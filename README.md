@@ -1,0 +1,2 @@
+# talentscool
+talentscool web team
