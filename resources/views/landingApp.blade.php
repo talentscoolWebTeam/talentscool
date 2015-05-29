@@ -9,6 +9,11 @@
 	<link rel="shortcut icon" href="{{{ asset('/images/favicon.jpeg') }}}">
 	<link href="{{ asset('/css/app.css') }}" rel="stylesheet">
 	<link href="{{ asset('/css/landing.css') }}" rel="stylesheet">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>	<style>
+	body{
+	font-family: 'Open Sans', sans-serif;
+	}
+	</style>
 	
 
 	<!-- Fonts -->

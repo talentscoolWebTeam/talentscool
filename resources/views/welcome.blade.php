@@ -15,41 +15,30 @@
 			{!! HTML::image('/images/TSVector.png', null, array('class'=>'logo', 'name'=>'logo')) !!}
 			<!--  <a href={{ URL('apply') }}>{!! HTML::image('/images/apply.png', null, array('class'=>'apply')) !!}</a>  -->
 	</div>
+	
 	<A name="about"></A>
 	<div class="">
-			<div class="col-md-12 landingDiv">
+			<div class="col-md-12 landingDivWhoWeAre">
 				<div class="col-md-12">
-					<div class="col-md-8">
+					<div class="col-md-9">
 						<h1 class="landingPoint">WHO WE ARE</h1>
-						<p class="landingBody">We know how it is to be an artist these days. With all of the competition
-						out there, it's nice to have someone on your side. As a talent service
-						company, <font class="landingPoint">Talentscool</font> finds opportunities, auditions, and whatever else
-						an artist like you may need. Through the greate relationships we have
-						with major record labels, we even connect aspiring talent with record
-						companies. All in all, our mission is to jump start your career!</p>
-						
+							<br>
+							<p class="landingBody">
+								 Headquartered in Los Angeles, Talentscool is a talent service that works with talents in music, film, fashion, visual arts, dance, and sports to find them opportunities and connect them to the various services they need for their careers. Being founded by both a musician and a pro-athlete, we know how hard it is to be successful in the entertainment industry. With all of the competition, we aim to give our clients ease knowing someone is on their side. 
+							</p>  	
+							<br><br>
 					</div>
-					<div class="col-md-4">
-						
+					<div class="col-md-3">
 					</div>
-					
 				</div>
-				<div class="col-md-12">
-					<div class="col-md-4">
-						
-					</div>
-					<div class="col-md-8 ">
-						<p align="right" class="landingBody">
-						Headquartered in Los Angeles, we introduce talented individuals to
-						other artist looking to collaborate and also connect our clients with
-						entertainment companies hungry for fresh talent. Los Angeles is an artist's
-						land of opportunity, but there are only so many seats at the table. Let us
-						help you find your spot, and together, we'll make your dream become a
-						reality. <br>
+				
+				<div class="col-md-12"">
+					<div class="col-md-3">&nbsp;</div>
+					<div class="col-md-9">
+						<p class="landingBody">
+						Through our global relationships with major/indie record labels, talent agencies, casting agencies, production companies, venues, art galleries, corporate sponsors, and much more, we are able to provide the best possible service to our clients. In addition, we recommend our clients to well-established vendor services ranging from publicists to agents to investors to entertainment lawyers and everything in between. We cater to the needs of our clients in every way possible.
 						</p>
-						<br>
-						<br>
-						<br>
+						<br><br><br><br>
 					</div>
 				</div>
 				{!! HTML::image('/images/TSVector.png', null, array('class'=>'tailLogo')) !!}
@@ -57,40 +46,59 @@
 	</div>
 	
 	<div class="col-md-12">
-		<br><br>&nbsp;<Br>
+		<br><br>&nbsp;<Br><br><br><br><br>
 	</div>
 
 
 	<A name="service"></A>
-	<div class="col-md-12 landingDiv">
+	<div class="col-md-12 landingDivWhatWeDo">
 			<div class="col-md-12">
-				<div class="col-md-8">
-					<br><br>
+				<div class="col-md-10">
 					<h1 class="landingPoint">WHAT WE DO</h1>
-					<p class="landingBody" style="font-size:25px;text-align:justice">
-					<font class="landingPoint">Opportunities:</font><br>
-					Help clients find jobs, endorsements, internships,<br>
-					auditions, showcases, and performance venues.<br>
 					<br>
-					</p>
-				</div>
-				<div class="col-md-4">
-					&nbsp;		
-				</div>
-			</div>
-			<div class="col-md-12">
-				<div class="col-md-6">
-					&nbsp;		
-				</div>
-				<div class="col-md-6">
-					<p align="right" class="landingBody" style="font-size:25px;" >
-					<font class="landingPoint">Services:</font><br>
-					Help clients find representation, talent development,
-					brand management, a stylist, a lawyer, a publicist,
-					a personal assistant, personal trainer and much more.
-					</p>
-					<Br><br><br><br>
-					<Br><br><br><br>
+					<ul>
+						<li class="listHeader">General</li>
+						<ul>
+							<li>Opportunities, Representaion, Brading, Talent Development, Collaboration, Social Media Management, etc</li>
+						</ul>
+					</ul>
+					
+					<ul>
+						<li class="listHeader">Opportunities</li>
+						<ul>
+							<li>Bookings, Endorsements, Auditions, Internships, Showcases, Appearances, etc.</li>
+						</ul>
+					</ul>
+					<ul>
+						<li class="listHeader">Representation</li>
+						<ul>
+							<li>Manager/Agent, Talent Agency, Publicist, Booking Agent, etc.</li>
+						</ul>
+					</ul>
+					<ul>
+						<li class="listHeader">Outside Services</li>
+						<ul>
+							<li>Musician, Vocalist, Dancer, Consultant, Lawyer, Accountant, Personal Assistant, Fitness Trainer, Video/Film Production, Event Planner, Graphic Designer, Audio Engineer, etc.</li>
+						</ul>
+					</ul>
+					<ul>
+						<li class="listHeader">Talent Development</li>
+						<ul>
+							<li>Vocal Coach, Acting Coach, Athletic Trainer, Dance Instructor, Instrument Teacher, etc.</li>
+						</ul>
+					</ul>
+					<ul>
+						<li class="listHeader">Vanity Services</li>
+						<ul>
+							<li>Clothing Stylist, Hair Stylist, Make-Up Artists, Clothing Designer, Photographer, Videographer, Model, etc.</li>
+						</ul>
+					</ul>
+					<ul>
+						<li class="listHeader">Luxury Services</li>
+						<ul>
+							<li>Body Guard, Limo Drivers, Private Jet, Car Rental, Studio Rental, etc.</li>
+						</ul>
+					</ul>
 				</div>
 			</div>
 			{!! HTML::image('/images/TSVector.png', null, array('class'=>'tailLogo')) !!}
