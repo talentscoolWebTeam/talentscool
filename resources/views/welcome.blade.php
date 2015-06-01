@@ -24,7 +24,7 @@
 						<h1 class="landingPoint">WHO WE ARE</h1>
 							<br>
 							<p class="landingBody">
-								 Headquartered in Los Angeles, Talentscool is a talent service that works with talents in music, film, fashion, visual arts, dance, and sports to find them opportunities and connect them to the various services they need for their careers. Being founded by both a musician and a pro-athlete, we know how hard it is to stand out in the entertainment industry. With all of the competition, we aim to give our clients ease knowing someone is on their side. 
+								 Headquartered in Los Angeles, Talentscool is a talent service that works with talents in music, film, fashion, visual arts, dance, and sports to find them opportunities and connect them to the various services they need for their careers. Being founded by both a musician and a pro-athlete, we know how hard it is to stand ou in the entertainment industry. With all of the competition, we aim to give our clients ease knowing someone is on their side. 
 							</p>  	
 							<br><br>
 					</div>
