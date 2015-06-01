@@ -3,7 +3,7 @@
 @section('content')
 
 	<div class="backgroundDiv">
-	{!! HTML::image('/images/background.png', null, array('class' => 'backgroundImg')) !!}
+	{!! HTML::image('/images/background.png', null, array('class' => 'backgroundImg', 'style'=>'float')) !!}
 	</div>
 	<div class="headerWHOWEARE">
 	 	<a href="#about">WHO WE ARE</a>
@@ -12,7 +12,7 @@
 		<a href="#service">WHAT WE DO</a>
 	</div>
 	<div class="container">
-			{!! HTML::image('/images/TSVector.png', null, array('class'=>'logo', 'name'=>'logo')) !!}
+			{!! HTML::image('/images/TSVector.png', null, array('class'=>'logo', 'name'=>'logo', 'style'=>'float')) !!}
 			<!--  <a href={{ URL('apply') }}>{!! HTML::image('/images/apply.png', null, array('class'=>'apply')) !!}</a>  -->
 	</div>
 	
@@ -24,7 +24,7 @@
 						<h1 class="landingPoint">WHO WE ARE</h1>
 							<br>
 							<p class="landingBody">
-								 Headquartered in Los Angeles, Talentscool is a talent service that works with talents in music, film, fashion, visual arts, dance, and sports to find them opportunities and connect them to the various services they need for their careers. Being founded by both a musician and a pro-athlete, we know how hard it is to be successful in the entertainment industry. With all of the competition, we aim to give our clients ease knowing someone is on their side. 
+								 Headquartered in Los Angeles, Talentscool is a talent service that works with talents in music, film, fashion, visual arts, dance, and sports to find them opportunities and connect them to the various services they need for their careers. Being founded by both a musician and a pro-athlete, we know how hard it is to stand out in the entertainment industry. With all of the competition, we aim to give our clients ease knowing someone is on their side. 
 							</p>  	
 							<br><br>
 					</div>
@@ -59,44 +59,44 @@
 					<ul>
 						<li class="listHeader">General</li>
 						<ul>
-							<li>Opportunities, Representaion, Brading, Talent Development, Collaboration, Social Media Management, etc</li>
+							<li>Opportunities, Representation, Brading, Talent Development, Collaboration, Social Media Management.</li>
 						</ul>
 					</ul>
 					
 					<ul>
 						<li class="listHeader">Opportunities</li>
 						<ul>
-							<li>Bookings, Endorsements, Auditions, Internships, Showcases, Appearances, etc.</li>
+							<li>Bookings, Endorsements, Auditions, Internships, Showcases, Appearances.</li>
 						</ul>
 					</ul>
 					<ul>
 						<li class="listHeader">Representation</li>
 						<ul>
-							<li>Manager/Agent, Talent Agency, Publicist, Booking Agent, etc.</li>
+							<li>Manager/Agent, Talent Agency, Publicist, Booking Agent.</li>
 						</ul>
 					</ul>
 					<ul>
 						<li class="listHeader">Outside Services</li>
 						<ul>
-							<li>Musician, Vocalist, Dancer, Consultant, Lawyer, Accountant, Personal Assistant, Fitness Trainer, Video/Film Production, Event Planner, Graphic Designer, Audio Engineer, etc.</li>
+							<li>Musician, Vocalist, Dancer, Consultant, Lawyer, Accountant, Personal Assistant, Fitness Trainer, Video/Film Production, Event Planner, Graphic Designer, Audio Engineer.</li>
 						</ul>
 					</ul>
 					<ul>
 						<li class="listHeader">Talent Development</li>
 						<ul>
-							<li>Vocal Coach, Acting Coach, Athletic Trainer, Dance Instructor, Instrument Teacher, etc.</li>
+							<li>Vocal Coach, Acting Coach, Athletic Trainer, Dance Instructor, Instrument Teacher.</li>
 						</ul>
 					</ul>
 					<ul>
 						<li class="listHeader">Vanity Services</li>
 						<ul>
-							<li>Clothing Stylist, Hair Stylist, Make-Up Artists, Clothing Designer, Photographer, Videographer, Model, etc.</li>
+							<li>Clothing Stylist, Hair Stylist, Make-Up Artists, Clothing Designer, Photographer, Videographer, Model.</li>
 						</ul>
 					</ul>
 					<ul>
 						<li class="listHeader">Luxury Services</li>
 						<ul>
-							<li>Body Guard, Limo Drivers, Private Jet, Car Rental, Studio Rental, etc.</li>
+							<li>Body Guard, Limo Drivers, Private Jet, Car Rental, Studio Rental.</li>
 						</ul>
 					</ul>
 				</div>
@@ -112,7 +112,6 @@
 		{
 			var curHeight = $(window).height();
 			var curWidth = $(window).width();
-//			$('.landingDiv').css('height', curHeight);
 			$('.logo').css('height', curHeight * .2);
 			$('.logo').css('width', curWidth * .4);
 			$('.tailLogo').css('height', curHeight * .1);
@@ -121,8 +120,9 @@
 		});
 		$(window).resize(function()
 		{
-			var curWidth = $(window).width();
-			$('.logo').css('left', curWidth * .5);
+			var curWidth = $(window).innerWidth();
+			
+			$('.logo').css('left', curWidth * .3);
 		});
 	</script>
 @stop
