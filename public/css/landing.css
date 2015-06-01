@@ -24,9 +24,9 @@ body {
 
 .backgroundImg
 {
-	width:100%;
+	max-width:100%;
 	position:relative;
-	height:70%;
+	height:auto;
 
 }
   .ver-md-12 {
@@ -205,8 +205,9 @@ body {
 	margin-left:75%;
 	position:relative;
 	bottom:30px;
-	width:300px;
-	height:50px;
+	max-width:20%;
+	height:auto;
+	
 }
 .landingDivWhatWeDo ul
 {
