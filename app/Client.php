@@ -17,6 +17,13 @@ class Client extends Model {
 							'phone_number',
 							'dob',
 	];
+	protected $dates = ['dob'];
+	
+	public function setdobAttribute($date)
+	{
+		$this->attributes['dob'] = \Carbon\Carbon::parse($date);
+	}
+	
 
 	public function talents()
 	{
@@ -29,5 +36,17 @@ class Client extends Model {
 	public function option()
 	{
 		return $this->hasOne('App\Option');
+	}
+	public function tags()
+	{
+		return $this->belongsToMany('App\Tag')->distinct();
+	}
+	public function location()
+	{
+		return $this->belongsTo('\App\Location');
+	}
+	public function gender()
+	{
+		return $this->belongsTo('\App\Gender');
 	}
 }

@@ -32,5 +32,13 @@ class WelcomeController extends Controller {
 	{
 		return view('welcome');
 	}
+	public function aboutUs()
+	{
+		return view('aboutus');
+	}
+	public function whatwedo()
+	{
+		return view('whatwedo');
+	}
 
 }

@@ -10,6 +10,10 @@ class Talent extends Model {
 							'category',
 							'specific_talent',
 	];
+	public function category()
+	{
+		return $this->belongsTo('App\TalentCategory');
+	}
 	
 	public function client()
 	{
@@ -17,6 +21,6 @@ class Talent extends Model {
 	}
 	public function portfolios()
 	{
-		return $this->hasMany('App\Portfolio');
+		return $this->hasOne('App\Portfolio');
 	}
 }
