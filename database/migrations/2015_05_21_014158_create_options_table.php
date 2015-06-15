@@ -23,7 +23,7 @@ class CreateOptionsTable extends Migration {
 			$table->text('intro_video');
 			$table->text('current_representation');
 			$table->text('accolades');
-			$table->text('achivements');
+			$table->text('acheivements');
 			$table->text('experiences');
 			$table->text('relative_talent');
 			$table->text('anything');
