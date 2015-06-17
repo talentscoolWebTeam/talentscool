@@ -17,8 +17,7 @@ class CreateTalentsTable extends Migration {
 			$table->increments('id');
 			$table->integer('client_id')->unsigned();
 			$table->foreign('client_id')->references('id')->on('clients');
-			$table->integer('category_id')->unsigned();
-			$table->foreign('category_id')->references('id')->on('talent_categories');
+			$table->String('category');
 			$table->String('specific_talent');
 			$table->timestamps();
 		});

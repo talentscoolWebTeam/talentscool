@@ -45,8 +45,4 @@ class Client extends Model {
 	{
 		return $this->belongsTo('\App\Location');
 	}
-	public function gender()
-	{
-		return $this->belongsTo('\App\Gender');
-	}
 }

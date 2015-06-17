@@ -21,14 +21,13 @@ class CreateClientsTable extends Migration {
 			$table->text('email');
 			$table->Integer('location_id')->unsigned();
 			$table->Integer('zipcode');
-			$table->Integer('gender_id')->unsigned();
+			$table->String('gender');
 			$table->text('phone_number')->nullable();
 			$table->date('dob');
 			$table->Integer('status');
 			$table->timestamps();
 			
 			$table->foreign('location_id')->references('id')->on('locations');
-			$table->foreign('gender_id')->references('id')->on('genders');
 		});
 	}
 

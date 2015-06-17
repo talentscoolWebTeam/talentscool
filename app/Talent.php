@@ -10,10 +10,6 @@ class Talent extends Model {
 							'category',
 							'specific_talent',
 	];
-	public function category()
-	{
-		return $this->belongsTo('App\TalentCategory');
-	}
 	
 	public function client()
 	{

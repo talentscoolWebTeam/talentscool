@@ -19,10 +19,10 @@ class AuthController extends Controller {
 	| a simple trait to add these behaviors. Why don't you explore it?
 	|
 	*/
-
+	
+	protected $redirectTo="clients";
 	use AuthenticatesAndRegistersUsers;
 
-	protected $redirectTo='/clients';
 	/**
 	 * Create a new authentication controller instance.
 	 *
@@ -40,17 +40,7 @@ class AuthController extends Controller {
 	}
     public function postRegister(Request $request)
 	{
-        //c889be53d0282c20da486a4ba799edfb,the passcode is "TalentscoolPasscode"
-        if (!$request->has('passcode'))
-        {
-            return Redirect::back()->withErrors("Passcode is not set");
-        }
-        if(md5($request->get('passcode')) !='c889be53d0282c20da486a4ba799edfb')
-        {
-            return Redirect::back()->withErrors('Passcode is not correct,please enter it again');
-        }
-        
-        
+     
 		$validator = $this->registrar->validator($request->all());
 
 		if ($validator->fails())

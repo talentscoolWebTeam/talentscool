@@ -28,11 +28,62 @@
 </head>
 <body>
 
+<ul class="headerWrapper">
+	<li class="image" id="img"><a href="{{action('WelcomeController@index')}}">{!! HTML::image('/images/TSVector.png', null, array('style'=>"width:100%")) !!}</a>
+	<li class="content"><a href="#" onmouseover="mopen('m1')" onmouseout="mclosetime()" id="test"">Company</a>
+		<div id="m1">
+			<a href="{{action('WelcomeController@aboutus')}}" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">About Us</a>
+			<a href="{{action('WelcomeController@whatwedo')}}" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">What We Do</a>
+		</div>
+	</li>
+	<li class="content"><a href="#"  onmouseover="mopen('m2')" onmouseout="mclosetime()" >Company2</a>
+		<div  id="m2">
+			<a href="#" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">test2</a>
+			<a href="#" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">test3</a>
+		</div>
+	</li>
+	<li class="content" style="width:37%; border:none;" >
+		&nbsp;
+	</li>
+</ul>
 	@yield('content')
 
 	<!-- Scripts -->
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
+	<script>
+	var timeout = 500;
+	var closetimer = 0;
+	var curMenu = 0;
+	function mopen(id)
+	{
+			mcancelclosetime();
+			if(curMenu)
+				curMenu.style.visibility="hidden";
+			curMenu = document.getElementById(id);
+			curMenu.style.visibility="visible";
+			curMenu.style.display="none";
+			$(curMenu).slideDown();
+	}
+	function mclose()
+	{
+			if(curMenu)
+				$(curMenu).slideUp();
+	}
+	function mclosetime()
+	{
+		closetimer = window.setTimeout(mclose, timeout);
+	}
+	function mcancelclosetime()
+	{
+			if(closetimer)
+			{
+					window.clearTimeout(closetimer);
+					closetimer = null;	
+			}
+	}
+	
+	</script>
 	@yield('tail')
 </body>
 </html>

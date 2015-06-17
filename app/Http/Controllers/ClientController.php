@@ -4,6 +4,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
+use Illuminate\Pagination;
 
 class ClientController extends Controller {
 
@@ -33,34 +34,41 @@ class ClientController extends Controller {
 			$filterText = $request->get('filterText');
 			if($filter == "state")
 			{
-				$requestClients = \App\Client::where('state', 'like', "%" . $filterText . "%")->where('status', '=', '2')->paginate($pageVal);
-				return view('clients.requested', compact('requestClients'));
+				$requestClients = \App\Client::where('status', '=', '2')->whereHas('location',function($q) use($filterText){
+					$q->where('state', '=', $filterText);
+				})->paginate($pageVal);
+				$filters = array('filter'=>$filter, 'filterText'=>$filterText);
+				return view('clients.requested', compact('requestClients', 'filters'));
 			}
 			else if($filter == "city")
 			{
-				$requestClients = \App\Client::where('city', 'like', "%$filterText%")->where('status', '=', '2')->paginate($pageVal);
-				return view('clients.requested', compact('requestClients'));
+				$requestClients = \App\Client::where('status', '=', '2')->whereHas('location',function($q) use($filterText){
+					$q->where('city', 'like', "%$filterText%");
+				})->paginate($pageVal);
+				$filters = array('filter'=>$filter, 'filterText'=>$filterText);
+				return view('clients.requested', compact('requestClients', 'filters'));
 			}
 			else if($filter == "gender")
 			{
-				$requestClients = \App\Client::where('status', '=', '2')->whereHas('gender', function($q) use($filterText){
-					$q->where('gender', 'like', "%$filterText%");
-				})->paginate($pageVal);
-				return view('clients.requested', compact('requestClients'));
+				$requestClients = \App\Client::where('status', '=', '2')->where('gender','like',"%$filterText%")->paginate($pageVal);
+				$filters = array('filter'=>$filter, 'filterText'=>$filterText);
+				return view('clients.requested', compact('requestClients', 'filters'));
 			}
 			else if($filter == "talentCategory")
 			{
 				$requestClients = \App\Client::where('status', '=', '2')->whereHas('talents', function($q) use($filterText){
 					$q->where('category', 'like', "%$filterText%");
 				})->paginate($pageVal);
-				return view('clients.requested', compact('requestClients'));
+				$filters = array('filter'=>$filter, 'filterText'=>$filterText);
+				return view('clients.requested', compact('requestClients', 'filters'));
 			}
 			else if($filter == "specificTalent")
 			{
 				$requestClients = \App\Client::where('status', '=', '2')->whereHas('talents', function($q) use($filterText){
 					$q->where('specific_talent', 'like', "%$filterText%");
 				})->paginate($pageVal);
-				return view('clients.requested', compact('requestClients'));
+				$filters = array('filter'=>$filter, 'filterText'=>$filterText);
+				return view('clients.requested', compact('requestClients', 'filters'));
 			}
 			else if($filter == "name")
 			{
@@ -68,11 +76,18 @@ class ClientController extends Controller {
 				$filters = array('filter'=>$filter, 'filterText'=>$filterText);
 				return view('clients.requested', compact('requestClients', 'filters'));
 			}
+			else if($filter == "date")
+			{
+				$requestClients = \App\Client::where('status', '=', '2')->where("created_at", 'like', "%$filterText%")->paginate($pageVal);
+				$filters = array('filter'=>$filter, 'filterText'=>$filterText);
+				return view('clients.requested', compact('requestClients', 'filters'));
+			}
 		}
 		else
 		{
+			$filters ="";
 			$requestClients = \App\Client::where('status', '=', '2')->latest('updated_at')->paginate($pageVal);
-			return view('clients.requested', compact('requestClients'));
+			return view('clients.requested', compact('requestClients', 'filters'));
 		}
 	}
 
@@ -96,13 +111,18 @@ class ClientController extends Controller {
 			}
 			else if($filter == "state")
 			{
-				$acceptedClients = \App\Client::where('state', 'like', "%$filterText%")->where('status', '=', '1')->paginate($pageVal);
+				$acceptedClients = \App\Client::where('status', '=', '1')->whereHas('location',function($q) use($filterText){
+					$q->where('state', '=', $filterText);
+				})->paginate($pageVal);
+				
 				$filters = array('filter'=>$filter, 'filterText'=>$filterText);
 				return view('clients.accepted', compact('acceptedClients', 'filters'));
 			}
 			else if($filter == "city")
 			{
-				$acceptedClients = \App\Client::where('city', 'like', "%$filterText%")->where('status', '=', '1')->paginate($pageVal);
+				$requestClients = \App\Client::where('status', '=', '1')->whereHas('location',function($q) use($filterText){
+					$q->where('city', 'like', "%$filterText%");
+				})->paginate($pageVal);
 				$filters = array('filter'=>$filter, 'filterText'=>$filterText);
 				return view('clients.accepted', compact('acceptedClients', 'filters'));
 			}
@@ -131,6 +151,12 @@ class ClientController extends Controller {
 			else if($filter == "name")
 			{
 				$acceptedClients = \App\Client::where('status', '=', '1')->where('name', 'like', "%$filterText%")->paginate($pageVal);
+				$filters = array('filter'=>$filter, 'filterText'=>$filterText);
+				return view('clients.accepted', compact('acceptedClients', 'filters'));
+			}
+			else if($filter == "date")
+			{
+				$acceptedClients = \App\Client::where('status', '=', '1')->where("created_at", 'like', "%$filterText%")->paginate($pageVal);
 				$filters = array('filter'=>$filter, 'filterText'=>$filterText);
 				return view('clients.accepted', compact('acceptedClients', 'filters'));
 			}
@@ -173,9 +199,18 @@ class ClientController extends Controller {
 	
 	public function acceptedClientUpdate($id, Request $request)
 	{
-		$client = \App\Client::findOrFail($id);
-		$client->tags()->sync($request->get('tags'));
-		$client->save();
+		if($request->get('tags') == '')
+		{
+			$client = \App\Client::findOrFail($id);
+			$client->tags()->sync([]);
+			$client->save();
+		}
+		else
+		{
+			$client = \App\Client::findOrFail($id);
+			$client->tags()->sync($request->get('tags'));
+			$client->save();
+		}
 		return redirect('clients/accepted/' . $id);
 	}
 }

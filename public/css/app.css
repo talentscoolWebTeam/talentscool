@@ -6291,3 +6291,76 @@ table .tbody:nth-child(odd)
 {
 	background-color:#008040;
 }
+div .option
+{
+	line-height:50px;
+}
+	#newTagWrapper
+	{
+		background:rgba(255,255,255,0.3);
+		z-index:10;	
+		top:0;
+		left:0;
+		position:fixed;
+		width:100%;
+		height:100%;
+		visibility:hidden;
+	}
+	.newTagContent
+	{
+		top:35%;
+		left:35%;
+		width:30%;
+		height:30%;
+		background-color:white;
+		color:black;
+		position:absolute;
+		border-radius:5px;
+	}
+	.displayTagName
+	{
+		margin-top: 20%;
+		margin-left: 3%;
+		color: black;
+		position:absolute;
+	}
+	.failureAddMessage
+	{
+		border-radius:4px;
+		width:100%;
+		text-align:center;
+		background-color: #f2dede;
+  		border-color: #ebccd1;
+  		color: #a94442;	
+	}
+	.successAddMessage
+	{
+		border-radius:4px;
+		width:100%;
+		text-align:center;
+		background-color: #dff0d8;
+  		border-color: #d6e9c6;
+  		color: #3c763d;
+	}
+	.deleteTagWrapper
+	{
+		background:rgba(255,255,255,0.3);
+		z-index:10;	
+		top:0;
+		left:0;
+		position:fixed;
+		width:100%;
+		height:100%;
+		visibility:hidden;
+	}
+	.deleteTagContent
+	{
+		top:35%;
+		left:35%;
+		width:30%;
+		height:30%;
+		background-color:white;
+		color:black;
+		position:absolute;
+		border-radius:5px;
+	}
