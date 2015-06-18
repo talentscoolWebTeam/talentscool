@@ -1,6 +1,10 @@
 @extends('app')
 
 @section('content')
+<script>
+body{background-image:url("/images/bodyBackground.png");
+background-size:contain}
+</script>
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2">
