@@ -5,7 +5,7 @@
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2">
 			<div class="panel panel-default">
-                <div class="panel-heading" style="background:#77DDFF;color:#FFF"><strong>Welcome to Login</strong></div>
+                <div class="panel-heading" style="background:#d0313c;color:#FFF"><strong>Welcome to Login</strong></div>
 				<div class="panel-body">
 					@if (count($errors) > 0)
 						<div class="alert alert-danger">
@@ -50,7 +50,7 @@
                         </div>
 						<div class="form-group">
 							<div class="col-md-6 col-md-offset-2">
-								<button type="submit" class="btn btn-info form-control">Login</button>
+								<button type="submit" class="btn btn-danger form-control">Login</button>
 
 								<a class="btn btn-link" href="{{ url('/password/email') }}">Forgot Your Password?</a>
 							</div>

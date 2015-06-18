@@ -6,7 +6,7 @@
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2">
 			<div class="panel panel-default">
-				<div class="panel-heading" style="background:#77DDFF;color:#FFF"><strong>Welcome to Register</strong></div>
+				<div class="panel-heading" style="background:#d0313c;color:#FFF"><strong>Welcome to Register</strong></div>
 				<div class="panel-body">
 					@if (count($errors) > 0)
 						<div class="alert alert-danger">
@@ -81,7 +81,7 @@
                         </div>
 						<div class="form-group">
 							<div class="col-md-6 col-md-offset-3">
-								<button type="submit" class="btn btn-info form-control" onclick="getElements()">
+								<button type="submit" class="btn btn-danger form-control" onclick="getElements()">
 									Register
 								</button>
 							</div>
