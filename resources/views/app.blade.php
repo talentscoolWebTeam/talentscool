@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" style="height:700px">
-<style type="text/css">
 
-</style>
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">

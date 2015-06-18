@@ -1,9 +1,9 @@
 @extends('app')
 @section('content')
-<script>
+<style type="text/css">
 body{background-image:url("/images/bodyBackground.png");
 background-size:contain}
-</script>
+</style>
 
 <div class="container-fluid">
 	<div class="row">
