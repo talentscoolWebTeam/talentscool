@@ -12,9 +12,12 @@ class ClientController extends Controller {
 	public function __construct()
 	{
 		$this->middleware('auth');
+		$this->middleware('VerifySubscription');
 	}
 	public function index(Request $request)
 	{
+		$user = \Auth::check();
+		return $user;
 		$clients = \App\Client::where('status', '=', '1')->paginate(3);
 		$clients->setPath('clients/accpeted');
 		$requestClients = \App\Client::where('status', '=', '2')->paginate(3);

@@ -25,6 +25,12 @@ Route::post('clients/requested/accept/', 'ClientController@acceptClient');
 Route::post('Tags', 'TagController@store');
 Route::put('Tags', 'TagController@delete');
 
+Route::get('application', 'ApplicationController@application');
+Route::get('loading', 'ApplicationController@loading');
+Route::get('thanks', 'ApplicationController@thanks');
+Route::get('error', 'ApplicationController@error');
+Route::post('application', 'ApplicationController@store');
+
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
