@@ -68,7 +68,7 @@
 								<a href="#service" class="read_more2">Read more</a> </div>
 							</div>
 							<div>
-								<img src="images/mainImg.png" class="bannerImg zoomIn wow animated" alt="" />
+							<!--	<img src="images/mainImg.png" class="bannerImg zoomIn wow animated" alt="" /> -->
 							</div>
 						</div>
 					</div>
@@ -85,7 +85,9 @@
 					<h2 id="auhead">About Us</h2>
 					<div class="inner_section">
 						<div class="row">
-							<div class=" col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-right"><img src="images/about-img.jpg" class="img-circle delay-03s animated wow zoomIn" alt=""></div>
+							<div class=" col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-right">
+								<!-- <img src="images/about-img.jpg" class="img-circle delay-03s animated wow zoomIn" alt=""> -->
+							</div>
 							<div class=" col-lg-7 col-md-7 col-sm-7 col-xs-12 pull-left">
 								<div class=" delay-01s animated fadeInDown wow animated">
 									

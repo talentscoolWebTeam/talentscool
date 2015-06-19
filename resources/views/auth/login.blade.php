@@ -56,7 +56,7 @@ background-size:contain}
 							<div class="col-md-6 col-md-offset-2">
 								<button type="submit" class="btn btn-danger form-control">Login</button>
 
-								<a class="btn btn-link" href="{{ url('/password/email') }}">Forgot Your Password?</a>
+								<a class="btn btn-link" style="color:#337ab7" href="{{ url('/password/email') }}">Forgot Your Password?</a>
 							</div>
 						</div>
 					</form>

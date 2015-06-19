@@ -1,5 +1,5 @@
 @extends('clients.app')
-@section('content')
+@section('content1')
 <div class="clientFilterDiv" align="right">
 				{!! Form::model($filters,['method'=>'GET', 'action' =>'ClientController@requested', 'class'=>'form-inline']) !!}
 					Filter:  {!! Form::select('filter', array('name'=>'Name', 'state'=>'State', 'city'=>'City', 'gender'=>'Gender', 'talentCategory'=>'Talent Category', 'specificTalent'=>'Specific Talent', 'date'=>'Date'), null, ['class' => 'form-control', 'required', 'style'=>'width:2	0%', 'id'=>'filter']) !!}
@@ -44,7 +44,7 @@
 {!! $requestClients->render() !!}
 
 @stop
-@section('tail')
+@section('tail1')
 $(document).ready(function()
 {
 	$('.requestedClientsButton').css('background-color', '#404040');

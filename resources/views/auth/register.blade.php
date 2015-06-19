@@ -68,16 +68,14 @@ background-size:contain}
                                 <span id='click4'><em>Hide the password</em></span>
 							</div>
 						</div>
-<!--
                         <div class="form-group">
                             <label class="col-md-4" text-algin="left">Passcode</label>
                             <div class="col-md-6">
-                                <input type="password" class="form-control" name="passcode" id="3">
+                                <input type="password" class="form-control" name="passcode" id="3" value="{{ old('passcode') }}">
                                 <span id='click5' style='display:-moz-inline-box;display:inline-block;width:250px;'><em>Show the passcode</em></span>
                                 <span id='click6'><em>Hide the passcode</em></span>
                             </div>
                         </div>
--->
 
                         <div class="col-xs-1">
                         <img src="/images/favicon.jpeg" style="width:100%;height:100%;">
@@ -110,12 +108,12 @@ background-size:contain}
     $('#click4').click(function(){
         $('#2').attr("type","password");
     });
-//    $('#click5').click(function(){
-//        $('#3').attr("type","text");
-//    });
-//    $('#click6').click(function(){
-//        $('#3').attr("type","password");
-//    });
+    $('#click5').click(function(){
+        $('#3').attr("type","text");
+    });
+    $('#click6').click(function(){
+        $('#3').attr("type","password");
+    });
 </script>
 @stop
 @stop
