@@ -12,12 +12,9 @@ class ClientController extends Controller {
 	public function __construct()
 	{
 		$this->middleware('auth');
-		$this->middleware('VerifySubscription');
 	}
 	public function index(Request $request)
 	{
-		$user = \Auth::check();
-		return $user;
 		$clients = \App\Client::where('status', '=', '1')->paginate(3);
 		$clients->setPath('clients/accpeted');
 		$requestClients = \App\Client::where('status', '=', '2')->paginate(3);
@@ -37,17 +34,13 @@ class ClientController extends Controller {
 			$filterText = $request->get('filterText');
 			if($filter == "state")
 			{
-				$requestClients = \App\Client::where('status', '=', '2')->whereHas('location',function($q) use($filterText){
-					$q->where('state', '=', $filterText);
-				})->paginate($pageVal);
+				$requestClients = \App\Client::where('status', '=', '2')->where('state','=',$filterText)->paginate($pageVal);
 				$filters = array('filter'=>$filter, 'filterText'=>$filterText);
 				return view('clients.requested', compact('requestClients', 'filters'));
 			}
 			else if($filter == "city")
 			{
-				$requestClients = \App\Client::where('status', '=', '2')->whereHas('location',function($q) use($filterText){
-					$q->where('city', 'like', "%$filterText%");
-				})->paginate($pageVal);
+				$requestClients = \App\Client::where('status', '=', '2')->where('city','=',$filterText)->paginate($pageVal);
 				$filters = array('filter'=>$filter, 'filterText'=>$filterText);
 				return view('clients.requested', compact('requestClients', 'filters'));
 			}
@@ -114,18 +107,14 @@ class ClientController extends Controller {
 			}
 			else if($filter == "state")
 			{
-				$acceptedClients = \App\Client::where('status', '=', '1')->whereHas('location',function($q) use($filterText){
-					$q->where('state', '=', $filterText);
-				})->paginate($pageVal);
+				$acceptedClients = \App\Client::where('status', '=', '1')->where('state','=',$filterText)->paginate($pageVal);
 				
 				$filters = array('filter'=>$filter, 'filterText'=>$filterText);
 				return view('clients.accepted', compact('acceptedClients', 'filters'));
 			}
 			else if($filter == "city")
 			{
-				$requestClients = \App\Client::where('status', '=', '1')->whereHas('location',function($q) use($filterText){
-					$q->where('city', 'like', "%$filterText%");
-				})->paginate($pageVal);
+				$acceptedClients = \App\Client::where('status', '=', '1')->where('city','=',$filterText)->paginate($pageVal);
 				$filters = array('filter'=>$filter, 'filterText'=>$filterText);
 				return view('clients.accepted', compact('acceptedClients', 'filters'));
 			}

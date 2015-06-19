@@ -19,7 +19,8 @@ class CreateClientsTable extends Migration {
 			$table->String('lname');
 			$table->String('nname');
 			$table->text('email');
-			$table->Integer('location_id')->unsigned();
+			$table->String('City');
+			$table->String('State');
 			$table->Integer('zipcode');
 			$table->String('gender');
 			$table->text('phone_number')->nullable();

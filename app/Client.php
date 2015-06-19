@@ -41,8 +41,5 @@ class Client extends Model {
 	{
 		return $this->belongsToMany('App\Tag')->distinct();
 	}
-	public function location()
-	{
-		return $this->belongsTo('\App\Location');
-	}
+	
 }

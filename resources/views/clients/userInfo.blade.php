@@ -98,13 +98,13 @@ background-color:black;
 					<b>City:</b>
 				</div>
 				<div class="col-xs-4 col-xs-offset-1">
-					{{ $client->location->city }}
+					{{ $client->city }}
 				</div>
 				<div class="col-xs-1">
 					<b>State:</b>
 				</div>
 				<div class="col-xs-3">
-					{{ $client->location->state }}
+					{{ $client->state }}
 				</div>
 			</div>
 		</div>

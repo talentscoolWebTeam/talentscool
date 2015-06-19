@@ -7,8 +7,5 @@ class Location extends Model {
 	//
 	protected $fillable = ['zip', 'state', 'latitude', 'longitude', 'city', 'full_state'];
 
-	public function client()
-	{
-		return $this->hasMany('\App\Client');
-	}	
+	
 }

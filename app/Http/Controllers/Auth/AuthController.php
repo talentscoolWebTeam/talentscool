@@ -40,8 +40,20 @@ class AuthController extends Controller {
 	}
     public function postRegister(Request $request)
 	{
-     
-		$validator = $this->registrar->validator($request->all());
+     	return $request->url();
+		$rules= array(
+						'name'=>'required',
+						'password'=>'required|min:8',
+						'email'=>'required|email|unique:users',
+						'passcode' => 'required',
+				);
+		$validator = \Validator::make($request->all(), $rules);
+		$user = \App\User::where('email', '=', $request->get('email'))->first();
+		if(count($user) == 0)
+		{
+			return Redirect::back()->withErrors("You must be invited first")->withInput(\Input::except('password'));
+		}
+		return Redirect::back()->withErrors("fuc it")->withInput(\Input::except('password'));
 
 		if ($validator->fails())
 		{
