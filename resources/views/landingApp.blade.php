@@ -194,9 +194,10 @@
 						<div class="col-lg-12 wow fadeInLeft delay-06s">
 							<div class="form">
 								<input class="input-text" type="text" name="" value="Your Name *" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;">
-								<input class="input-text" type="text" name="" value="Your E-mail *" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;">
-								<textarea class="input-text text-area" cols="0" rows="0" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;">Your Message *</textarea>
-								<input class="input-btn" type="submit" value="send message">
+								<input class="input-text" type="text" name="" value="Your Subject *" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;" id="subject">
+								<textarea class="input-text text-area" cols="0" rows="0" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;" id="myText">Your Message *</textarea>
+                                <input class="input-btn" type="button" value="send message" onclick="sendMail(); return false">
+
 							</div>
 						</div>
 						
@@ -210,6 +211,11 @@
 		</footer>
 		
 		<!-- Scripts -->
+        <script>
+            function sendMail(){
+            var link="mailto:tscool@talentscool.com"+"?cc=michaelbpratt@gmail.com"+"&subject="+escape(document.getElementById('subject').value)+"&body="+escape(document.getElementById('myText').value);
+            window.location.href=link;}        
+        </script>
 		<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="js/jquery-scrolltofixed.js"></script>
