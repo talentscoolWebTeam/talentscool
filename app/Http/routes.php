@@ -31,6 +31,8 @@ Route::get('thanks', 'ApplicationController@thanks');
 Route::get('error', 'ApplicationController@error');
 Route::post('application', 'ApplicationController@store');
 
+Route::get('admin/invite', 'AdminController@invite');
+
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',

@@ -38,9 +38,9 @@ class AuthController extends Controller {
 
 		$this->middleware('guest', ['except' => 'getLogout']);
 	}
+	
     public function postRegister(Request $request)
 	{
-     	return $request->url();
 		$rules= array(
 						'name'=>'required',
 						'password'=>'required|min:8',
@@ -50,11 +50,11 @@ class AuthController extends Controller {
 		$validator = \Validator::make($request->all(), $rules);
 		$user = \App\User::where('email', '=', $request->get('email'))->first();
 		if(count($user) == 0)
-		{
 			return Redirect::back()->withErrors("You must be invited first")->withInput(\Input::except('password'));
-		}
-		return Redirect::back()->withErrors("fuc it")->withInput(\Input::except('password'));
-
+		$passcode = $request->get('passcode');
+		$userPasscode = $user->passcode;
+		if($passcode != $userPasscode)
+			return Redirect::back()->withErrors("Passcode is not matched")->withInput(\Input::except('password'));
 		if ($validator->fails())
 		{
 			$this->throwValidationException(

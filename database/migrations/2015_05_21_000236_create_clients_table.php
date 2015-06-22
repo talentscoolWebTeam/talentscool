@@ -19,16 +19,16 @@ class CreateClientsTable extends Migration {
 			$table->String('lname');
 			$table->String('nname');
 			$table->text('email');
-			$table->String('City');
-			$table->String('State');
+			$table->String('city');
+			$table->String('state');
 			$table->Integer('zipcode');
 			$table->String('gender');
 			$table->text('phone_number')->nullable();
 			$table->date('dob');
+			$table->string('personal_photo');
 			$table->Integer('status');
 			$table->timestamps();
 			
-			$table->foreign('location_id')->references('id')->on('locations');
 		});
 	}
 

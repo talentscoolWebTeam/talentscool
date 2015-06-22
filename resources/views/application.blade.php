@@ -6,6 +6,7 @@
 </head>
 	<link href="{{ asset('/css/app.css') }}" rel="stylesheet">
 	<link rel="shortcut icon" href="{{{asset("/images/favicon.jpeg")}}}">
+    <link href="{{ asset('/css/select2.min.css') }}" rel="stylesheet">
 <style>
     
     body{
@@ -22,6 +23,9 @@
 	
 	select{
 		color:black;
+	}
+	option{
+		background-color:green;
 	}
 	input{
 		font-family:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
@@ -56,17 +60,20 @@
 
 <!--
 <form method="post" action="application" onSubmit="window.open('http://talentscool.local/application_2')"> -->
+<div id="result">
+</div>
 <form method="POST" action="http://talentscool.local/application" accept-charset="UTF-8" enctype="multipart/form-data"><input name="_token" type="hidden" value="{{ csrf_token() }}">
 <div class="firstPage">
-<p style="font-size:30px; position:relative; padding-left:0%;">APPLICATION</p>
-<p style="font-size:15px; position:relative; padding:0;"><b>personal information</b></p>
-<b><b style="color:red;">*</b> must be filled</b><br>
+<p class="col-xs-12" style="font-size:36px;">APPLICATION</p>
+<p class="col-xs-12">personal information</p>
+<b style="color:red;">*</b><b> required</b>
+<br><br>
 <div class="col-xs-12">
 	<div class="col-xs-2">
-	<label class="inline" for="fname">FIRST NAME<sup>*</sup></label>
+	FIRST NAME<sup>*</sup>
     </div>
-    <div class="col-xs-10">
-	<input type="text" style="width:300px;" name="fname"  id="fname" class="page1 form-control"/>
+    <div class="col-xs-3">
+	<input type="text" name="fname"  id="fname" class="page1 form-control"/>
 	</div>
 </div>
 
@@ -75,10 +82,10 @@
 
 <div class="col-xs-12">
 	<div class = "col-xs-2">
-		<label class="inline" for="lname">LAST NAME<sup>*</sup></label>
+		LAST NAME<sup>*</sup>
     </div>
-    <div class="col-xs-10">
-    	<input type="text" style="width:300px;" name="lname"  id="lname" class="page1 form-control">
+    <div class="col-xs-3">
+    	<input type="text" name="lname"  id="lname" class="page1 form-control">
     </div>
 </div>
 
@@ -87,10 +94,10 @@
 
 <div class="col-xs-12">
      <div class="col-xs-2">
-            <label class="inline" for="nname">NICKNAME(optional)</label>
+            NICKNAME(optional)
       </div>
-      <div class="col-xs-10">
-            <input type="text" style="width:300px" name="nname"  id="nname" class="page1 form-control">
+      <div class="col-xs-3">
+            <input type="text" name="nname"  id="nname" class="page1 form-control">
      </div>
 </div>
 
@@ -101,7 +108,7 @@
            <div class="col-xs-2">
             UPLOAD PERSONAL PHOTO (optional)(max size is 5MB. jpg, gif, png ONLY)
            </div>
-           <div class="col-xs-10">
+           <div class="col-xs-3">
            <input type="file" name="personal_photo" id="personal_photo" accept="image/*"></input>
            </div>
 </div>
@@ -112,35 +119,23 @@
 
 <div class="col-xs-12">
      <div class="col-xs-2">
-     <label class="inline" for="email">EMAIL<sup>*</sup></label>
+     EMAIL<sup>*</sup>
      </div>
-     <div class="col-xs-10">
-     <input type="text" style="width:300px" name="email"  id="email" class="page1 form-control">
+     <div class="col-xs-3">
+     <input type="text" name="email"  id="email" class="page1 form-control">
      </div>
 </div>
 
 <br>
-<br>
-<br>
-
-<div class="col-xs-12">
-      <div class="col-xs-2">
-      <label class="inline" for="city">CITY<sup>*</sup></label>
-      </div>
-      <div class="col-xs-10">
-      <input type="text" style="width:300px" name="city"  id="city" class="page1 form-control">
-      </div>
-</div>
-
 <br>
 <br>
 
 <div class="col-xs-12">
      <div class="col-xs-2">
-     <label class="inline" for="state">STATE<sup>*</sup></label>
+     STATE<sup>*</sup>
      </div>
-     <div class="col-xs-10">
-     <input type="text" style="width:300px" name="state"  id="state" class="page1 form-control">
+     <div class="col-xs-3">
+     {!! Form::select('state', $states,null,  ['class' => 'form-control', 'id'=>'state']) !!}
      </div>
 </div>
 
@@ -149,10 +144,23 @@
 
 <div class="col-xs-12">
       <div class="col-xs-2">
-      <label class="inline" for="zip">ZIP CODE<sup>*</sup></label>
+      CITY<sup>*</sup>
       </div>
-      <div class="col-xs-10">
-      <input type="text" style="width:300px" name="zipcode"  id="zip" class="page1 form-control">
+      <div class="col-xs-3">
+      <input type="text" class="page1 form-control" name="city" id="city">
+      </div>
+</div>
+
+
+<br>
+<br>
+
+<div class="col-xs-12">
+      <div class="col-xs-2">
+      ZIP CODE<sup>*</sup>
+      </div>
+      <div class="col-xs-3">
+      <input type="text" name="zipcode"  id="zip" class="page1 form-control">
       </div>
 </div>
 
@@ -163,8 +171,8 @@
         <div class="col-xs-2">
         GENDER<sup>*</sup>
         </div>
-        <div class="col-xs-10">
-        <select name="gender" id="gender">
+        <div class="col-xs-3">
+        <select name="gender" class="form-control" id="gender">
         <option value=""></option>
   <option value="Male">Male</option>
   <option value="Female">Female</option>
@@ -178,10 +186,10 @@
 
 <div class="col-xs-12">
       <div class="col-xs-2">
-      <label class="inline" for="phone">PHONE#(optional)</label>
+      PHONE#(optional)
       </div>
-      <div class="col-xs-10">
-      <input type="text" style="width:300px" name="phoneNum"  class="page1 form-control">
+      <div class="col-xs-3">
+      <input type="text" name="phoneNum"  class="page1 form-control">
       </div>
 </div>
 
@@ -190,10 +198,10 @@
 
 <div class="col-xs-12">
       <div class="col-xs-2">
-      <label class="inline" for="dob">DATE OF BIRTH<sup>*</sup></label>
+      DATE OF BIRTH<sup>*</sup>
       </div>
-      <div class="col-xs-10">
-      <input type="date" name="dob" id="dob" class="page1 form-control" style="width:200px;">
+      <div class="col-xs-3">
+      <input type="date" name="dob" id="dob" class="page1 form-control">
       </div>
 </div>
 
@@ -212,127 +220,14 @@
 
 
 <div class="secondPage">
-<p style="font-size:30px; position:relative; padding-left:0%;">APPLICATION</p>
-<p style="font-size:15px; position:relative; padding:0;"><b>TALENT</b></p>
+<p style="font-size:36px; position:relative; padding-left:0%;">APPLICATION</p>
+<p style="font-size:24px; position:relative; padding:0;">talent</p>
 <div class="col-xs-12">
-     <div class="col-xs-4">
-     <label class="inline" for="category1">TALENT CATEGORY<sup>*</sup></label>
+     <div class="col-xs-3">
+     TALENT CATEGORY<sup>*</sup>
      </div>
-     <div class="col-xs-8">
- <select name="category1" id="category1">
-  <option value=""></option>
-  <option value="dance">Dance</option>
-  <option value="fashion">Fashion</option>
-  <option value="film">Film</option>
-  <option value="fine_arts">Fine Arts</option>
-  <option value="music">Music</option>
-  <option value="sports">Sports</option>
-  <option value="other">Other</option>
-</select><br>
-</div>
-</div>
-
-<br>
-<br>
-
-<div class="col-xs-12">
-<div class="col-xs-4">
-SPECIFIC TALENT<sup>*</sup>
-</div>
-<div class="col-xs-8">
-<input type="text" name="specific_talent1" id="specific_talent1" class="form-control" style="width:200px;"></input>
-</div>
-</div>
-
-<br>
-<br>
-
-<div class="col-xs-12">
-<div class="col-xs-12">
-(<b>Ex:</b>&nbsp<b>Dance:</b> salsa dance, ballet, hip hop&nbsp<b>Fashion:</b> model, photographer, make-up artist&nbsp<b>Film: </b>actor, director, producer&nbsp<b>Fine arts:</b> painter, graphic designer&nbsp<b>Music:</b>composer, pianist&nbsp<b>Sports:</b>basketball, baseball, football)
-</div>
-</div>
-
-
-<br>
-<br>
-<br>
-
-
-
-<div class="col-xs-12">
-<div class="col-xs-4">
-UPLOAD PORTFOLIO<br>(At least 1 file. At most 3 files)
-</div>
-</div>
-
-<br>
-<br>
-<br>
-
-
-<div class="col-xs-12">
-<div class="col-xs-4">
-PHOTO(max size is 5MB. jpg, png, gif ONLY)
-</div>
-<div class="col-xs-8">
-<input type="file" name="tphoto1" id="tphoto1" accept="image/*">
-</div>
-</div>
-
-<br>
-<br>
-
-<div class="col-xs-12">
-<div class="col-xs-4">
-AUDIO(link)
-</div>
-<div class="col-xs-8"><input type="text" name="audiolink1" id="audiolink1"  class="page2 form-control" style="width:300px;">
-</div>
-</div>
-
-<br>
-<br>
-
-<div class="col-xs-12">
-<div class="col-xs-4">
-VIDEO(link)
-</div>
-<div class="col-xs-8"><input type="text" name="videolink1" id="videolink1"  class="page2 form-control" style="width:300px;">
-</div>
-</div>
-
-<br>
-<br>
-
-<div class="col-xs-12">
-<div class="col-xs-4">
-<input type="button" id="add_one" value="Add another" class="btn btn-danger"></input>
-</div>
-</div>
-
-<br>
-<br>
-
-<div class="col-xs-12">
-<div class="col-xs-4">
-<input type="button" id="secondPrevious" value="PREVIOUS"  class="btn btn-danger"></input>
-</div>
-<div class="col-xs-8">
-<input type="button" value="NEXT" id="secondNext" class="btn btn-danger"></input>
-</div>
-</div>
-</div>
-
-<div class="add_one">
-<p style="font-size:30px; position:relative; padding-left:0%;">APPLICATION</p>
-<p style="font-size:15px; position:relative; padding:0;"><b>TALENT</b></p>
-<div class="col-xs-12">
-<div class="col-xs-4">
-TALENT CATEGORY<sup>*</sup>
-</div>
-<div class="col-xs-8"> 
-<select name="category2" id="category2">
+     <div class="col-xs-3">
+ <select name="category1" id="category1" class="form-control">
   <option value=""></option>
   <option value="dance">Dance</option>
   <option value="fashion">Fashion</option>
@@ -349,10 +244,123 @@ TALENT CATEGORY<sup>*</sup>
 <br>
 
 <div class="col-xs-12">
-<div class="col-xs-4">
+<div class="col-xs-3">
 SPECIFIC TALENT<sup>*</sup>
 </div>
-<div class="col-xs-8">
+<div class="col-xs-3">
+<input type="text" name="specific_talent1" id="specific_talent1" class="form-control"></input>
+</div>
+</div>
+
+<br>
+<br>
+
+<div class="col-xs-12">
+<div class="col-xs-12">
+(<b>Ex:</b>&nbsp<b>Dance:</b> salsa dance, ballet, hip hop&nbsp<b>Fashion:</b> model, photographer, make-up artist&nbsp<b>Film: </b>actor, director, producer&nbsp<b>Fine arts:</b> painter, graphic designer&nbsp<b>Music:</b>composer, pianist&nbsp<b>Sports:</b>basketball, baseball, football)
+</div>
+</div>
+
+
+<br>
+<br>
+
+
+
+
+<div class="col-xs-12">
+<div class="col-xs-3">
+UPLOAD PORTFOLIO<br>(At least 1 file. At most 3 files)
+</div>
+</div>
+
+<br>
+<br>
+
+
+
+<div class="col-xs-12">
+<div class="col-xs-3">
+PHOTO(max size is 5MB. jpg, png, gif ONLY)
+</div>
+<div class="col-xs-3">
+<input type="file" name="tphoto1" id="tphoto1" accept="image/*">
+</div>
+</div>
+
+<br>
+<br>
+
+<div class="col-xs-12">
+<div class="col-xs-3">
+AUDIO(link)
+</div>
+<div class="col-xs-3"><input type="text" name="audiolink1" id="audiolink1"  class="page2 form-control">
+</div>
+</div>
+
+<br>
+<br>
+
+<div class="col-xs-12">
+<div class="col-xs-3">
+VIDEO(link)
+</div>
+<div class="col-xs-3"><input type="text" name="videolink1" id="videolink1"  class="page2 form-control">
+</div>
+</div>
+
+<br>
+<br>
+
+<div class="col-xs-12">
+<div class="col-xs-2">
+<input type="button" id="add_one" value="Add another" class="btn btn-danger"></input>
+</div>
+</div>
+
+<br>
+<br>
+
+<div class="col-xs-12">
+<div class="col-xs-2">
+<input type="button" id="secondPrevious" value="PREVIOUS"  class="btn btn-danger"></input>
+</div>
+<div class="col-xs-3">
+<input type="button" value="NEXT" id="secondNext" class="btn btn-danger"></input>
+</div>
+</div>
+</div>
+
+<div class="add_one">
+<p style="font-size:36px; position:relative; padding-left:0%;">APPLICATION</p>
+<p style="font-size:24px; position:relative; padding:0;">talent</p>
+<div class="col-xs-12">
+<div class="col-xs-3">
+TALENT CATEGORY<sup>*</sup>
+</div>
+<div class="col-xs-3"> 
+<select name="category2" id="category2" class="form-control">
+  <option value=""></option>
+  <option value="dance">Dance</option>
+  <option value="fashion">Fashion</option>
+  <option value="film">Film</option>
+  <option value="fine_arts">Fine Arts</option>
+  <option value="music">Music</option>
+  <option value="sports">Sports</option>
+  <option value="other">Other</option>
+</select>
+</div>
+</div>
+
+<br>
+<br>
+
+<div class="col-xs-12">
+<div class="col-xs-3">
+SPECIFIC TALENT<sup>*</sup>
+</div>
+<div class="col-xs-3">
 <input type="text" name="specific_talent2" id="specific_talent2" class="form-control" style="width:200px;"></input><br>
 </div>
 </div>
@@ -368,20 +376,18 @@ SPECIFIC TALENT<sup>*</sup>
 
 <br>
 <br>
-<br>
-<br>
+
 
 
 <div class="col-xs-12">
-<div class="col-xs-4">
+<div class="col-xs-3">
 UPLOAD PORTFOLIO<br>(At least 1 file. At most 3 files)
 </div>
 </div>
 
 <br>
 <br>
-<br>
-<br>
+
 
 <div class="col-xs-12">
 <div id="file1">
@@ -392,10 +398,10 @@ UPLOAD PORTFOLIO<br>(At least 1 file. At most 3 files)
 <br>
 
 <div class="col-xs-12">
-<div class="col-xs-4">
+<div class="col-xs-3">
 PHOTO(max size is 5MB. jpg, png, gif ONLY)
 </div>
-<div class="col-xs-8">
+<div class="col-xs-3">
 <input type="file" name="tphoto2" id="tphoto2" accept="image/*">
 </div>
 </div>
@@ -404,10 +410,10 @@ PHOTO(max size is 5MB. jpg, png, gif ONLY)
 <br>
 
 <div class="col-xs-12">
-<div class="col-xs-4">
+<div class="col-xs-3">
 AUDIO(link)
 </div>
-<div class="col-xs-8"><input type="text" name="audiolink2" id="audiolink2"  class="page2 form-control" style="width:300px;">
+<div class="col-xs-3"><input type="text" name="audiolink2" id="audiolink2"  class="page2 form-control" style="width:300px;">
 </div>
  </div>
  
@@ -415,10 +421,10 @@ AUDIO(link)
 <br>
  
  <div class="col-xs-12">
- <div class="col-xs-4">
+ <div class="col-xs-3">
 VIDEO(link)
 </div>
-<div class="col-xs-8"><input type="text" name="videolink2" id="videolink2"  class="page2 form-control" style="width:300px;">
+<div class="col-xs-3"><input type="text" name="videolink2" id="videolink2"  class="page2 form-control" style="width:300px;">
 </div>
 </div>
 
@@ -426,7 +432,7 @@ VIDEO(link)
 <br>
 
 <div class="col-xs-12">
-<div class="col-xs-4">
+<div class="col-xs-2">
 <input type="button" id="add_two" value="Add another" class="btn btn-danger"></input>
 </div>
 </div>
@@ -435,25 +441,25 @@ VIDEO(link)
 <br>
 
 <div class="col-xs-12">
-<div class="col-xs-4">
+<div class="col-xs-2">
 <input type="button" id="addonePrevious" value="PREVIOUS" class="btn btn-danger"></input>
 </div>
-<div class="col-xs-8">
+<div class="col-xs-3">
 <input type="button" value="NEXT" id="addoneNext" class="btn btn-danger"></input>
 </div>
 </div>
 </div>
 
 <div class="add_two">
-<p style="font-size:30px; position:relative; padding-left:0%;">APPLICATION</p>
-<p style="font-size:15px; position:relative; padding:0;"><b>TALENT</b></p>
+<p style="font-size:36px; position:relative; padding-left:0%;">APPLICATION</p>
+<p style="font-size:24px; position:relative; padding:0;">talent</p>
 
 <div class="col-xs-12">
-<div class="col-xs-4">
+<div class="col-xs-3">
 TALENT CATEGORY <sup>*</sup>
 </div>
-<div class="col-xs-8">
-<select name="category3" id="category3">
+<div class="col-xs-3">
+<select name="category3" id="category3" class="form-control">
   <option value=""></option>
   <option value="dance">Dance</option>
   <option value="fashion">Fashion</option>
@@ -470,10 +476,10 @@ TALENT CATEGORY <sup>*</sup>
 <br>
 
 <div class="col-xs-12">
-<div class="col-xs-4">
+<div class="col-xs-3">
 SPECIFIC TALENT<sup>*</sup>
 </div>
-<div class="col-xs-8">
+<div class="col-xs-3">
 <input type="text" name="specific_talent3" id="specific_talent3" class="form-control" style="width:200px;"></input>
 </div>
 </div>
@@ -489,19 +495,17 @@ SPECIFIC TALENT<sup>*</sup>
 
 <br>
 <br>
-<br>
-<br>
+
 
 <div class="col-xs-12">
-<div class="col-xs-4">
+<div class="col-xs-3">
 UPLOAD PORTFOLIO<br>(At least 1 file. At most 3 files)
 </div>
 </div>
 
 <br>
 <br>
-<br>
-<br>
+
 
 <div class="col-xs-12">
 <div id="file2">
@@ -512,10 +516,10 @@ UPLOAD PORTFOLIO<br>(At least 1 file. At most 3 files)
 <br>
 
 <div class="col-xs-12">
-<div class="col-xs-4">
+<div class="col-xs-3">
 PHOTO(max size is 5MB. jpg, png, gif ONLY)
 </div>
-<div class="col-xs-8">
+<div class="col-xs-3">
  <input type="file" name="tphoto3" id="tphoto3" accept="image/*">
  </div>
  </div>
@@ -524,10 +528,10 @@ PHOTO(max size is 5MB. jpg, png, gif ONLY)
 <br>
  
  <div class="col-xs-12">
- <div class="col-xs-4">
+ <div class="col-xs-3">
 AUDIO(link)
 </div>
-<div class="col-xs-8"><input type="text" name="audiolink3" id="audiolink3"  class="page2 form-control" style="width:300px;">
+<div class="col-xs-3"><input type="text" name="audiolink3" id="audiolink3"  class="page2 form-control" style="width:300px;">
 </div>
 </div>
 
@@ -535,10 +539,10 @@ AUDIO(link)
 <br>
 
 <div class="col-xs-12">
-<div class="col-xs-4">
+<div class="col-xs-3">
 VIDEO(link)
 </div>
-<div class="col-xs-8"><input type="text" name="videolink3" id="videolink3"  class="page2 form-control" style="width:300px;">
+<div class="col-xs-3"><input type="text" name="videolink3" id="videolink3"  class="page2 form-control" style="width:300px;">
 </div>
 </div>
 
@@ -546,10 +550,10 @@ VIDEO(link)
 <br>
 
 <div class="col-xs-12">
-<div class="col-xs-4">
+<div class="col-xs-2">
 <input type="button" id="addtwoPrevious" value="PREVIOUS" class="btn btn-danger"></input>
 </div>
-<div class="col-xs-8">
+<div class="col-xs-3">
 <input type="button" value="NEXT" id="addtwoNext" class="btn btn-danger"></input>
 </div>
 </div>
@@ -560,9 +564,11 @@ VIDEO(link)
 
 
 <div class="thirdPage">
-<p style="font-size:30px; position:relative; padding-left:0%;">APPLICATION</p>
-<p style="font-size:15px; position:relative; padding:0;"><b>services desired</b></p>
-<p style="font-size:15px; position:relative; padding:0;">PLEASE CHECK THE BOXES THAT APPLY</p>
+<p style="font-size:36px; position:relative; padding-left:0%;">APPLICATION</p>
+<p style="font-size:24px; position:relative; padding:0;">services desired</p>
+<p style="font-size:24px; position:relative; padding:0;">PLEASE CHECK THE BOXES THAT APPLY</p>
+<div class="col-xs-12">
+<div class="col-xs-3">
 OPPORTUNITIES<sup>*</sup><br>
 <input type="checkbox" name="opportunity[]" value="booking">booking<br>
 <input type="checkbox" name="opportunity[]" value="audition">audition<br>
@@ -572,14 +578,22 @@ OPPORTUNITIES<sup>*</sup><br>
 <input type="checkbox" name="opportunity[]" value="job">job<br>
 <input type="checkbox" name="opportunity[]" value="endorsement">endorsement<br>
 <input type="checkbox" name="opportunity[]" value="" id="oppo_other" onClick="addopp()">other<br>
-<input type="text" name="opportunity[]" id="oppo" disabled class="form-control" style="width:200px;"></input><br><br>
+<input type="text" name="opportunity[]" id="oppo" disabled class="form-control" style="width:200px;"></input><br>
+</div>
+</div>
+<div class="col-xs-12">
+<div class="col-xs-3">
 REPREAENTATIONS<sup>*</sup><br>
 <input type="checkbox" name="representation[]" value="talent agent">talent agent<br>
 <input type="checkbox" name="representation[]" value="record label">record label<br>
 <input type="checkbox" name="representation[]" value="agent manager">agent manager<br>
 <input type="checkbox" name="representation[]" value="modeling agency">modeling agency<br>
 <input type="checkbox" name="representation[]" value="" onClick="addrep()" id="rep_other">other<br>
-<input type="text" name="representation[]" id="rep" disabled class="form-control" style="width:200px;"></input><br><br>
+<input type="text" name="representation[]" id="rep" disabled class="form-control" style="width:200px;"></input><br>
+</div>
+</div>
+<div class="col-xs-12">
+<div class="col-xs-3">
 SERVICES<sup>*</sup><br>
 <input type="checkbox" name="service[]" value="brand manager">brand manager<br>
 <input type="checkbox" name="service[]" value="lawyer">lawyer<br>
@@ -591,12 +605,14 @@ SERVICES<sup>*</sup><br>
 <input type="checkbox" name="service[]" value="consulting">consulting<br>
 <input type="checkbox" name="service[]" value="collaboration">collaboration<br>
 <input type="checkbox" name="service[]" value="" onClick="addser()" id="ser_other">other<br>
-<input type="text" name="service[]" id="ser" disabled class="form-control" style="width:200px;"></input><br><br>
+<input type="text" name="service[]" id="ser" disabled class="form-control" style="width:200px;"></input><br>
+</div>
+</div>
 <div class="col-xs-12">
 <div class="col-xs-2">
 <input type='button' value="PREVIOUS" id="thirdPrevious" class="btn btn-danger"></input>
 </div>
-<div class="col-xs-10">
+<div class="col-xs-3">
 <input type="button" id="thirdNext" value="NEXT" class="btn btn-danger"></input>
 </div>
 </div>
@@ -607,30 +623,32 @@ SERVICES<sup>*</sup><br>
 
 
 <div class="fourPage">
-<p style="font-size:30px; position:relative; padding-left:0%;">APPLICATION</p>
-<p style="font-size:15px; position:relative; padding:0;"><b>OPTIONAL(STRONGLY RECOMMENDED)</b></p>
+<p style="font-size:36px; position:relative; padding-left:0%;">APPLICATION</p>
+<p style="font-size:24px; position:relative; padding:0;">OPTIONAL(STRONGLY RECOMMENDED)</p>
 
 <div class="col-xs-12">
-<div class="col-xs-4">
+<div class="col-xs-2">
 Describe yourself in three words
 </div>
-<div class="col-xs-8">
+<div class="col-xs-3">
 <input type="text" style="width:300px"  name="describeword1" class="page4 form-control">
+</div>
+<div class="col-xs-3">
 <input type="text" style="width:300px"  name="describeword2" class="page4 form-control">
+</div>
+<div class="col-xs-3">
 <input type="text"  style="width:300px"  name="describeword3" class="page4 form-control">
  </div>
  </div>
  
 <br>
 <br>
-<br>
-<br>
  
 <div class="col-xs-12">
-<div class="col-xs-4">
+<div class="col-xs-2">
 Intro video(link)
 </div>
-<div class="col-xs-8">
+<div class="col-xs-3">
 <input type="text" style="width:300px"  name="introVideo" id="introVideo" class="page4 form-control">
 </div>
 </div>
@@ -640,10 +658,10 @@ Intro video(link)
 
 
  <div class="col-xs-12">
- <div class="col-xs-4">
+ <div class="col-xs-2">
 Current representation
 </div> 
-<div class="col-xs-8">
+<div class="col-xs-3">
 <input type="text"  style="width:300px"  name="current_representation" class="page4 form-control">
 </div>
 </div>
@@ -652,10 +670,10 @@ Current representation
 <br>
 
 <div class="col-xs-12">
-<div class="col-xs-4">
+<div class="col-xs-2">
 Accolades 
 </div>
-<div class="col-xs-8">
+<div class="col-xs-3">
 <input type="text"  style="width:300px"  name="accolades" class="page4 form-control">
 </div>
 </div>
@@ -664,10 +682,10 @@ Accolades
 <br>
 
 <div class="col-xs-12">
-<div class="col-xs-4">
+<div class="col-xs-2">
 Achievements 
 </div>
-<div class="col-xs-8">
+<div class="col-xs-3">
 <input type="text"  style="width:300px"  name="achievements" class="page4 form-control">
 </div>
 </div>
@@ -676,10 +694,10 @@ Achievements
 <br>
 
 <div class="col-xs-12">
-<div class="col-xs-4">
+<div class="col-xs-2">
 Experience 
 </div>
-<div class="col-xs-8">
+<div class="col-xs-3">
 <input type="text"  style="width:300px"  name="experiences" class="page4 form-control">
 </div>
 </div>
@@ -688,10 +706,10 @@ Experience
 <br>
 
 <div class="col-xs-12">
-<div class="col-xs-4">
+<div class="col-xs-2">
 Related talent 
 </div>
-<div class="col-xs-8">
+<div class="col-xs-3">
 <input type="text"  style="width:300px"  name="relative_talent" class="page4 form-control">
 </div>
 </div>
@@ -700,10 +718,10 @@ Related talent
 <br>
 
 <div class="col-xs-12">
-<div class="col-xs-4">
+<div class="col-xs-2">
 Anything else 
 </div>
-<div class="col-xs-8">
+<div class="col-xs-3">
 <input type="text"  style="width:300px"  name="anything" class="page4 form-control">
 </div>
 </div>
@@ -712,10 +730,10 @@ Anything else
 <br>
 
 <div class="col-xs-12">
-<div class="col-xs-4">
+<div class="col-xs-2">
 <input type="button" value="PREVIOUS" id="lastPrevious" class="btn btn-danger"></input>
 </div>
-<div class="col-xs-8">
+<div class="col-xs-3">
 <input type="submit" value="SUBMIT" id="submit" formmethod="post" class="btn btn-danger"></input>
 </div>
 </div>
@@ -1027,5 +1045,66 @@ function addser(){
 		ele.disabled=true;
 		}
 }
+/*function loadXML(url) 
+	{		
+		if (window.XMLHttpRequest)
+		{
+			xmlhttp=new XMLHttpRequest(); 
+		}
+		else 
+		{
+			xmlhttp=new ActiveXObject("Microsoft.XMLHTTP"); 
+		}
+		xmlhttp.open("GET",url,false);
+		xmlhttp.send();
+		xmlDoc=xmlhttp.responseXML;
+		if(xmlDoc==null)
+		{
+			alert("cannot find this XML file");
+			exit(0);
+		}
+		return xmlDoc;
+}
+
+function viewXML(URL)
+{
+	if(URL=="")
+	{
+		alert("Please choose valid state!"); 
+		exit(0);
+	};
+	xmlDoc = loadXML(URL);
+	generateHTML(xmlDoc);
+}
+function generateHTML(xmlDoc)
+{
+	root=xmlDoc.DocumentElement;
+	cities=xmlDoc.getElementsByTagName("CityList");
+	cityList=cities.item(0).childNodes;
+	var i = 0;
+	for(i = 0; i < cityList.length; i++)
+	{
+	document.getElementById('cityList').innerHTML+="<option value='"+cityList.item(i).firstChild.nodeValue+"'>"+cityList.item(i).firstChild.nodeValue+"</option>";
+	}	
+}*/
 </script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.min.js">
+</script>
+<script type="text/javascript">
+  $('select').select2();
+  $('#state').select2({
+  });
+  /*
+ if($('#state').val()!=""){
+	  var URL = "http://talentscool.local/cities/" + $('#state').val();
+	  viewXML(URL);
+ }
+ $('#state').change(function(){
+	  var URL = "http://talentscool.local/cities/" + $('#state').val();
+	  document.getElementById('cityList').innerHTML="";
+	  viewXML(URL);
+  });*/
+</script>
+
 </html>

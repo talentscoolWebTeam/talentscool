@@ -71,7 +71,7 @@ class ApplicationController extends Controller {
 		}
 	
 		$email=$_POST['email'];
-		$destinationPath = 'C:\wamp\apps\talentscool\files';
+		$destinationPath = 'files';
 		$clients=  new \App\Client();
 		$clients->fname=$_POST['fname'];
 		$clients->lname=$_POST['lname'];
