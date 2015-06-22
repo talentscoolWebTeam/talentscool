@@ -9,7 +9,9 @@ class ApplicationController extends Controller {
 	//
 	public function application()
 	{
-		return view('application');
+		$state = \App\Location::distinct()->select('full_state', 'full_state')->get();
+		$states = array_unique($state->lists('full_state', 'full_state'));
+		return view('application', compact('states'));
 	}
 	
 	public function loading()
@@ -51,27 +53,27 @@ class ApplicationController extends Controller {
 		$tphoto3 = \Input::file('tphoto3');
 		if($personal_photo!=null){
 			$size=$personal_photo->getClientSize();
-			$type=$personal_photo->guessExtension();
+			//$type=$personal_photo->guessExtension();
 			if($size<=0||$size>$personal_photo->getMaxFilesize()||$this->check($personal_photo))return view('error');
 		}
 		if($tphoto1!=null){
 			$size=$tphoto1->getClientSize();
-			$type=$tphoto1->guessExtension();
+			//$type=$tphoto1->guessExtension();
 			if($size<=0||$size>$tphoto1->getMaxFilesize()||$this->check($tphoto1))return view('error');
 		}
 		if($tphoto2!=null){
 			$size=$tphoto2->getClientSize();
-			$type=$tphoto2->guessExtension();
+			//$type=$tphoto2->guessExtension();
 			if($size<=0||$size>$tphoto2->getMaxFilesize()||$this->check($tphoto2))return view('error');
 		}
 		if($tphoto3!=null){
 			$size=$tphoto3->getClientSize();
-			$type=$tphoto3->guessExtension();
+			//$type=$tphoto3->guessExtension();
 			if($size<=0||$size>$tphoto3->getMaxFilesize()||$this->check($tphoto3))return view('error');
 		}
 	
 		$email=$_POST['email'];
-		$destinationPath = 'files';
+		$destinationPath = 'C:\wamp\apps\talentscool\files';
 		$clients=  new \App\Client();
 		$clients->fname=$_POST['fname'];
 		$clients->lname=$_POST['lname'];
