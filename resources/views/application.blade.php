@@ -56,13 +56,7 @@
 </style>
 
 <body>
-
-
-<!--
-<form method="post" action="application" onSubmit="window.open('http://talentscool.local/application_2')"> -->
-<div id="result">
-</div>
-<form method="POST" action="http://talentscool.local/application" accept-charset="UTF-8" enctype="multipart/form-data"><input name="_token" type="hidden" value="{{ csrf_token() }}">
+{!! Form::open(['action'=>'ApplicationController@store','enctype' => 'multipart/form-data']) !!}
 <div class="firstPage">
 <p class="col-xs-12" style="font-size:36px;">APPLICATION</p>
 <p class="col-xs-12">personal information</p>
@@ -738,11 +732,7 @@ Anything else
 </div>
 </div>
 </div>
-</form>
-
-<div class="thanks">
-<p style="font-size:30px; position:relative; padding-left:0;">Thanks for your interest. Your application has been submitted. If there is a match, we will contact you ASAP.<br>Thank you!</p>
-</div>
+{!! Form::close() !!}
 
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -836,7 +826,6 @@ Anything else
 	});
 	$('#thirdNext').click(function(){
 		var message="";
-		if((document.getElementById('rep_other').checked&&document.getElementById('rep').value=="")||(document.getElementById('oppo_other').checked&&document.getElementById('oppo').value=="")||(document.getElementById('ser_other').checked&&document.getElementById('ser').value==""))message+="please fill the chosen other blank.\n"
 	    if($("[name='representation[]']:checked").length==0)message+="representation/";
 	    if($("[name='opportunity[]']:checked").length==0)message+="opportunity/";
 		if($("[name='service[]']:checked").length==0)message+="service/";
@@ -844,6 +833,11 @@ Anything else
 		if(message!=""){
 		    message=message.substring(0,message.length-1);
 			message+=" are required. Please fill out.";
+			alert(message);
+		}
+		else if((document.getElementById('rep_other').checked&&document.getElementById('rep').value=="")||(document.getElementById('oppo_other').checked&&document.getElementById('oppo').value=="")||(document.getElementById('ser_other').checked&&document.getElementById('ser').value=="")){
+			message="";
+			message+="Please fill the chosen other blank.\n";
 			alert(message);
 		}
 		else{
@@ -1007,12 +1001,6 @@ Anything else
 		}
 	});
 	
-
-
-
-
-
-
 	var oppo=0;
 	var rep=0;
 	var ser=0;
@@ -1045,48 +1033,6 @@ function addser(){
 		ele.disabled=true;
 		}
 }
-/*function loadXML(url) 
-	{		
-		if (window.XMLHttpRequest)
-		{
-			xmlhttp=new XMLHttpRequest(); 
-		}
-		else 
-		{
-			xmlhttp=new ActiveXObject("Microsoft.XMLHTTP"); 
-		}
-		xmlhttp.open("GET",url,false);
-		xmlhttp.send();
-		xmlDoc=xmlhttp.responseXML;
-		if(xmlDoc==null)
-		{
-			alert("cannot find this XML file");
-			exit(0);
-		}
-		return xmlDoc;
-}
-
-function viewXML(URL)
-{
-	if(URL=="")
-	{
-		alert("Please choose valid state!"); 
-		exit(0);
-	};
-	xmlDoc = loadXML(URL);
-	generateHTML(xmlDoc);
-}
-function generateHTML(xmlDoc)
-{
-	root=xmlDoc.DocumentElement;
-	cities=xmlDoc.getElementsByTagName("CityList");
-	cityList=cities.item(0).childNodes;
-	var i = 0;
-	for(i = 0; i < cityList.length; i++)
-	{
-	document.getElementById('cityList').innerHTML+="<option value='"+cityList.item(i).firstChild.nodeValue+"'>"+cityList.item(i).firstChild.nodeValue+"</option>";
-	}	
-}*/
 </script>
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.min.js">
@@ -1095,16 +1041,6 @@ function generateHTML(xmlDoc)
   $('select').select2();
   $('#state').select2({
   });
-  /*
- if($('#state').val()!=""){
-	  var URL = "http://talentscool.local/cities/" + $('#state').val();
-	  viewXML(URL);
- }
- $('#state').change(function(){
-	  var URL = "http://talentscool.local/cities/" + $('#state').val();
-	  document.getElementById('cityList').innerHTML="";
-	  viewXML(URL);
-  });*/
 </script>
 
 </html>

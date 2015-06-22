@@ -29,7 +29,7 @@ class DatabaseSeeder extends Seeder {
 class LocationTableSeeder extends Seeder{
 	public function run()
 	{
-	
+		\App\Location::create(array('state'=>'','full_state'=>''));
 		\App\Location::create(array('state'=>'AL','full_state'=>'Alabama'));
 		\App\Location::create(array('state'=>'AK','full_state'=>'Alaska'));
 		\App\Location::create(array('state'=>'AZ','full_state'=>'Arizona'));
