@@ -56,10 +56,13 @@
 </style>
 
 <body>
+
+
+
 {!! Form::open(['action'=>'ApplicationController@store','enctype' => 'multipart/form-data']) !!}
 <div class="firstPage">
 <p class="col-xs-12" style="font-size:36px;">APPLICATION</p>
-<p class="col-xs-12">personal information</p>
+<p class="col-xs-12">Personal information</p>
 <b style="color:red;">*</b><b> required</b>
 <br><br>
 <div class="col-xs-12">
@@ -71,8 +74,7 @@
 	</div>
 </div>
 
-<br>
-<br>
+<div class="col-xs-12">&nbsp;</div>
 
 <div class="col-xs-12">
 	<div class = "col-xs-2">
@@ -83,33 +85,29 @@
     </div>
 </div>
 
-<br>
-<br>
+<div class="col-xs-12">&nbsp;</div>
 
 <div class="col-xs-12">
      <div class="col-xs-2">
-            NICKNAME(optional)
+            NICKNAME&nbsp(optional)
       </div>
       <div class="col-xs-3">
             <input type="text" name="nname"  id="nname" class="page1 form-control">
      </div>
 </div>
 
-<br>
-<br>
+<div class="col-xs-12">&nbsp;</div>
 
 <div class="col-xs-12">
            <div class="col-xs-2">
-            UPLOAD PERSONAL PHOTO (optional)(max size is 5MB. jpg, gif, png ONLY)
+            UPLOAD PERSONAL PHOTO&nbsp(optional)&nbsp(max size is 5MB. jpg, gif, png ONLY)
            </div>
            <div class="col-xs-3">
            <input type="file" name="personal_photo" id="personal_photo" accept="image/*"></input>
            </div>
 </div>
 
-<br>
-<br>
-<br>
+<div class="col-xs-12">&nbsp;</div>
 
 <div class="col-xs-12">
      <div class="col-xs-2">
@@ -120,9 +118,7 @@
      </div>
 </div>
 
-<br>
-<br>
-<br>
+<div class="col-xs-12">&nbsp;</div>
 
 <div class="col-xs-12">
      <div class="col-xs-2">
@@ -133,8 +129,7 @@
      </div>
 </div>
 
-<br>
-<br>
+<div class="col-xs-12">&nbsp;</div>
 
 <div class="col-xs-12">
       <div class="col-xs-2">
@@ -146,9 +141,7 @@
 </div>
 
 
-<br>
-<br>
-
+<div class="col-xs-12">&nbsp;</div>
 <div class="col-xs-12">
       <div class="col-xs-2">
       ZIP CODE<sup>*</sup>
@@ -158,9 +151,7 @@
       </div>
 </div>
 
-<br>
-<br>
-
+<div class="col-xs-12">&nbsp;</div>
 <div class="col-xs-12">
         <div class="col-xs-2">
         GENDER<sup>*</sup>
@@ -175,20 +166,18 @@
         </div>
  </div>
 
-<br>
-<br>
+<div class="col-xs-12">&nbsp;</div>
 
 <div class="col-xs-12">
       <div class="col-xs-2">
-      PHONE#(optional)
+      PHONE&nbspNO.&nbsp(optional)
       </div>
       <div class="col-xs-3">
       <input type="text" name="phoneNum"  class="page1 form-control">
       </div>
 </div>
 
-<br>
-<br>
+<div class="col-xs-12">&nbsp;</div>
 
 <div class="col-xs-12">
       <div class="col-xs-2">
@@ -199,12 +188,11 @@
       </div>
 </div>
 
-<br>
-<br>
+<div class="col-xs-12">&nbsp;</div>
 <input type="text" name="status" value="2" style="display:none;">
 <div class="col-xs-12">
      <div class="col-xs-2">
-     <input type="button" value="NEXT" id="firstNext" style="float:left" class="btn btn-danger"></input>
+     <input type="button" value="NEXT" id="firstNext" style="font-family:'Roboto', Helvetica, Arial, sans-serif" class="btn btn-danger"></input>
      </div>
      </div>
 </div>
@@ -215,7 +203,7 @@
 
 <div class="secondPage">
 <p style="font-size:36px; position:relative; padding-left:0%;">APPLICATION</p>
-<p style="font-size:24px; position:relative; padding:0;">talent</p>
+<p style="font-size:24px; position:relative; padding:0;">Talent</p>
 <div class="col-xs-12">
      <div class="col-xs-3">
      TALENT CATEGORY<sup>*</sup>
@@ -246,89 +234,79 @@ SPECIFIC TALENT<sup>*</sup>
 </div>
 </div>
 
-<br>
-<br>
+<div class="col-xs-12">&nbsp;</div>
 
 <div class="col-xs-12">
 <div class="col-xs-12">
-(<b>Ex:</b>&nbsp<b>Dance:</b> salsa dance, ballet, hip hop&nbsp<b>Fashion:</b> model, photographer, make-up artist&nbsp<b>Film: </b>actor, director, producer&nbsp<b>Fine arts:</b> painter, graphic designer&nbsp<b>Music:</b>composer, pianist&nbsp<b>Sports:</b>basketball, baseball, football)
+(<b>Ex:</b>&nbsp<b>Dance:</b> salsa dance, ballet, hip hop&nbsp<b>Fashion:</b> model, photographer, make-up artist&nbsp<b>Film: </b>actor, director, producer&nbsp<b>Fine arts:</b> painter, graphic designer&nbsp<b>Music:&nbsp</b>composer, pianist&nbsp<b>Sports:&nbsp</b>basketball, baseball, football)
 </div>
 </div>
 
 
-<br>
-<br>
-
+<div class="col-xs-12">&nbsp;</div>
 
 
 
 <div class="col-xs-12">
 <div class="col-xs-3">
-UPLOAD PORTFOLIO<br>(At least 1 file. At most 3 files)
+UPLOAD PORTFOLIO<br>(Choose at least one of the below)
 </div>
 </div>
 
-<br>
-<br>
-
+<div class="col-xs-12">&nbsp;</div>
 
 
 <div class="col-xs-12">
 <div class="col-xs-3">
-PHOTO(max size is 5MB. jpg, png, gif ONLY)
+PHOTO&nbsp(max size is 5MB. jpg, png, gif ONLY)
 </div>
 <div class="col-xs-3">
 <input type="file" name="tphoto1" id="tphoto1" accept="image/*">
 </div>
 </div>
 
-<br>
-<br>
+<div class="col-xs-12">&nbsp;</div>
 
 <div class="col-xs-12">
 <div class="col-xs-3">
-AUDIO(link)
+AUDIO&nbsp(link)
 </div>
 <div class="col-xs-3"><input type="text" name="audiolink1" id="audiolink1"  class="page2 form-control">
 </div>
 </div>
 
-<br>
-<br>
+<div class="col-xs-12">&nbsp;</div>
 
 <div class="col-xs-12">
 <div class="col-xs-3">
-VIDEO(link)
+VIDEO&nbsp(link)
 </div>
 <div class="col-xs-3"><input type="text" name="videolink1" id="videolink1"  class="page2 form-control">
 </div>
 </div>
 
-<br>
-<br>
-
+<div class="col-xs-12">&nbsp;</div>
 <div class="col-xs-12">
 <div class="col-xs-2">
-<input type="button" id="add_one" value="Add another" class="btn btn-danger"></input>
+<input type="button" id="add_one" value="Add another" class="btn btn-danger" style="font-family:'Roboto', Helvetica, Arial, sans-serif"></input>
 </div>
 </div>
 
-<br>
-<br>
+<div class="col-xs-12">&nbsp;</div>
 
 <div class="col-xs-12">
 <div class="col-xs-2">
-<input type="button" id="secondPrevious" value="PREVIOUS"  class="btn btn-danger"></input>
+<input type="button" id="secondPrevious" value="PREVIOUS"  class="btn btn-danger" style="font-family:'Roboto', Helvetica, Arial, sans-serif"></input>
 </div>
 <div class="col-xs-3">
-<input type="button" value="NEXT" id="secondNext" class="btn btn-danger"></input>
+<input type="button" value="NEXT" id="secondNext" class="btn btn-danger" style="font-family:'Roboto', Helvetica, Arial, sans-serif"></input>
 </div>
 </div>
 </div>
 
 <div class="add_one">
 <p style="font-size:36px; position:relative; padding-left:0%;">APPLICATION</p>
-<p style="font-size:24px; position:relative; padding:0;">talent</p>
+<p style="font-size:24px; position:relative; padding:0;">Talent</p>
 <div class="col-xs-12">
 <div class="col-xs-3">
 TALENT CATEGORY<sup>*</sup>
@@ -347,8 +325,7 @@ TALENT CATEGORY<sup>*</sup>
 </div>
 </div>
 
-<br>
-<br>
+<div class="col-xs-12">&nbsp;</div>
 
 <div class="col-xs-12">
 <div class="col-xs-3">
@@ -359,28 +336,24 @@ SPECIFIC TALENT<sup>*</sup>
 </div>
 </div>
 
-<br>
-<br>
+<div class="col-xs-12">&nbsp;</div>
 
 <div class="col-xs-12">
 <div class="col-xs-12">
-(<b>Ex:</b>&nbsp<b>Dance:</b> salsa dance, ballet, hip hop&nbsp<b>Fashion:</b> model, photographer, make-up artist&nbsp<b>Film: </b>actor, director, producer&nbsp<b>Fine arts:</b> painter, graphic designer&nbsp<b>Music:</b>composer, pianist&nbsp<b>Sports:</b>basketball, baseball, football)
+(<b>Ex:</b>&nbsp<b>Dance:</b> salsa dance, ballet, hip hop&nbsp<b>Fashion:</b> model, photographer, make-up artist&nbsp<b>Film: </b>actor, director, producer&nbsp<b>Fine arts:</b> painter, graphic designer&nbsp<b>Music:&nbsp</b>composer, pianist&nbsp<b>Sports:&nbsp</b>basketball, baseball, football)
 </div>
 </div>
 
-<br>
-<br>
-
+<div class="col-xs-12">&nbsp;</div>
 
 
 <div class="col-xs-12">
 <div class="col-xs-3">
-UPLOAD PORTFOLIO<br>(At least 1 file. At most 3 files)
+UPLOAD PORTFOLIO<br>(Choose at least one of the below)
 </div>
 </div>
 
-<br>
-<br>
+<div class="col-xs-12">&nbsp;</div>
 
 
 <div class="col-xs-12">
@@ -388,65 +361,60 @@ UPLOAD PORTFOLIO<br>(At least 1 file. At most 3 files)
 </div>
 </div>
 
-<br>
-<br>
+<div class="col-xs-12">&nbsp;</div>
 
 <div class="col-xs-12">
 <div class="col-xs-3">
-PHOTO(max size is 5MB. jpg, png, gif ONLY)
+PHOTO&nbsp(max size is 5MB. jpg, png, gif ONLY)
 </div>
 <div class="col-xs-3">
 <input type="file" name="tphoto2" id="tphoto2" accept="image/*">
 </div>
 </div>
 
-<br>
-<br>
+<div class="col-xs-12">&nbsp;</div>
 
 <div class="col-xs-12">
 <div class="col-xs-3">
-AUDIO(link)
+AUDIO&nbsp(link)
 </div>
 <div class="col-xs-3"><input type="text" name="audiolink2" id="audiolink2"  class="page2 form-control" style="width:300px;">
 </div>
  </div>
  
- <br>
-<br>
+<div class="col-xs-12">&nbsp;</div>
  
  <div class="col-xs-12">
  <div class="col-xs-3">
-VIDEO(link)
+VIDEO&nbsp(link)
 </div>
 <div class="col-xs-3"><input type="text" name="videolink2" id="videolink2"  class="page2 form-control" style="width:300px;">
 </div>
 </div>
 
-<br>
-<br>
+<div class="col-xs-12">&nbsp;</div>
 
 <div class="col-xs-12">
 <div class="col-xs-2">
-<input type="button" id="add_two" value="Add another" class="btn btn-danger"></input>
+<input type="button" id="add_two" value="Add another" class="btn btn-danger" style="font-family:'Roboto', Helvetica, Arial, sans-serif"></input>
 </div>
 </div>
 
-<br>
-<br>
+<div class="col-xs-12">&nbsp;</div>
 
 <div class="col-xs-12">
 <div class="col-xs-2">
-<input type="button" id="addonePrevious" value="PREVIOUS" class="btn btn-danger"></input>
+<input type="button" id="addonePrevious" value="PREVIOUS" class="btn btn-danger" style="font-family:'Roboto', Helvetica, Arial, sans-serif"></input>
 </div>
 <div class="col-xs-3">
-<input type="button" value="NEXT" id="addoneNext" class="btn btn-danger"></input>
+<input type="button" value="NEXT" id="addoneNext" class="btn btn-danger" style="font-family:'Roboto', Helvetica, Arial, sans-serif"></input>
 </div>
 </div>
 </div>
 
 <div class="add_two">
 <p style="font-size:36px; position:relative; padding-left:0%;">APPLICATION</p>
-<p style="font-size:24px; position:relative; padding:0;">talent</p>
+<p style="font-size:24px; position:relative; padding:0;">Talent</p>
 
 <div class="col-xs-12">
 <div class="col-xs-3">
@@ -466,8 +434,7 @@ TALENT CATEGORY <sup>*</sup>
 </div>
 </div>
 
-<br>
-<br>
+<div class="col-xs-12">&nbsp;</div>
 
 <div class="col-xs-12">
 <div class="col-xs-3">
@@ -478,27 +445,23 @@ SPECIFIC TALENT<sup>*</sup>
 </div>
 </div>
 
-<br>
-<br>
-
+<div class="col-xs-12">&nbsp;</div>
 <div class="col-xs-12">
 <div class="col-xs-12">
-(<b>Ex:</b>&nbsp<b>Dance:</b> salsa dance, ballet, hip hop&nbsp<b>Fashion:</b> model, photographer, make-up artist&nbsp<b>Film: </b>actor, director, producer&nbsp<b>Fine arts:</b> painter, graphic designer&nbsp<b>Music:</b>composer, pianist&nbsp<b>Sports:</b>basketball, baseball, football)
+(<b>Ex:</b>&nbsp<b>Dance:</b> salsa dance, ballet, hip hop&nbsp<b>Fashion:</b> model, photographer, make-up artist&nbsp<b>Film: </b>actor, director, producer&nbsp<b>Fine arts:</b> painter, graphic designer&nbsp<b>Music:&nbsp</b>composer, pianist&nbsp<b>Sports:&nbsp</b>basketball, baseball, football)
 </div>
 </div>
 
-<br>
-<br>
+<div class="col-xs-12">&nbsp;</div>
 
 
 <div class="col-xs-12">
 <div class="col-xs-3">
-UPLOAD PORTFOLIO<br>(At least 1 file. At most 3 files)
+UPLOAD PORTFOLIO<br>(Choose at least one of the below)
 </div>
 </div>
 
-<br>
-<br>
+<div class="col-xs-12">&nbsp;</div>
 
 
 <div class="col-xs-12">
@@ -506,49 +469,43 @@ UPLOAD PORTFOLIO<br>(At least 1 file. At most 3 files)
 </div>
 </div>
 
-<br>
-<br>
-
+<div class="col-xs-12">&nbsp;</div>
 <div class="col-xs-12">
 <div class="col-xs-3">
-PHOTO(max size is 5MB. jpg, png, gif ONLY)
+PHOTO&nbsp(max size is 5MB. jpg, png, gif ONLY)
 </div>
 <div class="col-xs-3">
  <input type="file" name="tphoto3" id="tphoto3" accept="image/*">
  </div>
  </div>
  
- <br>
-<br>
+<div class="col-xs-12">&nbsp;</div>
  
  <div class="col-xs-12">
  <div class="col-xs-3">
-AUDIO(link)
+AUDIO&nbsp(link)
 </div>
 <div class="col-xs-3"><input type="text" name="audiolink3" id="audiolink3"  class="page2 form-control" style="width:300px;">
 </div>
 </div>
 
-<br>
-<br>
+<div class="col-xs-12">&nbsp;</div>
 
 <div class="col-xs-12">
 <div class="col-xs-3">
-VIDEO(link)
+VIDEO&nbsp(link)
 </div>
 <div class="col-xs-3"><input type="text" name="videolink3" id="videolink3"  class="page2 form-control" style="width:300px;">
 </div>
 </div>
 
-<br>
-<br>
-
+<div class="col-xs-12">&nbsp;</div>
 <div class="col-xs-12">
 <div class="col-xs-2">
-<input type="button" id="addtwoPrevious" value="PREVIOUS" class="btn btn-danger"></input>
+<input type="button" id="addtwoPrevious" value="PREVIOUS" class="btn btn-danger" style="font-family:'Roboto', Helvetica, Arial, sans-serif"></input>
 </div>
 <div class="col-xs-3">
-<input type="button" value="NEXT" id="addtwoNext" class="btn btn-danger"></input>
+<input type="button" value="NEXT" id="addtwoNext" class="btn btn-danger" style="font-family:'Roboto', Helvetica, Arial, sans-serif"></input>
 </div>
 </div>
 </div>
@@ -559,7 +516,7 @@ VIDEO(link)
 
 <div class="thirdPage">
 <p style="font-size:36px; position:relative; padding-left:0%;">APPLICATION</p>
-<p style="font-size:24px; position:relative; padding:0;">services desired</p>
+<p style="font-size:24px; position:relative; padding:0;">Services desired</p>
 <p style="font-size:24px; position:relative; padding:0;">PLEASE CHECK THE BOXES THAT APPLY</p>
 <div class="col-xs-12">
 <div class="col-xs-3">
@@ -577,7 +534,7 @@ OPPORTUNITIES<sup>*</sup><br>
 </div>
 <div class="col-xs-12">
 <div class="col-xs-3">
-REPREAENTATIONS<sup>*</sup><br>
+REPRESENTATIONS<sup>*</sup><br>
 <input type="checkbox" name="representation[]" value="talent agent">talent agent<br>
 <input type="checkbox" name="representation[]" value="record label">record label<br>
 <input type="checkbox" name="representation[]" value="agent manager">agent manager<br>
@@ -604,10 +561,10 @@ SERVICES<sup>*</sup><br>
 </div>
 <div class="col-xs-12">
 <div class="col-xs-2">
-<input type='button' value="PREVIOUS" id="thirdPrevious" class="btn btn-danger"></input>
+<input type='button' value="PREVIOUS" id="thirdPrevious" class="btn btn-danger" style="font-family:'Roboto', Helvetica, Arial, sans-serif"></input>
 </div>
 <div class="col-xs-3">
-<input type="button" id="thirdNext" value="NEXT" class="btn btn-danger"></input>
+<input type="button" id="thirdNext" value="NEXT" class="btn btn-danger" style="font-family:'Roboto', Helvetica, Arial, sans-serif"></input>
 </div>
 </div>
 </div>
@@ -618,7 +575,7 @@ SERVICES<sup>*</sup><br>
 
 <div class="fourPage">
 <p style="font-size:36px; position:relative; padding-left:0%;">APPLICATION</p>
-<p style="font-size:24px; position:relative; padding:0;">OPTIONAL(STRONGLY RECOMMENDED)</p>
+<p style="font-size:24px; position:relative; padding:0;">Optional&nbsp(strongly recommend)</p>
 
 <div class="col-xs-12">
 <div class="col-xs-2">
@@ -635,20 +592,17 @@ Describe yourself in three words
  </div>
  </div>
  
-<br>
-<br>
- 
+<div class="col-xs-12">&nbsp;</div> 
 <div class="col-xs-12">
 <div class="col-xs-2">
-Intro video(link)
+Intro video&nbsp(link)
 </div>
 <div class="col-xs-3">
 <input type="text" style="width:300px"  name="introVideo" id="introVideo" class="page4 form-control">
 </div>
 </div>
 
-<br>
-<br>
+<div class="col-xs-12">&nbsp;</div>
 
 
  <div class="col-xs-12">
@@ -660,8 +614,7 @@ Current representation
 </div>
 </div>
 
-<br>
-<br>
+<div class="col-xs-12">&nbsp;</div>
 
 <div class="col-xs-12">
 <div class="col-xs-2">
@@ -672,8 +625,7 @@ Accolades
 </div>
 </div>
 
-<br>
-<br>
+<div class="col-xs-12">&nbsp;</div>
 
 <div class="col-xs-12">
 <div class="col-xs-2">
@@ -684,8 +636,7 @@ Achievements
 </div>
 </div>
 
-<br>
-<br>
+<div class="col-xs-12">&nbsp;</div>
 
 <div class="col-xs-12">
 <div class="col-xs-2">
@@ -696,8 +647,7 @@ Experience
 </div>
 </div>
 
-<br>
-<br>
+<div class="col-xs-12">&nbsp;</div>
 
 <div class="col-xs-12">
 <div class="col-xs-2">
@@ -708,9 +658,7 @@ Related talent
 </div>
 </div>
 
-<br>
-<br>
-
+<div class="col-xs-12">&nbsp;</div>
 <div class="col-xs-12">
 <div class="col-xs-2">
 Anything else 
@@ -720,15 +668,14 @@ Anything else
 </div>
 </div>
 
-<br>
-<br>
+<div class="col-xs-12">&nbsp;</div>
 
 <div class="col-xs-12">
 <div class="col-xs-2">
-<input type="button" value="PREVIOUS" id="lastPrevious" class="btn btn-danger"></input>
+<input type="button" value="PREVIOUS" id="lastPrevious" class="btn btn-danger" style="font-family:'Roboto', Helvetica, Arial, sans-serif"></input>
 </div>
 <div class="col-xs-3">
-<input type="submit" value="SUBMIT" id="submit" formmethod="post" class="btn btn-danger"></input>
+<input type="submit" value="SUBMIT" id="submit" formmethod="post" class="btn btn-danger" style="font-family:'Roboto', Helvetica, Arial, sans-serif"></input>
 </div>
 </div>
 </div>
