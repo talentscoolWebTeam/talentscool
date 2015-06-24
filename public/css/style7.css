@@ -96,7 +96,7 @@ p {
 ---------------------------------*/
 
 #header_wrapper {
-    background: #000;
+    background: #454545;
     padding: 20px 0px;
 }
 
@@ -312,7 +312,7 @@ a.read_more2:hover {
 /*About Us
 ---------------------------------*/
 #aboutUs{
-	/* height: 550px; */
+	height: 100vh;
 	background-image:url(http://talentscool.com/images/bodyBackground1.png);
 	background-repeat:no-repeat;
 	background-size: cover;	
@@ -337,7 +337,7 @@ a.read_more2:hover {
 ---------------------------------*/
 
 #service {
-	/* height: 550px; */
+	height: 100vh; 
     padding: 60px 0px;
 	background-image: url(http://talentscool.com/images/bodyBackground.png);
 	background-repeat:no-repeat;

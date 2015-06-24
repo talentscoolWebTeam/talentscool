@@ -212,11 +212,14 @@ body {
   margin-top: 10px;
   margin-bottom: 10px;
 	position:relative;
-	/*bottom:-5vh;*/
-	/*max-width:100px;*/
-  width: 10vh !important;
-  height: 10vh !important;
-	/*height:auto;*/
+}
+
+.footerInfo
+{
+  font-size: 200px;
+  font-family: 'Open Sans', sans-serif;
+  color: #d0313c;
+  text-align: center;
 }
 
 .landingDivWhatWeDo ul
