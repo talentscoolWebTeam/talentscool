@@ -1,15 +1,10 @@
 <?php namespace App\Http\Middleware;
 
 use Closure;
-use Illuminate\Contracts\Auth\Guard;
 
 class AdminAuthenticate {
 
-	protected $auth;
-	public function __construct(Guard $auth)
-	{
-		$this->auth = $auth;
-	}
+	
 	/**
 	 * Handle an incoming request.
 	 *
@@ -19,8 +14,10 @@ class AdminAuthenticate {
 	 */
 	public function handle($request, Closure $next)
 	{
-		if($auth->level != 0)
-			return redirect()->back();
+		if(!$request->user())
+			return redirect()->guest('auth/login');
+		if($request->user()->level != 0)
+			return "permission error";
 		else
 			return $next($request);
 	}

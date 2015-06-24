@@ -44,7 +44,7 @@ class AuthController extends Controller {
 		$rules= array(
 						'name'=>'required',
 						'password'=>'required|min:8',
-						'email'=>'required|email|unique:users',
+						'email'=>'required|email',
 						'passcode' => 'required',
 				);
 		$validator = \Validator::make($request->all(), $rules);
@@ -61,9 +61,43 @@ class AuthController extends Controller {
 				$request, $validator
 			);
 		}
+		$user->level = 1;
+		$user->password = bcrypt($request->get('password'));
+		$user->name = $request->get('name');
+		$user->accessible = 1;
+		$user->save();
 
-		$this->auth->login($this->registrar->create($request->all()));
-
+		//$this->auth->login($this->registrar->create($request->all()));
+		$this->auth->login($user);
 		return redirect($this->redirectPath());
 	}
+	
+	public function postLogin(Request $request)
+	{
+		$this->validate($request, [
+				'email' => 'required|email', 'password' => 'required',
+				]);
+	
+		$credentials = $request->only('email', 'password');
+
+		if ($this->auth->attempt($credentials, $request->has('remember')))
+		{
+			$user = \Auth::user();
+			
+			if($user->accessible == 0)
+				{
+					\Auth::logout();
+					return redirect()->back()->withErrors(['Your Account has beend blocked']);
+				}
+			else
+				return redirect()->intended($this->redirectPath());
+		}
+	
+		return redirect($this->loginPath())
+		->withInput($request->only('email', 'remember'))
+		->withErrors([
+				'email' => $this->getFailedLoginMessage(),
+				]);
+	}
+	
 }
