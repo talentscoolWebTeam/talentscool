@@ -17,7 +17,7 @@ class AdminAuthenticate {
 		if(!$request->user())
 			return redirect()->guest('auth/login');
 		if($request->user()->level != 0)
-			return "permission error";
+			return redirect()->back();
 		else
 			return $next($request);
 	}
