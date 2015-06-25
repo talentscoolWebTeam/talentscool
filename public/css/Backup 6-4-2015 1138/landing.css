@@ -1,0 +1,228 @@
+@font-face {
+	font-family: 'NexaFreeBoldwebfont';
+	src: url('./NexaFreeBoldwebfont.eot');
+	src: local('NexaFreeBoldwebfont'), url('./NexaFreeBoldwebfont.woff') format('woff'), url('./NexaFreeBoldwebfont.ttf') format('truetype');
+}
+body {
+  font-family: "NexaFreeBoldwebfont", sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: white;
+  background-color: black;
+  margin-top:0;
+  margin-right:0;
+  margin-top:0;
+  margin-bottom:0;
+  margin:0;
+  padding:0;
+}
+
+.navbar
+{
+	margin-bottom: 0px;
+}
+
+.backgroundImg
+{
+	max-width:100%;
+	position:relative;
+	height:auto;
+
+}
+  .ver-md-12 {
+    width: 100%;
+  }
+  .ver-md-11 {
+    width: 91.66666667%;
+  }
+  .ver-md-10 {
+    width: 83.33333333%;
+  }
+  .ver-md-9 {
+    width: 75%;
+  }
+  .ver-md-8 {
+    width: 66.66666667%;
+  }
+  .ver-md-7 {
+    width: 58.33333333%;
+  }
+  .ver-md-6 {
+    width: 50%;
+  }
+  .ver-md-5 {
+    width: 41.66666667%;
+  }
+  .ver-md-4 {
+    width: 33.33333333%;
+  }
+  .ver-md-3 {
+    width: 25%;
+  }
+  .ver-md-2 {
+    width: 16.66666667%;
+  }
+  .ver-md-1 {
+    width: 8.33333333%;
+  }
+  
+   .ver-md-offset-12 {
+    margin-top: 100%;
+  }
+  .ver-md-offset-11 {
+    margin-top: 91.66666667%;
+  }
+  .ver-md-offset-10 {
+    margin-top: 83.33333333%;
+  }
+  .ver-md-offset-9 {
+    margin-top: 75%;
+  }
+  .ver-md-offset-8 {
+    margin-top: 66.66666667%;
+  }
+  .ver-md-offset-7 {
+    margin-top: 58.33333333%;
+  }
+  .ver-md-offset-6 {
+    margin-top: 50%;
+  }
+  .ver-md-offset-5 {
+    margin-top: 41.66666667%;
+  }
+  .ver-md-offset-4 {
+    margin-top: 33.33333333%;
+  }
+  .ver-md-offset-3 {
+    margin-top: 25%;
+  }
+  .ver-md-offset-2 {
+    margin-top: 16.66666667%;
+  }
+  .ver-md-offset-1 {
+    margin-top: 8.33333333%;
+  }
+  .ver-md-offset-0 {
+    margin-top: 0%;
+  }
+  .clientInfo
+  {
+ 		border-style:solid;
+ 		border-width:medium;
+ 		border-color:gray;
+  }
+ 	.clientInfoPic
+  {
+ 		height:200px;
+ 		width:100%;
+  }
+  .headerWHOWEARE a
+  {
+  		/*color: #595959;*/
+		color:black;
+  		text-decoration: none;
+  }
+  .headerWHATWEDO a
+  {
+  		color: black;
+  		text-decoration: none;
+  }
+  .logo
+  {
+  width:40%;
+  height:auto;
+  max-width:100%;
+  min-width:200px;
+ 	position:absolute;
+ 	top:30%;
+  left:30%;
+ }
+ 
+ .apply
+ {
+	width:15%;
+	height:7%;
+	position:absolute;
+	top:63%;
+	left:43%;
+}
+.headerWHOWEARE
+{
+	position:absolute;
+	color: #595959;
+	top:10px;
+	left:20px;
+	font-size:20px;
+	letter-spacing: 2px;
+	display:inline;
+}
+.headerWHATWEDO
+{
+	position:absolute;
+	color: #595959;
+	top:10px;
+	right:20px;
+	font-size:20px;
+	letter-spacing: 2px;
+	display:inline;
+}
+.backgroundDiv
+{
+	width:100%;
+	height:800px;
+}
+.landingPoint
+{
+	margin-left:5px;
+	color:red;
+	font-family:Sans-serif;
+}
+.landingBody
+{
+	
+	font-size:23px;
+	letter-spacing:1px;
+	text-align: justify;
+}
+
+.landingDivWhoWeAre
+{ 
+	
+	background-image:url("/images/bodyBackground1.png");
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	box-shadow: 0px -50px 50px 10px white;
+}
+
+.landingDivWhatWeDo
+{ 
+	margin:0;
+	padding:0;
+	background-image:url("/images/bodyBackground.png");
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+}
+
+.tailLogo
+{
+  clear:both;
+  overflow:hidden;
+  display:block;
+	margin-left:75%;
+	position:relative;
+	bottom:30px;
+  max-width:9%; 
+  max-height:18%;
+}
+.landingDivWhatWeDo ul
+{
+	margin-left:40px;
+}
+.landingDivWhatWeDo ul li.listHeader
+{
+	font-size:25px;
+}
+.landingDivWhatWeDo ul ul li
+{
+	font-size:18px;
+}
