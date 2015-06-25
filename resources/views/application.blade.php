@@ -17,7 +17,7 @@
        background-size: cover;	
 	   color:white;
 	   font:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
-	   font-size:20px;
+	   font-size:17px;
 	   padding-left:5%;
 	}
 	
@@ -58,12 +58,13 @@
 <body>
 
 
-
+<table>
+<tr><td class="col-xs-12" style="font-size:36px;">APPLICATION</td><td style="float:right;position:relative;margin-right:20%;margin-top:2%;"><img src="/images/TSVector.png" style="width:200px;"></td></tr>
+</table>
 {!! Form::open(['action'=>'ApplicationController@store','enctype' => 'multipart/form-data']) !!}
 <div class="firstPage">
-<p class="col-xs-12" style="font-size:36px;">APPLICATION</p>
 <p class="col-xs-12">Personal information</p>
-<b style="color:red;">*</b><b> required</b>
+<p class="col-xs-12"><b style="color:red;">*</b><b> required</b></p>
 <br><br>
 <div class="col-xs-12">
 	<div class="col-xs-2">
@@ -202,8 +203,7 @@
 
 
 <div class="secondPage">
-<p style="font-size:36px; position:relative; padding-left:0%;">APPLICATION</p>
-<p style="font-size:24px; position:relative; padding:0;">Talent</p>
+<p class="col-xs-12">Talent</p>
 <div class="col-xs-12">
      <div class="col-xs-3">
      TALENT CATEGORY<sup>*</sup>
@@ -221,10 +221,7 @@
 </select>
 </div>
 </div>
-
-<br>
-<br>
-
+<div class="col-xs-12">&nbsp;</div>
 <div class="col-xs-12">
 <div class="col-xs-3">
 SPECIFIC TALENT<sup>*</sup>
@@ -305,8 +302,7 @@ VIDEO&nbsp(link)
 </div>
 
 <div class="add_one">
-<p style="font-size:36px; position:relative; padding-left:0%;">APPLICATION</p>
-<p style="font-size:24px; position:relative; padding:0;">Talent</p>
+<p class="col-xs-12">Talent</p>
 <div class="col-xs-12">
 <div class="col-xs-3">
 TALENT CATEGORY<sup>*</sup>
@@ -413,9 +409,7 @@ VIDEO&nbsp(link)
 </div>
 
 <div class="add_two">
-<p style="font-size:36px; position:relative; padding-left:0%;">APPLICATION</p>
-<p style="font-size:24px; position:relative; padding:0;">Talent</p>
-
+<p class="col-xs-12">Talent</p>
 <div class="col-xs-12">
 <div class="col-xs-3">
 TALENT CATEGORY <sup>*</sup>
@@ -515,9 +509,8 @@ VIDEO&nbsp(link)
 
 
 <div class="thirdPage">
-<p style="font-size:36px; position:relative; padding-left:0%;">APPLICATION</p>
-<p style="font-size:24px; position:relative; padding:0;">Services desired</p>
-<p style="font-size:24px; position:relative; padding:0;">PLEASE CHECK THE BOXES THAT APPLY</p>
+<p class="col-xs-12">Services desired</p>
+<p class="col-xs-12">Please check all boxes that apply</p>
 <div class="col-xs-12">
 <div class="col-xs-3">
 OPPORTUNITIES<sup>*</sup><br>
@@ -574,9 +567,7 @@ SERVICES<sup>*</sup><br>
 
 
 <div class="fourPage">
-<p style="font-size:36px; position:relative; padding-left:0%;">APPLICATION</p>
-<p style="font-size:24px; position:relative; padding:0;">Optional&nbsp(strongly recommend)</p>
-
+<p class="col-xs-12">Optional&nbsp(Strongly recommended)</p>
 <div class="col-xs-12">
 <div class="col-xs-2">
 Describe yourself in three words
@@ -813,19 +804,17 @@ Anything else
 			} 
 		else{
 		var num=0;
+		document.getElementById('file1').innerHTML=document.getElementById('specific_talent1').value+" :<br>";
 		if($('#tphoto1').val()!=''){
-			document.getElementById('file1').innerHTML+="<img src='/pic/photo.png' width='40' height='40'><sub>"+
-			document.getElementById('specific_talent1').value+"</sub>   ";
+			document.getElementById('file1').innerHTML+="<img src='/pic/photo.png' width='40' height='40'><br>";
 			num++;
 		}
 		if($('#audiolink1').val()!=''){
-			document.getElementById('file1').innerHTML+="<img src='/pic/audio.png' width='40' height='40'><sub>"+
-			document.getElementById('specific_talent1').value+"</sub>   ";
+			document.getElementById('file1').innerHTML+="<a href='"+$('#audiolink1').val()+"' target='_blank' style='color:red;'>"+$('#audiolink1').val()+"</a><br>";
 			num++;
 		}
 		if($('#videolink1').val()!=''){
-			document.getElementById('file1').innerHTML+="<img src='/pic/video.jpg' width='40' height='40'><sub>"+
-			document.getElementById('specific_talent1').value+"</sub>   ";
+			document.getElementById('file1').innerHTML+="<a href='"+$('#videolink1').val()+"' target='_blank' style='color:red;'>"+$('#videolink1').val()+"</a><br>";
 			num++;
 		}
 		if(num==0)alert("Pleast upload at least one file!");
@@ -889,19 +878,17 @@ Anything else
 		else{
 		var num=0;
 		document.getElementById('file2').innerHTML=document.getElementById('file1').innerHTML;
+		document.getElementById('file2').innerHTML+=document.getElementById('specific_talent2').value+" :<br>";
 		if($('#tphoto2').val()!=''){
-			document.getElementById('file2').innerHTML+="<img src='/pic/photo.png' width='40' height='40'><sub>"+
-			document.getElementById('specific_talent2').value+"</sub>   ";
+			document.getElementById('file2').innerHTML+="<img src='/pic/photo.png' width='40' height='40'><br>";
 			num++;
 		}
 		if($('#audiolink2').val()!=''){
-			document.getElementById('file2').innerHTML+="<img src='/pic/audio.png' width='40' height='40'><sub>"+
-			document.getElementById('specific_talent2').value+"</sub>   ";
+			document.getElementById('file2').innerHTML+="<a href='"+$('#audiolink2').val()+"' target='_blank' style='color:red;'>"+$('#audiolink2').val()+"</a><br>";
 			num++;
 		}
 		if($('#videolink2').val()!=''){
-			document.getElementById('file2').innerHTML+="<img src='/pic/video.jpg' width='40' height='40'><sub>"+
-			document.getElementById('specific_talent2').value+"</sub>   ";
+			document.getElementById('file2').innerHTML+="<a href='"+$('#audiolink2').val()+"' target='_blank' style='color:red;'>"+$('#audiolink2').val()+"</a><br>";
 			num++;
 		}
 		if(num==0)alert("Please upload at least one file!");

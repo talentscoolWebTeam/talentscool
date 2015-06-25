@@ -15,12 +15,22 @@ body{
 	   font-size:20px;
 	   padding-left:5%;
 	}
+	img {
+	float: right top;
+    margin-top:2%;
+	position:relative;
+	margin-left:80%;
+	width:200px;
+	
+}
 </style>
 </head>
 <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
 <body>
+
 <div class="thanks">
-<p style="font-size:30px; position:relative; padding-left:0; color:white;">Thanks for your interest. Your application has been submitted. If there is a match, we will contact you ASAP.<br>Thank you!</p>
+<img src="/images/TSVector.png">
+<p style="font-size:30px; position:relative; color:white; margin-top:15%; margin-left:10%; margin-right:15%;">Thanks for your interest. Your application has been submitted. If there is a match, we will contact you ASAP.<br>Thank you!</p>
 </div>
 </body>
 </html>
