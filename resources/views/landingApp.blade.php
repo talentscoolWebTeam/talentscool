@@ -215,7 +215,7 @@
 		<!-- Scripts -->
         <script>
             function sendMail(){
-            var link="mailto:tscool@talentscool.com"+"?cc=michaelbpratt@gmail.com"+"&subject="+escape(document.getElementById('subject').value)+"&body="+escape(document.getElementById('myText').value);
+            var link="mailto:tscool@talentscool.com"+"?subject="+escape(document.getElementById('subject').value)+"&body="+escape(document.getElementById('myText').value);
             window.location.href=link;}        
         </script>
 		<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
