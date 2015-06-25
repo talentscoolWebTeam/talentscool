@@ -36,7 +36,7 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 	
 	public function isAdmin()
 	{
-		if($this->lavel == 0)
+		if($this->level == 0)
 			return true;
 		else return false; 
 	}
