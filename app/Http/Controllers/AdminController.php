@@ -48,11 +48,25 @@ class AdminController extends Controller {
 		$user->email = $request->get('email');
 		$code = $user->email . \Carbon\Carbon::now();
 		$user->passcode = bcrypt($code);
+		$user->level = 1;
+		$user->accessible = 1;
 		$user->save();
 		//change url on the serverside;
-		$URL = "talentscool.local/auth/register?inviteToken=" . $user->passcode;
-		
-		return redirect('/admin/invite')->with("Success", "We successfully invite the user\n The link is: " . $URL);
+                $URL = "http://talentscool.com/auth/register?inviteToken=" . $user->passcode;
+
+		$body = '<html><body>Hello,<br />';
+		$body .= 'We want to invite you to look our great talents<br />';
+		$body .= 'You can go to the below link to create an account<br />';
+		$body .= '<a href="' . $URL .  '">' . $URL . '</a><br />';
+		$body .= 'Thank you<br /> Have a great day<br />Talentscool<br />';
+		$body .= '</body></html>';
+
+		$header = "From: donotreply@talentscool.com\r\n";
+		$header .= "MIME-Version: 1.0\r\n";
+		$header .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+		$checkMail = mail($request->get('email'), "Visit Talentscool", $body, $header);
+		if($checkMail)
+			return redirect('/admin/invite')->with("Success", "We successfully invite the user");
 	}
 	public function users()
 	{
