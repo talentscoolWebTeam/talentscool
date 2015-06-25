@@ -17,7 +17,7 @@ class AdminAuthenticate {
 		if(!$request->user())
 			return redirect()->guest('auth/login');
 		if($request->user()->level != 0)
-			return redirect()->back();
+			return redirect('clients');
 		else
 			return $next($request);
 	}
