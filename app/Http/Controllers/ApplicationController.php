@@ -6,7 +6,6 @@ use App\Client;
 
 class ApplicationController extends Controller {
 
-	//
 	public function application()
 	{
 		$state = \App\Location::distinct()->select('full_state', 'full_state')->get();
@@ -53,27 +52,23 @@ class ApplicationController extends Controller {
 		$tphoto3 = \Input::file('tphoto3');
 		if($personal_photo!=null){
 			$size=$personal_photo->getClientSize();
-			//$type=$personal_photo->guessExtension();
 			if($size<=0||$size>$personal_photo->getMaxFilesize()||$this->check($personal_photo))return view('error');
 		}
 		if($tphoto1!=null){
 			$size=$tphoto1->getClientSize();
-			//$type=$tphoto1->guessExtension();
 			if($size<=0||$size>$tphoto1->getMaxFilesize()||$this->check($tphoto1))return view('error');
 		}
 		if($tphoto2!=null){
 			$size=$tphoto2->getClientSize();
-			//$type=$tphoto2->guessExtension();
 			if($size<=0||$size>$tphoto2->getMaxFilesize()||$this->check($tphoto2))return view('error');
 		}
 		if($tphoto3!=null){
 			$size=$tphoto3->getClientSize();
-			//$type=$tphoto3->guessExtension();
 			if($size<=0||$size>$tphoto3->getMaxFilesize()||$this->check($tphoto3))return view('error');
 		}
 	
 		$email=$_POST['email'];
-		$destinationPath = 'C:\wamp\apps\talentscool\files';
+		$destinationPath = 'files';
 		$clients=  new \App\Client();
 		$clients->fname=$_POST['fname'];
 		$clients->lname=$_POST['lname'];
@@ -209,42 +204,13 @@ class ApplicationController extends Controller {
 		$option->relative_talent=$_POST['relative_talent'];
 		$option->anything=$_POST['anything'];
 		$option->save();
-		return view('thanks');
-	}
-	
-	public function test()
-	{
-		return view('test');
-	}
-	
-	
-	public function save(Request $request){
-	
-	
-		$file = \Input::file('yourfileuploader');
-		$destinationPath = '..';
-		if($file == null)
-			return "NULL";
-		//$file->move($destinationPath);
-		$name=$file->getClientOriginalName();
-		//return $name;
-		$n=-1;
-		for($i=sizeof($name);$i>=0;$i--){
-			if($name[$i]!='.')$n--;
-			else break;
-		}
-		$result=substr($name,$n);
-		$values = ["jpg", "png","JPG", "PNG","GIF", "gif"];
-		if(in_array($result, $values))
-			return "same";
-		else
-			return "not ";
-	
-		//$file->move($destinationPath, bcrypt($a));
-		//$file->move($destinationPath, $a);
-		//$extension=\Input::file('tphoto1')->getClientOriginalExtension();
-		//return $extension;
-		//return bcrypt($a);
-		//return $a;
+		
+		 $subject='Thanks for your interest in Talentscool';
+		 $message='Thanks for your interest. Your application has been submitted. If there is a match, we will contact you ASAP.'."\r\n".'Please do not reply this email!'."\r\n".'Thank you!';
+		 $headers = 'From: donotreply@talentscool.com' . "\r\n" .
+    'Reply-To: donotreply@talentscool.com' . "\r\n" .
+    'X-Mailer: PHP/' . phpversion();
+	$flag=mail($email,$subject,$message,$headers);
+	if($flag) return view('thanks');
 	}
 }

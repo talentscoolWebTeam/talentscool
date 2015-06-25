@@ -60,16 +60,15 @@
 				<div class="container">
 					<div class="hero_section">
 						<div class="row">
-							<div class="col-lg-6 col-sm-7">
+							<div class="col-lg-5 col-sm-7">
 								<div class="top_left_cont zoomIn wow animated"> 
 									<h2>We are the new way to connect in Entertainment</h2>
-									<p>Whether you are looking for new talent or your next big break,<br> we're here to help you.</p>
+									<p>Whether you are looking for talent or your next big break, we are here to help you.</p>
 									<p>Music. Dance. Film. Fashion. Arts. Sports. We know them all.</p>
 								<a href="#service" class="read_more2">Read more</a> </div>
 							</div>
-							<!-- Image div here -->
 							<div>
-								<!-- <img src="images/mainImg.png" class="bannerImg zoomIn wow animated" alt="" />  -->
+								<img src="images/mainImg.png" class="bannerImg zoomIn wow animated" alt="" />
 							</div>
 						</div>
 					</div>
@@ -83,19 +82,17 @@
 		<section id="aboutUs" >
 			<div class="inner_wrapper">
 				<div class="container">
-					<h2 >About Us</h2>
+					<h2 id="auhead">About Us</h2>
 					<div class="inner_section">
 						<div class="row">
-							<div class=" col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-right">
-								<!-- <img src="images/about-img.jpg" class="img-circle delay-03s animated wow zoomIn" alt=""> -->
-							</div>
+							<div class=" col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-right"><img src="images/about-img.jpg" class="img-circle delay-03s animated wow zoomIn" alt=""></div>
 							<div class=" col-lg-7 col-md-7 col-sm-7 col-xs-12 pull-left">
 								<div class=" delay-01s animated fadeInDown wow animated">
 									
-									<p align="justify">Headquartered in Los Angeles, Talentscool is a talent service that works with talents in music, film, fashion, visual arts, dance, and sports to find them opportunities and connect them to the various services they need for their careers. Being founded by both a musician and a pro-athlete, we know how hard it is to stand out in the entertainment industry. With all of the competition, we aim to give our clients ease knowing someone is on their side.</p> <br/>
-									<p align="justify">Through our global relationships with major/indie record labels, talent agencies, casting agencies, production companies, venues, art galleries, corporate sponsors, and much more, we are able to provide the best possible service to our clients. In addition, we recommend our clients to well-established vendor services ranging from publicists to agents to investors to entertainment lawyers and everything in between. We cater to the needs of our clients in every way possible.</p>
+									<p>Headquartered in Los Angeles, Talentscool is a talent service that works with talents in music, film, fashion, visual arts, dance, and sports to find them opportunities and connect them to the various services they need for their careers. Being founded by both a musician and a pro-athlete, we know how hard it is to stand out in the entertainment industry. With all of the competition, we aim to give our clients ease knowing someone is on their side.</p> <br/>
+									<p>Through our global relationships with major/indie record labels, talent agencies, casting agencies, production companies, venues, art galleries, corporate sponsors, and much more, we are able to provide the best possible service to our clients. In addition, we recommend our clients to well-established vendor services ranging from publicists to agents to investors to entertainment lawyers and everything in between. We cater to the needs of our clients in every way possible.</p>
 								</div>
-								<div class="work_bottom"> <span>Want to know more?</span> <a href="#contact" class="contact_btn">Contact Us</a> </div>       
+								<div class="work_bottom"> <span>Want to know more..</span> <a href="#contact" class="contact_btn">Contact Us</a> </div>       
 							</div>
 							
 						</div>
@@ -196,31 +193,25 @@
 						
 						<div class="col-lg-12 wow fadeInLeft delay-06s">
 							<div class="form">
-								<input class="input-text" type="text" name="" value="Your Name *" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;">
-								<input class="input-text" type="text" name="" value="Your Subject *" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;" id="subject">
-								<textarea class="input-text text-area" cols="0" rows="0" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;" id="myText">Your Message *</textarea>
-                                <input class="input-btn" type="button" value="send message" onclick="sendMail(); return false">
-
+                            {!! Form::open() !!}
+								<input class="input-text" type="text" name="receiver" value="Your Name *" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;">
+								<input class="input-text" type="text" name="email" value="Your E-mail *" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;">
+								<textarea class="input-text text-area" cols="0" rows="0" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;" name="message" id="message">Your Message *</textarea>
+								<input class="input-btn" type="button" value="send message" id="sendmail">
+                             {!! Form::close() !!}
 							</div>
 						</div>
 						
 					</div>
 				</section>
 				</div>
-			<div class="container">
-				<div class="tailLogo"><img src="http://talentscool.com/images/logoT.png" style="display: block; max-height: 10%; max-width: 10%; margin-bottom: 2vh; margin-left: auto; margin-right: auto"> </div>
-				<div class="footerInfo" style="color: #d0313c; text-align: center; margin-bottom: 2vh">Copyright &copy 2013-2015 Talentscool LLC.<br>All rights reserved.
-				</div>
-				<!-- <div class="footer_bottom"><img src="http://talentscool.com/images/logoT.png" style="vertical-align:middle; max-height: 50%; max-width: 50%;"> </div> -->
-			</div>
+			<!-- <div class="container">
+				<div class="footer_bottom"><img src="http://talentscool.com/images/logoT.png" style="vertical-align:middle; max-height: 50%; max-width: 50%;"> </div>
+				<!-- class="tailLogo" 
+			</div> -->
 		</footer>
 		
 		<!-- Scripts -->
-        <script>
-            function sendMail(){
-            var link="mailto:tscool@talentscool.com"+"?subject="+escape(document.getElementById('subject').value)+"&body="+escape(document.getElementById('myText').value);
-            window.location.href=link;}        
-        </script>
 		<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="js/jquery-scrolltofixed.js"></script>
@@ -229,6 +220,38 @@
 		<script type="text/javascript" src="js/jquery.isotope.js"></script>
 		<script type="text/javascript" src="js/wow.js"></script> 
 		<script type="text/javascript" src="js/custom.js"></script>
+		<script>
+		$('#sendmail').click(function(){
+			$token=$(this).parent().find('input[name=_token]').val();
+			$receiver=$(this).parent().find('input[name=receiver]').val();
+			$email=$(this).parent().find('input[name=email]').val();
+			$message=document.getElementById('message').value;
+			//alert($token);
+			//alert($receiver);
+			//alert($email);
+			//alert($message);
+	
+			$.ajax(
+			{
+				type: "POST",
+				url:"/",
+				data: {
+					"_token": $(this).parent().children().get(0).value,
+					"receiver": $(this).parent().children().get(1).value,
+			        "email": $(this).parent().children().get(2).value,
+			        "message": $(this).parent().children().get(3).value
+					},
+			    dataType:"text",
+				success: function(responseData){
+				     var obj=JSON.parse(responseData);
+					 if(obj.result == 'success')
+					 	alert("Message sent!");
+				}
+			}
+			);	
+
+		});
+		</script>
 		
 	</body>
 </html>

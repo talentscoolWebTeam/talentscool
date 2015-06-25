@@ -40,5 +40,22 @@ class WelcomeController extends Controller {
 	{
 		return view('whatwedo');
 	}
+	public function sendmail(){
+		$to='contact@talentscool.com';
+		$subject='Message from ';
+		$subject.=\Input::get('receiver');
+		$message=\Input::get('message');
+		$headers = 'From: '.\Input::get('email')."\r\n".
+				'Reply-To: '.\Input::get('email') . "\r\n";
+		$status = mail($to,$subject,$message,$headers);
+		$ret = "";
+		if($status)
+		{
+			$ret = array("result"=> 'success');
+		}
+		else
+			$ret = array("result" => 'fail');
+		return \Response::json($ret);
+	}
 
 }
