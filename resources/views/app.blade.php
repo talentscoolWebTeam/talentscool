@@ -37,6 +37,19 @@
 				<ul class="nav navbar-nav">
                     <li><a href="{{ url('/') }}" style="color:#d0313c"><strong>Home</strong></a></li>
 				</ul>
+				@if(Auth::user())
+					@if(Auth::user()->isAdmin())
+					<ul class="nav navbar-nav">
+						<li class="dropdown">
+							<a href={{ action('AdminController@invite') }} value="admin" class="dropdown-toggle" style="color:#d0313c" data-toggle="dropdown" role="button" aria-expanded="false"><b>Admin</b><span class="caret"></span></a>
+							<ul class="dropdown-menu" role="menu">
+								<li><a href="{{ action('AdminController@invite') }}" style="color:#d0313c">Invite Users</a></li>
+								<li><a href="{{ action('AdminController@users') }}" style="color:#d0313c">Manage Users</a></li>
+							</ul>
+						</li>
+					</ul>
+					@endif
+				@endif
 
 				<ul class="nav navbar-nav navbar-right">
 					@if (Auth::guest())
@@ -47,6 +60,7 @@
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>
 							<ul class="dropdown-menu" role="menu">
 								<li><a href="{{ url('/auth/logout') }}" style="color:#d0313c">Logout</a></li>
+								<li><a href="{{ url('/auth/logout') }}" style="color:#d0313c">Invite User</a></li>
 							</ul>
 						</li>
 					@endif
@@ -54,10 +68,9 @@
 			</div>
 		</div>
 	@yield('content')
-
+</body>
 	<!-- Scripts -->
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
     @yield('tail')
-</body>
 </html>

@@ -32,6 +32,10 @@ Route::get('error', 'ApplicationController@error');
 Route::post('application', 'ApplicationController@store');
 
 Route::get('admin/invite', 'AdminController@invite');
+Route::post('admin/invite', 'AdminController@sendInvite');
+
+Route::get('admin/users', 'AdminController@users');
+Route::post('admin/users', 'AdminController@updateUser');
 
 
 Route::controllers([
