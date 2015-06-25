@@ -209,7 +209,7 @@
 				</div>
 			<div class="container">
 				<div class="tailLogo"><img src="http://talentscool.com/images/logoT.png" style="display: block; max-height: 10%; max-width: 10%; margin-bottom: 2vh; margin-left: auto; margin-right: auto"> </div>
-				<div class="footerInfo">Copyright &copy 2013-2015 Talentscool LLC.<br>All rights reserved.
+				<div class="footerInfo" style="color: #d0313c; text-align: center; margin-bottom: 2vh">Copyright &copy 2013-2015 Talentscool LLC.<br>All rights reserved.
 				</div>
 				<!-- <div class="footer_bottom"><img src="http://talentscool.com/images/logoT.png" style="vertical-align:middle; max-height: 50%; max-width: 50%;"> </div> -->
 			</div>
