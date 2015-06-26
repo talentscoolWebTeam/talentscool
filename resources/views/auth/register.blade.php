@@ -22,8 +22,7 @@ color:black;}
                             </ul>
 						</div>
 					@endif
-					<form class="form-horizontal" role="form" method="POST" action="{{ url('/auth/register') }}">
-						<input type="hidden" name="_token" value="{{ csrf_token() }}">
+					{!! Form::open(['url'=>'/auth/register', 'class'=>'form-horizontal']) !!}
 						@if(!empty($_GET['inviteToken']))
 							<input type="hidden" name="passcode" value="{{ $_GET['inviteToken'] }}">
 						@endif
@@ -81,7 +80,7 @@ color:black;}
 								</button>
 							</div>
                         </div>
-					</form>
+					{!! Form::close() !!}
 				</div>
 			</div>
 		</div>
