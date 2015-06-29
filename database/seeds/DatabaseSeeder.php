@@ -377,5 +377,173 @@ class ClientTableSeeder extends Seeder{
 		$client->phone_number = "9853518953";
 		$client->status = 2;
 		$client->save();
+		
+		$client = new App\Client();
+		$client->fname = "James";
+		$client->lname = "Bush";
+		$client->email = "JamesBush@gmail.com";
+		$client->dob = "6/17/1989";
+		$client->gender = "Male";
+		$client->city="Baton Rouge";
+		$client->state="Lousisana";
+		$client->phone_number = "123-123-1234";
+		$client->status = 2;
+		$client->save();
+		
+		$client = new App\Client();
+		$client->fname = "Cristiano";
+		$client->lname = "Ronaldo";
+		$client->email = "christianoRonaldo@gmail.com";
+		$client->dob = "2/5/1985";
+		$client->gender = "Male";
+		$client->city="Baton rouge";
+		$client->state="Louisiana";
+		$client->phone_number = "456-123-1523";
+		$client->status = 2;
+		$client->save();
+		
+		$client = new App\Client();
+		$client->fname = "Angelina";
+		$client->lname = "Jolie";
+		$client->email = "AngelinaJolie@gmail.com";
+		$client->dob = "6/4/1975";
+		$client->gender = "Female";
+		$client->city="Baton Rouge";
+		$client->state="Louisiana";
+		$client->phone_number = "542-234-1523";
+		$client->status = 2;
+		$client->save();
+		
+		$client = new App\Client();
+		$client->fname = "Scarllet";
+		$client->lname = "Johansson";
+		$client->email = "ScarlletJohansson@gmail.com";
+		$client->dob = "11/22/1984";
+		$client->gender = "Female";
+		$client->city="Baton Rouge";
+		$client->state="Louisiana";
+		$client->phone_number = "123-123-1234";
+		$client->status = 2;
+		$client->save();
+		
+		$client = new App\Client();
+		$client->fname = "Ludwig";
+		$client->lname = "Beethoven";
+		$client->email = "LudwidBeethoven@gmail.com";
+		$client->dob = "3/26/1827";
+		$client->gender = "Male";
+		$client->city="Baton Rouge";
+		$client->state="Louisiana";
+		$client->phone_number = "123-123-1235";
+		$client->status = 2;
+		$client->save();
+		
+		$client = new App\Client();
+		$client->fname = "Wolfgang";
+		$client->lname = "Mozart";
+		$client->email = "WolfgangMozart@gmail.com";
+		$client->dob = "1/27/1756";
+		$client->gender = "Male";
+		$client->city="Baton Rouge";
+		$client->state="Louisiana";
+		$client->phone_number = "124-124-1241";
+		$client->status = 2;
+		$client->save();
+		
+		$client = new App\Client();
+		$client->fname = "Jeff";
+		$client->lname = "Beck";
+		$client->email = "JeffBeck@gmail.com";
+		$client->dob = "6/24/1944";
+		$client->gender = "Male";
+		$client->city="Baton Rouge";
+		$client->state="Louisiana";
+		$client->phone_number = "9853518953";
+		$client->status = 2;
+		$client->save();
+		
+		$client = new App\Client();
+		$client->fname = "James";
+		$client->lname = "Bush";
+		$client->email = "JamesBush@gmail.com";
+		$client->dob = "6/17/1989";
+		$client->gender = "Male";
+		$client->city="Austin";
+		$client->state="Texas";
+		$client->phone_number = "123-123-1234";
+		$client->status = 2;
+		$client->save();
+		
+		$client = new App\Client();
+		$client->fname = "Cristiano";
+		$client->lname = "Ronaldo";
+		$client->email = "christianoRonaldo@gmail.com";
+		$client->dob = "2/5/1985";
+		$client->gender = "Male";
+		$client->city="Austin";
+		$client->state="Texas";
+		$client->phone_number = "456-123-1523";
+		$client->status = 2;
+		$client->save();
+		
+		$client = new App\Client();
+		$client->fname = "Angelina";
+		$client->lname = "Jolie";
+		$client->email = "AngelinaJolie@gmail.com";
+		$client->dob = "6/4/1975";
+		$client->gender = "Female";
+		$client->city="Austin";
+		$client->state="Texas";
+		$client->phone_number = "542-234-1523";
+		$client->status = 2;
+		$client->save();
+		
+		$client = new App\Client();
+		$client->fname = "Scarllet";
+		$client->lname = "Johansson";
+		$client->email = "ScarlletJohansson@gmail.com";
+		$client->dob = "11/22/1984";
+		$client->gender = "Female";
+		$client->city="Austin";
+		$client->state="Texas";
+		$client->phone_number = "123-123-1234";
+		$client->status = 2;
+		$client->save();
+		
+		$client = new App\Client();
+		$client->fname = "Ludwig";
+		$client->lname = "Beethoven";
+		$client->email = "LudwidBeethoven@gmail.com";
+		$client->dob = "3/26/1827";
+		$client->gender = "Male";
+		$client->city="Austin";
+		$client->state="Texas";
+		$client->phone_number = "123-123-1235";
+		$client->status = 2;
+		$client->save();
+		
+		$client = new App\Client();
+		$client->fname = "Wolfgang";
+		$client->lname = "Mozart";
+		$client->email = "WolfgangMozart@gmail.com";
+		$client->dob = "1/27/1756";
+		$client->gender = "Male";
+		$client->city="Austin";
+		$client->state="Texas";
+		$client->phone_number = "124-124-1241";
+		$client->status = 2;
+		$client->save();
+		
+		$client = new App\Client();
+		$client->fname = "Jeff";
+		$client->lname = "Beck";
+		$client->email = "JeffBeck@gmail.com";
+		$client->dob = "6/24/1944";
+		$client->gender = "Male";
+		$client->city="Austin";
+		$client->state="Texas";
+		$client->phone_number = "9853518953";
+		$client->status = 2;
+		$client->save();
 	}
 }

@@ -10,17 +10,18 @@ class TagController extends Controller {
 	//
 	public function store(Request $request)
 	{
-		
 		$tag = \App\Tag::where('name', '=', $request->get('name'))->first();
 		
 		if(!is_null($tag))
 		{
-			return redirect()->back()->with('AddError','The Tag ' . $request->get('name') . ' already exist');
+			$ret = array('result'=>'failure', 'message'=>'The Tag ' . $request->get('name') . ' already exist');
+			return \Response::json($ret);	
 		}
 		else
 		{
 			$tag = \App\Tag::create($request->all());
-			return redirect()->back()->with('AddSuccess','The Tag ' . $request->get('name') . ' is successfully added');;
+			$ret = array('result'=>'success', 'id' => $tag->id, 'message' => 'The Tag ' . $request->get('name') . ' is successfully added');
+			return \Response::json($ret);
 		}
 	}
 	public function delete(Request $request)
@@ -30,7 +31,8 @@ class TagController extends Controller {
 		{
 			$tag->delete();
 		}
-		return redirect()->back()->with('DeleteSuccess','The Tag ' . $tag->name . ' is removed successfully');
+		$ret = array('result'=>'success', 'message'=>'The Tag ' . $tag->name . ' is removed successfully');
+		return \Response::json($ret);
 	}
 
 }

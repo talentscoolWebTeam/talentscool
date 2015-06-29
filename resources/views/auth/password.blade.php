@@ -2,9 +2,14 @@
 
 @section('content')
 <style type="text/css">
-body{background-image:url("/images/bodyBackground.png");
-background-size:contain;
-color:black;}
+html{
+background: url("/images/bodyBackground.png") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+ }
+
 </style>
 <div class="container-fluid">
 	<div class="row">

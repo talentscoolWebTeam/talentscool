@@ -4,6 +4,7 @@
 				{!! Form::model($filters, ['method'=>'GET', 'action' =>'ClientController@accepted', 'class'=>'form-inline']) !!}
 					Filter:  {!! Form::select('filter', array('name'=>'Name', 'state'=>'State', 'city'=>'City', 'gender'=>'Gender', 'talentCategory'=>'Talent Category', 'specificTalent'=>'Specific Talent', 'tag'=>'Tag', 'date'=>'Date'), null, ['class' => 'form-control', 'required', 'style'=>'width:20%', 'id'=>'filter']) !!}
 					{!! Form::text('filterText', null, ['class'=>'form-control','id'=>'filterText']) !!}
+					{!! Form::hidden('count', Input::get('count'), ['id' => 'hiddenViewCounter']) !!}
 					{!! Form::submit('Search', ['class' => 'btn btn-primary']) !!}
 				{!! Form::close() !!}
 			</div>
@@ -55,15 +56,32 @@
 	</tr>
 @endforeach
 </table>
-@if($filters)
-	{!! $acceptedClients->appends($filters)->render() !!}
-@else
-	{!! $acceptedClients->render() !!}
-@endif
+<div class="col-xs-12 form-inline">
+	{!! Form::label('Number of Contents: '); !!}
+	{!! Form::select('count', array('5'=>'5', '10'=>'10', '25'=>'25', '100'=>'100'), Input::get('count'), ['style'=>'color:black', 'class'=>'form-control', 'id'=>'viewCounter'] ) !!}
+</div>
+{!! $acceptedClients->render() !!}
 @stop
 @section('tail1')
+<script>
 $(document).ready(function()
 {
 	$('.acceptedClientsButton').css('background-color', '#404040');
 });
+$('#viewCounter').change(function(){
+	var url = window.location.href;
+	var e = document.getElementById('viewCounter');
+	
+	var hidden = document.getElementById('hiddenViewCounter');
+	hidden.value = e.options[e.selectedIndex].text;
+
+	if(url.indexOf("?") ==	 -1)
+		url = url+"?";
+	if(url.indexOf("&count") > -1)
+		url = url.substring(0, url.indexOf("&count=") + 7) + e.options[e.selectedIndex].text;
+	else
+		url = url+"&count="+e.options[e.selectedIndex].text; 
+	window.location = url;
+});
+</script>
 @stop

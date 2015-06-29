@@ -9,33 +9,15 @@
 <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
 <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 <link ref="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/css/select2.min.css" rel="stylesheet" />
+<link href="{{ asset('/css/select2.min.css') }}" rel="stylesheet">	
 	
 <style>
 body{
 font-family: 'Open Sans', sans-serif;
-color:#BDBDBD;
 background-color:black;
-}
-.select2-container .select2-choice {
-    padding: 5px 10px;
-    height: 40px;
-    width: 132px; 
-    font-size: 1.2em;  
+color:white;
 }
 
-.select2-container .select2-choice .select2-arrow {
-    background-image: -khtml-gradient(linear, left top, left bottom, from(#424242), to(#030303));
-    background-image: -moz-linear-gradient(top, #424242, #030303);
-    background-image: -ms-linear-gradient(top, #424242, #030303);
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #424242), color-stop(100%, #030303));
-    background-image: -webkit-linear-gradient(top, #424242, #030303);
-    background-image: -o-linear-gradient(top, #424242, #030303);
-    background-image: linear-gradient(#424242, #030303);
-    width: 40px;
-    color: #fff;
-    font-size: 1.3em;
-    padding: 4px 12px;
-}
 </style>
 <!-- Fonts -->
 <link href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>

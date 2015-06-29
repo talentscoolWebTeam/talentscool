@@ -213,4 +213,4 @@ class ApplicationController extends Controller {
 	$flag=mail($email,$subject,$message,$headers);
 	if($flag) return view('thanks');
 	}
-}
+}	

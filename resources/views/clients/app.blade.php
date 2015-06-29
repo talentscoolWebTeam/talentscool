@@ -2,15 +2,24 @@
 
 @section('content')
 <style type="text/css">
-body{background-image:url("/images/bodyBackground.png");
-background-size:contain}
+html{
+background: url("/images/bodyBackground.png") no-repeat center center fixed; 
+-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+ }
+ body{
+ color:white;
+ }
+
 </style>
 	<div class="container">
-		<div id="successMessage">
-			@if(Session::has('Success'))
-				<div class="alert alert-success">{{Session::get('Success') }}</div>
-			@endif
-		</div>
+		@if(Session::has('Success'))
+				<div class="alert alert-success">
+					{{Session::get('Success') }}
+				</div>
+		@endif
 		<div>
 			<h1>Clients</h1>
 		 		<br>
@@ -25,32 +34,14 @@ background-size:contain}
 		</div>
 	</div>
 @stop
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
+@section('tail')
+	@yield('tail1')
 	<script>
-		@yield('tail1');
+	$('#filter').change(function(){
+		if($('#filter').val() == 'date')
+			$('#filterText').attr('type','date');
+		else
+			$('#filterText').attr('type','text');
+	});
 	</script>
-<!-- 
-{!! HTML::image('/images/TSVector.png', null, array('class'=>'logo')) !!}
-	<div class="container">
-		
-				@yield('content')
-		</div>
-	</div>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
-	<script>
-//		@yield('tail')
-//		$('#successMessage').delay(2000).slideUp(300);
-//		$('#filter').change(function(){
-//			if($('#filter').val() == 'date')
-//			{
-//				$('#filterText').attr('type', 'date');
-//			}
-//			else
-//				$('#filterText').attr('type', 'text');
-//		});
-	</script>
-	</body>
-
--->
+@stop

@@ -1,8 +1,14 @@
 @extends('app')
 @section('content')
 <style type="text/css">
-body{background-image:url("/images/bodyBackground.png");
-background-size:contain}
+html{
+background: url("/images/bodyBackground.png") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+ }
+
 </style>
 <div class="container">
 	<h1>Invite Users</h1>

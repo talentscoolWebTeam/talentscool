@@ -17,7 +17,7 @@
 				<br>
 				<div class="col-xs-offset-5">
 				{!! Form::Submit('Edit', ['class' => 'btn btn-success']) !!}
-				{!! Form::Button('cancel', ['class' => 'btn btn-danger', 'id'=>'cancelEdit']) !!}
+				<a href="{{ url('/clients')}}">{!! Form::Button('cancel', ['class' => 'btn btn-danger', 'id'=>'cancelEdit']) !!}</a>
 				</div>
 			{!! Form::close() !!}
 			</div>

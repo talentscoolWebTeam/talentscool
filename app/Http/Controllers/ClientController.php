@@ -36,11 +36,13 @@ class ClientController extends Controller {
 			{
 				$requestClients = \App\Client::where('status', '=', '2')->where('state','=',$filterText)->paginate($pageVal);
 				$filters = array('filter'=>$filter, 'filterText'=>$filterText);
+				$requestClients->appends(array('filter' => $filter, 'filterText'=>$filterText, 'count'=> $pageVal));
 				return view('clients.requested', compact('requestClients', 'filters'));
 			}
 			else if($filter == "city")
 			{
 				$requestClients = \App\Client::where('status', '=', '2')->where('city','=',$filterText)->paginate($pageVal);
+				$requestClients->appends(array('filter' => $filter, 'filterText'=>$filterText, 'count'=> $pageVal));
 				$filters = array('filter'=>$filter, 'filterText'=>$filterText);
 				return view('clients.requested', compact('requestClients', 'filters'));
 			}
@@ -48,6 +50,7 @@ class ClientController extends Controller {
 			{
 				$requestClients = \App\Client::where('status', '=', '2')->where('gender','like',"%$filterText%")->paginate($pageVal);
 				$filters = array('filter'=>$filter, 'filterText'=>$filterText);
+				$requestClients->appends(array('filter' => $filter, 'filterText'=>$filterText, 'count'=> $pageVal));
 				return view('clients.requested', compact('requestClients', 'filters'));
 			}
 			else if($filter == "talentCategory")
@@ -56,6 +59,7 @@ class ClientController extends Controller {
 					$q->where('category', 'like', "%$filterText%");
 				})->paginate($pageVal);
 				$filters = array('filter'=>$filter, 'filterText'=>$filterText);
+				$requestClients->appends(array('filter' => $filter, 'filterText'=>$filterText, 'count'=> $pageVal));
 				return view('clients.requested', compact('requestClients', 'filters'));
 			}
 			else if($filter == "specificTalent")
@@ -64,18 +68,21 @@ class ClientController extends Controller {
 					$q->where('specific_talent', 'like', "%$filterText%");
 				})->paginate($pageVal);
 				$filters = array('filter'=>$filter, 'filterText'=>$filterText);
+				$requestClients->appends(array('filter' => $filter, 'filterText'=>$filterText, 'count'=> $pageVal));
 				return view('clients.requested', compact('requestClients', 'filters'));
 			}
 			else if($filter == "name")
 			{
 				$requestClients = \App\Client::where('status', '=', '2')->where("fname", 'like', "%$filterText%")->paginate($pageVal);
 				$filters = array('filter'=>$filter, 'filterText'=>$filterText);
+				$requestClients->appends(array('filter' => $filter, 'filterText'=>$filterText, 'count'=> $pageVal));
 				return view('clients.requested', compact('requestClients', 'filters'));
 			}
 			else if($filter == "date")
 			{
 				$requestClients = \App\Client::where('status', '=', '2')->where("created_at", 'like', "%$filterText%")->paginate($pageVal);
 				$filters = array('filter'=>$filter, 'filterText'=>$filterText);
+				$requestClients->appends(array('filter' => $filter, 'filterText'=>$filterText, 'count'=> $pageVal));
 				return view('clients.requested', compact('requestClients', 'filters'));
 			}
 		}
@@ -103,6 +110,7 @@ class ClientController extends Controller {
 					$q->where('name', 'like', "%$filterText%");
 				})->paginate($pageVal);
 				$filters = array('filter'=>$filter, 'filterText'=>$filterText);
+				$acceptedClients->appends(array('filter' => $filter, 'filterText'=>$filterText, 'count'=> $pageVal));
 				return view('clients.accepted', compact('acceptedClients', 'filters'));
 			}
 			else if($filter == "state")
@@ -110,18 +118,21 @@ class ClientController extends Controller {
 				$acceptedClients = \App\Client::where('status', '=', '1')->where('state','=',$filterText)->paginate($pageVal);
 				
 				$filters = array('filter'=>$filter, 'filterText'=>$filterText);
+				$acceptedClients->appends(array('filter' => $filter, 'filterText'=>$filterText, 'count'=> $pageVal));
 				return view('clients.accepted', compact('acceptedClients', 'filters'));
 			}
 			else if($filter == "city")
 			{
 				$acceptedClients = \App\Client::where('status', '=', '1')->where('city','=',$filterText)->paginate($pageVal);
 				$filters = array('filter'=>$filter, 'filterText'=>$filterText);
+				$acceptedClients->appends(array('filter' => $filter, 'filterText'=>$filterText, 'count'=> $pageVal));
 				return view('clients.accepted', compact('acceptedClients', 'filters'));
 			}
 			else if($filter == "gender")
 			{
 				$acceptedClients = \App\Client::where('gender', '=', $filterText)->where('status', '=', '1')->paginate($pageVal);
 				$filters = array('filter'=>$filter, 'filterText'=>$filterText);
+				$acceptedClients->appends(array('filter' => $filter, 'filterText'=>$filterText, 'count'=> $pageVal));
 				return view('clients.accepted', compact('acceptedClients', 'filters'));
 			}
 			else if($filter == "talentCategory")
@@ -130,6 +141,7 @@ class ClientController extends Controller {
 					$q->where('category', 'like', "%$filterText%");
 				})->paginate($pageVal);
 				$filters = array('filter'=>$filter, 'filterText'=>$filterText);
+				$acceptedClients->appends(array('filter' => $filter, 'filterText'=>$filterText, 'count'=> $pageVal));
 				return view('clients.accepted', compact('acceptedClients', 'filters'));
 			}
 			else if($filter == "specificTalent")
@@ -138,18 +150,21 @@ class ClientController extends Controller {
 					$q->where('specific_talent', 'like', "%$filterText%");
 				})->paginate($pageVal);
 				$filters = array('filter'=>$filter, 'filterText'=>$filterText);
+				$acceptedClients->appends(array('filter' => $filter, 'filterText'=>$filterText, 'count'=> $pageVal));
 				return view('clients.accepted', compact('acceptedClients', 'filters'));
 			}
 			else if($filter == "name")
 			{
-				$acceptedClients = \App\Client::where('status', '=', '1')->where('name', 'like', "%$filterText%")->paginate($pageVal);
+				$acceptedClients = \App\Client::where('status', '=', '1')->where('fname', 'like', "%$filterText%")->paginate($pageVal);
 				$filters = array('filter'=>$filter, 'filterText'=>$filterText);
+				$acceptedClients->appends(array('filter' => $filter, 'filterText'=>$filterText, 'count'=> $pageVal));
 				return view('clients.accepted', compact('acceptedClients', 'filters'));
 			}
 			else if($filter == "date")
 			{
 				$acceptedClients = \App\Client::where('status', '=', '1')->where("created_at", 'like', "%$filterText%")->paginate($pageVal);
 				$filters = array('filter'=>$filter, 'filterText'=>$filterText);
+				$acceptedClients->appends(array('filter' => $filter, 'filterText'=>$filterText, 'count'=> $pageVal));
 				return view('clients.accepted', compact('acceptedClients', 'filters'));
 			}
 		}
