@@ -2,10 +2,13 @@
 @section('content1')
 <div class="clientFilterDiv" align="right">
 				{!! Form::model($filters, ['method'=>'GET', 'action' =>'ClientController@accepted', 'class'=>'form-inline']) !!}
-					Filter:  {!! Form::select('filter', array('name'=>'Name', 'state'=>'State', 'city'=>'City', 'gender'=>'Gender', 'talentCategory'=>'Talent Category', 'specificTalent'=>'Specific Talent', 'tag'=>'Tag', 'date'=>'Date'), null, ['class' => 'form-control', 'required', 'style'=>'width:20%', 'id'=>'filter']) !!}
-					{!! Form::text('filterText', null, ['class'=>'form-control','id'=>'filterText']) !!}
-					{!! Form::hidden('count', Input::get('count'), ['id' => 'hiddenViewCounter']) !!}
-					{!! Form::submit('Search', ['class' => 'btn btn-primary']) !!}
+					<div class="col-xs-12" style="float:right">
+						Filter:  {!! Form::select('filter', array('name'=>'Name', 'state'=>'State', 'city'=>'City', 'gender'=>'Gender', 'talentCategory'=>'Talent Category', 'specificTalent'=>'Specific Talent', 'tag'=>'Tag', 'date'=>'Date'), null, ['class' => 'form-control', 'required', 'id'=>'filter']) !!}
+							{!! Form::text('filterText', null, ['class'=>'form-control','id'=>'filterText']) !!}
+							{!! Form::hidden('count', Input::get('count'), ['id' => 'hiddenViewCounter']) !!}
+							{!! Form::submit('Search', ['class' => 'btn btn-primary']) !!}
+						
+					</div>
 				{!! Form::close() !!}
 			</div>
 <br>

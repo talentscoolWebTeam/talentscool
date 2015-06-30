@@ -8,6 +8,7 @@ background: url("/images/bodyBackground.png") no-repeat center center fixed;
   -o-background-size: cover;
   background-size: cover;
   color:white;
+  height:100%;
  }
 
 </style>

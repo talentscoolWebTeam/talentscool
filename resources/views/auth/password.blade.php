@@ -8,6 +8,8 @@ background: url("/images/bodyBackground.png") no-repeat center center fixed;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  width:100%;
+  height:100%;
  }
 
 </style>

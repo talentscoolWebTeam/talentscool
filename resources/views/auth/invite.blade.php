@@ -8,6 +8,7 @@ background: url("/images/bodyBackground.png") no-repeat center center fixed;
   -o-background-size: cover;
   background-size: cover;
   color:white;
+  height:100%;
  }
 
 </style>
@@ -31,13 +32,13 @@ background: url("/images/bodyBackground.png") no-repeat center center fixed;
 			</div>
 		@endif
 		<div class="col-xs-12">
-			<div class="col-xs-1">
+			<div class="col-xs-2">
 				<b>Email:</b>
 			</div>
-			<div class="col-xs-8">
+			<div class="col-xs-5">
 				<input type="text" name="email" class="form-control">
 			</div>
-			<div class="col-xs-3">
+			<div class="col-xs-1">
 				{!! Form::Submit("Submit", ['class' => 'btn btn-primary']) !!}
 			</div>
 		</div>
