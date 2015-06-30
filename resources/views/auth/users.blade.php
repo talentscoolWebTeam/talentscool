@@ -7,6 +7,7 @@ background: url("/images/bodyBackground.png") no-repeat center center fixed;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  color:white;
  }
 
 </style>
