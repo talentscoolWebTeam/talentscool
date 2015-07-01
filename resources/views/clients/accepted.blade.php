@@ -1,64 +1,48 @@
 @extends('clients.app')
 @section('content1')
+<link rel="stylesheet" href="{{ asset('/css/bladestyle.css') }}" type="text/css">
 <div class="clientFilterDiv" align="right">
 				{!! Form::model($filters, ['method'=>'GET', 'action' =>'ClientController@accepted', 'class'=>'form-inline']) !!}
-					<div class="col-xs-12" style="float:right">
-						Filter:  {!! Form::select('filter', array('name'=>'Name', 'state'=>'State', 'city'=>'City', 'gender'=>'Gender', 'talentCategory'=>'Talent Category', 'specificTalent'=>'Specific Talent', 'tag'=>'Tag', 'date'=>'Date'), null, ['class' => 'form-control', 'required', 'id'=>'filter']) !!}
-							{!! Form::text('filterText', null, ['class'=>'form-control','id'=>'filterText']) !!}
-							{!! Form::hidden('count', Input::get('count'), ['id' => 'hiddenViewCounter']) !!}
-							{!! Form::submit('Search', ['class' => 'btn btn-primary']) !!}
-						
-					</div>
+					Filter:  {!! Form::select('filter', array('name'=>'Name', 'state'=>'State', 'city'=>'City', 'gender'=>'Gender', 'talentCategory'=>'Talent Category', 'specificTalent'=>'Specific Talent', 'tag'=>'Tag', 'date'=>'Date'), null, ['class' => 'form-control', 'required', 'style'=>'width:20%', 'id'=>'filter']) !!}
+					{!! Form::text('filterText', null, ['class'=>'form-control','id'=>'filterText']) !!}
+					{!! Form::hidden('count', Input::get('count'), ['id' => 'hiddenViewCounter']) !!}
+					{!! Form::submit('Search', ['class' => 'btn btn-primary']) !!}
 				{!! Form::close() !!}
 			</div>
 <br>
-<table class="table table-bordered">
-<tr>
-<th rowspan="2" style="text-align:center; align:center; vertical-align:middle">Name</th>
-<th colspan="3" style="text-align:center">Service Desire</th>
-<th rowspan="2" style="text-align:center; align:center; vertical-align:middle">View</th>
-<tr>
-	<th style="text-align:center">Representation</th>
-	<th style="text-align:center">Opportunity</th>
-	<th style="text-align:center">Service</th>
-</tr>
 
-</tr>
+<div class="container">
 
-@foreach($acceptedClients as $acceptedClient)
-	<tr class="tbody">
-		<td style="text-align:center">{{ $acceptedClient->fname . " " . $acceptedClient->lname }}</td>
-		@if(!is_null($acceptedClient->service))
-			<td style="text-align:center">
-				@if(empty($acceptedClient->service->representation))
-					None
-				@else
-					{{ $acceptedClient->service->representation }}
-				@endif
-			</td>
-			<td style="text-align:center">
-				@if(empty($acceptedClient->service->opportunity))
-					None
-				@else
-					{{ $acceptedClient->service->opportunity }}
-				@endif
-			</td>
-			<td style="text-align:center">
-				@if(empty($acceptedClient->service->service))
-					None
-				@else
-					{{ $acceptedClient->service->service }}
-				@endif
-			</td>
-		@else
-			<td style="text-align:center">None</td>
-			<td style="text-align:center">None</td>
-			<td style="text-align:center">None</td>
-		@endif
-		<td style="text-align:center"><a href={{action('ClientController@acceptedClientInfo', $acceptedClient->id)}}> <button type="button" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>View</button></a></td>
-	</tr>
-@endforeach
-</table>
+    <?php
+    $counter=0;
+?>
+    <div class="row">
+    @foreach($acceptedClients as $acceptedClient)
+    <?php
+    $counter=$counter+1;
+?>
+    <div class="col-md-4">
+            <div class="medium-thumb">
+                @if($acceptedClient->personal_photo == "")
+                <img src="{{asset('/images/profilepicture.png')}}" class="attachment-post-thumbnail wp-post-image" alt="KrishaJain6bw" />
+                @else
+                <img width="144" height="216" src="{{$acceptedClient->personal_photo}}" class="attachment-post-thumbnail wp-post-image" alt="KrishaJain6bw" />
+                @endif
+                <a href={{action('ClientController@acceptedClientInfo', $acceptedClient->id)}}>{{$acceptedClient->fname." ".$acceptedClient->lname}}</a>
+            </div>
+        </div>   
+    <?php
+    if($counter>=3)
+    {
+        echo'</div>';
+        echo'<div class="row">';
+        $counter=0;       
+    }
+?>
+    @endforeach
+        </div>	
+</div>
+
 <div class="col-xs-12 form-inline">
 	{!! Form::label('Number of Contents: '); !!}
 	{!! Form::select('count', array('5'=>'5', '10'=>'10', '25'=>'25', '100'=>'100'), Input::get('count'), ['style'=>'color:black', 'class'=>'form-control', 'id'=>'viewCounter'] ) !!}
