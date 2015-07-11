@@ -221,6 +221,7 @@ p {
 
 #hero_section {
 	height: 550px;
+    padding-top:60px;
     position: relative;
 	background-image: url(http://talentscool.com/images/background.png);
 	background-repeat:no-repeat;
@@ -316,7 +317,7 @@ a.read_more2:hover {
 	background-image:url(http://talentscool.com/images/bodyBackground1.png);
 	background-repeat:no-repeat;
 	background-size: cover;	
-	padding: 60px 0;
+	padding: 120px 0;
 	
 }
 
@@ -338,7 +339,7 @@ a.read_more2:hover {
 
 #service {
 	height: 100vh; 
-    padding: 60px 0px;
+    padding: 120px 0px;
 	background-image: url(http://talentscool.com/images/bodyBackground.png);
 	background-repeat:no-repeat;
 	background-size: 100% 100%;
@@ -1630,10 +1631,12 @@ div.mc-image {
 	#aboutUs img{
 		margin-bottom:20px;
 	}
+/*
 	#aboutUs h3{
 		font-size:16px;
 		line-height:22px;
 	}
+*/
 	.service_block{
 		margin-bottom:20px;
 	}
@@ -1641,7 +1644,7 @@ div.mc-image {
 		font-size: 16px;
 	}
 	service_block p {
-		font-size: 14px; 
+		font-size: 10px; 
 		margin: 0px;
 		margin-bottom: 20px;
 	}
@@ -1704,6 +1707,14 @@ div.mc-image {
 	.navStyle ul li:last-child {
 		margin: 0px;
 	} 
+    #service li{
+        font-size:13px;
+    }
+/*
+    #aboutUs p{
+        font-size:14px;
+    }
+*/
 } 
 @media (max-width: 480px){
 	.navStyle {
@@ -1720,4 +1731,17 @@ div.mc-image {
 		display: block;
 		padding-top: 18px;
 	}
+    #service li{
+        font-size:10.5px;
+    }
+/*
+    #aboutUs p{
+        font-size:14px;
+    }
+*/
+}
+
+#show img{
+    padding-top: 150px;
+    text-align:center;
 }

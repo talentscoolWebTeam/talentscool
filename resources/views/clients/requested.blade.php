@@ -1,6 +1,6 @@
 @extends('clients.app')
 @section('content1')
-
+<link rel="stylesheet" href="{{ asset('/css/bladestyle.css') }}" type="text/css">
 <div class="clientFilterDiv" align="right">
 				{!! Form::model($filters,['method'=>'GET', 'action' =>'ClientController@requested', 'class'=>'form-inline']) !!}
 					Filter:  {!! Form::select('filter', array('name'=>'Name', 'state'=>'State', 'city'=>'City', 'gender'=>'Gender', 'talentCategory'=>'Talent Category', 'specificTalent'=>'Specific Talent', 'date'=>'Date'), null, ['class' => 'form-control', 'required', 'style'=>'width:2	0%', 'id'=>'filter']) !!}
@@ -10,34 +10,37 @@
 				{!! Form::close() !!}
 			</div>
 			<br>
-<table class="table table-bordered">
-	<tr>
-		<th style="text-align:center; vertical-align:middle">Name</th>
-		<th style="text-align:center; vertical-align:middle">Talent Category</th>
-		<th style="text-align:center; vertical-align:middle">Specific Talent</th>
-		<th style="text-align:center; vertical-align:middle">View</th>
-	</tr>
-	@foreach ($requestClients as $requestClient)
-		<tr class="tbody">
-			<td style="text-align:center">{{$requestClient->fname . " " . $requestClient->lname}}</td>
-		@if(!is_null($requestClient->talents))
-			@if($requestClient->talents == "[]")
-				<td style="text-align:center">None</td>
-				<td style="text-align:center">None</td>
-			@else
-				@foreach($requestClient->talents as $talent)
-						<td style="text-align:center"> {{ $talent->category }}</td>
-						<td style="text-align:center"> {{ $talent->specific_talent }}</td>
-				@endforeach
-			@endif
-		@else
-				<td style="text-align:center">None</td>
-				<td style="text-align:center">None</td>
-		@endif
-		<td style="text-align:center"><a href={{action('ClientController@requestedClientInfo', $requestClient->id)}}> <button type="button" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>View</button></a></td>
-		</tr>
-	@endforeach
-</table>
+
+<div class="container">
+    <?php
+    $counter=0;
+?>
+    <div class="row">
+    @foreach ($requestClients as $requestClient)
+    <?php
+    $counter=$counter+1;
+?>
+    <div class="col-md-4">
+            <div class="medium-thumb">
+                @if($requestClient->personal_photo == "")
+                <img src="{{asset('/images/profilepicture.png')}}" class="attachment-post-thumbnail wp-post-image" alt="KrishaJain6bw" />
+                @else
+                <img width="144" height="216" src="{{$requestClient->personal_photo}}" class="attachment-post-thumbnail wp-post-image" alt="KrishaJain6bw" />
+                @endif
+                <a href={{action('ClientController@requestedClientInfo', $requestClient->id)}}>{{$requestClient->fname." ".$requestClient->lname}}</a>
+            </div>
+        </div>   
+    <?php
+    if($counter>=3)
+    {
+        echo'</div>';
+        echo'<div class="row">';
+        $counter=0;       
+    }
+?>
+    @endforeach
+    </div>
+        
 <div class="col-xs-12 form-inline">
 	{!! Form::label('Number of Contents: '); !!}
 	{!! Form::select('count', array('5'=>'5', '10'=>'10', '25'=>'25', '100'=>'100'), Input::get('count'), ['style'=>'color:black', 'class'=>'form-control', 'id'=>'viewCounter'] ) !!}

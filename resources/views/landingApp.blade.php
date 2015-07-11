@@ -10,7 +10,7 @@
 		<link href="css/font-awesome.css" rel="stylesheet" type="text/css"> 
 		<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
 		<link href="css/style7.css" rel="stylesheet" type="text/css"> 
-		<link href="css/animate.css" rel="stylesheet" type="text/css"> 
+		<link href="css/animate.css" rel="stylesheet" type="text/css">
 		
 		
 		<!-- <link rel="shortcut icon" href="{{{ asset('/images/favicon.jpeg') }}}">
@@ -27,10 +27,37 @@
 			<script src="js/html5shiv.js"></script>
 			<script src="js/html5element.js"></script>
 		<![endif]-->
-		
+		<style>
+            .hidden{
+                display:hidden;
+            }
+        </style>
 	</head>
 	<body>
-		
+<!--
+		<script type="text/javascript">
+            
+                //网页正文高度
+            var pageHeight;
+            var locate=0;
+            window.onload=function(){
+                pageHeight=document.body.scrollHeight;
+            }
+            var timer;
+            timer=setInterval("scrollDown()",40); 
+            function scrollDown()
+            {
+                if(locate<pageHeight)
+                {
+                    locate++;
+                    scroll(0,locate);
+                }else{
+                    clearInterval(timer);
+                }
+            }
+//
+        </script>
+-->
 		<!--Header_section-->
 		<header id="header_wrapper">
 			<div class="container">
@@ -53,7 +80,7 @@
 			</div>
 		</header>
 		<!--Header_section--> 
-		
+        
 		<!--Hero_Section-->
 		<section id="hero_section" class="top_cont_outer">
 			<div class="hero_wrapper">
@@ -67,6 +94,11 @@
 									<p>Music. Dance. Film. Fashion. Arts. Sports. We know them all.</p>
 								<a href="#service" class="read_more2">Read more</a> </div>
 							</div>
+                            <div class="bannerImg zoomIn wow animated" id="show">
+                                <img src="{{asset('/images/profilepicture.png')}}">
+                                <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/3/000/264/3ed/0f9aedd.jpg">
+                                <img src="http://businessrockstars.com/wp-content/uploads/2015/06/dan-300-x-300-profile-pic.jpg">
+                            </div>
 							<div>
 							</div>
 						</div>
@@ -105,7 +137,7 @@
 		
 		
 		<!--Service-->
-		<section  id="service" style="font-size: 16px;">
+		<section  id="service">
 			<div class="service_wrapper" >
 				<div class="container">
 					<h2>Services</h2>
@@ -159,7 +191,7 @@
 			</div>
 		</section>
 		<!--Service-->
-		
+<!--        </div>-->
 		
 		
 		
@@ -203,7 +235,7 @@
 						
 					</div>
 				</section>
-				</div>
+			
 			<!-- <div class="container">
 				<div class="footer_bottom"><img src="http://talentscool.com/images/logoT.png" style="vertical-align:middle; max-height: 50%; max-width: 50%;"> </div>
 				<!-- class="tailLogo" 
@@ -219,7 +251,11 @@
 		<script type="text/javascript" src="js/jquery.isotope.js"></script>
 		<script type="text/javascript" src="js/wow.js"></script> 
 		<script type="text/javascript" src="js/custom.js"></script>
-		<script>
+        <script type="text/javascript" src="js/jquery.easing.min.js"></script>
+        <script type="text/javascript" src="js/jquery.scrollify.min.js"></script>
+            
+        
+        <script>
 		$('#sendmail').click(function(){
 			$token=$(this).parent().find('input[name=_token]').val();
 			$receiver=$(this).parent().find('input[name=receiver]').val();
@@ -251,6 +287,41 @@
 
 		});
 		</script>
+        <script>// Question:display属性变了以后连图片位置都变了？
+                // fade in和fade out的speed无法改变？
+        $(function(){
+  var aImg = $('#show img');//抓取id=show下所有的图片
+  var nTime = 0;//初始化轮播图片的开始图片为第一张
+  function show(){
+    $.each(aImg,function() {
+      $(this).fadeOut('50000');//淡出，可选项
+      $(this).addClass('hidden');//设置display为hidden
+    });
+    $(aImg[nTime]).removeClass('hidden');//拿掉display=hidden
+    $(aImg[nTime]).fadeIn('50000');//淡入，可选项，如果删除的话fadeOut也要一并删除
+    (nTime == 2)?nTime=0:nTime++;//三目运算符，如果轮播完毕则跳转回第一张
+  }
+    show();//让它先进行一次播放，显示第一张图片
+    $(document).ready(function() {
+    setInterval(show,5000);//设置定时器,隔5000毫秒调用一次show函数
+  });
+});
+        </script>
+            
+        <script>
+            $(function(){
+                $.scrollify({ 
+                section : "section", 
+                sectionName : "section-name", 
+                easing: "easeOutExpo", 
+                scrollSpeed: 1500, 
+                offset : 0, 
+                scrollbars: true, 
+                before:function() {}, 
+                after:function() {} 
+                });     
+            });   
+        </script>
 		
 	</body>
 </html>
