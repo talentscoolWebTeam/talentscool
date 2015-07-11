@@ -84,6 +84,11 @@
 		$(this).parent().parent().parent().fadeOut('slow');
 		$('.tagField').val("");
 	});
+	$('.tagField').keydown( function(e){
+		if(e.keyCode == 13)
+			return false;
+
+	});
 	$('.tagSubmit').click(function(){
 		var token = $(this).parent().parent().parent().children().get(0).value;
 		var name = $(this).parent().children().get(1).value;
@@ -105,6 +110,7 @@
 					document.getElementById('tag_list').innerHTML+='<option value="' + obj.id +'">' + name + '</option>';
 					$('#successMessage').css('visibility', 'visible').hide().fadeIn('slow');
 					document.getElementById('successMessageBody').innerHTML = obj.message;
+					document.getElementById('deleteTagName').innerHTML+='<option value="' + obj.id +'">' + name + '</option>';
 				}
 				else if(obj.result == 'failure')
 				{

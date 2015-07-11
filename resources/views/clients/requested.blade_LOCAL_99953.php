@@ -1,10 +1,6 @@
 @extends('clients.app')
 @section('content1')
 <link rel="stylesheet" href="{{ asset('/css/bladestyle.css') }}" type="text/css">
-<<<<<<< HEAD
-=======
-
->>>>>>> 09e9ecc9d2d2e5654db442799b21cf959a83aa68
 <div class="clientFilterDiv" align="right">
 				{!! Form::model($filters,['method'=>'GET', 'action' =>'ClientController@requested', 'class'=>'form-inline']) !!}
 					Filter:  {!! Form::select('filter', array('name'=>'Name', 'state'=>'State', 'city'=>'City', 'gender'=>'Gender', 'talentCategory'=>'Talent Category', 'specificTalent'=>'Specific Talent', 'date'=>'Date'), null, ['class' => 'form-control', 'required', 'style'=>'width:2	0%', 'id'=>'filter']) !!}
@@ -15,11 +11,7 @@
 			</div>
 			<br>
 
-<<<<<<< HEAD
 <div class="container">
-=======
-			<div class="container">
->>>>>>> 09e9ecc9d2d2e5654db442799b21cf959a83aa68
     <?php
     $counter=0;
 ?>
@@ -48,11 +40,7 @@
 ?>
     @endforeach
     </div>
-<<<<<<< HEAD
         
-=======
-			
->>>>>>> 09e9ecc9d2d2e5654db442799b21cf959a83aa68
 <div class="col-xs-12 form-inline">
 	{!! Form::label('Number of Contents: '); !!}
 	{!! Form::select('count', array('5'=>'5', '10'=>'10', '25'=>'25', '100'=>'100'), Input::get('count'), ['style'=>'color:black', 'class'=>'form-control', 'id'=>'viewCounter'] ) !!}
