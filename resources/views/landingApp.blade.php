@@ -95,9 +95,13 @@
 								<a href="#service" class="read_more2">Read more</a> </div>
 							</div>
                             <div class="bannerImg zoomIn wow animated" id="show">
-                                <img src="{{asset('/images/profilepicture.png')}}">
-                                <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/3/000/264/3ed/0f9aedd.jpg">
-                                <img src="http://businessrockstars.com/wp-content/uploads/2015/06/dan-300-x-300-profile-pic.jpg">
+                                <img src="{{asset('/images/rotator/Acting.png')}}">
+                                <img src="{{asset('/images/rotator/Art.png')}}">
+                                <img src="{{asset('/images/rotator/Fashion.png')}}">
+                                <img src="{{asset('/images/rotator/HipHop.png')}}">
+                                <img src="{{asset('/images/rotator/Makeup.png')}}">
+                                <img src="{{asset('/images/rotator/Music.png')}}">
+                                <img src="{{asset('/images/rotator/Sports.png')}}">
                             </div>
 							<div>
 							</div>
@@ -299,7 +303,7 @@
     });
     $(aImg[nTime]).removeClass('hidden');//拿掉display=hidden
     $(aImg[nTime]).fadeIn('50000');//淡入，可选项，如果删除的话fadeOut也要一并删除
-    (nTime == 2)?nTime=0:nTime++;//三目运算符，如果轮播完毕则跳转回第一张
+    (nTime == 5)?nTime=0:nTime++;//三目运算符，如果轮播完毕则跳转回第一张
   }
     show();//让它先进行一次播放，显示第一张图片
     $(document).ready(function() {
