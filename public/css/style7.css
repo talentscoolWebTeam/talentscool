@@ -1597,9 +1597,9 @@ div.mc-image {
 	Media Queries
 --------------------------- */
 @media (min-width: 768px) {
-	
-	
+
 }
+
 @media (max-width: 768px) {
 	.bannerImg{
 		display:none;
@@ -1685,7 +1685,7 @@ div.mc-image {
 		border-color: transparent;
 	}
 	.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus{
-		background:none;
+;		background:none;
 		outline: none;
 	}
 	.navStyle ul li {
@@ -1743,5 +1743,6 @@ div.mc-image {
 
 #show img{
     padding-top: 150px;
+    padding-left: 390px;
     text-align:center;
 }
