@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*
 Theme Name: My custom theme
 Theme URI: http://wordpress.org/
@@ -246,6 +247,7 @@ a:hover{
 
 .page-title{
     margin-bottom: 25px;
+=======
 body, html,  p, a {
     height: 100%;
     font-family: 'Montserrat', sans-serif;
@@ -477,4 +479,5 @@ a:hover{
 
 .page-title{
     margin-bottom: 25px;
+>>>>>>> 09e9ecc9d2d2e5654db442799b21cf959a83aa68
 }

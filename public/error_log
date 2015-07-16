@@ -1,1 +1,8 @@
 [29-Apr-2015 01:28:31 America/Chicago] PHP Parse error:  syntax error, unexpected '\Routing;', expecting \\ (T_NS_SEPARATOR) or ';' or '{' in /home4/tscool/talentscool/vendor/compiled.php on line 7328
+[16-Jul-2015 22:52:15 UTC] PHP Fatal error:  Interface 'Laravel\Cashier\Contracts\Billable' not found in /home4/tscool/talentscool/app/User.php on line 11
+[16-Jul-2015 22:54:51 UTC] PHP Fatal error:  Interface 'Laravel\Cashier\Contracts\Billable' not found in /home4/tscool/talentscool/app/User.php on line 11
+[16-Jul-2015 22:54:52 UTC] PHP Fatal error:  Interface 'Laravel\Cashier\Contracts\Billable' not found in /home4/tscool/talentscool/app/User.php on line 11
+[16-Jul-2015 22:56:00 UTC] PHP Fatal error:  Interface 'Laravel\Cashier\Contracts\Billable' not found in /home4/tscool/talentscool/app/User.php on line 11
+[16-Jul-2015 22:57:47 UTC] PHP Fatal error:  Interface 'Laravel\Cashier\Contracts\Billable' not found in /home4/tscool/talentscool/app/User.php on line 11
+[16-Jul-2015 22:58:16 UTC] PHP Fatal error:  Interface 'Laravel\Cashier\Contracts\Billable' not found in /home4/tscool/talentscool/app/User.php on line 11
+[16-Jul-2015 22:58:27 UTC] PHP Fatal error:  Interface 'Laravel\Cashier\Contracts\Billable' not found in /home4/tscool/talentscool/app/User.php on line 11
