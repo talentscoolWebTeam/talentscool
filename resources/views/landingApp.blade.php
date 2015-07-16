@@ -87,10 +87,10 @@
 				<div class="container">
 					<div class="hero_section">
 						<div class="row">
-							<div class="col-lg-5 col-sm-7">
+							<div class="col-lg-6 col-sm-7">
 								<div class="top_left_cont zoomIn wow animated"> 
 									<h2>We are the new way to connect in Entertainment</h2>
-									<p>Whether you are looking for talent or your next big break, we are here to help you.</p>
+									<p>Whether you are looking for talent or your next big break, we're here to help.</p>
 									<p>Music. Dance. Film. Fashion. Arts. Sports. We know them all.</p>
 								<a href="#service" class="read_more2">Read more</a> </div>
 							</div>
@@ -121,13 +121,13 @@
 					<div class="inner_section">
 						<div class="row">
 							<div class=" col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-right"></div>
-							<div class=" col-lg-7 col-md-7 col-sm-7 col-xs-12 pull-left">
+							<div class=" col-lg-8 col-md-8 col-sm-8 col-xs-12 pull-left">
 								<div class=" delay-01s animated fadeInDown wow animated">
 									
-									<p>Headquartered in Los Angeles, Talentscool is a talent service that works with talents in music, film, fashion, visual arts, dance, and sports to find them opportunities and connect them to the various services they need for their careers. Being founded by both a musician and a pro-athlete, we know how hard it is to stand out in the entertainment industry. With all of the competition, we aim to give our clients ease knowing someone is on their side.</p> <br/>
-									<p>Through our global relationships with major/indie record labels, talent agencies, casting agencies, production companies, venues, art galleries, corporate sponsors, and much more, we are able to provide the best possible service to our clients. In addition, we recommend our clients to well-established vendor services ranging from publicists to agents to investors to entertainment lawyers and everything in between. We cater to the needs of our clients in every way possible.</p>
+									<p align="justify">Headquartered in Los Angeles, Talentscool is a talent service that works with the music, film, fashion, visual arts, dance, and sports industries to help find talents new opportunities and connect them to the services they need. Having been founded by founded by both a musician and a pro-athlete, we know how hard it is to stand out in the entertainment industry. With so much competition, our clients will be given the ease at mind with someone on their side.</p> <br/>
+									<p align="justify">Through our global relationships with major/indie record labels, talent agencies, casting agencies, production companies, venues, art galleries, corporate sponsors, and much more, we are able to provide the best possible services to our clients. In addition, we recommend our clients to well-established vendor services ranging from publicists to agents to investors to entertainment lawyers and everything in between. The needs of our clients are our #1 priority.</p>
 								</div>
-								<div class="work_bottom"> <span>Want to know more..</span> <a href="#contact" class="contact_btn">Contact Us</a> </div>       
+								<div class="work_bottom"> <span>Want to know more?</span> <a href="#contact" class="contact_btn">Contact Us</a> </div>       
 							</div>
 							
 						</div>
