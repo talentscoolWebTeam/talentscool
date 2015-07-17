@@ -313,7 +313,7 @@ a.read_more2:hover {
 /*About Us
 ---------------------------------*/
 #aboutUs{
-	height: 100vh;
+	height: auto;
 	background-image:url(http://talentscool.com/images/bodyBackground1.png);
 	background-repeat:no-repeat;
 	background-size: cover;	
@@ -333,7 +333,7 @@ a.read_more2:hover {
 ---------------------------------*/
 
 #service {
-	height: 100vh; 
+	height: auto; 
     padding: 120px 0px;
 	background-image: url(http://talentscool.com/images/bodyBackground.png);
 	background-repeat:no-repeat;
