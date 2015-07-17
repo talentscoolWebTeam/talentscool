@@ -59,7 +59,11 @@
 
 
 <table>
+<<<<<<< HEAD
+<tr><td class="col-xs-12" style="font-size:36px;">APPLICATION</td><td style="float:right;position:relative;margin-right:20%;margin-top:2%;"><img src="/pic/TSVector.png" style="width:200px;"></td></tr>
+=======
 <tr><td class="col-xs-12" style="font-size:36px;">APPLICATION</td><td style="float:right;position:relative;margin-right:20%;margin-top:2%;"><img src="/images/TSVector.png" style="width:200px;"></td></tr>
+>>>>>>> 58f0f6caf1a4fc027ed3555721565f4cbbf46597
 </table>
 {!! Form::open(['action'=>'ApplicationController@store','enctype' => 'multipart/form-data']) !!}
 <div class="firstPage">
@@ -101,7 +105,11 @@
 
 <div class="col-xs-12">
            <div class="col-xs-2">
+<<<<<<< HEAD
+            UPLOAD PERSONAL PHOTO&nbsp(optional)&nbsp(max size is <b style="color:red;">5MB. jpg, gif, png ONLY</b>)
+=======
             UPLOAD PERSONAL PHOTO&nbsp(optional)&nbsp(max size is 5MB. jpg, gif, png ONLY)
+>>>>>>> 58f0f6caf1a4fc027ed3555721565f4cbbf46597
            </div>
            <div class="col-xs-3">
            <input type="file" name="personal_photo" id="personal_photo" accept="image/*"></input>
@@ -246,19 +254,32 @@ SPECIFIC TALENT<sup>*</sup>
 
 <div class="col-xs-12">
 <div class="col-xs-3">
+<<<<<<< HEAD
+UPLOAD PORTFOLIO<br>(At least one/at most three photos or links of the below)
+=======
 UPLOAD PORTFOLIO<br>(Choose at least one of the below)
+>>>>>>> 58f0f6caf1a4fc027ed3555721565f4cbbf46597
 </div>
 </div>
 
 <div class="col-xs-12">&nbsp;</div>
 
 
+<<<<<<< HEAD
+<div class="col-xs-12" id="file1">
+<div id="img1">
+</div>
+<div id="audio1">
+</div>
+<div id="video1">
+=======
 <div class="col-xs-12">
 <div class="col-xs-3">
 PHOTO&nbsp(max size is 5MB. jpg, png, gif ONLY)
 </div>
 <div class="col-xs-3">
 <input type="file" name="tphoto1" id="tphoto1" accept="image/*">
+>>>>>>> 58f0f6caf1a4fc027ed3555721565f4cbbf46597
 </div>
 </div>
 
@@ -266,9 +287,22 @@ PHOTO&nbsp(max size is 5MB. jpg, png, gif ONLY)
 
 <div class="col-xs-12">
 <div class="col-xs-3">
+<<<<<<< HEAD
+PHOTO&nbsp(max size is <b style="color:red;">5MB. jpg, gif, png ONLY</b>)
+</div>
+<div class="col-xs-3">
+<input type="file" name="tphoto1_1" id="tphoto1_1" accept="image/*">
+</div>
+<div class="col-xs-3">
+<input type="file" name="tphoto1_2" id="tphoto1_2" accept="image/*">
+</div>
+<div class="col-xs-3">
+<input type="file" name="tphoto1_3" id="tphoto1_3" accept="image/*">
+=======
 AUDIO&nbsp(link)
 </div>
 <div class="col-xs-3"><input type="text" name="audiolink1" id="audiolink1"  class="page2 form-control">
+>>>>>>> 58f0f6caf1a4fc027ed3555721565f4cbbf46597
 </div>
 </div>
 
@@ -276,12 +310,35 @@ AUDIO&nbsp(link)
 
 <div class="col-xs-12">
 <div class="col-xs-3">
+<<<<<<< HEAD
+AUDIO&nbsp(Please separate links by <b style="color:red;">;</b>)
+</div>
+<div class="col-xs-3"><input type="text" name="audiolink1" id="audiolink1"  class="page2 form-control">
+=======
 VIDEO&nbsp(link)
 </div>
 <div class="col-xs-3"><input type="text" name="videolink1" id="videolink1"  class="page2 form-control">
+>>>>>>> 58f0f6caf1a4fc027ed3555721565f4cbbf46597
+</div>
+<div class="col-xs-3"><input type="button" name="preview_audio_1" id="preview_audio_1" class="btn btn-danger" style="font-family:'Roboto', Helvetica, Arial, sans-serif" value="preview">
 </div>
 </div>
 
+<div class="col-xs-12">&nbsp;</div>
+
+<<<<<<< HEAD
+<div class="col-xs-12">
+<div class="col-xs-3">
+VIDEO&nbsp(Please separate links by <b style="color:red;">;</b>)
+</div>
+<div class="col-xs-3"><input type="text" name="videolink1" id="videolink1"  class="page2 form-control">
+</div>
+<div class="col-xs-3"><input type="button" name="preview_video_1" id="preview_video_1" class="btn btn-danger" style="font-family:'Roboto', Helvetica, Arial, sans-serif" value="preview">
+</div>
+</div>
+
+=======
+>>>>>>> 58f0f6caf1a4fc027ed3555721565f4cbbf46597
 <div class="col-xs-12">&nbsp;</div>
 <div class="col-xs-12">
 <div class="col-xs-2">
@@ -345,15 +402,27 @@ SPECIFIC TALENT<sup>*</sup>
 
 <div class="col-xs-12">
 <div class="col-xs-3">
+<<<<<<< HEAD
+UPLOAD PORTFOLIO<br>(At least one/at most three photos or links of the below)
+=======
 UPLOAD PORTFOLIO<br>(Choose at least one of the below)
+>>>>>>> 58f0f6caf1a4fc027ed3555721565f4cbbf46597
 </div>
 </div>
 
 <div class="col-xs-12">&nbsp;</div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 58f0f6caf1a4fc027ed3555721565f4cbbf46597
 
 
-<div class="col-xs-12">
-<div id="file1">
+<div class="col-xs-12" id="file2">
+<div id="img2">
+</div>
+<div id="audio2">
+</div>
+<div id="video2">
 </div>
 </div>
 
@@ -361,10 +430,23 @@ UPLOAD PORTFOLIO<br>(Choose at least one of the below)
 
 <div class="col-xs-12">
 <div class="col-xs-3">
+<<<<<<< HEAD
+PHOTO&nbsp(max size is <b style="color:red;">5MB. jpg, gif, png ONLY</b>)
+</div>
+<div class="col-xs-3">
+<input type="file" name="tphoto2_1" id="tphoto2_1" accept="image/*">
+</div>
+<div class="col-xs-3">
+<input type="file" name="tphoto2_2" id="tphoto2_2" accept="image/*">
+</div>
+<div class="col-xs-3">
+<input type="file" name="tphoto2_3" id="tphoto2_3" accept="image/*">
+=======
 PHOTO&nbsp(max size is 5MB. jpg, png, gif ONLY)
 </div>
 <div class="col-xs-3">
 <input type="file" name="tphoto2" id="tphoto2" accept="image/*">
+>>>>>>> 58f0f6caf1a4fc027ed3555721565f4cbbf46597
 </div>
 </div>
 
@@ -372,9 +454,17 @@ PHOTO&nbsp(max size is 5MB. jpg, png, gif ONLY)
 
 <div class="col-xs-12">
 <div class="col-xs-3">
+<<<<<<< HEAD
+AUDIO&nbsp(Please separate links by <b style="color:red;">;</b>)
+</div>
+<div class="col-xs-3"><input type="text" name="audiolink2" id="audiolink2"  class="page2 form-control" style="width:300px;">
+</div>
+<div class="col-xs-3"><input type="button" name="preview_audio_2" id="preview_audio_2" class="btn btn-danger" style="font-family:'Roboto', Helvetica, Arial, sans-serif" value="preview">
+=======
 AUDIO&nbsp(link)
 </div>
 <div class="col-xs-3"><input type="text" name="audiolink2" id="audiolink2"  class="page2 form-control" style="width:300px;">
+>>>>>>> 58f0f6caf1a4fc027ed3555721565f4cbbf46597
 </div>
  </div>
  
@@ -382,9 +472,17 @@ AUDIO&nbsp(link)
  
  <div class="col-xs-12">
  <div class="col-xs-3">
+<<<<<<< HEAD
+VIDEO&nbsp(Please separate links by <b style="color:red;">;</b>)
+</div>
+<div class="col-xs-3"><input type="text" name="videolink2" id="videolink2"  class="page2 form-control" style="width:300px;">
+</div>
+<div class="col-xs-3"><input type="button" name="preview_video_2" id="preview_video_2" class="btn btn-danger" style="font-family:'Roboto', Helvetica, Arial, sans-serif" value="preview">
+=======
 VIDEO&nbsp(link)
 </div>
 <div class="col-xs-3"><input type="text" name="videolink2" id="videolink2"  class="page2 form-control" style="width:300px;">
+>>>>>>> 58f0f6caf1a4fc027ed3555721565f4cbbf46597
 </div>
 </div>
 
@@ -451,35 +549,69 @@ SPECIFIC TALENT<sup>*</sup>
 
 <div class="col-xs-12">
 <div class="col-xs-3">
+<<<<<<< HEAD
+UPLOAD PORTFOLIO<br>(At least one/at most three photos or links of the below)
+=======
 UPLOAD PORTFOLIO<br>(Choose at least one of the below)
+>>>>>>> 58f0f6caf1a4fc027ed3555721565f4cbbf46597
 </div>
 </div>
 
 <div class="col-xs-12">&nbsp;</div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 58f0f6caf1a4fc027ed3555721565f4cbbf46597
 
 
-<div class="col-xs-12">
-<div id="file2">
+<div class="col-xs-12" id="file3">
+<div id="img3">
+</div>
+<div id="audio3">
+</div>
+<div id="video3">
 </div>
 </div>
 
 <div class="col-xs-12">&nbsp;</div>
 <div class="col-xs-12">
 <div class="col-xs-3">
+<<<<<<< HEAD
+PHOTO&nbsp(max size is <b style="color:red;">5MB. jpg, gif, png ONLY</b>)
+</div>
+<div class="col-xs-3">
+<input type="file" name="tphoto3_1" id="tphoto3_1" accept="image/*">
+</div>
+<div class="col-xs-3">
+<input type="file" name="tphoto3_2" id="tphoto3_2" accept="image/*">
+</div>
+<div class="col-xs-3">
+<input type="file" name="tphoto3_3" id="tphoto3_3" accept="image/*">
+</div>
+=======
 PHOTO&nbsp(max size is 5MB. jpg, png, gif ONLY)
 </div>
 <div class="col-xs-3">
  <input type="file" name="tphoto3" id="tphoto3" accept="image/*">
  </div>
+>>>>>>> 58f0f6caf1a4fc027ed3555721565f4cbbf46597
  </div>
  
 <div class="col-xs-12">&nbsp;</div>
  
  <div class="col-xs-12">
  <div class="col-xs-3">
+<<<<<<< HEAD
+AUDIO&nbsp(Please separate links by <b style="color:red;">;</b>)
+</div>
+<div class="col-xs-3"><input type="text" name="audiolink3" id="audiolink3"  class="page2 form-control" style="width:300px;">
+</div>
+<div class="col-xs-3"><input type="button" name="preview_audio_3" id="preview_audio_3" class="btn btn-danger" style="font-family:'Roboto', Helvetica, Arial, sans-serif" value="preview">
+=======
 AUDIO&nbsp(link)
 </div>
 <div class="col-xs-3"><input type="text" name="audiolink3" id="audiolink3"  class="page2 form-control" style="width:300px;">
+>>>>>>> 58f0f6caf1a4fc027ed3555721565f4cbbf46597
 </div>
 </div>
 
@@ -487,9 +619,17 @@ AUDIO&nbsp(link)
 
 <div class="col-xs-12">
 <div class="col-xs-3">
+<<<<<<< HEAD
+VIDEO&nbsp(Please separate links by <b style="color:red;">;</b>)
+</div>
+<div class="col-xs-3"><input type="text" name="videolink3" id="videolink3"  class="page2 form-control" style="width:300px;">
+</div>
+<div class="col-xs-3"><input type="button" name="preview_video_3" id="preview_video_3" class="btn btn-danger" style="font-family:'Roboto', Helvetica, Arial, sans-serif" value="preview">
+=======
 VIDEO&nbsp(link)
 </div>
 <div class="col-xs-3"><input type="text" name="videolink3" id="videolink3"  class="page2 form-control" style="width:300px;">
+>>>>>>> 58f0f6caf1a4fc027ed3555721565f4cbbf46597
 </div>
 </div>
 
@@ -586,7 +726,11 @@ Describe yourself in three words
 <div class="col-xs-12">&nbsp;</div> 
 <div class="col-xs-12">
 <div class="col-xs-2">
+<<<<<<< HEAD
+Intro video&nbsp(One link ONLY)
+=======
 Intro video&nbsp(link)
+>>>>>>> 58f0f6caf1a4fc027ed3555721565f4cbbf46597
 </div>
 <div class="col-xs-3">
 <input type="text" style="width:300px"  name="introVideo" id="introVideo" class="page4 form-control">
@@ -718,18 +862,26 @@ Anything else
 	$('#secondPrevious').click(function(){
 		   $('.secondPage').hide();
 		   $('.firstPage').show();
-		   one=0;
+		   document.getElementById('file1').innerHTML="<div id='img1'></div><div id='audio1'></div><div id='video1'></div>";
 		   document.getElementById('audiolink1').value="";
 		   document.getElementById('videolink1').value='';
-		   document.getElementById('tphoto1').value='';
+		   document.getElementById('tphoto1_1').value='';
+		   document.getElementById('tphoto1_2').value='';
+		   document.getElementById('tphoto1_3').value='';
 	}
 	);
 	
 	$('#secondNext').click(function(){
 		var num=0;
-	    if($('#tphoto1').val()!='')num++;
-		if($('#audiolink1').val()!='')num++;
-		if($('#videolink1').val()!='')num++;
+		var pic=0;
+		var audio=0;
+		var video=0;
+	    if($('#tphoto1_1').val()!='')pic++;
+		if($('#tphoto1_2').val()!='')pic++;
+		if($('#tphoto1_3').val()!='')pic++;
+		if($('#audiolink1').val()!='')audio=$('#audiolink1').val().split(";").length;
+		if($('#videolink1').val()!='')video=$('#videolink1').val().split(";").length;
+		num=pic+audio+video;
 		var message="";
 		var picmessage="";
 	    if($('#category1').val()=='')message+="category/";
@@ -739,11 +891,12 @@ Anything else
 			message+=" are required. Please fill out.";
 			alert(message);
 		}
-		else if(getextension($('#tphoto1').val())==-1){
+		else if(getextension($('#tphoto1_1').val())==-1||getextension($('#tphoto1_2').val())==-1||getextension($('#tphoto1_3').val())==-1){
 				picmessage="The extension name of file is wrong!";
 				alert(picmessage);
 			}
 		else if(num==0)alert("Please upload at least one file!");
+		else if(num>3)alert("Please upload at most three files!");
 		else{
 			$('.secondPage').hide();
 		    $('.thirdPage').show();
@@ -752,15 +905,24 @@ Anything else
 	$('#thirdPrevious').click(function(){
 		$('.thirdPage').hide();
 		$('.secondPage').show();
-		document.getElementById('tphoto1').value='';
-		document.getElementById('tphoto2').value='';
-		document.getElementById('tphoto3').value='';
+		document.getElementById('tphoto1_1').value='';
+		document.getElementById('tphoto2_1').value='';
+		document.getElementById('tphoto3_1').value='';
+		document.getElementById('tphoto1_2').value='';
+		document.getElementById('tphoto2_2').value='';
+		document.getElementById('tphoto3_2').value='';
+		document.getElementById('tphoto1_3').value='';
+		document.getElementById('tphoto2_3').value='';
+		document.getElementById('tphoto3_3').value='';
 		document.getElementById('audiolink1').value='';
 		document.getElementById('audiolink2').value='';
 		document.getElementById('audiolink3').value='';
 		document.getElementById('videolink1').value='';
 		document.getElementById('videolink2').value='';
 		document.getElementById('videolink3').value='';
+		document.getElementById('file1').innerHTML="<div id='img1'></div><div id='audio1'></div><div id='video1'></div>";
+		document.getElementById('file2').innerHTML="<div id='img2'></div><div id='audio2'></div><div id='video2'></div>";
+		document.getElementById('file3').innerHTML="<div id='img3'></div><div id='audio3'></div><div id='video3'></div>";
 	});
 	$('#thirdNext').click(function(){
 		var message="";
@@ -798,12 +960,26 @@ Anything else
 			message+=" are required. Please fill out.";
 			alert(message);
 		}
-		else if(getextension($('#tphoto1').val())==-1){
+		else if(getextension($('#tphoto1_1').val())==-1||getextension($('#tphoto1_2').val())==-1||getextension($('#tphoto1_3').val())==-1){
 				picmessage="The extension name of file is wrong!";
 				alert(picmessage);
 			} 
 		else{
 		var num=0;
+<<<<<<< HEAD
+		if($('#tphoto1_1').val()!=''){
+			num++;
+		}
+		if($('#tphoto1_2').val()!=''){
+			num++;
+		}
+		if($('#tphoto1_3').val()!=''){
+			num++;
+		}
+		if($('#audiolink1').val()!=''){
+			var url=$('#audiolink1').val().split(";");
+			for(var i=0;i<url.length;i++){
+=======
 		document.getElementById('file1').innerHTML=document.getElementById('specific_talent1').value+" :<br>";
 		if($('#tphoto1').val()!=''){
 			document.getElementById('file1').innerHTML+="<img src='/pic/photo.png' width='40' height='40'><br>";
@@ -811,14 +987,23 @@ Anything else
 		}
 		if($('#audiolink1').val()!=''){
 			document.getElementById('file1').innerHTML+="<a href='"+$('#audiolink1').val()+"' target='_blank' style='color:red;'>"+$('#audiolink1').val()+"</a><br>";
+>>>>>>> 58f0f6caf1a4fc027ed3555721565f4cbbf46597
 			num++;
+			}
 		}
 		if($('#videolink1').val()!=''){
+<<<<<<< HEAD
+			var url=$('#videolink1').val().split(";");
+			for(var i=0;i<url.length;i++){
+=======
 			document.getElementById('file1').innerHTML+="<a href='"+$('#videolink1').val()+"' target='_blank' style='color:red;'>"+$('#videolink1').val()+"</a><br>";
+>>>>>>> 58f0f6caf1a4fc027ed3555721565f4cbbf46597
 			num++;
+			}
 		}
 		if(num==0)alert("Pleast upload at least one file!");
-		if(num>0&&message==""&&picmessage==""){
+		if(num>3)alert("Please upload at most three files!");
+		if(num<=3&&num>0&&message==""&&picmessage==""){
 			$('.secondPage').hide();
 		    $('.add_one').show();
 		}
@@ -828,14 +1013,19 @@ Anything else
 	$('#addonePrevious').click(function(){
 		$('.add_one').hide();
 		$('.secondPage').show();
-		document.getElementById('file1').innerHTML='';
+		document.getElementById('file2').innerHTML="<div id='img2'></div><div id='audio2'></div><div id='video2'></div>";
 		document.getElementById('audiolink2').value='';
 		document.getElementById('videolink2').value='';
-		document.getElementById('tphoto2').value='';
+		document.getElementById('tphoto2_1').value='';
+		document.getElementById('tphoto2_2').value='';
+		document.getElementById('tphoto2_3').value='';
 	});
 	
 	$('#addoneNext').click(function(){
 		var num=0;
+		var pic=0;
+		var audio=0;
+		var video=0;
 		var message="";
 		var picmessage="";
 	    if($('#category2').val()=='')message+="category/";
@@ -845,16 +1035,20 @@ Anything else
 			message+=" are required. Please fill out.";
 			alert(message);
 		}
-		else if(getextension($('#tphoto2').val())==-1){
+		else if(getextension($('#tphoto2_1').val())==-1||getextension($('#tphoto2_1').val())==-1||getextension($('#tphoto2_1').val())==-1){
 				picmessage="The extension name of file is wrong!";
 				alert(picmessage);
 			}
 		else{
-		if($('#tphoto2').val()!='')num++;
-		if($('#audiolink2').val()!='')num++;
-		if($('#videolink2').val()!='')num++;
+		if($('#tphoto2_1').val()!='')pic++;
+		if($('#tphoto2_2').val()!='')pic++;
+		if($('#tphoto2_3').val()!='')pic++;
+		if($('#audiolink2').val()!='')audio=$('#audiolink2').val().split(";").length;
+		if($('#videolink2').val()!='')video=$('#videolink2').val().split(";").length;
+		num=pic+audio+video;
 		if(num==0)alert("Please upload at least one file!");
-		if(num>0&&message==""&&picmessage==""){
+		if(num>3)alert("PLease upload at most three files!");
+		if(num<=3&&num>0&&message==""&&picmessage==""){
 			$('.add_one').hide();
 		    $('.thirdPage').show();
 		}
@@ -871,12 +1065,26 @@ Anything else
 			message+=" are required. Please fill out.";
 			alert(message);
 		}
-		else if(getextension($('#tphoto2').val())==-1){
+		else if(getextension($('#tphoto2_1').val())==-1||getextension($('#tphoto2_2').val())==-1||getextension($('#tphoto2_3').val())==-1){
 				picmessage="The extension name of file is wrong!";
 				alert(picmessage);
 			}
 		else{
 		var num=0;
+<<<<<<< HEAD
+		if($('#tphoto2_1').val()!=''){
+			num++;
+		}
+		if($('#tphoto2_2').val()!=''){
+			num++;
+		}
+		if($('#tphoto2_3').val()!=''){
+			num++;
+		}
+		if($('#audiolink2').val()!=''){
+			var url=$('#audiolink2').val().split(";");
+			for(var i=0;i<url.length;i++){
+=======
 		document.getElementById('file2').innerHTML=document.getElementById('file1').innerHTML;
 		document.getElementById('file2').innerHTML+=document.getElementById('specific_talent2').value+" :<br>";
 		if($('#tphoto2').val()!=''){
@@ -885,14 +1093,23 @@ Anything else
 		}
 		if($('#audiolink2').val()!=''){
 			document.getElementById('file2').innerHTML+="<a href='"+$('#audiolink2').val()+"' target='_blank' style='color:red;'>"+$('#audiolink2').val()+"</a><br>";
+>>>>>>> 58f0f6caf1a4fc027ed3555721565f4cbbf46597
 			num++;
+			}
 		}
 		if($('#videolink2').val()!=''){
+<<<<<<< HEAD
+			var url=$('#videolink2').val().split(";");
+			for(var i=0;i<url.length;i++){
+=======
 			document.getElementById('file2').innerHTML+="<a href='"+$('#audiolink2').val()+"' target='_blank' style='color:red;'>"+$('#audiolink2').val()+"</a><br>";
+>>>>>>> 58f0f6caf1a4fc027ed3555721565f4cbbf46597
 			num++;
+			}
 		}
 		if(num==0)alert("Please upload at least one file!");
-		if(num>0&&message==""&&picmessage==""){
+		if(num>3)alert("Please upload at most three files!");
+		if(num<=3&&num>0&&message==""&&picmessage==""){
 			$('.add_one').hide();
 		    $('.add_two').show();
 		}
@@ -902,14 +1119,19 @@ Anything else
 	$('#addtwoPrevious').click(function(){
 		$('.add_two').hide();
 		$('.add_one').show();
-		document.getElementById('file2').innerHTML='';
+		document.getElementById('file3').innerHTML="<div id='img3'></div><div id='audio3'></div><div id='video3'></div>";
 		document.getElementById('audiolink3').value='';
 		document.getElementById('videolink3').value='';
-		document.getElementById('tphoto3').value='';
+		document.getElementById('tphoto3_1').value='';
+		document.getElementById('tphoto3_2').value='';
+		document.getElementById('tphoto3_3').value='';
 	});
 	
 	$('#addtwoNext').click(function(){
 		var num=0;
+		var pic=0;
+		var audio=0;
+		var video=0;
 		var message="";
 		var picmessage="";
 	    if($('#category3').val()=='')message+="category/";
@@ -919,16 +1141,20 @@ Anything else
 			message+=" are required. Please fill out.";
 			alert(message);
 		}
-		else if(getextension($('#tphoto3').val())==-1){
+		else if(getextension($('#tphoto3_1').val())==-1||getextension($('#tphoto3_2').val())==-1||getextension($('#tphoto3_3').val())==-1){
 				picmessage="The extension name of file is wrong!";
 				alert(picmessage);
 			}
 		else{
-		if($('#tphoto3').val()!='')num++;
-		if($('#audiolink3').val()!='')num++;
-		if($('#videolink3').val()!='')num++;
+		if($('#tphoto3_1').val()!='')pic++;
+		if($('#tphoto3_2').val()!='')pic++;
+		if($('#tphoto3_3').val()!='')pic++;
+		if($('#audiolink3').val()!='')audio=$('#audiolink3').val().split(";").length;
+		if($('#videolink3').val()!='')video=$('#videolink3').val().split(";").length;
+		num=pic+audio+video;
 		if(num==0)alert("Please upload at least one file!");
-		if(num>0&&message==""&&picmessage==""){
+		if(num>3)alert("Please upload at most three files!");
+		if(num<=3&&num>0&&message==""&&picmessage==""){
 			$('.add_two').hide();
 		    $('.thirdPage').show();
 		}
@@ -967,6 +1193,7 @@ function addser(){
 		ele.disabled=true;
 		}
 }
+
 </script>
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.min.js">
@@ -975,6 +1202,145 @@ function addser(){
   $('select').select2();
   $('#state').select2({
   });
+<<<<<<< HEAD
+  
+  function readURL1(input)
+  {   
+	  if(input.files&&input.files[0]){
+		  var reader = new FileReader();
+		  reader.onload = function(e)
+		  {
+			  document.getElementById('img1').innerHTML += "<img src=" + e.target.result + " width='100px' height='100px'>&nbsp;";
+		  }
+		  reader.readAsDataURL(input.files[0]);
+	  }
+	  else document.getElementById('img1').innerHTML="";
+  }
+  $('#tphoto1_1').change(function(){
+	  readURL1(this)
+  });
+   $('#tphoto1_2').change(function(){
+	  readURL1(this)
+  });
+   $('#tphoto1_3').change(function(){
+	  readURL1(this)
+  });
+  $('#preview_audio_1').click(function(){
+	 var url=$('#audiolink1').val().split(";");
+	 document.getElementById('audio1').innerHTML="";
+	for(var i=0;i<url.length;i++){
+				if(url[i].indexOf("http")>=0){
+				document.getElementById('audio1').innerHTML+="<a href='"+url[i]+"' target='_blank' style='color:red;'>"+url[i]+"</a><br>";
+			}
+			else{
+				document.getElementById('audio1').innerHTML+="<a href='"+"http://"+url[i]+"' target='_blank' style='color:red;'>"+url[i]+"</a><br>";
+			}
+			} 
+  });
+  $('#preview_video_1').click(function(){
+	 var url=$('#videolink1').val().split(";");
+	 document.getElementById('video1').innerHTML="";
+	for(var i=0;i<url.length;i++){
+				if(url[i].indexOf("http")>=0){
+				document.getElementById('video1').innerHTML+="<a href='"+url[i]+"' target='_blank' style='color:red;'>"+url[i]+"</a><br>";
+			}
+			else{
+				document.getElementById('video1').innerHTML+="<a href='"+"http://"+url[i]+"' target='_blank' style='color:red;'>"+url[i]+"</a><br>";
+			}
+			} 
+  });
+  
+  function readURL2(input)
+  {
+	  if(input.files&&input.files[0]){
+		  var reader = new FileReader();
+		  reader.onload = function(e)
+		  {
+			  document.getElementById('img2').innerHTML += "<img src=" + e.target.result + " width='100px' height='100px'>&nbsp;";
+		  }
+		  reader.readAsDataURL(input.files[0]);
+	  }
+  }
+  $('#tphoto2_1').change(function(){
+	  readURL2(this)
+  });
+   $('#tphoto2_2').change(function(){
+	  readURL2(this)
+  });
+   $('#tphoto2_3').change(function(){
+	  readURL2(this)
+  });
+  $('#preview_audio_2').click(function(){
+	 var url=$('#audiolink2').val().split(";");
+	 document.getElementById('audio2').innerHTML+="<br>";
+	for(var i=0;i<url.length;i++){
+				if(url[i].indexOf("http")>=0){
+				document.getElementById('audio2').innerHTML+="<a href='"+url[i]+"' target='_blank' style='color:red;'>"+url[i]+"</a><br>";
+			}
+			else{
+				document.getElementById('audio2').innerHTML+="<a href='"+"http://"+url[i]+"' target='_blank' style='color:red;'>"+url[i]+"</a><br>";
+			}
+			} 
+  });
+  $('#preview_video_2').click(function(){
+	 var url=$('#videolink2').val().split(";");
+	 document.getElementById('video2').innerHTML+="<br>";
+	for(var i=0;i<url.length;i++){
+				if(url[i].indexOf("http")>=0){
+				document.getElementById('video2').innerHTML+="<a href='"+url[i]+"' target='_blank' style='color:red;'>"+url[i]+"</a><br>";
+			}
+			else{
+				document.getElementById('video2').innerHTML+="<a href='"+"http://"+url[i]+"' target='_blank' style='color:red;'>"+url[i]+"</a><br>";
+			}
+			} 
+  });
+   
+  function readURL3(input)
+  {
+	  if(input.files&&input.files[0]){
+		  var reader = new FileReader();
+		  reader.onload = function(e)
+		  {
+			  document.getElementById('img3').innerHTML += "<img src=" + e.target.result + " width='100px' height='100px'>&nbsp;";
+		  }
+		  reader.readAsDataURL(input.files[0]);
+	  }
+  }
+  $('#tphoto3_1').change(function(){
+	  readURL3(this)
+  });
+   $('#tphoto3_2').change(function(){
+	  readURL3(this)
+  });
+   $('#tphoto3_3').change(function(){
+	  readURL3(this)
+  });
+  $('#preview_audio_3').click(function(){
+	 var url=$('#audiolink3').val().split(";");
+	 document.getElementById('audio3').innerHTML+="<br>";
+	for(var i=0;i<url.length;i++){
+				if(url[i].indexOf("http")>=0){
+				document.getElementById('audio3').innerHTML+="<a href='"+url[i]+"' target='_blank' style='color:red;'>"+url[i]+"</a><br>";
+			}
+			else{
+				document.getElementById('audio3').innerHTML+="<a href='"+"http://"+url[i]+"' target='_blank' style='color:red;'>"+url[i]+"</a><br>";
+			}
+			} 
+  });
+  $('#preview_video_3').click(function(){
+	 var url=$('#videolink3').val().split(";");
+	 document.getElementById('video3').innerHTML+="<br>";
+	for(var i=0;i<url.length;i++){
+				if(url[i].indexOf("http")>=0){
+				document.getElementById('video3').innerHTML+="<a href='"+url[i]+"' target='_blank' style='color:red;'>"+url[i]+"</a><br>";
+			}
+			else{
+				document.getElementById('video3').innerHTML+="<a href='"+"http://"+url[i]+"' target='_blank' style='color:red;'>"+url[i]+"</a><br>";
+			}
+			} 
+  });
+=======
+>>>>>>> 58f0f6caf1a4fc027ed3555721565f4cbbf46597
 </script>
 
 </html>
