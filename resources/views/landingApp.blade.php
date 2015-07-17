@@ -314,6 +314,8 @@
             
         <script>
             $(function(){
+            if (/Android|BlackBerry|iPhone|iPad|iPod|webOS/i.test(navigator.userAgent) === false) {
+
                 $.scrollify({ 
                 section : "section", 
                 sectionName : "section-name", 
@@ -324,7 +326,8 @@
                 before:function() {}, 
                 after:function() {} 
                 });     
-            });   
+            }}); 
+        
         </script>
 		
 	</body>
