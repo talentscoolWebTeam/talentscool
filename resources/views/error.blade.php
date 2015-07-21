@@ -29,7 +29,7 @@ body{
 <body>
 <img src="/pic/TSVector.png">
 <div class="error">
-<p style="font-size:30px; position:relative; color:white; margin-top:15%; margin-left:10%; margin-right:15%;">The files you submitted have some problems. Please make sure that the photos you submitted have valid extension names(gif,png,jpg ONLY) and each one is limited to 5MB.<br><input type="button" value="Back to application page" id="myButton" class="btn btn-danger"></input></p>
+<p style="font-size:30px; position:relative; color:white; margin-top:15%; margin-left:10%; margin-right:15%;">The files you submitted have some problems. Please make sure that the photos you submitted have valid extension names (.gif,.png,.jpg only) and each one is limited to 5MB.<br><input type="button" value="Back to application page" id="myButton" class="btn btn-danger"></input></p>
 </div>
 </body>
 <script type="text/javascript">
