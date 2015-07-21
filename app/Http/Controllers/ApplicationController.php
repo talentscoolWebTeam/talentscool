@@ -1,5 +1,4 @@
 <?php namespace App\Http\Controllers;
-
 use App\Http\Requests;
 use Illuminate\Http\Request;
 use App\Client;
@@ -43,28 +42,71 @@ class ApplicationController extends Controller {
 			return true;
 	}
 	
+	public function save_pic($portfolio,$photonum,$path,$file,$email){
+		$name='';
+		$extension=$file->getClientOriginalName();
+		$name.=$email;
+		$name.=$photonum;
+		$name.=$extension;
+		$name=str_replace("@","_",$name);
+		$file->move($path,$name);
+		$portfolio->photo.=$path;
+		$portfolio->photo.='\\';
+		$portfolio->photo.=$name;
+		$portfolio->photo.=';';
+	}
 	
 	public function store(Request $request)
 	{
 		$personal_photo=\Input::file('personal_photo');
-		$tphoto1 = \Input::file('tphoto1');
-		$tphoto2 = \Input::file('tphoto2');
-		$tphoto3 = \Input::file('tphoto3');
+		$tphoto1_1 = \Input::file('tphoto1_1');
+		$tphoto2_1 = \Input::file('tphoto2_1');
+		$tphoto3_1 = \Input::file('tphoto3_1');
+		$tphoto1_2 = \Input::file('tphoto1_2');
+		$tphoto2_2 = \Input::file('tphoto2_2');
+		$tphoto3_2 = \Input::file('tphoto3_2');
+		$tphoto1_3 = \Input::file('tphoto1_3');
+		$tphoto2_3 = \Input::file('tphoto2_3');
+		$tphoto3_3 = \Input::file('tphoto3_3');
 		if($personal_photo!=null){
 			$size=$personal_photo->getClientSize();
 			if($size<=0||$size>$personal_photo->getMaxFilesize()||$this->check($personal_photo))return view('error');
 		}
-		if($tphoto1!=null){
-			$size=$tphoto1->getClientSize();
-			if($size<=0||$size>$tphoto1->getMaxFilesize()||$this->check($tphoto1))return view('error');
+		if($tphoto1_1!=null){
+			$size=$tphoto1_1->getClientSize();
+			if($size<=0||$size>$tphoto1_1->getMaxFilesize()||$this->check($tphoto1_1))return view('error');
 		}
-		if($tphoto2!=null){
-			$size=$tphoto2->getClientSize();
-			if($size<=0||$size>$tphoto2->getMaxFilesize()||$this->check($tphoto2))return view('error');
+		if($tphoto2_1!=null){
+			$size=$tphoto2_1->getClientSize();
+			if($size<=0||$size>$tphoto2_1->getMaxFilesize()||$this->check($tphoto2_1))return view('error');
 		}
-		if($tphoto3!=null){
-			$size=$tphoto3->getClientSize();
-			if($size<=0||$size>$tphoto3->getMaxFilesize()||$this->check($tphoto3))return view('error');
+		if($tphoto3_1!=null){
+			$size=$tphoto3_1->getClientSize();
+			if($size<=0||$size>$tphoto3_1->getMaxFilesize()||$this->check($tphoto3_1))return view('error');
+		}
+		if($tphoto1_2!=null){
+			$size=$tphoto1_2->getClientSize();
+			if($size<=0||$size>$tphoto1_2->getMaxFilesize()||$this->check($tphoto1_2))return view('error');
+		}
+		if($tphoto2_2!=null){
+			$size=$tphoto2_2->getClientSize();
+			if($size<=0||$size>$tphoto2_2->getMaxFilesize()||$this->check($tphoto2_2))return view('error');
+		}
+		if($tphoto3_2!=null){
+			$size=$tphoto3_2->getClientSize();
+			if($size<=0||$size>$tphoto3_2->getMaxFilesize()||$this->check($tphoto3_2))return view('error');
+		}
+		if($tphoto1_3!=null){
+			$size=$tphoto1_3->getClientSize();
+			if($size<=0||$size>$tphoto1_3->getMaxFilesize()||$this->check($tphoto1_3))return view('error');
+		}
+		if($tphoto2_3!=null){
+			$size=$tphoto2_3->getClientSize();
+			if($size<=0||$size>$tphoto2_3->getMaxFilesize()||$this->check($tphoto2_3))return view('error');
+		}
+		if($tphoto3_3!=null){
+			$size=$tphoto3_3->getClientSize();
+			if($size<=0||$size>$tphoto3_3->getMaxFilesize()||$this->check($tphoto3_3))return view('error');
 		}
 	
 		$email=$_POST['email'];
@@ -85,8 +127,9 @@ class ApplicationController extends Controller {
 			$name='';
 			$extension=$personal_photo->getClientOriginalName();
 			$name.=$email;
-			$name.='_personal photo_';
+			$name.='_personal_photo_';
 			$name.=$extension;
+			$name=str_replace("@","_",$name);
 			$personal_photo->move($destinationPath,$name);
 			$clients->personal_photo =$destinationPath.'\\';
 			$clients->personal_photo.=$name;
@@ -105,17 +148,10 @@ class ApplicationController extends Controller {
 			$portfolio->talent_id=$talent->id;
 			if($audiolink!=null)$portfolio->audio.=$audiolink;
 			if($videolink!=null)$portfolio->video.=$videolink;
-			if($tphoto1!=null){
-				$name='';
-				$extension=$tphoto1->getClientOriginalName();
-				$name.=$email;
-				$name.='_photo1_';
-				$name.=$extension;
-				$tphoto1->move($destinationPath,$name);
-				$portfolio->photo.=$destinationPath;
-				$portfolio->photo.='\\';
-				$portfolio->photo.=$name;
-			}
+			if($tphoto1_1!=null)$this->save_pic($portfolio,'_tphoto1_1_',$destinationPath,$tphoto1_1,$email);
+			if($tphoto1_2!=null)$this->save_pic($portfolio,'_tphoto1_2_',$destinationPath,$tphoto1_2,$email);
+			if($tphoto1_3!=null)$this->save_pic($portfolio,'_tphoto1_3_',$destinationPath,$tphoto1_3,$email);
+			$portfolio->photo=substr($portfolio->photo,0,strlen($portfolio->photo)-1);
 			$portfolio->save();
 		}
 	
@@ -131,16 +167,10 @@ class ApplicationController extends Controller {
 			$portfolio->talent_id=$talent->id;
 			if($audiolink!=null)$portfolio->audio.=$audiolink;
 			if($videolink!=null)$portfolio->video.=$videolink;
-			if($tphoto2!=null){
-				$name='';
-				$extension=$tphoto2->getClientOriginalName();
-				$name.=$email;
-				$name.='_photo2_';
-				$name.=$extension;
-				$tphoto2->move($destinationPath,$name);
-				if($portfolio->photo!='')$portfolio->photo.=';';
-				$portfolio->photo.=$destinationPath.'\\'.$name;
-			}
+			if($tphoto2_1!=null)$this->save_pic($portfolio,'_tphoto2_1_',$destinationPath,$tphoto2_1,$email);
+			if($tphoto2_2!=null)$this->save_pic($portfolio,'_tphoto2_2_',$destinationPath,$tphoto2_2,$email);
+			if($tphoto2_3!=null)$this->save_pic($portfolio,'_tphoto2_3_',$destinationPath,$tphoto2_3,$email);
+			$portfolio->photo=substr($portfolio->photo,0,strlen($portfolio->photo)-1);
 			$portfolio->save();
 		}
 	
@@ -156,16 +186,10 @@ class ApplicationController extends Controller {
 			$portfolio->talent_id=$talent->id;
 			if($audiolink!=null)$portfolio->audio.=$audiolink;
 			if($videolink!=null)$portfolio->video.=$videolink;
-			if($tphoto3!=null){
-				$name='';
-				$extension=$tphoto3->getClientOriginalName();
-				$name.=$email;
-				$name.='_photo3_';
-				$name.=$extension;
-				$tphoto3->move($destinationPath,$name);
-				if($portfolio->photo!='')$portfolio->photo.=';';
-				$portfolio->photo.=$destinationPath.'\\'.$name;
-			}
+			if($tphoto3_1!=null)$this->save_pic($portfolio,'_tphoto3_1_',$destinationPath,$tphoto3_1,$email);
+			if($tphoto3_2!=null)$this->save_pic($portfolio,'_tphoto3_2_',$destinationPath,$tphoto3_2,$email);
+			if($tphoto3_3!=null)$this->save_pic($portfolio,'_tphoto3_3_',$destinationPath,$tphoto3_3,$email);
+			$portfolio->photo=substr($portfolio->photo,0,strlen($portfolio->photo)-1);
 			$portfolio->save();
 		}
 	
@@ -213,4 +237,4 @@ class ApplicationController extends Controller {
 	$flag=mail($email,$subject,$message,$headers);
 	if($flag) return view('thanks');
 	}
-}	
+}
