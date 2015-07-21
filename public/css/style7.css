@@ -337,7 +337,7 @@ a.read_more2:hover {
     padding: 120px 0px;
 	background-image: url(http://talentscool.com/images/bodyBackground.png);
 	background-repeat:no-repeat;
-	background-size: 100% 100%;
+	background-size: cover;
 }
 
 .service_wrapper {
