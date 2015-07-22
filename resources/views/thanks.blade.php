@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Application finished</title>
+<title>Thanks for your application</title>
 <style>
 body{
 	   background: url("http://www.talentscool.com/images/background.png") no-repeat center center fixed; 
@@ -27,10 +27,9 @@ body{
 </head>
 <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
 <body>
-
 <div class="thanks">
-<img src="/images/TSVector.png">
-<p style="font-size:30px; position:relative; color:white; margin-top:15%; margin-left:10%; margin-right:15%;">Thanks for your interest. Your application has been submitted. If there is a match, we will contact you ASAP.<br>Thank you!</p>
+<img src="/pic/TSVector.png">
+<p style="font-size:30px; position:relative; color:white; margin-top:15%; margin-left:10%; margin-right:15%;">Thanks for your interest. Your application has been submitted.<br>A confirmation email will be sent to your email address. If there is a match, we will contact you shortly.<br><br>Thank you!</p>
 </div>
 </body>
 </html>

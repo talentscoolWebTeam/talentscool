@@ -1,0 +1,2 @@
+[23-Jun-2015 00:57:42 UTC] PHP Fatal error:  Interface 'Laravel\Cashier\Contracts\Billable' not found in /home4/tscool/talentscool/app/User.php on line 11
+[26-Jun-2015 00:09:11 UTC] PHP Fatal error:  Call to undefined method stdClass::save() in /home4/tscool/talentscool/vendor/psy/psysh/src/Psy/ExecutionLoop/Loop.php(76) : eval()'d code on line 1

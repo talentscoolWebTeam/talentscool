@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Application finished</title>
+<title>Error</title>
 <style>
 body{
 	   background: url("http://www.talentscool.com/images/background.png") no-repeat center center fixed; 
@@ -27,15 +27,14 @@ body{
 </head>
 <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
 <body>
-<img src="/images/TSVector.png">
+<img src="/pic/TSVector.png">
 <div class="error">
-<p style="font-size:30px; position:relative; color:white; margin-top:15%; margin-left:10%; margin-right:15%;">The files you submitted have some problems. Please make sure that the files you submitted have valid extension names and each one is limited to 5MB.<br><input type="button" value="Back to application page" id="myButton" class="btn btn-danger"></input></p>
-
+<p style="font-size:30px; position:relative; color:white; margin-top:15%; margin-left:10%; margin-right:15%;">The files you submitted have some problems. Please make sure that the photos you submitted have valid extension names (.gif,.png,.jpg only) and each one is limited to 5MB.<br><input type="button" value="Back to application page" id="myButton" class="btn btn-danger"></input></p>
 </div>
 </body>
 <script type="text/javascript">
     document.getElementById("myButton").onclick = function () {
-        location.href = "http://talentscool.local/application";
+        location.href = "/application";
     };
 </script>
 </html>

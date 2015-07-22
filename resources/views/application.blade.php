@@ -59,7 +59,7 @@
 
 
 <table>
-<tr><td class="col-xs-12" style="font-size:36px;">APPLICATION</td><td style="float:right;position:relative;margin-right:20%;margin-top:2%;"><img src="/images/TSVector.png" style="width:200px;"></td></tr>
+<tr><td class="col-xs-12" style="font-size:36px;">APPLICATION</td><td style="float:right;position:relative;margin-right:20%;margin-top:2%;"><img src="/pic/TSVector.png" style="width:200px;"></td></tr>
 </table>
 {!! Form::open(['action'=>'ApplicationController@store','enctype' => 'multipart/form-data']) !!}
 <div class="firstPage">
@@ -101,7 +101,7 @@
 
 <div class="col-xs-12">
            <div class="col-xs-2">
-            UPLOAD PERSONAL PHOTO&nbsp(optional)&nbsp(max size is 5MB. jpg, gif, png ONLY)
+            UPLOAD PERSONAL PHOTO&nbsp(optional)&nbsp(max size is <b style="color:red;">5MB. jpg, gif, png ONLY</b>)
            </div>
            <div class="col-xs-3">
            <input type="file" name="personal_photo" id="personal_photo" accept="image/*"></input>
@@ -246,19 +246,27 @@ SPECIFIC TALENT<sup>*</sup>
 
 <div class="col-xs-12">
 <div class="col-xs-3">
-UPLOAD PORTFOLIO<br>(Choose at least one of the below)
+UPLOAD PORTFOLIO<br>(At least one/at most three photos or links of the below)
 </div>
 </div>
 
 <div class="col-xs-12">&nbsp;</div>
 
 
-<div class="col-xs-12">
+<div class="col-xs-12" id="file1">
+<div id="img1" class="col-xs-12">
 <div class="col-xs-3">
-PHOTO&nbsp(max size is 5MB. jpg, png, gif ONLY)
 </div>
-<div class="col-xs-3">
-<input type="file" name="tphoto1" id="tphoto1" accept="image/*">
+<div id="img1_1" class="col-xs-3">
+</div>
+<div id="img1_2" class="col-xs-3">
+</div>
+<div id="img1_3" class="col-xs-3">
+</div>
+</div>
+<div id="audio1">
+</div>
+<div id="video1">
 </div>
 </div>
 
@@ -266,19 +274,40 @@ PHOTO&nbsp(max size is 5MB. jpg, png, gif ONLY)
 
 <div class="col-xs-12">
 <div class="col-xs-3">
-AUDIO&nbsp(link)
+PHOTO&nbsp(max size is <b style="color:red;">5MB. jpg, gif, png ONLY</b>)
+</div>
+<div class="col-xs-3">
+<input type="file" name="tphoto1_1" id="tphoto1_1" accept="image/*">
+</div>
+<div class="col-xs-3">
+<input type="file" name="tphoto1_2" id="tphoto1_2" accept="image/*">
+</div>
+<div class="col-xs-3">
+<input type="file" name="tphoto1_3" id="tphoto1_3" accept="image/*">
+</div>
+</div>
+
+<div class="col-xs-12">&nbsp;</div>
+
+<div class="col-xs-12">
+<div class="col-xs-3">
+AUDIO&nbsp(Please separate links by <b style="color:red;">;</b>)
 </div>
 <div class="col-xs-3"><input type="text" name="audiolink1" id="audiolink1"  class="page2 form-control">
 </div>
+<div class="col-xs-3"><input type="button" name="preview_audio_1" id="preview_audio_1" class="btn btn-danger" style="font-family:'Roboto', Helvetica, Arial, sans-serif" value="preview">
+</div>
 </div>
 
 <div class="col-xs-12">&nbsp;</div>
 
 <div class="col-xs-12">
 <div class="col-xs-3">
-VIDEO&nbsp(link)
+VIDEO&nbsp(Please separate links by <b style="color:red;">;</b>)
 </div>
 <div class="col-xs-3"><input type="text" name="videolink1" id="videolink1"  class="page2 form-control">
+</div>
+<div class="col-xs-3"><input type="button" name="preview_video_1" id="preview_video_1" class="btn btn-danger" style="font-family:'Roboto', Helvetica, Arial, sans-serif" value="preview">
 </div>
 </div>
 
@@ -345,15 +374,27 @@ SPECIFIC TALENT<sup>*</sup>
 
 <div class="col-xs-12">
 <div class="col-xs-3">
-UPLOAD PORTFOLIO<br>(Choose at least one of the below)
+UPLOAD PORTFOLIO<br>(At least one/at most three photos or links of the below)
 </div>
 </div>
 
 <div class="col-xs-12">&nbsp;</div>
 
 
-<div class="col-xs-12">
-<div id="file1">
+<div class="col-xs-12" id="file2">
+<div id="img2">
+<div class="col-xs-3">
+</div>
+<div id="img2_1" class="col-xs-3">
+</div>
+<div id="img2_2" class="col-xs-3">
+</div>
+<div id="img2_3" class="col-xs-3">
+</div>
+</div>
+<div id="audio2">
+</div>
+<div id="video2">
 </div>
 </div>
 
@@ -361,10 +402,16 @@ UPLOAD PORTFOLIO<br>(Choose at least one of the below)
 
 <div class="col-xs-12">
 <div class="col-xs-3">
-PHOTO&nbsp(max size is 5MB. jpg, png, gif ONLY)
+PHOTO&nbsp(max size is <b style="color:red;">5MB. jpg, gif, png ONLY</b>)
 </div>
 <div class="col-xs-3">
-<input type="file" name="tphoto2" id="tphoto2" accept="image/*">
+<input type="file" name="tphoto2_1" id="tphoto2_1" accept="image/*">
+</div>
+<div class="col-xs-3">
+<input type="file" name="tphoto2_2" id="tphoto2_2" accept="image/*">
+</div>
+<div class="col-xs-3">
+<input type="file" name="tphoto2_3" id="tphoto2_3" accept="image/*">
 </div>
 </div>
 
@@ -372,9 +419,11 @@ PHOTO&nbsp(max size is 5MB. jpg, png, gif ONLY)
 
 <div class="col-xs-12">
 <div class="col-xs-3">
-AUDIO&nbsp(link)
+AUDIO&nbsp(Please separate links by <b style="color:red;">;</b>)
 </div>
 <div class="col-xs-3"><input type="text" name="audiolink2" id="audiolink2"  class="page2 form-control" style="width:300px;">
+</div>
+<div class="col-xs-3"><input type="button" name="preview_audio_2" id="preview_audio_2" class="btn btn-danger" style="font-family:'Roboto', Helvetica, Arial, sans-serif" value="preview">
 </div>
  </div>
  
@@ -382,9 +431,11 @@ AUDIO&nbsp(link)
  
  <div class="col-xs-12">
  <div class="col-xs-3">
-VIDEO&nbsp(link)
+VIDEO&nbsp(Please separate links by <b style="color:red;">;</b>)
 </div>
 <div class="col-xs-3"><input type="text" name="videolink2" id="videolink2"  class="page2 form-control" style="width:300px;">
+</div>
+<div class="col-xs-3"><input type="button" name="preview_video_2" id="preview_video_2" class="btn btn-danger" style="font-family:'Roboto', Helvetica, Arial, sans-serif" value="preview">
 </div>
 </div>
 
@@ -451,35 +502,55 @@ SPECIFIC TALENT<sup>*</sup>
 
 <div class="col-xs-12">
 <div class="col-xs-3">
-UPLOAD PORTFOLIO<br>(Choose at least one of the below)
+UPLOAD PORTFOLIO<br>(At least one/at most three photos or links of the below)
 </div>
 </div>
 
 <div class="col-xs-12">&nbsp;</div>
 
 
-<div class="col-xs-12">
-<div id="file2">
+<div class="col-xs-12" id="file3">
+<div id="img3">
+<div class="col-xs-3">
+</div>
+<div id="img3_1" class="col-xs-3">
+</div>
+<div id="img3_2" class="col-xs-3">
+</div>
+<div id="img3_3" class="col-xs-3">
+</div>
+</div>
+<div id="audio3">
+</div>
+<div id="video3">
 </div>
 </div>
 
 <div class="col-xs-12">&nbsp;</div>
 <div class="col-xs-12">
 <div class="col-xs-3">
-PHOTO&nbsp(max size is 5MB. jpg, png, gif ONLY)
+PHOTO&nbsp(max size is <b style="color:red;">5MB. jpg, gif, png ONLY</b>)
 </div>
 <div class="col-xs-3">
- <input type="file" name="tphoto3" id="tphoto3" accept="image/*">
- </div>
+<input type="file" name="tphoto3_1" id="tphoto3_1" accept="image/*">
+</div>
+<div class="col-xs-3">
+<input type="file" name="tphoto3_2" id="tphoto3_2" accept="image/*">
+</div>
+<div class="col-xs-3">
+<input type="file" name="tphoto3_3" id="tphoto3_3" accept="image/*">
+</div>
  </div>
  
 <div class="col-xs-12">&nbsp;</div>
  
  <div class="col-xs-12">
  <div class="col-xs-3">
-AUDIO&nbsp(link)
+AUDIO&nbsp(Please separate links by <b style="color:red;">;</b>)
 </div>
 <div class="col-xs-3"><input type="text" name="audiolink3" id="audiolink3"  class="page2 form-control" style="width:300px;">
+</div>
+<div class="col-xs-3"><input type="button" name="preview_audio_3" id="preview_audio_3" class="btn btn-danger" style="font-family:'Roboto', Helvetica, Arial, sans-serif" value="preview">
 </div>
 </div>
 
@@ -487,9 +558,11 @@ AUDIO&nbsp(link)
 
 <div class="col-xs-12">
 <div class="col-xs-3">
-VIDEO&nbsp(link)
+VIDEO&nbsp(Please separate links by <b style="color:red;">;</b>)
 </div>
 <div class="col-xs-3"><input type="text" name="videolink3" id="videolink3"  class="page2 form-control" style="width:300px;">
+</div>
+<div class="col-xs-3"><input type="button" name="preview_video_3" id="preview_video_3" class="btn btn-danger" style="font-family:'Roboto', Helvetica, Arial, sans-serif" value="preview">
 </div>
 </div>
 
@@ -586,7 +659,7 @@ Describe yourself in three words
 <div class="col-xs-12">&nbsp;</div> 
 <div class="col-xs-12">
 <div class="col-xs-2">
-Intro video&nbsp(link)
+Intro video&nbsp(One link ONLY)
 </div>
 <div class="col-xs-3">
 <input type="text" style="width:300px"  name="introVideo" id="introVideo" class="page4 form-control">
@@ -718,18 +791,30 @@ Anything else
 	$('#secondPrevious').click(function(){
 		   $('.secondPage').hide();
 		   $('.firstPage').show();
-		   one=0;
+		   document.getElementById('img1_1').innerHTML="";
+		   document.getElementById('img1_2').innerHTML="";
+		   document.getElementById('img1_3').innerHTML="";
+		   document.getElementById('audio1').innerHTML="";
+		   document.getElementById('video1').innerHTML="";
 		   document.getElementById('audiolink1').value="";
 		   document.getElementById('videolink1').value='';
-		   document.getElementById('tphoto1').value='';
+		   document.getElementById('tphoto1_1').value='';
+		   document.getElementById('tphoto1_2').value='';
+		   document.getElementById('tphoto1_3').value='';
 	}
 	);
 	
 	$('#secondNext').click(function(){
 		var num=0;
-	    if($('#tphoto1').val()!='')num++;
-		if($('#audiolink1').val()!='')num++;
-		if($('#videolink1').val()!='')num++;
+		var pic=0;
+		var audio=0;
+		var video=0;
+	    if($('#tphoto1_1').val()!='')pic++;
+		if($('#tphoto1_2').val()!='')pic++;
+		if($('#tphoto1_3').val()!='')pic++;
+		if($('#audiolink1').val()!='')audio=$('#audiolink1').val().split(";").length;
+		if($('#videolink1').val()!='')video=$('#videolink1').val().split(";").length;
+		num=pic+audio+video;
 		var message="";
 		var picmessage="";
 	    if($('#category1').val()=='')message+="category/";
@@ -739,11 +824,12 @@ Anything else
 			message+=" are required. Please fill out.";
 			alert(message);
 		}
-		else if(getextension($('#tphoto1').val())==-1){
+		else if(getextension($('#tphoto1_1').val())==-1||getextension($('#tphoto1_2').val())==-1||getextension($('#tphoto1_3').val())==-1){
 				picmessage="The extension name of file is wrong!";
 				alert(picmessage);
 			}
 		else if(num==0)alert("Please upload at least one file!");
+		else if(num>3)alert("Please upload at most three files!");
 		else{
 			$('.secondPage').hide();
 		    $('.thirdPage').show();
@@ -752,15 +838,36 @@ Anything else
 	$('#thirdPrevious').click(function(){
 		$('.thirdPage').hide();
 		$('.secondPage').show();
-		document.getElementById('tphoto1').value='';
-		document.getElementById('tphoto2').value='';
-		document.getElementById('tphoto3').value='';
+		document.getElementById('tphoto1_1').value='';
+		document.getElementById('tphoto2_1').value='';
+		document.getElementById('tphoto3_1').value='';
+		document.getElementById('tphoto1_2').value='';
+		document.getElementById('tphoto2_2').value='';
+		document.getElementById('tphoto3_2').value='';
+		document.getElementById('tphoto1_3').value='';
+		document.getElementById('tphoto2_3').value='';
+		document.getElementById('tphoto3_3').value='';
 		document.getElementById('audiolink1').value='';
 		document.getElementById('audiolink2').value='';
 		document.getElementById('audiolink3').value='';
 		document.getElementById('videolink1').value='';
 		document.getElementById('videolink2').value='';
 		document.getElementById('videolink3').value='';
+		document.getElementById('img1_1').innerHTML="";
+		document.getElementById('img1_2').innerHTML="";
+		document.getElementById('img1_3').innerHTML="";
+		document.getElementById('audio1').innerHTML="";
+		document.getElementById('video1').innerHTML="";
+		document.getElementById('img2_1').innerHTML="";
+		document.getElementById('img2_2').innerHTML="";
+		document.getElementById('img2_3').innerHTML="";
+		document.getElementById('audio2').innerHTML="";
+		document.getElementById('video2').innerHTML="";
+		document.getElementById('img3_1').innerHTML="";
+		document.getElementById('img3_2').innerHTML="";
+		document.getElementById('img3_3').innerHTML="";
+		document.getElementById('audio3').innerHTML="";
+		document.getElementById('video3').innerHTML="";
 	});
 	$('#thirdNext').click(function(){
 		var message="";
@@ -798,27 +905,36 @@ Anything else
 			message+=" are required. Please fill out.";
 			alert(message);
 		}
-		else if(getextension($('#tphoto1').val())==-1){
+		else if(getextension($('#tphoto1_1').val())==-1||getextension($('#tphoto1_2').val())==-1||getextension($('#tphoto1_3').val())==-1){
 				picmessage="The extension name of file is wrong!";
 				alert(picmessage);
 			} 
 		else{
 		var num=0;
-		document.getElementById('file1').innerHTML=document.getElementById('specific_talent1').value+" :<br>";
-		if($('#tphoto1').val()!=''){
-			document.getElementById('file1').innerHTML+="<img src='/pic/photo.png' width='40' height='40'><br>";
+		if($('#tphoto1_1').val()!=''){
+			num++;
+		}
+		if($('#tphoto1_2').val()!=''){
+			num++;
+		}
+		if($('#tphoto1_3').val()!=''){
 			num++;
 		}
 		if($('#audiolink1').val()!=''){
-			document.getElementById('file1').innerHTML+="<a href='"+$('#audiolink1').val()+"' target='_blank' style='color:red;'>"+$('#audiolink1').val()+"</a><br>";
+			var url=$('#audiolink1').val().split(";");
+			for(var i=0;i<url.length;i++){
 			num++;
+			}
 		}
 		if($('#videolink1').val()!=''){
-			document.getElementById('file1').innerHTML+="<a href='"+$('#videolink1').val()+"' target='_blank' style='color:red;'>"+$('#videolink1').val()+"</a><br>";
+			var url=$('#videolink1').val().split(";");
+			for(var i=0;i<url.length;i++){
 			num++;
+			}
 		}
 		if(num==0)alert("Pleast upload at least one file!");
-		if(num>0&&message==""&&picmessage==""){
+		if(num>3)alert("Please upload at most three files!");
+		if(num<=3&&num>0&&message==""&&picmessage==""){
 			$('.secondPage').hide();
 		    $('.add_one').show();
 		}
@@ -828,14 +944,23 @@ Anything else
 	$('#addonePrevious').click(function(){
 		$('.add_one').hide();
 		$('.secondPage').show();
-		document.getElementById('file1').innerHTML='';
+		document.getElementById('img2_1').innerHTML="";
+		document.getElementById('img2_2').innerHTML="";
+		document.getElementById('img2_3').innerHTML="";
+		document.getElementById('audio2').innerHTML="";
+		document.getElementById('video2').innerHTML="";
 		document.getElementById('audiolink2').value='';
 		document.getElementById('videolink2').value='';
-		document.getElementById('tphoto2').value='';
+		document.getElementById('tphoto2_1').value='';
+		document.getElementById('tphoto2_2').value='';
+		document.getElementById('tphoto2_3').value='';
 	});
 	
 	$('#addoneNext').click(function(){
 		var num=0;
+		var pic=0;
+		var audio=0;
+		var video=0;
 		var message="";
 		var picmessage="";
 	    if($('#category2').val()=='')message+="category/";
@@ -845,16 +970,20 @@ Anything else
 			message+=" are required. Please fill out.";
 			alert(message);
 		}
-		else if(getextension($('#tphoto2').val())==-1){
+		else if(getextension($('#tphoto2_1').val())==-1||getextension($('#tphoto2_1').val())==-1||getextension($('#tphoto2_1').val())==-1){
 				picmessage="The extension name of file is wrong!";
 				alert(picmessage);
 			}
 		else{
-		if($('#tphoto2').val()!='')num++;
-		if($('#audiolink2').val()!='')num++;
-		if($('#videolink2').val()!='')num++;
+		if($('#tphoto2_1').val()!='')pic++;
+		if($('#tphoto2_2').val()!='')pic++;
+		if($('#tphoto2_3').val()!='')pic++;
+		if($('#audiolink2').val()!='')audio=$('#audiolink2').val().split(";").length;
+		if($('#videolink2').val()!='')video=$('#videolink2').val().split(";").length;
+		num=pic+audio+video;
 		if(num==0)alert("Please upload at least one file!");
-		if(num>0&&message==""&&picmessage==""){
+		if(num>3)alert("PLease upload at most three files!");
+		if(num<=3&&num>0&&message==""&&picmessage==""){
 			$('.add_one').hide();
 		    $('.thirdPage').show();
 		}
@@ -871,28 +1000,36 @@ Anything else
 			message+=" are required. Please fill out.";
 			alert(message);
 		}
-		else if(getextension($('#tphoto2').val())==-1){
+		else if(getextension($('#tphoto2_1').val())==-1||getextension($('#tphoto2_2').val())==-1||getextension($('#tphoto2_3').val())==-1){
 				picmessage="The extension name of file is wrong!";
 				alert(picmessage);
 			}
 		else{
 		var num=0;
-		document.getElementById('file2').innerHTML=document.getElementById('file1').innerHTML;
-		document.getElementById('file2').innerHTML+=document.getElementById('specific_talent2').value+" :<br>";
-		if($('#tphoto2').val()!=''){
-			document.getElementById('file2').innerHTML+="<img src='/pic/photo.png' width='40' height='40'><br>";
+		if($('#tphoto2_1').val()!=''){
+			num++;
+		}
+		if($('#tphoto2_2').val()!=''){
+			num++;
+		}
+		if($('#tphoto2_3').val()!=''){
 			num++;
 		}
 		if($('#audiolink2').val()!=''){
-			document.getElementById('file2').innerHTML+="<a href='"+$('#audiolink2').val()+"' target='_blank' style='color:red;'>"+$('#audiolink2').val()+"</a><br>";
+			var url=$('#audiolink2').val().split(";");
+			for(var i=0;i<url.length;i++){
 			num++;
+			}
 		}
 		if($('#videolink2').val()!=''){
-			document.getElementById('file2').innerHTML+="<a href='"+$('#audiolink2').val()+"' target='_blank' style='color:red;'>"+$('#audiolink2').val()+"</a><br>";
+			var url=$('#videolink2').val().split(";");
+			for(var i=0;i<url.length;i++){
 			num++;
+			}
 		}
 		if(num==0)alert("Please upload at least one file!");
-		if(num>0&&message==""&&picmessage==""){
+		if(num>3)alert("Please upload at most three files!");
+		if(num<=3&&num>0&&message==""&&picmessage==""){
 			$('.add_one').hide();
 		    $('.add_two').show();
 		}
@@ -902,14 +1039,23 @@ Anything else
 	$('#addtwoPrevious').click(function(){
 		$('.add_two').hide();
 		$('.add_one').show();
-		document.getElementById('file2').innerHTML='';
+		document.getElementById('img3_1').innerHTML="";
+		document.getElementById('img3_2').innerHTML="";
+		document.getElementById('img3_3').innerHTML="";
+		document.getElementById('audio3').innerHTML="";
+		document.getElementById('video3').innerHTML="";
 		document.getElementById('audiolink3').value='';
 		document.getElementById('videolink3').value='';
-		document.getElementById('tphoto3').value='';
+		document.getElementById('tphoto3_1').value='';
+		document.getElementById('tphoto3_2').value='';
+		document.getElementById('tphoto3_3').value='';
 	});
 	
 	$('#addtwoNext').click(function(){
 		var num=0;
+		var pic=0;
+		var audio=0;
+		var video=0;
 		var message="";
 		var picmessage="";
 	    if($('#category3').val()=='')message+="category/";
@@ -919,16 +1065,20 @@ Anything else
 			message+=" are required. Please fill out.";
 			alert(message);
 		}
-		else if(getextension($('#tphoto3').val())==-1){
+		else if(getextension($('#tphoto3_1').val())==-1||getextension($('#tphoto3_2').val())==-1||getextension($('#tphoto3_3').val())==-1){
 				picmessage="The extension name of file is wrong!";
 				alert(picmessage);
 			}
 		else{
-		if($('#tphoto3').val()!='')num++;
-		if($('#audiolink3').val()!='')num++;
-		if($('#videolink3').val()!='')num++;
+		if($('#tphoto3_1').val()!='')pic++;
+		if($('#tphoto3_2').val()!='')pic++;
+		if($('#tphoto3_3').val()!='')pic++;
+		if($('#audiolink3').val()!='')audio=$('#audiolink3').val().split(";").length;
+		if($('#videolink3').val()!='')video=$('#videolink3').val().split(";").length;
+		num=pic+audio+video;
 		if(num==0)alert("Please upload at least one file!");
-		if(num>0&&message==""&&picmessage==""){
+		if(num>3)alert("Please upload at most three files!");
+		if(num<=3&&num>0&&message==""&&picmessage==""){
 			$('.add_two').hide();
 		    $('.thirdPage').show();
 		}
@@ -967,6 +1117,7 @@ function addser(){
 		ele.disabled=true;
 		}
 }
+
 </script>
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.min.js">
@@ -974,6 +1125,144 @@ function addser(){
 <script type="text/javascript">
   $('select').select2();
   $('#state').select2({
+  });
+  
+  function readURL1(input,n)
+  {   
+	  if(input.files&&input.files[0]){
+		  var reader = new FileReader();
+		  reader.onload = function(e)
+		  {
+			  document.getElementById('img1_'+n).innerHTML = "<img src=" + e.target.result + " width='100px' height='100px'>&nbsp;";
+		  }
+		  reader.readAsDataURL(input.files[0]);
+	  }
+	  else document.getElementById('img1_'+n).innerHTML="";
+  }
+  $('#tphoto1_1').change(function(){
+	  readURL1(this,1)
+  });
+   $('#tphoto1_2').change(function(){
+	  readURL1(this,2)
+  });
+   $('#tphoto1_3').change(function(){
+	  readURL1(this,3)
+  });
+  $('#preview_audio_1').click(function(){
+	 var url=$('#audiolink1').val().split(";");
+	 document.getElementById('audio1').innerHTML="";
+	for(var i=0;i<url.length;i++){
+				if(url[i].indexOf("http")>=0){
+				document.getElementById('audio1').innerHTML+="<a href='"+url[i]+"' target='_blank' style='color:red;'>"+url[i]+"</a><br>";
+			}
+			else{
+				document.getElementById('audio1').innerHTML+="<a href='"+"http://"+url[i]+"' target='_blank' style='color:red;'>"+url[i]+"</a><br>";
+			}
+			} 
+  });
+  $('#preview_video_1').click(function(){
+	 var url=$('#videolink1').val().split(";");
+	 document.getElementById('video1').innerHTML="";
+	for(var i=0;i<url.length;i++){
+				if(url[i].indexOf("http")>=0){
+				document.getElementById('video1').innerHTML+="<a href='"+url[i]+"' target='_blank' style='color:red;'>"+url[i]+"</a><br>";
+			}
+			else{
+				document.getElementById('video1').innerHTML+="<a href='"+"http://"+url[i]+"' target='_blank' style='color:red;'>"+url[i]+"</a><br>";
+			}
+			} 
+  });
+  
+  function readURL2(input,n)
+  {
+	  if(input.files&&input.files[0]){
+		  var reader = new FileReader();
+		  reader.onload = function(e)
+		  {
+			  document.getElementById('img2_'+n).innerHTML = "<img src=" + e.target.result + " width='100px' height='100px'>&nbsp;";
+		  }
+		  reader.readAsDataURL(input.files[0]);
+	  }
+	  else document.getElementById('img2_'+n).innerHTML="";
+  }
+  $('#tphoto2_1').change(function(){
+	  readURL2(this,1)
+  });
+   $('#tphoto2_2').change(function(){
+	  readURL2(this,2)
+  });
+   $('#tphoto2_3').change(function(){
+	  readURL2(this,3)
+  });
+  $('#preview_audio_2').click(function(){
+	 var url=$('#audiolink2').val().split(";");
+	 document.getElementById('audio2').innerHTML+="<br>";
+	for(var i=0;i<url.length;i++){
+				if(url[i].indexOf("http")>=0){
+				document.getElementById('audio2').innerHTML+="<a href='"+url[i]+"' target='_blank' style='color:red;'>"+url[i]+"</a><br>";
+			}
+			else{
+				document.getElementById('audio2').innerHTML+="<a href='"+"http://"+url[i]+"' target='_blank' style='color:red;'>"+url[i]+"</a><br>";
+			}
+			} 
+  });
+  $('#preview_video_2').click(function(){
+	 var url=$('#videolink2').val().split(";");
+	 document.getElementById('video2').innerHTML+="<br>";
+	for(var i=0;i<url.length;i++){
+				if(url[i].indexOf("http")>=0){
+				document.getElementById('video2').innerHTML+="<a href='"+url[i]+"' target='_blank' style='color:red;'>"+url[i]+"</a><br>";
+			}
+			else{
+				document.getElementById('video2').innerHTML+="<a href='"+"http://"+url[i]+"' target='_blank' style='color:red;'>"+url[i]+"</a><br>";
+			}
+			} 
+  });
+   
+  function readURL3(input,n)
+  {
+	  if(input.files&&input.files[0]){
+		  var reader = new FileReader();
+		  reader.onload = function(e)
+		  {
+			  document.getElementById('img3_'+n).innerHTML = "<img src=" + e.target.result + " width='100px' height='100px'>&nbsp;";
+		  }
+		  reader.readAsDataURL(input.files[0]);
+	  }
+	  else document.getElementById('img3_'+n).innerHTML="";
+  }
+  $('#tphoto3_1').change(function(){
+	  readURL3(this,1)
+  });
+   $('#tphoto3_2').change(function(){
+	  readURL3(this,2)
+  });
+   $('#tphoto3_3').change(function(){
+	  readURL3(this,3)
+  });
+  $('#preview_audio_3').click(function(){
+	 var url=$('#audiolink3').val().split(";");
+	 document.getElementById('audio3').innerHTML+="<br>";
+	for(var i=0;i<url.length;i++){
+				if(url[i].indexOf("http")>=0){
+				document.getElementById('audio3').innerHTML+="<a href='"+url[i]+"' target='_blank' style='color:red;'>"+url[i]+"</a><br>";
+			}
+			else{
+				document.getElementById('audio3').innerHTML+="<a href='"+"http://"+url[i]+"' target='_blank' style='color:red;'>"+url[i]+"</a><br>";
+			}
+			} 
+  });
+  $('#preview_video_3').click(function(){
+	 var url=$('#videolink3').val().split(";");
+	 document.getElementById('video3').innerHTML+="<br>";
+	for(var i=0;i<url.length;i++){
+				if(url[i].indexOf("http")>=0){
+				document.getElementById('video3').innerHTML+="<a href='"+url[i]+"' target='_blank' style='color:red;'>"+url[i]+"</a><br>";
+			}
+			else{
+				document.getElementById('video3').innerHTML+="<a href='"+"http://"+url[i]+"' target='_blank' style='color:red;'>"+url[i]+"</a><br>";
+			}
+			} 
   });
 </script>
 

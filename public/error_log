@@ -1,1 +1,37 @@
 [29-Apr-2015 01:28:31 America/Chicago] PHP Parse error:  syntax error, unexpected '\Routing;', expecting \\ (T_NS_SEPARATOR) or ';' or '{' in /home4/tscool/talentscool/vendor/compiled.php on line 7328
+[16-Jul-2015 22:52:15 UTC] PHP Fatal error:  Interface 'Laravel\Cashier\Contracts\Billable' not found in /home4/tscool/talentscool/app/User.php on line 11
+[16-Jul-2015 22:54:51 UTC] PHP Fatal error:  Interface 'Laravel\Cashier\Contracts\Billable' not found in /home4/tscool/talentscool/app/User.php on line 11
+[16-Jul-2015 22:54:52 UTC] PHP Fatal error:  Interface 'Laravel\Cashier\Contracts\Billable' not found in /home4/tscool/talentscool/app/User.php on line 11
+[16-Jul-2015 22:56:00 UTC] PHP Fatal error:  Interface 'Laravel\Cashier\Contracts\Billable' not found in /home4/tscool/talentscool/app/User.php on line 11
+[16-Jul-2015 22:57:47 UTC] PHP Fatal error:  Interface 'Laravel\Cashier\Contracts\Billable' not found in /home4/tscool/talentscool/app/User.php on line 11
+[16-Jul-2015 22:58:16 UTC] PHP Fatal error:  Interface 'Laravel\Cashier\Contracts\Billable' not found in /home4/tscool/talentscool/app/User.php on line 11
+[16-Jul-2015 22:58:27 UTC] PHP Fatal error:  Interface 'Laravel\Cashier\Contracts\Billable' not found in /home4/tscool/talentscool/app/User.php on line 11
+[16-Jul-2015 23:58:49 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement in the script in /home4/tscool/talentscool/app/User.php on line 2
+[16-Jul-2015 23:58:50 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement in the script in /home4/tscool/talentscool/app/User.php on line 2
+[16-Jul-2015 23:58:58 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement in the script in /home4/tscool/talentscool/app/User.php on line 2
+[16-Jul-2015 23:59:31 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement in the script in /home4/tscool/talentscool/app/User.php on line 2
+[16-Jul-2015 23:59:33 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement in the script in /home4/tscool/talentscool/app/User.php on line 2
+[16-Jul-2015 23:59:57 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement in the script in /home4/tscool/talentscool/app/User.php on line 2
+[17-Jul-2015 00:00:10 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement in the script in /home4/tscool/talentscool/app/User.php on line 2
+[17-Jul-2015 00:00:11 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement in the script in /home4/tscool/talentscool/app/User.php on line 2
+[17-Jul-2015 00:03:47 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement in the script in /home4/tscool/talentscool/app/User.php on line 2
+[17-Jul-2015 00:10:33 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement in the script in /home4/tscool/talentscool/app/User.php on line 2
+[17-Jul-2015 00:12:39 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement in the script in /home4/tscool/talentscool/app/User.php on line 2
+[17-Jul-2015 00:21:43 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement in the script in /home4/tscool/talentscool/app/User.php on line 2
+[17-Jul-2015 03:02:58 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement in the script in /home4/tscool/talentscool/app/User.php on line 2
+[17-Jul-2015 21:40:58 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement in the script in /home4/tscool/talentscool/app/User.php on line 2
+[20-Jul-2015 21:22:52 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement in the script in /home4/tscool/talentscool/app/User.php on line 2
+[20-Jul-2015 21:23:12 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement in the script in /home4/tscool/talentscool/app/User.php on line 2
+[20-Jul-2015 21:25:36 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement in the script in /home4/tscool/talentscool/app/User.php on line 2
+[20-Jul-2015 21:36:00 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement in the script in /home4/tscool/talentscool/app/User.php on line 2
+[20-Jul-2015 21:37:46 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement in the script in /home4/tscool/talentscool/app/User.php on line 2
+[20-Jul-2015 21:49:59 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement in the script in /home4/tscool/talentscool/app/User.php on line 2
+[20-Jul-2015 22:14:03 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement in the script in /home4/tscool/talentscool/app/User.php on line 2
+[20-Jul-2015 22:14:17 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement in the script in /home4/tscool/talentscool/app/User.php on line 2
+[20-Jul-2015 22:14:23 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement in the script in /home4/tscool/talentscool/app/User.php on line 2
+[20-Jul-2015 22:14:49 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement in the script in /home4/tscool/talentscool/app/User.php on line 2
+[20-Jul-2015 22:15:44 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement in the script in /home4/tscool/talentscool/app/User.php on line 2
+[20-Jul-2015 22:53:48 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement in the script in /home4/tscool/talentscool/app/User.php on line 2
+[21-Jul-2015 21:04:49 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement in the script in /home4/tscool/talentscool/app/User.php on line 2
+[21-Jul-2015 21:05:33 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement in the script in /home4/tscool/talentscool/app/User.php on line 2
+[21-Jul-2015 21:09:11 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement in the script in /home4/tscool/talentscool/app/User.php on line 2
