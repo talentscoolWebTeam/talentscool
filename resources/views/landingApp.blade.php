@@ -211,18 +211,7 @@
 			<div class="container">
 				<section class="page_section contact" id="contact">
 					<div class="contact_section">
-						<h2>Contact Us</h2>
-						<div class="row">
-							<div class="col-lg-4">
-								
-							</div>
-							<div class="col-lg-4">
-								
-							</div>
-							<div class="col-lg-4">
-								
-							</div>
-						</div>
+						<h2 style="padding:0px">Contact Us</h2>
 					</div>
 					<div class="row">
 						
