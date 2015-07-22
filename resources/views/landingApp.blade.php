@@ -228,7 +228,7 @@
 					</div>
 				<div class="container">
 					<div class="footer_bottom">
-						<p>Follow us!</p>
+						<p style="font-family: 'Raleway', sans-serif;">Follow us!</p>
 						<a href="http://www.twitter.com/talentscool">
 						<img src="http://talentscool.com/images/social_media/twitter_logo.png" style="max-height: 6vh; max-width: 6vh; padding: 1vh;"></a>
 						<a href="http://www.facebook.com/talentscool">
@@ -236,6 +236,7 @@
 						<a href="http://www.instagram.com/talentscool">
 						<img src="http://talentscool.com/images/social_media/instagram_logo.png" style="max-height: 6vh; max-width: 6vh; padding: 1vh"></a>
 						<br/>
+						<p style="font-family: 'Raleway', sans-serif;">Copyright &copy; 2015 Talentscool, LLC.</p>
 						<!-- <img src="http://talentscool.com/images/logoT.png" style="vertical-align:middle; max-height: 50%; max-width: 50%;">  -->
 					</div>
 				</div>				
