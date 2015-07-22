@@ -312,7 +312,7 @@
     });
     $(aImg[nTime]).removeClass('hidden');//拿掉display=hidden
     $(aImg[nTime]).fadeIn('50000');//淡入，可选项，如果删除的话fadeOut也要一并删除
-    (nTime == 5)?nTime=0:nTime++;//三目运算符，如果轮播完毕则跳转回第一张
+    (nTime == 6)?nTime=0:nTime++;//三目运算符，如果轮播完毕则跳转回第一张
   }
     show();//让它先进行一次播放，显示第一张图片
     $(document).ready(function() {
