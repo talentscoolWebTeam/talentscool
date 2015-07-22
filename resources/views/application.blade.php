@@ -59,11 +59,7 @@
 
 
 <table>
-<<<<<<< HEAD
 <tr><td class="col-xs-12" style="font-size:36px;">APPLICATION</td><td style="float:right;position:relative;margin-right:20%;margin-top:2%;"><img src="/pic/TSVector.png" style="width:200px;"></td></tr>
-=======
-<tr><td class="col-xs-12" style="font-size:36px;">APPLICATION</td><td style="float:right;position:relative;margin-right:20%;margin-top:2%;"><img src="/images/TSVector.png" style="width:200px;"></td></tr>
->>>>>>> 58f0f6caf1a4fc027ed3555721565f4cbbf46597
 </table>
 {!! Form::open(['action'=>'ApplicationController@store','enctype' => 'multipart/form-data']) !!}
 <div class="firstPage">
@@ -105,11 +101,7 @@
 
 <div class="col-xs-12">
            <div class="col-xs-2">
-<<<<<<< HEAD
             UPLOAD PERSONAL PHOTO&nbsp(optional)&nbsp(max size is <b style="color:red;">5MB. jpg, gif, png ONLY</b>)
-=======
-            UPLOAD PERSONAL PHOTO&nbsp(optional)&nbsp(max size is 5MB. jpg, gif, png ONLY)
->>>>>>> 58f0f6caf1a4fc027ed3555721565f4cbbf46597
            </div>
            <div class="col-xs-3">
            <input type="file" name="personal_photo" id="personal_photo" accept="image/*"></input>
@@ -254,32 +246,27 @@ SPECIFIC TALENT<sup>*</sup>
 
 <div class="col-xs-12">
 <div class="col-xs-3">
-<<<<<<< HEAD
 UPLOAD PORTFOLIO<br>(At least one/at most three photos or links of the below)
-=======
-UPLOAD PORTFOLIO<br>(Choose at least one of the below)
->>>>>>> 58f0f6caf1a4fc027ed3555721565f4cbbf46597
 </div>
 </div>
 
 <div class="col-xs-12">&nbsp;</div>
 
 
-<<<<<<< HEAD
 <div class="col-xs-12" id="file1">
-<div id="img1">
+<div id="img1" class="col-xs-12">
+<div class="col-xs-3">
+</div>
+<div id="img1_1" class="col-xs-3">
+</div>
+<div id="img1_2" class="col-xs-3">
+</div>
+<div id="img1_3" class="col-xs-3">
+</div>
 </div>
 <div id="audio1">
 </div>
 <div id="video1">
-=======
-<div class="col-xs-12">
-<div class="col-xs-3">
-PHOTO&nbsp(max size is 5MB. jpg, png, gif ONLY)
-</div>
-<div class="col-xs-3">
-<input type="file" name="tphoto1" id="tphoto1" accept="image/*">
->>>>>>> 58f0f6caf1a4fc027ed3555721565f4cbbf46597
 </div>
 </div>
 
@@ -287,7 +274,6 @@ PHOTO&nbsp(max size is 5MB. jpg, png, gif ONLY)
 
 <div class="col-xs-12">
 <div class="col-xs-3">
-<<<<<<< HEAD
 PHOTO&nbsp(max size is <b style="color:red;">5MB. jpg, gif, png ONLY</b>)
 </div>
 <div class="col-xs-3">
@@ -298,11 +284,6 @@ PHOTO&nbsp(max size is <b style="color:red;">5MB. jpg, gif, png ONLY</b>)
 </div>
 <div class="col-xs-3">
 <input type="file" name="tphoto1_3" id="tphoto1_3" accept="image/*">
-=======
-AUDIO&nbsp(link)
-</div>
-<div class="col-xs-3"><input type="text" name="audiolink1" id="audiolink1"  class="page2 form-control">
->>>>>>> 58f0f6caf1a4fc027ed3555721565f4cbbf46597
 </div>
 </div>
 
@@ -310,15 +291,9 @@ AUDIO&nbsp(link)
 
 <div class="col-xs-12">
 <div class="col-xs-3">
-<<<<<<< HEAD
 AUDIO&nbsp(Please separate links by <b style="color:red;">;</b>)
 </div>
 <div class="col-xs-3"><input type="text" name="audiolink1" id="audiolink1"  class="page2 form-control">
-=======
-VIDEO&nbsp(link)
-</div>
-<div class="col-xs-3"><input type="text" name="videolink1" id="videolink1"  class="page2 form-control">
->>>>>>> 58f0f6caf1a4fc027ed3555721565f4cbbf46597
 </div>
 <div class="col-xs-3"><input type="button" name="preview_audio_1" id="preview_audio_1" class="btn btn-danger" style="font-family:'Roboto', Helvetica, Arial, sans-serif" value="preview">
 </div>
@@ -326,7 +301,6 @@ VIDEO&nbsp(link)
 
 <div class="col-xs-12">&nbsp;</div>
 
-<<<<<<< HEAD
 <div class="col-xs-12">
 <div class="col-xs-3">
 VIDEO&nbsp(Please separate links by <b style="color:red;">;</b>)
@@ -337,8 +311,6 @@ VIDEO&nbsp(Please separate links by <b style="color:red;">;</b>)
 </div>
 </div>
 
-=======
->>>>>>> 58f0f6caf1a4fc027ed3555721565f4cbbf46597
 <div class="col-xs-12">&nbsp;</div>
 <div class="col-xs-12">
 <div class="col-xs-2">
@@ -402,23 +374,23 @@ SPECIFIC TALENT<sup>*</sup>
 
 <div class="col-xs-12">
 <div class="col-xs-3">
-<<<<<<< HEAD
 UPLOAD PORTFOLIO<br>(At least one/at most three photos or links of the below)
-=======
-UPLOAD PORTFOLIO<br>(Choose at least one of the below)
->>>>>>> 58f0f6caf1a4fc027ed3555721565f4cbbf46597
 </div>
 </div>
 
 <div class="col-xs-12">&nbsp;</div>
-<<<<<<< HEAD
-=======
-
->>>>>>> 58f0f6caf1a4fc027ed3555721565f4cbbf46597
 
 
 <div class="col-xs-12" id="file2">
 <div id="img2">
+<div class="col-xs-3">
+</div>
+<div id="img2_1" class="col-xs-3">
+</div>
+<div id="img2_2" class="col-xs-3">
+</div>
+<div id="img2_3" class="col-xs-3">
+</div>
 </div>
 <div id="audio2">
 </div>
@@ -430,7 +402,6 @@ UPLOAD PORTFOLIO<br>(Choose at least one of the below)
 
 <div class="col-xs-12">
 <div class="col-xs-3">
-<<<<<<< HEAD
 PHOTO&nbsp(max size is <b style="color:red;">5MB. jpg, gif, png ONLY</b>)
 </div>
 <div class="col-xs-3">
@@ -441,12 +412,6 @@ PHOTO&nbsp(max size is <b style="color:red;">5MB. jpg, gif, png ONLY</b>)
 </div>
 <div class="col-xs-3">
 <input type="file" name="tphoto2_3" id="tphoto2_3" accept="image/*">
-=======
-PHOTO&nbsp(max size is 5MB. jpg, png, gif ONLY)
-</div>
-<div class="col-xs-3">
-<input type="file" name="tphoto2" id="tphoto2" accept="image/*">
->>>>>>> 58f0f6caf1a4fc027ed3555721565f4cbbf46597
 </div>
 </div>
 
@@ -454,17 +419,11 @@ PHOTO&nbsp(max size is 5MB. jpg, png, gif ONLY)
 
 <div class="col-xs-12">
 <div class="col-xs-3">
-<<<<<<< HEAD
 AUDIO&nbsp(Please separate links by <b style="color:red;">;</b>)
 </div>
 <div class="col-xs-3"><input type="text" name="audiolink2" id="audiolink2"  class="page2 form-control" style="width:300px;">
 </div>
 <div class="col-xs-3"><input type="button" name="preview_audio_2" id="preview_audio_2" class="btn btn-danger" style="font-family:'Roboto', Helvetica, Arial, sans-serif" value="preview">
-=======
-AUDIO&nbsp(link)
-</div>
-<div class="col-xs-3"><input type="text" name="audiolink2" id="audiolink2"  class="page2 form-control" style="width:300px;">
->>>>>>> 58f0f6caf1a4fc027ed3555721565f4cbbf46597
 </div>
  </div>
  
@@ -472,17 +431,11 @@ AUDIO&nbsp(link)
  
  <div class="col-xs-12">
  <div class="col-xs-3">
-<<<<<<< HEAD
 VIDEO&nbsp(Please separate links by <b style="color:red;">;</b>)
 </div>
 <div class="col-xs-3"><input type="text" name="videolink2" id="videolink2"  class="page2 form-control" style="width:300px;">
 </div>
 <div class="col-xs-3"><input type="button" name="preview_video_2" id="preview_video_2" class="btn btn-danger" style="font-family:'Roboto', Helvetica, Arial, sans-serif" value="preview">
-=======
-VIDEO&nbsp(link)
-</div>
-<div class="col-xs-3"><input type="text" name="videolink2" id="videolink2"  class="page2 form-control" style="width:300px;">
->>>>>>> 58f0f6caf1a4fc027ed3555721565f4cbbf46597
 </div>
 </div>
 
@@ -549,23 +502,23 @@ SPECIFIC TALENT<sup>*</sup>
 
 <div class="col-xs-12">
 <div class="col-xs-3">
-<<<<<<< HEAD
 UPLOAD PORTFOLIO<br>(At least one/at most three photos or links of the below)
-=======
-UPLOAD PORTFOLIO<br>(Choose at least one of the below)
->>>>>>> 58f0f6caf1a4fc027ed3555721565f4cbbf46597
 </div>
 </div>
 
 <div class="col-xs-12">&nbsp;</div>
-<<<<<<< HEAD
-=======
-
->>>>>>> 58f0f6caf1a4fc027ed3555721565f4cbbf46597
 
 
 <div class="col-xs-12" id="file3">
 <div id="img3">
+<div class="col-xs-3">
+</div>
+<div id="img3_1" class="col-xs-3">
+</div>
+<div id="img3_2" class="col-xs-3">
+</div>
+<div id="img3_3" class="col-xs-3">
+</div>
 </div>
 <div id="audio3">
 </div>
@@ -576,7 +529,6 @@ UPLOAD PORTFOLIO<br>(Choose at least one of the below)
 <div class="col-xs-12">&nbsp;</div>
 <div class="col-xs-12">
 <div class="col-xs-3">
-<<<<<<< HEAD
 PHOTO&nbsp(max size is <b style="color:red;">5MB. jpg, gif, png ONLY</b>)
 </div>
 <div class="col-xs-3">
@@ -588,30 +540,17 @@ PHOTO&nbsp(max size is <b style="color:red;">5MB. jpg, gif, png ONLY</b>)
 <div class="col-xs-3">
 <input type="file" name="tphoto3_3" id="tphoto3_3" accept="image/*">
 </div>
-=======
-PHOTO&nbsp(max size is 5MB. jpg, png, gif ONLY)
-</div>
-<div class="col-xs-3">
- <input type="file" name="tphoto3" id="tphoto3" accept="image/*">
- </div>
->>>>>>> 58f0f6caf1a4fc027ed3555721565f4cbbf46597
  </div>
  
 <div class="col-xs-12">&nbsp;</div>
  
  <div class="col-xs-12">
  <div class="col-xs-3">
-<<<<<<< HEAD
 AUDIO&nbsp(Please separate links by <b style="color:red;">;</b>)
 </div>
 <div class="col-xs-3"><input type="text" name="audiolink3" id="audiolink3"  class="page2 form-control" style="width:300px;">
 </div>
 <div class="col-xs-3"><input type="button" name="preview_audio_3" id="preview_audio_3" class="btn btn-danger" style="font-family:'Roboto', Helvetica, Arial, sans-serif" value="preview">
-=======
-AUDIO&nbsp(link)
-</div>
-<div class="col-xs-3"><input type="text" name="audiolink3" id="audiolink3"  class="page2 form-control" style="width:300px;">
->>>>>>> 58f0f6caf1a4fc027ed3555721565f4cbbf46597
 </div>
 </div>
 
@@ -619,17 +558,11 @@ AUDIO&nbsp(link)
 
 <div class="col-xs-12">
 <div class="col-xs-3">
-<<<<<<< HEAD
 VIDEO&nbsp(Please separate links by <b style="color:red;">;</b>)
 </div>
 <div class="col-xs-3"><input type="text" name="videolink3" id="videolink3"  class="page2 form-control" style="width:300px;">
 </div>
 <div class="col-xs-3"><input type="button" name="preview_video_3" id="preview_video_3" class="btn btn-danger" style="font-family:'Roboto', Helvetica, Arial, sans-serif" value="preview">
-=======
-VIDEO&nbsp(link)
-</div>
-<div class="col-xs-3"><input type="text" name="videolink3" id="videolink3"  class="page2 form-control" style="width:300px;">
->>>>>>> 58f0f6caf1a4fc027ed3555721565f4cbbf46597
 </div>
 </div>
 
@@ -726,11 +659,7 @@ Describe yourself in three words
 <div class="col-xs-12">&nbsp;</div> 
 <div class="col-xs-12">
 <div class="col-xs-2">
-<<<<<<< HEAD
 Intro video&nbsp(One link ONLY)
-=======
-Intro video&nbsp(link)
->>>>>>> 58f0f6caf1a4fc027ed3555721565f4cbbf46597
 </div>
 <div class="col-xs-3">
 <input type="text" style="width:300px"  name="introVideo" id="introVideo" class="page4 form-control">
@@ -862,7 +791,11 @@ Anything else
 	$('#secondPrevious').click(function(){
 		   $('.secondPage').hide();
 		   $('.firstPage').show();
-		   document.getElementById('file1').innerHTML="<div id='img1'></div><div id='audio1'></div><div id='video1'></div>";
+		   document.getElementById('img1_1').innerHTML="";
+		   document.getElementById('img1_2').innerHTML="";
+		   document.getElementById('img1_3').innerHTML="";
+		   document.getElementById('audio1').innerHTML="";
+		   document.getElementById('video1').innerHTML="";
 		   document.getElementById('audiolink1').value="";
 		   document.getElementById('videolink1').value='';
 		   document.getElementById('tphoto1_1').value='';
@@ -920,9 +853,21 @@ Anything else
 		document.getElementById('videolink1').value='';
 		document.getElementById('videolink2').value='';
 		document.getElementById('videolink3').value='';
-		document.getElementById('file1').innerHTML="<div id='img1'></div><div id='audio1'></div><div id='video1'></div>";
-		document.getElementById('file2').innerHTML="<div id='img2'></div><div id='audio2'></div><div id='video2'></div>";
-		document.getElementById('file3').innerHTML="<div id='img3'></div><div id='audio3'></div><div id='video3'></div>";
+		document.getElementById('img1_1').innerHTML="";
+		document.getElementById('img1_2').innerHTML="";
+		document.getElementById('img1_3').innerHTML="";
+		document.getElementById('audio1').innerHTML="";
+		document.getElementById('video1').innerHTML="";
+		document.getElementById('img2_1').innerHTML="";
+		document.getElementById('img2_2').innerHTML="";
+		document.getElementById('img2_3').innerHTML="";
+		document.getElementById('audio2').innerHTML="";
+		document.getElementById('video2').innerHTML="";
+		document.getElementById('img3_1').innerHTML="";
+		document.getElementById('img3_2').innerHTML="";
+		document.getElementById('img3_3').innerHTML="";
+		document.getElementById('audio3').innerHTML="";
+		document.getElementById('video3').innerHTML="";
 	});
 	$('#thirdNext').click(function(){
 		var message="";
@@ -966,7 +911,6 @@ Anything else
 			} 
 		else{
 		var num=0;
-<<<<<<< HEAD
 		if($('#tphoto1_1').val()!=''){
 			num++;
 		}
@@ -979,25 +923,12 @@ Anything else
 		if($('#audiolink1').val()!=''){
 			var url=$('#audiolink1').val().split(";");
 			for(var i=0;i<url.length;i++){
-=======
-		document.getElementById('file1').innerHTML=document.getElementById('specific_talent1').value+" :<br>";
-		if($('#tphoto1').val()!=''){
-			document.getElementById('file1').innerHTML+="<img src='/pic/photo.png' width='40' height='40'><br>";
-			num++;
-		}
-		if($('#audiolink1').val()!=''){
-			document.getElementById('file1').innerHTML+="<a href='"+$('#audiolink1').val()+"' target='_blank' style='color:red;'>"+$('#audiolink1').val()+"</a><br>";
->>>>>>> 58f0f6caf1a4fc027ed3555721565f4cbbf46597
 			num++;
 			}
 		}
 		if($('#videolink1').val()!=''){
-<<<<<<< HEAD
 			var url=$('#videolink1').val().split(";");
 			for(var i=0;i<url.length;i++){
-=======
-			document.getElementById('file1').innerHTML+="<a href='"+$('#videolink1').val()+"' target='_blank' style='color:red;'>"+$('#videolink1').val()+"</a><br>";
->>>>>>> 58f0f6caf1a4fc027ed3555721565f4cbbf46597
 			num++;
 			}
 		}
@@ -1013,7 +944,11 @@ Anything else
 	$('#addonePrevious').click(function(){
 		$('.add_one').hide();
 		$('.secondPage').show();
-		document.getElementById('file2').innerHTML="<div id='img2'></div><div id='audio2'></div><div id='video2'></div>";
+		document.getElementById('img2_1').innerHTML="";
+		document.getElementById('img2_2').innerHTML="";
+		document.getElementById('img2_3').innerHTML="";
+		document.getElementById('audio2').innerHTML="";
+		document.getElementById('video2').innerHTML="";
 		document.getElementById('audiolink2').value='';
 		document.getElementById('videolink2').value='';
 		document.getElementById('tphoto2_1').value='';
@@ -1071,7 +1006,6 @@ Anything else
 			}
 		else{
 		var num=0;
-<<<<<<< HEAD
 		if($('#tphoto2_1').val()!=''){
 			num++;
 		}
@@ -1084,26 +1018,12 @@ Anything else
 		if($('#audiolink2').val()!=''){
 			var url=$('#audiolink2').val().split(";");
 			for(var i=0;i<url.length;i++){
-=======
-		document.getElementById('file2').innerHTML=document.getElementById('file1').innerHTML;
-		document.getElementById('file2').innerHTML+=document.getElementById('specific_talent2').value+" :<br>";
-		if($('#tphoto2').val()!=''){
-			document.getElementById('file2').innerHTML+="<img src='/pic/photo.png' width='40' height='40'><br>";
-			num++;
-		}
-		if($('#audiolink2').val()!=''){
-			document.getElementById('file2').innerHTML+="<a href='"+$('#audiolink2').val()+"' target='_blank' style='color:red;'>"+$('#audiolink2').val()+"</a><br>";
->>>>>>> 58f0f6caf1a4fc027ed3555721565f4cbbf46597
 			num++;
 			}
 		}
 		if($('#videolink2').val()!=''){
-<<<<<<< HEAD
 			var url=$('#videolink2').val().split(";");
 			for(var i=0;i<url.length;i++){
-=======
-			document.getElementById('file2').innerHTML+="<a href='"+$('#audiolink2').val()+"' target='_blank' style='color:red;'>"+$('#audiolink2').val()+"</a><br>";
->>>>>>> 58f0f6caf1a4fc027ed3555721565f4cbbf46597
 			num++;
 			}
 		}
@@ -1119,7 +1039,11 @@ Anything else
 	$('#addtwoPrevious').click(function(){
 		$('.add_two').hide();
 		$('.add_one').show();
-		document.getElementById('file3').innerHTML="<div id='img3'></div><div id='audio3'></div><div id='video3'></div>";
+		document.getElementById('img3_1').innerHTML="";
+		document.getElementById('img3_2').innerHTML="";
+		document.getElementById('img3_3').innerHTML="";
+		document.getElementById('audio3').innerHTML="";
+		document.getElementById('video3').innerHTML="";
 		document.getElementById('audiolink3').value='';
 		document.getElementById('videolink3').value='';
 		document.getElementById('tphoto3_1').value='';
@@ -1202,28 +1126,27 @@ function addser(){
   $('select').select2();
   $('#state').select2({
   });
-<<<<<<< HEAD
   
-  function readURL1(input)
+  function readURL1(input,n)
   {   
 	  if(input.files&&input.files[0]){
 		  var reader = new FileReader();
 		  reader.onload = function(e)
 		  {
-			  document.getElementById('img1').innerHTML += "<img src=" + e.target.result + " width='100px' height='100px'>&nbsp;";
+			  document.getElementById('img1_'+n).innerHTML = "<img src=" + e.target.result + " width='100px' height='100px'>&nbsp;";
 		  }
 		  reader.readAsDataURL(input.files[0]);
 	  }
-	  else document.getElementById('img1').innerHTML="";
+	  else document.getElementById('img1_'+n).innerHTML="";
   }
   $('#tphoto1_1').change(function(){
-	  readURL1(this)
+	  readURL1(this,1)
   });
    $('#tphoto1_2').change(function(){
-	  readURL1(this)
+	  readURL1(this,2)
   });
    $('#tphoto1_3').change(function(){
-	  readURL1(this)
+	  readURL1(this,3)
   });
   $('#preview_audio_1').click(function(){
 	 var url=$('#audiolink1').val().split(";");
@@ -1250,25 +1173,26 @@ function addser(){
 			} 
   });
   
-  function readURL2(input)
+  function readURL2(input,n)
   {
 	  if(input.files&&input.files[0]){
 		  var reader = new FileReader();
 		  reader.onload = function(e)
 		  {
-			  document.getElementById('img2').innerHTML += "<img src=" + e.target.result + " width='100px' height='100px'>&nbsp;";
+			  document.getElementById('img2_'+n).innerHTML = "<img src=" + e.target.result + " width='100px' height='100px'>&nbsp;";
 		  }
 		  reader.readAsDataURL(input.files[0]);
 	  }
+	  else document.getElementById('img2_'+n).innerHTML="";
   }
   $('#tphoto2_1').change(function(){
-	  readURL2(this)
+	  readURL2(this,1)
   });
    $('#tphoto2_2').change(function(){
-	  readURL2(this)
+	  readURL2(this,2)
   });
    $('#tphoto2_3').change(function(){
-	  readURL2(this)
+	  readURL2(this,3)
   });
   $('#preview_audio_2').click(function(){
 	 var url=$('#audiolink2').val().split(";");
@@ -1295,25 +1219,26 @@ function addser(){
 			} 
   });
    
-  function readURL3(input)
+  function readURL3(input,n)
   {
 	  if(input.files&&input.files[0]){
 		  var reader = new FileReader();
 		  reader.onload = function(e)
 		  {
-			  document.getElementById('img3').innerHTML += "<img src=" + e.target.result + " width='100px' height='100px'>&nbsp;";
+			  document.getElementById('img3_'+n).innerHTML = "<img src=" + e.target.result + " width='100px' height='100px'>&nbsp;";
 		  }
 		  reader.readAsDataURL(input.files[0]);
 	  }
+	  else document.getElementById('img3_'+n).innerHTML="";
   }
   $('#tphoto3_1').change(function(){
-	  readURL3(this)
+	  readURL3(this,1)
   });
    $('#tphoto3_2').change(function(){
-	  readURL3(this)
+	  readURL3(this,2)
   });
    $('#tphoto3_3').change(function(){
-	  readURL3(this)
+	  readURL3(this,3)
   });
   $('#preview_audio_3').click(function(){
 	 var url=$('#audiolink3').val().split(";");
@@ -1339,8 +1264,6 @@ function addser(){
 			}
 			} 
   });
-=======
->>>>>>> 58f0f6caf1a4fc027ed3555721565f4cbbf46597
 </script>
 
 </html>
