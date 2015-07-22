@@ -229,11 +229,11 @@
 				<div class="container">
 					<div class="footer_bottom">
 						<p style="font-family: 'Raleway', sans-serif;">Follow us!</p>
-						<a href="http://www.twitter.com/talentscool">
+						<a href="http://www.twitter.com/talentscool" target="_blank">
 						<img src="http://talentscool.com/images/social_media/twitter_logo.png" style="max-height: 6vh; max-width: 6vh; padding: 1vh;"></a>
-						<a href="http://www.facebook.com/talentscool">
+						<a href="http://www.facebook.com/talentscool" target="_blank">
 						<img src="http://talentscool.com/images/social_media/facebook_logo.png" style="max-height: 6vh; max-width: 6vh; padding: 1vh"></a>
-						<a href="http://www.instagram.com/talentscool">
+						<a href="http://www.instagram.com/talentscool" target="_blank">
 						<img src="http://talentscool.com/images/social_media/instagram_logo.png" style="max-height: 6vh; max-width: 6vh; padding: 1vh"></a>
 						<br/>
 						<p style="font-family: 'Raleway', sans-serif;">Copyright &copy; 2015 Talentscool, LLC.</p>
