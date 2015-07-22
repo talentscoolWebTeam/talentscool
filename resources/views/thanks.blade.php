@@ -29,7 +29,8 @@ body{
 <body>
 <div class="thanks">
 <img src="/pic/TSVector.png">
-<p style="font-size:30px; position:relative; color:white; margin-top:15%; margin-left:10%; margin-right:15%;">Thanks for your interest. Your application has been submitted.<br>A confirmation email will be sent to your email address. If there is a match, we will contact you shortly.<br><br>Thank you!</p>
+<p style="font-size:30px; position:relative; color:white; margin-top:15%; margin-left:10%; margin-right:15%;">Thank you for your interest in Talentscool. Your application has been submitted and will be reviewed. If your application is accepted, we will contact you.
+<br>If you have concerns, questions, or any additional information for your application, please email us at talent@talentscool.com.</p>
 </div>
 </body>
 </html>

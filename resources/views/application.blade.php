@@ -10,14 +10,14 @@
 <style>
     
     body{
-	   background: url("http://www.talentscool.com/images/background.png") no-repeat center center fixed; 
+	   background: url("https://lh5.googleusercontent.com/IZ80Qiaknjyjvbtm3Xu09UbAgh5YDJ8mv5ei_-RJZAdFwnSbwN2GfnzSeOcWGlIQ-XeDqA=s190") no-repeat center center fixed; 
        -webkit-background-size: cover;
        -moz-background-size: cover;
        -o-background-size: cover;
-       background-size: cover;	
+       background-size: cover;
 	   color:white;
-	   font:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
-	   font-size:17px;
+	   font-family: "Times New Roman", Georgia, Serif;
+	   font-size:14px;
 	   padding-left:5%;
 	}
 	
@@ -28,12 +28,17 @@
 		background-color:green;
 	}
 	input{
-		font-family:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+		font-family: "Times New Roman", Georgia, Serif;
 	}
 	sup{
 		color:red;
 	}
 	
+	.checkbox-grid li {
+    	display: inline-block;
+   	 	float: left;
+   	 	width: 50%;
+	}
 	
 	.secondPage{
 		display:none;
@@ -59,11 +64,11 @@
 
 
 <table>
-<tr><td class="col-xs-12" style="font-size:36px;">APPLICATION</td><td style="float:right;position:relative;margin-right:20%;margin-top:2%;"><img src="/pic/TSVector.png" style="width:200px;"></td></tr>
+<tr><td class="col-xs-12" style="font-size:36px;">APPLICATION</td><td style="float:right;position:relative;margin-right:20%;margin-top:2%;"><a href="http://talentscool.com"><img src="/pic/TSVector.png" style="width:200px;"></td></tr>
 </table>
 {!! Form::open(['action'=>'ApplicationController@store','enctype' => 'multipart/form-data']) !!}
 <div class="firstPage">
-<p class="col-xs-12">Personal information</p>
+<p class="col-xs-12"><big>Personal information</big></p>
 <p class="col-xs-12"><b style="color:red;">*</b><b> required</b></p>
 <br><br>
 <div class="col-xs-12">
@@ -71,7 +76,7 @@
 	FIRST NAME<sup>*</sup>
     </div>
     <div class="col-xs-3">
-	<input type="text" name="fname"  id="fname" class="page1 form-control"/>
+	<input type="text" style="height:25px" name="fname"  id="fname" class="page1 form-control"/>
 	</div>
 </div>
 
@@ -82,7 +87,7 @@
 		LAST NAME<sup>*</sup>
     </div>
     <div class="col-xs-3">
-    	<input type="text" name="lname"  id="lname" class="page1 form-control">
+    	<input type="text" style="height:25px" name="lname"  id="lname" class="page1 form-control">
     </div>
 </div>
 
@@ -93,7 +98,7 @@
             NICKNAME&nbsp(optional)
       </div>
       <div class="col-xs-3">
-            <input type="text" name="nname"  id="nname" class="page1 form-control">
+            <input type="text" style="height:25px" name="nname"  id="nname" class="page1 form-control">
      </div>
 </div>
 
@@ -115,7 +120,7 @@
      EMAIL<sup>*</sup>
      </div>
      <div class="col-xs-3">
-     <input type="text" name="email"  id="email" class="page1 form-control">
+     <input type="text" style="height:25px" name="email"  id="email" class="page1 form-control">
      </div>
 </div>
 
@@ -137,7 +142,7 @@
       CITY<sup>*</sup>
       </div>
       <div class="col-xs-3">
-      <input type="text" class="page1 form-control" name="city" id="city">
+      <input type="text" style="height:25px" class="page1 form-control" name="city" id="city">
       </div>
 </div>
 
@@ -148,7 +153,7 @@
       ZIP CODE<sup>*</sup>
       </div>
       <div class="col-xs-3">
-      <input type="text" name="zipcode"  id="zip" class="page1 form-control">
+      <input type="text" style="height:25px" name="zipcode"  id="zip" class="page1 form-control">
       </div>
 </div>
 
@@ -174,7 +179,7 @@
       PHONE&nbspNO.&nbsp(optional)
       </div>
       <div class="col-xs-3">
-      <input type="text" name="phoneNum"  class="page1 form-control">
+      <input type="text" style="height:25px" name="phoneNum"  class="page1 form-control">
       </div>
 </div>
 
@@ -185,7 +190,7 @@
       DATE OF BIRTH<sup>*</sup>
       </div>
       <div class="col-xs-3">
-      <input type="date" name="dob" id="dob" class="page1 form-control">
+      <input type="date"style="height:25px" name="dob" id="dob" class="page1 form-control">
       </div>
 </div>
 
@@ -587,42 +592,45 @@ VIDEO&nbsp(Please separate links by <b style="color:red;">;</b>)
 <div class="col-xs-12">
 <div class="col-xs-3">
 OPPORTUNITIES<sup>*</sup><br>
-<input type="checkbox" name="opportunity[]" value="booking">booking<br>
-<input type="checkbox" name="opportunity[]" value="audition">audition<br>
-<input type="checkbox" name="opportunity[]" value="tour">tour<br>
-<input type="checkbox" name="opportunity[]" value="showcase">showcase<br>
-<input type="checkbox" name="opportunity[]" value="internship">internship<br>
-<input type="checkbox" name="opportunity[]" value="job">job<br>
-<input type="checkbox" name="opportunity[]" value="endorsement">endorsement<br>
-<input type="checkbox" name="opportunity[]" value="" id="oppo_other" onClick="addopp()">other<br>
-<input type="text" name="opportunity[]" id="oppo" disabled class="form-control" style="width:200px;"></input><br>
+<ul class="checkbox-grid">
+<li><input type="checkbox" name="opportunity[]" value="booking">booking<br>
+<li><input type="checkbox" name="opportunity[]" value="audition">audition<br>
+<li><input type="checkbox" name="opportunity[]" value="tour">tour<br>
+<li><input type="checkbox" name="opportunity[]" value="showcase">showcase<br>
+<li><input type="checkbox" name="opportunity[]" value="internship">internship<br>
+<li><input type="checkbox" name="opportunity[]" value="job">job<br>
+<li><input type="checkbox" name="opportunity[]" value="endorsement">endorsement<br>
+<li><input type="checkbox" name="opportunity[]" value="" id="oppo_other" onClick="addopp()">other<br>
+<li><input type="text" name="opportunity[]" id="oppo" disabled class="form-control" style="width:200px;"></input><br></li></ul>
 </div>
 </div>
 <div class="col-xs-12">
 <div class="col-xs-3">
-REPRESENTATIONS<sup>*</sup><br>
-<input type="checkbox" name="representation[]" value="talent agent">talent agent<br>
-<input type="checkbox" name="representation[]" value="record label">record label<br>
-<input type="checkbox" name="representation[]" value="agent manager">agent manager<br>
-<input type="checkbox" name="representation[]" value="modeling agency">modeling agency<br>
-<input type="checkbox" name="representation[]" value="" onClick="addrep()" id="rep_other">other<br>
-<input type="text" name="representation[]" id="rep" disabled class="form-control" style="width:200px;"></input><br>
+REPRESENTATION<sup>*</sup><br>
+<ul class="checkbox-grid">
+<li><input type="checkbox" name="representation[]" value="talent agent">talent agent<br>
+<li><input type="checkbox" name="representation[]" value="record label">record label<br>
+<li><input type="checkbox" name="representation[]" value="agent manager">agent manager<br>
+<li><input type="checkbox" name="representation[]" value="modeling agency">modeling agency<br>
+<li><input type="checkbox" name="representation[]" value="" onClick="addrep()" id="rep_other">other<br>
+<li><input type="text" name="representation[]" id="rep" disabled class="form-control" style="width:200px;"></input><br></li></ul>
 </div>
 </div>
 <div class="col-xs-12">
 <div class="col-xs-3">
 SERVICES<sup>*</sup><br>
-<input type="checkbox" name="service[]" value="brand manager">brand manager<br>
-<input type="checkbox" name="service[]" value="lawyer">lawyer<br>
-<input type="checkbox" name="service[]" value="account">account<br>
-<input type="checkbox" name="service[]" value="publicist">publicist<br>
-<input type="checkbox" name="service[]" value="personal assistant">personal assistant<br>
-<input type="checkbox" name="service[]" value="talent development">talent development<br>
-<input type="checkbox" name="service[]" value="stylist">stylist<br>
-<input type="checkbox" name="service[]" value="consulting">consulting<br>
-<input type="checkbox" name="service[]" value="collaboration">collaboration<br>
-<input type="checkbox" name="service[]" value="" onClick="addser()" id="ser_other">other<br>
-<input type="text" name="service[]" id="ser" disabled class="form-control" style="width:200px;"></input><br>
+<ul class="checkbox-grid">
+<li><input type="checkbox" name="service[]" value="brand manager">brand manager<br>
+<li><input type="checkbox" name="service[]" value="lawyer">lawyer<br>
+<li><input type="checkbox" name="service[]" value="account">account<br>
+<li><input type="checkbox" name="service[]" value="publicist">publicist<br>
+<li><input type="checkbox" name="service[]" value="personal assistant">personal assistant<br>
+<li><input type="checkbox" name="service[]" value="talent development">talent development<br>
+<li><input type="checkbox" name="service[]" value="stylist">stylist<br>
+<li><input type="checkbox" name="service[]" value="consulting">consulting<br>
+<li><input type="checkbox" name="service[]" value="collaboration">collaboration<br>
+<li><input type="checkbox" name="service[]" value="" onClick="addser()" id="ser_other">other<br>
+<li><input type="text" name="service[]" id="ser" disabled class="form-control" style="width:200px;"></input><br></li></ul>
 </div>
 </div>
 <div class="col-xs-12">
@@ -640,10 +648,10 @@ SERVICES<sup>*</sup><br>
 
 
 <div class="fourPage">
-<p class="col-xs-12">Optional&nbsp(Strongly recommended)</p>
+<p class="col-xs-12">Optional&nbsp(STRONGLY RECOMMENDED)</p>
 <div class="col-xs-12">
 <div class="col-xs-2">
-Describe yourself in three words
+DESCRIBE YOURSELF IN THREE WORDS
 </div>
 <div class="col-xs-3">
 <input type="text" style="width:300px"  name="describeword1" class="page4 form-control">
@@ -659,7 +667,7 @@ Describe yourself in three words
 <div class="col-xs-12">&nbsp;</div> 
 <div class="col-xs-12">
 <div class="col-xs-2">
-Intro video&nbsp(One link ONLY)
+INTRO VIDEO&nbsp(ONE LINK ONLY)
 </div>
 <div class="col-xs-3">
 <input type="text" style="width:300px"  name="introVideo" id="introVideo" class="page4 form-control">
@@ -671,7 +679,7 @@ Intro video&nbsp(One link ONLY)
 
  <div class="col-xs-12">
  <div class="col-xs-2">
-Current representation
+CURRENT REPRESENTATION
 </div> 
 <div class="col-xs-3">
 <input type="text"  style="width:300px"  name="current_representation" class="page4 form-control">
@@ -682,7 +690,7 @@ Current representation
 
 <div class="col-xs-12">
 <div class="col-xs-2">
-Accolades 
+ACCOLADES 
 </div>
 <div class="col-xs-3">
 <input type="text"  style="width:300px"  name="accolades" class="page4 form-control">
@@ -693,7 +701,7 @@ Accolades
 
 <div class="col-xs-12">
 <div class="col-xs-2">
-Achievements 
+ACHIEVEMENTS 
 </div>
 <div class="col-xs-3">
 <input type="text"  style="width:300px"  name="achievements" class="page4 form-control">
@@ -704,7 +712,7 @@ Achievements
 
 <div class="col-xs-12">
 <div class="col-xs-2">
-Experience 
+EXPERIENCE 
 </div>
 <div class="col-xs-3">
 <input type="text"  style="width:300px"  name="experiences" class="page4 form-control">
@@ -715,7 +723,7 @@ Experience
 
 <div class="col-xs-12">
 <div class="col-xs-2">
-Related talent 
+RELATED TALENT 
 </div>
 <div class="col-xs-3">
 <input type="text"  style="width:300px"  name="relative_talent" class="page4 form-control">
@@ -725,7 +733,7 @@ Related talent
 <div class="col-xs-12">&nbsp;</div>
 <div class="col-xs-12">
 <div class="col-xs-2">
-Anything else 
+ANYTHING ELSE 
 </div>
 <div class="col-xs-3">
 <input type="text"  style="width:300px"  name="anything" class="page4 form-control">
@@ -740,6 +748,7 @@ Anything else
 </div>
 <div class="col-xs-3">
 <input type="submit" value="SUBMIT" id="submit" formmethod="post" class="btn btn-danger" style="font-family:'Roboto', Helvetica, Arial, sans-serif"></input>
+<input type="button" value="REVIEW APPLICATION" id="review" style="font-family:'Roboto', Helvetica, Arial, sans-serif" class="btn btn-danger"></input>
 </div>
 </div>
 </div>
@@ -787,6 +796,10 @@ Anything else
 			$('.firstPage').hide();
 			$('.secondPage').show();
 			}
+	});
+	$('#review').click(function(){
+		   $('.fourPage').hide();
+		   $('.firstPage').show();
 	});
 	$('#secondPrevious').click(function(){
 		   $('.secondPage').hide();
