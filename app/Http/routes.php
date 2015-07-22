@@ -44,3 +44,8 @@ Route::controllers([
 	'password' => 'Auth\PasswordController',
 ]);
 
+Route::get('payment', 'PaymentController@payment');
+Route::post('payment', 'PaymentController@pay');
+Route::get('payment/successfully', 'PaymentController@successfully');
+Route::get('payment/no_account', 'PaymentController@no_account');
+
