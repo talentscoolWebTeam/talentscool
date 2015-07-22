@@ -55,15 +55,25 @@ class ApiRequestor
         if (!$headers) {
             $headers = array();
         }
+<<<<<<< HEAD
+        list($rbody, $rcode, $rheaders, $myApiKey) =
+        $this->_requestRaw($method, $url, $params, $headers);
+        $resp = $this->_interpretResponse($rbody, $rcode, $rheaders);
+=======
         list($rbody, $rcode, $myApiKey) =
         $this->_requestRaw($method, $url, $params, $headers);
         $resp = $this->_interpretResponse($rbody, $rcode);
+>>>>>>> a4954494880de80b002b67374bf830a440e3a926
         return array($resp, $myApiKey);
     }
 
     /**
      * @param string $rbody A JSON string.
      * @param int $rcode
+<<<<<<< HEAD
+     * @param array $rheaders
+=======
+>>>>>>> a4954494880de80b002b67374bf830a440e3a926
      * @param array $resp
      *
      * @throws Error\InvalidRequest if the error is caused by the user.
@@ -73,12 +83,20 @@ class ApiRequestor
      *    required)
      * @throws Error\Api otherwise.
      */
+<<<<<<< HEAD
+    public function handleApiError($rbody, $rcode, $rheaders, $resp)
+=======
     public function handleApiError($rbody, $rcode, $resp)
+>>>>>>> a4954494880de80b002b67374bf830a440e3a926
     {
         if (!is_array($resp) || !isset($resp['error'])) {
             $msg = "Invalid response object from API: $rbody "
               . "(HTTP response code was $rcode)";
+<<<<<<< HEAD
+            throw new Error\Api($msg, $rcode, $rbody, $resp, $rheaders);
+=======
             throw new Error\Api($msg, $rcode, $rbody, $resp);
+>>>>>>> a4954494880de80b002b67374bf830a440e3a926
         }
 
         $error = $resp['error'];
@@ -89,11 +107,24 @@ class ApiRequestor
         switch ($rcode) {
             case 400:
                 if ($code == 'rate_limit') {
+<<<<<<< HEAD
+                    throw new Error\RateLimit($msg, $param, $rcode, $rbody, $resp, $rheaders);
+=======
                     throw new Error\RateLimit($msg, $param, $rcode, $rbody, $resp);
+>>>>>>> a4954494880de80b002b67374bf830a440e3a926
                 }
 
                 // intentional fall-through
             case 404:
+<<<<<<< HEAD
+                throw new Error\InvalidRequest($msg, $param, $rcode, $rbody, $resp, $rheaders);
+            case 401:
+                throw new Error\Authentication($msg, $rcode, $rbody, $resp, $rheaders);
+            case 402:
+                throw new Error\Card($msg, $param, $code, $rcode, $rbody, $resp, $rheaders);
+            default:
+                throw new Error\Api($msg, $rcode, $rbody, $resp, $rheaders);
+=======
                 throw new Error\InvalidRequest($msg, $param, $rcode, $rbody, $resp);
             case 401:
                 throw new Error\Authentication($msg, $rcode, $rbody, $resp);
@@ -101,6 +132,7 @@ class ApiRequestor
                 throw new Error\Card($msg, $param, $code, $rcode, $rbody, $resp);
             default:
                 throw new Error\Api($msg, $rcode, $rbody, $resp);
+>>>>>>> a4954494880de80b002b67374bf830a440e3a926
         }
     }
 
@@ -162,14 +194,22 @@ class ApiRequestor
             $rawHeaders[] = $header . ': ' . $value;
         }
 
+<<<<<<< HEAD
+        list($rbody, $rcode, $rheaders) = $this->httpClient()->request(
+=======
         list($rbody, $rcode) = $this->httpClient()->request(
+>>>>>>> a4954494880de80b002b67374bf830a440e3a926
             $method,
             $absUrl,
             $rawHeaders,
             $params,
             $hasFile
         );
+<<<<<<< HEAD
+        return array($rbody, $rcode, $rheaders, $myApiKey);
+=======
         return array($rbody, $rcode, $myApiKey);
+>>>>>>> a4954494880de80b002b67374bf830a440e3a926
     }
 
     private function _processResourceParam($resource, $hasCurlFile)
@@ -195,7 +235,11 @@ class ApiRequestor
         }
     }
 
+<<<<<<< HEAD
+    private function _interpretResponse($rbody, $rcode, $rheaders)
+=======
     private function _interpretResponse($rbody, $rcode)
+>>>>>>> a4954494880de80b002b67374bf830a440e3a926
     {
         try {
             $resp = json_decode($rbody, true);
@@ -206,7 +250,11 @@ class ApiRequestor
         }
 
         if ($rcode < 200 || $rcode >= 300) {
+<<<<<<< HEAD
+            $this->handleApiError($rbody, $rcode, $rheaders, $resp);
+=======
             $this->handleApiError($rbody, $rcode, $resp);
+>>>>>>> a4954494880de80b002b67374bf830a440e3a926
         }
         return $resp;
     }
