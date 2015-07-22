@@ -236,7 +236,7 @@
 						<a href="http://www.instagram.com/talentscool">
 						<img src="http://talentscool.com/images/social_media/instagram_logo.png" style="max-height: 6vh; max-width: 6vh; padding: 1vh"></a>
 						<br/>
-						<img src="http://talentscool.com/images/logoT.png" style="vertical-align:middle; max-height: 50%; max-width: 50%;"> 
+						<!-- <img src="http://talentscool.com/images/logoT.png" style="vertical-align:middle; max-height: 50%; max-width: 50%;">  -->
 					</div>
 				</div>				
 			</section>
