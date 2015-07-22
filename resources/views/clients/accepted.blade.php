@@ -28,7 +28,7 @@
                 @else
                 <img width="144" height="216" src="{{$acceptedClient->personal_photo}}" class="attachment-post-thumbnail wp-post-image" alt="KrishaJain6bw" />
                 @endif
-                <a href={{action('ClientController@acceptedClientInfo', $acceptedClient->id)}}>{{$acceptedClient->fname." ".$acceptedClient->lname}}</a>
+                <a href='/payment'>{{$acceptedClient->fname." ".$acceptedClient->lname}}</a>
             </div>
         </div>   
     <?php

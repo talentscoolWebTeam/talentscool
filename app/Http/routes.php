@@ -38,14 +38,10 @@ Route::post('admin/invite', 'AdminController@sendInvite');
 Route::get('admin/users', 'AdminController@users');
 Route::post('admin/users', 'AdminController@updateUser');
 
+Route::get('payment','ApplicationController@test');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
 ]);
-
-Route::get('payment', 'PaymentController@payment');
-Route::post('payment', 'PaymentController@pay');
-Route::get('payment/successfully', 'PaymentController@successfully');
-Route::get('payment/no_account', 'PaymentController@no_account');
 
