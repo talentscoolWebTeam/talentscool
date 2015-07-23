@@ -17,7 +17,7 @@
        background-size: cover;
 	   color:white;
 	   font-family: 'Raleway', sans-serif;
-	   font-size:14px;
+	   font-size:28px;
 	   padding-left:5%;
 	}
 	
@@ -69,6 +69,7 @@
 {!! Form::open(['action'=>'ApplicationController@store','enctype' => 'multipart/form-data']) !!}
 <div class="firstPage">
 <p class="col-xs-12"><big>Personal information</big></p>
+<p class="col-xs-12">Please fill out your personal information below.</p>
 <p class="col-xs-12"><b style="color:red;">*</b><b> required</b></p>
 <br><br>
 <div class="col-xs-12">
@@ -95,7 +96,7 @@
 
 <div class="col-xs-12">
      <div class="col-xs-2">
-            NICKNAME&nbsp(optional)
+            NICKNAME&nbsp
       </div>
       <div class="col-xs-3">
             <input type="text" style="height:25px" name="nname"  id="nname" class="page1 form-control">
@@ -106,7 +107,7 @@
 
 <div class="col-xs-12">
            <div class="col-xs-2">
-            UPLOAD PERSONAL PHOTO&nbsp(optional)&nbsp(max size is <b style="color:red;">5MB. jpg, gif, png ONLY</b>)
+            PROFILE PHOTO&nbsp<b style="font-size:12px; color:red">(5MB max, jpg/gif/png only)</b>
            </div>
            <div class="col-xs-3">
            <input type="file" name="personal_photo" id="personal_photo" accept="image/*"></input>
@@ -176,7 +177,7 @@
 
 <div class="col-xs-12">
       <div class="col-xs-2">
-      PHONE&nbspNO.&nbsp(optional)
+      PHONE NUMBER
       </div>
       <div class="col-xs-3">
       <input type="text" style="height:25px" name="phoneNum"  class="page1 form-control">
@@ -782,7 +783,7 @@ ANYTHING ELSE
 			if($('#zip').val()=='')message+=" [zip code]";
 			if($('#gender').val()=='')message+=" [gender]";
 			if($('#dob').val()=='')message+=" [birthday]";
-			if(message!=""){
+			if(message>28){
 			message=message.substring(0,message.length);
 			message+=" field(s). Please fill these out.";
 			alert(message);
@@ -832,7 +833,7 @@ ANYTHING ELSE
 		var picmessage="";
 	    if($('#category1').val()=='')message+=" [category]";
 	    if($('#specific_talent1').val()=='')message+=" [specific_talent]";
-		if(message!=""){
+		if(message>28){
 		    message=message.substring(0,message.length);
 			message+=" field(s). Please fill these out.";
 			alert(message);
@@ -888,7 +889,7 @@ ANYTHING ELSE
 	    if($("[name='opportunity[]']:checked").length==0)message+=" [opportunity]";
 		if($("[name='service[]']:checked").length==0)message+=" [service]";
 		
-		if(message!=""){
+		if(message>28){
 		    message=message.substring(0,message.length);
 			message+=" field(s). Please fill these out.";
 			alert(message);
@@ -913,7 +914,7 @@ ANYTHING ELSE
 		var picmessage="";
 	    if($('#category1').val()=='')message+=" [category]";
 	    if($('#specific_talent1').val()=='')message+=" [specific talent]";
-		if(message!=""){
+		if(message>28){
 		    message=message.substring(0,message.length);
 			message+=" field(s). Please fill these out.";
 			alert(message);
@@ -978,7 +979,7 @@ ANYTHING ELSE
 		var picmessage="";
 	    if($('#category2').val()=='')message+=" [category]";
 	    if($('#specific_talent2').val()=='')message+=" [specific talent]";
-		if(message!=""){
+		if(message>28){
 		    message=message.substring(0,message.length);
 			message+=" field(s). Please fill these out.";
       alert(message);
@@ -1008,7 +1009,7 @@ ANYTHING ELSE
 		var picmessage="";
 	    if($('#category2').val()=='')message+=" [category]";
 	    if($('#specific_talent2').val()=='')message+=" [specific talent]";
-		if(message!=""){
+		if(message>28){
 		    message=message.substring(0,message.length);
 			message+=" field(s). Please fill these out.";
 			alert(message);
@@ -1073,7 +1074,7 @@ ANYTHING ELSE
 		var picmessage="";
 	    if($('#category3').val()=='')message+=" [category]";
 	    if($('#specific_talent3').val()=='')message+=" [specific talent]";
-		if(message!=""){
+		if(message>28){
 		    message=message.substring(0,message.length);
 			message+=" field(s). Please fill these out.";
 			alert(message);
