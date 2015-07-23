@@ -27,10 +27,10 @@ class PaymentController extends Controller {
 	
 	public function pay(){
      $email=\Input::get('stripeEmail');
-	 $servername = "localhost";
-     $username = "root";
-     $password = "";
-     $dbname = "talentscool";
+	 $servername = getenv('DB_HOST');
+     $username = getenv('DB_USERNAME');
+     $password = getenv('DB_PASSWORD');
+     $dbname = getenv('DB_DATABASE');
      $conn = mysqli_connect($servername, $username, $password, $dbname);
      if (!$conn) {
           die("Connection failed: " . mysqli_connect_error());
@@ -40,7 +40,8 @@ class PaymentController extends Controller {
      if(mysqli_num_rows($result)==0)return view('payment/no_account');
 	echo "1";
 	require_once('C:\wamp\apps\talentscool\vendor\autoload.php');
-	\Stripe\Stripe::setApiKey("sk_test_WNCyP9BnKndkqTNCwhVgd0Ew");
+	\Stripe\Stripe::setApiKey("sk_test_kr0gEVBLylbLE7r0FKMFSHyG");
+	//\Stripe\Stripe::setApiKey(Config::get('stripe.stripe.secret'));
      echo "2";
 	
 	// Get the credit card details submitted by the form

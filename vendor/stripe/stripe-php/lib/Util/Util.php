@@ -65,10 +65,7 @@ abstract class Util
             'account' => 'Stripe\\Account',
             'alipay_account' => 'Stripe\\AlipayAccount',
             'bank_account' => 'Stripe\\BankAccount',
-<<<<<<< HEAD
             'balance_transaction' => 'Stripe\\BalanceTransaction',
-=======
->>>>>>> a4954494880de80b002b67374bf830a440e3a926
             'card' => 'Stripe\\Card',
             'charge' => 'Stripe\\Charge',
             'coupon' => 'Stripe\\Coupon',
