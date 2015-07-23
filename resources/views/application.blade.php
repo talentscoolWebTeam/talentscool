@@ -10,7 +10,7 @@
 <style>
     
     body{
-	   background: url("https://lh5.googleusercontent.com/IZ80Qiaknjyjvbtm3Xu09UbAgh5YDJ8mv5ei_-RJZAdFwnSbwN2GfnzSeOcWGlIQ-XeDqA=s190") no-repeat center center fixed; 
+	   background: url("../public/images/applicationBackground.png") no-repeat center center fixed; 
        -webkit-background-size: cover;
        -moz-background-size: cover;
        -o-background-size: cover;
