@@ -16,7 +16,7 @@
        -o-background-size: cover;
        background-size: cover;
 	   color:white;
-	   font-family: "Times New Roman", Georgia, Serif;
+	   font-family: 'Raleway', sans-serif;
 	   font-size:14px;
 	   padding-left:5%;
 	}
@@ -28,7 +28,7 @@
 		background-color:green;
 	}
 	input{
-		font-family: "Times New Roman", Georgia, Serif;
+		font-family: 'Open Sans', sans-serif;
 	}
 	sup{
 		color:red;
@@ -771,20 +771,20 @@ ANYTHING ELSE
 	  }
 	  
 	$('#firstNext').click(function(){
-			var message="";
+			var message="You are missing the required";
 			var picmessage="";
 			var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-			if($('#fname').val()=='')message+="first name/";
-			if($('#lname').val()=='')message+="last name/";
-			if($('#email').val()=='')message+="email/";
-			if($('#state').val()=='')message+="state/";
-			if($('#city').val()=='')message+="city/";
-			if($('#zip').val()=='')message+="zip code/";
-			if($('#gender').val()=='')message+="gender/";
-			if($('#dob').val()=='')message+="birthday/";
+			if($('#fname').val()=='')message+=" [first name]";
+			if($('#lname').val()=='')message+=" [last name]";
+			if($('#email').val()=='')message+=" [email]";
+			if($('#state').val()=='')message+=" [state]";
+			if($('#city').val()=='')message+=" [city]";
+			if($('#zip').val()=='')message+=" [zip code]";
+			if($('#gender').val()=='')message+=" [gender]";
+			if($('#dob').val()=='')message+=" [birthday]";
 			if(message!=""){
 			message=message.substring(0,message.length-1);
-			message+=" are required. Please fill out.";
+			message+=" field(s). Please fill these out.";
 			alert(message);
 			}
 			else if(getextension($('#personal_photo').val())==-1){
@@ -828,13 +828,13 @@ ANYTHING ELSE
 		if($('#audiolink1').val()!='')audio=$('#audiolink1').val().split(";").length;
 		if($('#videolink1').val()!='')video=$('#videolink1').val().split(";").length;
 		num=pic+audio+video;
-		var message="";
+		var message="You are missing the required";
 		var picmessage="";
-	    if($('#category1').val()=='')message+="category/";
-	    if($('#specific_talent1').val()=='')message+="specific_talent/";
+	    if($('#category1').val()=='')message+=" [category]";
+	    if($('#specific_talent1').val()=='')message+=" [specific_talent]";
 		if(message!=""){
 		    message=message.substring(0,message.length-1);
-			message+=" are required. Please fill out.";
+			message+=" field(s). Please fill these out.";
 			alert(message);
 		}
 		else if(getextension($('#tphoto1_1').val())==-1||getextension($('#tphoto1_2').val())==-1||getextension($('#tphoto1_3').val())==-1){
@@ -883,14 +883,14 @@ ANYTHING ELSE
 		document.getElementById('video3').innerHTML="";
 	});
 	$('#thirdNext').click(function(){
-		var message="";
-	    if($("[name='representation[]']:checked").length==0)message+="representation/";
-	    if($("[name='opportunity[]']:checked").length==0)message+="opportunity/";
-		if($("[name='service[]']:checked").length==0)message+="service/";
+		var message="You are missing the required";
+	    if($("[name='representation[]']:checked").length==0)message+=" [representation]";
+	    if($("[name='opportunity[]']:checked").length==0)message+=" [opportunity]";
+		if($("[name='service[]']:checked").length==0)message+=" [service]";
 		
 		if(message!=""){
 		    message=message.substring(0,message.length-1);
-			message+=" are required. Please fill out.";
+			message+=" field(s). Please fill these out.";
 			alert(message);
 		}
 		else if((document.getElementById('rep_other').checked&&document.getElementById('rep').value=="")||(document.getElementById('oppo_other').checked&&document.getElementById('oppo').value=="")||(document.getElementById('ser_other').checked&&document.getElementById('ser').value=="")){
@@ -909,13 +909,13 @@ ANYTHING ELSE
 	});
 	
 	$('#add_one').click(function(){
-		var message="";
+		var message="You are missing the required";
 		var picmessage="";
-	    if($('#category1').val()=='')message+="category/";
-	    if($('#specific_talent1').val()=='')message+="specific talent/";
+	    if($('#category1').val()=='')message+=" [category]";
+	    if($('#specific_talent1').val()=='')message+=" [specific talent]";
 		if(message!=""){
 		    message=message.substring(0,message.length-1);
-			message+=" are required. Please fill out.";
+			message+=" field(s). Please fill these out.";
 			alert(message);
 		}
 		else if(getextension($('#tphoto1_1').val())==-1||getextension($('#tphoto1_2').val())==-1||getextension($('#tphoto1_3').val())==-1){
@@ -945,7 +945,7 @@ ANYTHING ELSE
 			num++;
 			}
 		}
-		if(num==0)alert("Pleast upload at least one file!");
+		if(num==0)alert("Please upload at least one file!");
 		if(num>3)alert("Please upload at most three files!");
 		if(num<=3&&num>0&&message==""&&picmessage==""){
 			$('.secondPage').hide();
@@ -974,14 +974,14 @@ ANYTHING ELSE
 		var pic=0;
 		var audio=0;
 		var video=0;
-		var message="";
+		var message="You are missing the required";
 		var picmessage="";
-	    if($('#category2').val()=='')message+="category/";
-	    if($('#specific_talent2').val()=='')message+="specific talent/";
+	    if($('#category2').val()=='')message+=" [category]";
+	    if($('#specific_talent2').val()=='')message+=" [specific talent]";
 		if(message!=""){
 		    message=message.substring(0,message.length-1);
-			message+=" are required. Please fill out.";
-			alert(message);
+			message+=" field(s). Please fill these out.";
+      alert(message);
 		}
 		else if(getextension($('#tphoto2_1').val())==-1||getextension($('#tphoto2_1').val())==-1||getextension($('#tphoto2_1').val())==-1){
 				picmessage="The extension name of file is wrong!";
@@ -1004,13 +1004,13 @@ ANYTHING ELSE
 	})
 	
 	$('#add_two').click(function(){
-		var message="";
+		var message="You are missing the required";
 		var picmessage="";
-	    if($('#category2').val()=='')message+="category/";
-	    if($('#specific_talent2').val()=='')message+="specific talent/";
+	    if($('#category2').val()=='')message+=" [category]";
+	    if($('#specific_talent2').val()=='')message+=" [specific talent]";
 		if(message!=""){
 		    message=message.substring(0,message.length-1);
-			message+=" are required. Please fill out.";
+			message+=" field(s). Please fill these out.";
 			alert(message);
 		}
 		else if(getextension($('#tphoto2_1').val())==-1||getextension($('#tphoto2_2').val())==-1||getextension($('#tphoto2_3').val())==-1){
@@ -1069,13 +1069,13 @@ ANYTHING ELSE
 		var pic=0;
 		var audio=0;
 		var video=0;
-		var message="";
+		var message="You are missing the required";
 		var picmessage="";
-	    if($('#category3').val()=='')message+="category/";
-	    if($('#specific_talent3').val()=='')message+="specific talent/";
+	    if($('#category3').val()=='')message+=" [category]";
+	    if($('#specific_talent3').val()=='')message+=" [specific talent]";
 		if(message!=""){
 		    message=message.substring(0,message.length-1);
-			message+=" are required. Please fill out.";
+			message+=" field(s). Please fill these out.";
 			alert(message);
 		}
 		else if(getextension($('#tphoto3_1').val())==-1||getextension($('#tphoto3_2').val())==-1||getextension($('#tphoto3_3').val())==-1){
