@@ -783,7 +783,7 @@ ANYTHING ELSE
 			if($('#gender').val()=='')message+=" [gender]";
 			if($('#dob').val()=='')message+=" [birthday]";
 			if(message!=""){
-			message=message.substring(0,message.length-1);
+			message=message.substring(0,message.length);
 			message+=" field(s). Please fill these out.";
 			alert(message);
 			}
@@ -833,7 +833,7 @@ ANYTHING ELSE
 	    if($('#category1').val()=='')message+=" [category]";
 	    if($('#specific_talent1').val()=='')message+=" [specific_talent]";
 		if(message!=""){
-		    message=message.substring(0,message.length-1);
+		    message=message.substring(0,message.length);
 			message+=" field(s). Please fill these out.";
 			alert(message);
 		}
@@ -889,7 +889,7 @@ ANYTHING ELSE
 		if($("[name='service[]']:checked").length==0)message+=" [service]";
 		
 		if(message!=""){
-		    message=message.substring(0,message.length-1);
+		    message=message.substring(0,message.length);
 			message+=" field(s). Please fill these out.";
 			alert(message);
 		}
@@ -914,7 +914,7 @@ ANYTHING ELSE
 	    if($('#category1').val()=='')message+=" [category]";
 	    if($('#specific_talent1').val()=='')message+=" [specific talent]";
 		if(message!=""){
-		    message=message.substring(0,message.length-1);
+		    message=message.substring(0,message.length);
 			message+=" field(s). Please fill these out.";
 			alert(message);
 		}
@@ -979,7 +979,7 @@ ANYTHING ELSE
 	    if($('#category2').val()=='')message+=" [category]";
 	    if($('#specific_talent2').val()=='')message+=" [specific talent]";
 		if(message!=""){
-		    message=message.substring(0,message.length-1);
+		    message=message.substring(0,message.length);
 			message+=" field(s). Please fill these out.";
       alert(message);
 		}
@@ -1009,7 +1009,7 @@ ANYTHING ELSE
 	    if($('#category2').val()=='')message+=" [category]";
 	    if($('#specific_talent2').val()=='')message+=" [specific talent]";
 		if(message!=""){
-		    message=message.substring(0,message.length-1);
+		    message=message.substring(0,message.length);
 			message+=" field(s). Please fill these out.";
 			alert(message);
 		}
@@ -1074,7 +1074,7 @@ ANYTHING ELSE
 	    if($('#category3').val()=='')message+=" [category]";
 	    if($('#specific_talent3').val()=='')message+=" [specific talent]";
 		if(message!=""){
-		    message=message.substring(0,message.length-1);
+		    message=message.substring(0,message.length);
 			message+=" field(s). Please fill these out.";
 			alert(message);
 		}
