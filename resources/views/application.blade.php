@@ -17,7 +17,7 @@
        background-size: cover;
 	   color:white;
 	   font-family: 'Raleway', sans-serif;
-	   font-size:28px;
+	   font-size:18px;
 	   padding-left:5%;
 	}
 	
@@ -107,7 +107,9 @@
 
 <div class="col-xs-12">
            <div class="col-xs-2">
-            PROFILE PHOTO&nbsp<b style="font-size:12px; color:red">(5MB max, jpg/gif/png only)</b>
+            PROFILE PHOTO
+            <br/>
+            <b style="font-size:12px; color:red">(5MB max, jpg/gif/png only)</b>
            </div>
            <div class="col-xs-3">
            <input type="file" name="personal_photo" id="personal_photo" accept="image/*"></input>
