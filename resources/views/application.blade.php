@@ -69,7 +69,11 @@
 {!! Form::open(['action'=>'ApplicationController@store','enctype' => 'multipart/form-data']) !!}
 <div class="firstPage">
 <p class="col-xs-12"><big>Personal information</big></p>
-<p class="col-xs-12">Please fill out your personal information below.</p>
+<div class="col-xs-12">
+  <div class="col-xs-8">
+    <p>Please fill out your personal information below.</p>
+  </div>
+</div>
 <p class="col-xs-12"><b style="color:red;">*</b><b> required</b></p>
 <br><br>
 <div class="col-xs-12">
@@ -212,7 +216,11 @@
 <!-- Start class secondPage -->
 <div class="secondPage">
   <p class="col-xs-12"><big>Talent</big></p>
-  <p class="col-xs-12">Let us know more about your talents!</p>
+  <div class="col-xs-12">
+    <div class="col-xs-8">
+      <p>Let us know more about your talents!</p>
+    </div>
+  </div>
   <p class="col-xs-12"><b style="color:red;">*</b><b> required</b></p>
   <div class="col-xs-12">
     <div class="col-xs-12">
