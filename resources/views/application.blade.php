@@ -221,8 +221,9 @@
       For example, in if you choose <b>Dance</b>, a specific talent would be Salsa, <b>Fashion</b>: Make-up artist, <b>Film</b>: Producer, <b>Fine Arts</b>: Graphic Designer, <b>Music</b>: Composer, <b>Sports</b>: Baseball
     </div>
   </div>
+<div class="col-xs-12">
   <br/>
-  <br/>
+</div>
   <div class="col-xs-12">
        <div class="col-xs-3">
        TALENT CATEGORY<sup>*</sup>
@@ -356,8 +357,9 @@
       For example, in if you choose <b>Dance</b>, a specific talent would be Salsa, <b>Fashion</b>: Make-up artist, <b>Film</b>: Producer, <b>Fine Arts</b>: Graphic Designer, <b>Music</b>: Composer, <b>Sports</b>: Baseball
     </div>
   </div>
+<div class="col-xs-12">
   <br/>
-  <br/>
+</div>
 <div class="col-xs-12">
 <div class="col-xs-3">
 TALENT CATEGORY<sup>*</sup>
@@ -486,8 +488,9 @@ VIDEO <span style="font-size:12px;">(Separate links with a <b style="color:red;"
       For example, in if you choose <b>Dance</b>, a specific talent would be Salsa, <b>Fashion</b>: Make-up artist, <b>Film</b>: Producer, <b>Fine Arts</b>: Graphic Designer, <b>Music</b>: Composer, <b>Sports</b>: Baseball
     </div>
   </div>
+<div class="col-xs-12">
   <br/>
-  <br/>
+</div>
 <div class="col-xs-12">
 <div class="col-xs-3">
 TALENT CATEGORY <sup>*</sup>
