@@ -814,7 +814,7 @@ ANYTHING ELSE
 				picmessage="The extension name of file is wrong!";
 				alert(picmessage);
 			} 
-            else if(re.test($('#email').val())==false)alert("Please enter a valid email");
+            else if(re.test($('#email').val())==false)alert("Please enter a valid email.");
 			else{
 			$('.firstPage').hide();
 			$('.secondPage').show();

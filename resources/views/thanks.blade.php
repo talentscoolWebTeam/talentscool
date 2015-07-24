@@ -2,10 +2,10 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Thanks for your application</title>
+<title>Thank you!</title>
 <style>
 body{
-	   background: url("http://www.talentscool.com/images/background.png") no-repeat center center fixed; 
+	   background: url("http://www.talentscool.com/images/applicationBackground.png") no-repeat center center fixed; 
        -webkit-background-size: cover;
        -moz-background-size: cover;
        -o-background-size: cover;
@@ -29,8 +29,8 @@ body{
 <body>
 <div class="thanks">
 <img src="/pic/TSVector.png">
-<p style="font-size:30px; position:relative; color:white; margin-top:15%; margin-left:10%; margin-right:15%;">Thank you for your interest in Talentscool. Your application has been submitted and will be reviewed. If your application is accepted, we will contact you.
-<br>If you have concerns, questions, or any additional information for your application, please email us at talent@talentscool.com.</p>
+<p style="font-size:30px; position:relative; text-align: justify; color:white; margin-top:15%; margin-left:10%; margin-right:15%;">Thank you for your interest in Talentscool. Your application has been submitted and will be reviewed. If your application is accepted, we will contact you.
+<br/><br/>If you have concerns, questions, or any additional information for your application, please email us at contact@talentscool.com.</p>
 </div>
 </body>
 </html>
