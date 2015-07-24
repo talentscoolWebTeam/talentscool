@@ -805,7 +805,7 @@ ANYTHING ELSE
 			if($('#zip').val()=='')message+=" [zip code]";
 			if($('#gender').val()=='')message+=" [gender]";
 			if($('#dob').val()=='')message+=" [birthday]";
-			if(message>26){
+			if(true){
 			message=message.substring(0,message.length);
 			message+=" field(s). Please fill these out.";
 			alert(message);
