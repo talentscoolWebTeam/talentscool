@@ -28,7 +28,7 @@ body{
 <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
 <body>
 <div class="thanks">
-<img src="/pic/TSVector.png">
+<a href="http://www.talentscool.com/"><img src="/pic/TSVector.png"></a>
 <p style="font-size:30px; position:relative; text-align: justify; color:white; margin-top:15%; margin-left:10%; margin-right:15%;">Thank you for your interest in Talentscool. Your application has been submitted and will be reviewed. If your application is accepted, we will contact you.
 <br/><br/>If you have concerns, questions, or any additional information for your application, please email us at contact@talentscool.com.</p>
 </div>
