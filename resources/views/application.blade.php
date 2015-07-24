@@ -222,6 +222,7 @@
     </div>
   </div>
   <br/>
+  <br/>
   <div class="col-xs-12">
        <div class="col-xs-3">
        TALENT CATEGORY<sup>*</sup>
@@ -356,6 +357,7 @@
     </div>
   </div>
   <br/>
+  <br/>
 <div class="col-xs-12">
 <div class="col-xs-3">
 TALENT CATEGORY<sup>*</sup>
@@ -485,6 +487,7 @@ VIDEO <span style="font-size:12px;">(Separate links with a <b style="color:red;"
     </div>
   </div>
   <br/>
+  <br/>
 <div class="col-xs-12">
 <div class="col-xs-3">
 TALENT CATEGORY <sup>*</sup>
@@ -513,16 +516,6 @@ SPECIFIC TALENT<sup>*</sup>
 <input type="text" name="specific_talent3" id="specific_talent3" class="form-control" style="width:200px;"></input>
 </div>
 </div>
-
-<div class="col-xs-12">&nbsp;</div>
-<div class="col-xs-12">
-<div class="col-xs-12">
-(<b>Ex:</b>&nbsp<b>Dance:</b> salsa dance, ballet, hip hop&nbsp<b>Fashion:</b> model, photographer, make-up artist&nbsp<b>Film: </b>actor, director, producer&nbsp<b>Fine arts:</b> painter, graphic designer&nbsp<b>Music:&nbsp</b>composer, pianist&nbsp<b>Sports:&nbsp</b>basketball, baseball, football)
-</div>
-</div>
-
-<div class="col-xs-12">&nbsp;</div>
-
 
 <div class="col-xs-12">
     <big>Portfolio</big>
