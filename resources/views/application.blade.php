@@ -212,13 +212,16 @@
 <!-- Start class secondPage -->
 <div class="secondPage">
   <p class="col-xs-12"><big>Talent</big></p>
-  <p class="col-xs-12">Let us know more about your talents!.</p>
+  <p class="col-xs-12">Let us know more about your talents!</p>
   <p class="col-xs-12"><b style="color:red;">*</b><b> required</b></p>
   <div class="col-xs-12">
     <div class="col-xs-12">
-      Choose a talent category, and then specify the exact skill in that category. For example, in if you choose <b>Dance</b>, a specific talent would be Salsa, <b>Fashion</b>: Make-up artist, <b>Film</b>: Producer, <b>Fine Arts</b>: Graphic Designer, <b>Music</b>: Composer, <b>Sports</b>: Baseball
+      Choose a talent category, and then specify the exact skill in that category.
+      <br/>
+      For example, in if you choose <b>Dance</b>, a specific talent would be Salsa, <b>Fashion</b>: Make-up artist, <b>Film</b>: Producer, <b>Fine Arts</b>: Graphic Designer, <b>Music</b>: Composer, <b>Sports</b>: Baseball
     </div>
   </div>
+  <br/>
   <div class="col-xs-12">
        <div class="col-xs-3">
        TALENT CATEGORY<sup>*</sup>
@@ -256,7 +259,8 @@
 
 
   <div class="col-xs-12">
-    Portfolio<br>
+    <big>Portfolio<big>
+    <br/>
     <div class="col-xs-12">
       Upload at least one and at most three photos or links of the following
     </div>
@@ -300,7 +304,7 @@
 
   <div class="col-xs-12">
   <div class="col-xs-3">
-  AUDIO (Separate links with a <b style="color:red;">;</b>)
+  AUDIO <span style="font-size:12px;">(Separate links with a <b style="color:red;">;</b>)</span>
   </div>
   <div class="col-xs-3"><input type="text" name="audiolink1" id="audiolink1"  class="page2 form-control">
   </div>
@@ -312,7 +316,7 @@
 
   <div class="col-xs-12">
   <div class="col-xs-3">
-  VIDEO (Separate links with a <b style="color:red;">;</b>)
+  VIDEO <span style="font-size:12px;">(Separate links with a <b style="color:red;">;</b>)</span>
   </div>
   <div class="col-xs-3"><input type="text" name="videolink1" id="videolink1"  class="page2 form-control">
   </div>
@@ -341,7 +345,17 @@
 <!-- End class second_page -->
 
 <div class="add_one">
-<p class="col-xs-12">Talent</p>
+  <p class="col-xs-12"><big>Talent</big></p>
+  <p class="col-xs-12">Let us know more about your talents!</p>
+  <p class="col-xs-12"><b style="color:red;">*</b><b> required</b></p>
+  <div class="col-xs-12">
+    <div class="col-xs-12">
+      Choose a talent category, and then specify the exact skill in that category.
+      <br/>
+      For example, in if you choose <b>Dance</b>, a specific talent would be Salsa, <b>Fashion</b>: Make-up artist, <b>Film</b>: Producer, <b>Fine Arts</b>: Graphic Designer, <b>Music</b>: Composer, <b>Sports</b>: Baseball
+    </div>
+  </div>
+  <br/>
 <div class="col-xs-12">
 <div class="col-xs-3">
 TALENT CATEGORY<sup>*</sup>
@@ -371,24 +385,13 @@ SPECIFIC TALENT<sup>*</sup>
 </div>
 </div>
 
-<div class="col-xs-12">&nbsp;</div>
-
 <div class="col-xs-12">
-<div class="col-xs-12">
-(<b>Ex:</b>&nbsp<b>Dance:</b> salsa dance, ballet, hip hop&nbsp<b>Fashion:</b> model, photographer, make-up artist&nbsp<b>Film: </b>actor, director, producer&nbsp<b>Fine arts:</b> painter, graphic designer&nbsp<b>Music:&nbsp</b>composer, pianist&nbsp<b>Sports:&nbsp</b>basketball, baseball, football)
-</div>
-</div>
-
-<div class="col-xs-12">&nbsp;</div>
-
-
-<div class="col-xs-12">
-<div class="col-xs-3">
-UPLOAD PORTFOLIO<br>(At least one/at most three photos or links of the below)
-</div>
-</div>
-
-<div class="col-xs-12">&nbsp;</div>
+    <big>Portfolio<big>
+    <br/>
+    <div class="col-xs-12">
+      Upload at least one and at most three photos or links of the following
+    </div>
+  </div>
 
 
 <div class="col-xs-12" id="file2">
@@ -429,7 +432,7 @@ PHOTO <b style="font-size:12px; color:red">(5MB max, jpg/gif/png only)</b>
 
 <div class="col-xs-12">
 <div class="col-xs-3">
-AUDIO (Separate links with a <b style="color:red;">;</b>)
+AUDIO <span style="font-size:12px;">(Separate links with a <b style="color:red;">;</b>)</span>
 </div>
 <div class="col-xs-3"><input type="text" name="audiolink2" id="audiolink2"  class="page2 form-control" style="width:300px;">
 </div>
@@ -441,7 +444,7 @@ AUDIO (Separate links with a <b style="color:red;">;</b>)
  
  <div class="col-xs-12">
  <div class="col-xs-3">
-VIDEO (Separate links with a <b style="color:red;">;</b>)
+VIDEO <span style="font-size:12px;">(Separate links with a <b style="color:red;">;</b>)</span>
 </div>
 <div class="col-xs-3"><input type="text" name="videolink2" id="videolink2"  class="page2 form-control" style="width:300px;">
 </div>
@@ -471,7 +474,17 @@ VIDEO (Separate links with a <b style="color:red;">;</b>)
 <!-- end class add_one -->
 
 <div class="add_two">
-<p class="col-xs-12">Talent</p>
+  <p class="col-xs-12"><big>Talent</big></p>
+  <p class="col-xs-12">Let us know more about your talents!</p>
+  <p class="col-xs-12"><b style="color:red;">*</b><b> required</b></p>
+  <div class="col-xs-12">
+    <div class="col-xs-12">
+      Choose a talent category, and then specify the exact skill in that category.
+      <br/>
+      For example, in if you choose <b>Dance</b>, a specific talent would be Salsa, <b>Fashion</b>: Make-up artist, <b>Film</b>: Producer, <b>Fine Arts</b>: Graphic Designer, <b>Music</b>: Composer, <b>Sports</b>: Baseball
+    </div>
+  </div>
+  <br/>
 <div class="col-xs-12">
 <div class="col-xs-3">
 TALENT CATEGORY <sup>*</sup>
@@ -512,12 +525,12 @@ SPECIFIC TALENT<sup>*</sup>
 
 
 <div class="col-xs-12">
-<div class="col-xs-3">
-UPLOAD PORTFOLIO<br>(At least one/at most three photos or links of the below)
-</div>
-</div>
-
-<div class="col-xs-12">&nbsp;</div>
+    <big>Portfolio<big>
+    <br/>
+    <div class="col-xs-12">
+      Upload at least one and at most three photos or links of the following
+    </div>
+  </div>
 
 
 <div class="col-xs-12" id="file3">
@@ -557,7 +570,7 @@ PHOTO <b style="font-size:12px; color:red">(5MB max, jpg/gif/png only)</b>
  
  <div class="col-xs-12">
  <div class="col-xs-3">
-AUDIO (Separate links with a <b style="color:red;">;</b>)
+AUDIO <span style="font-size:12px;">(Separate links with a <b style="color:red;">;</b>)</span>
 </div>
 <div class="col-xs-3"><input type="text" name="audiolink3" id="audiolink3"  class="page2 form-control" style="width:300px;">
 </div>
@@ -569,7 +582,7 @@ AUDIO (Separate links with a <b style="color:red;">;</b>)
 
 <div class="col-xs-12">
 <div class="col-xs-3">
-VIDEO (Separate links with a <b style="color:red;">;</b>)
+VIDEO <span style="font-size:12px;">(Separate links with a <b style="color:red;">;</b>)</span>
 </div>
 <div class="col-xs-3"><input type="text" name="videolink3" id="videolink3"  class="page2 form-control" style="width:300px;">
 </div>
