@@ -259,7 +259,7 @@
 
 
   <div class="col-xs-12">
-    <big>Portfolio<big>
+    <big>Portfolio</big>
     <br/>
     <div class="col-xs-12">
       Upload at least one and at most three photos or links of the following
@@ -386,7 +386,7 @@ SPECIFIC TALENT<sup>*</sup>
 </div>
 
 <div class="col-xs-12">
-    <big>Portfolio<big>
+    <big>Portfolio</big>
     <br/>
     <div class="col-xs-12">
       Upload at least one and at most three photos or links of the following
@@ -525,7 +525,7 @@ SPECIFIC TALENT<sup>*</sup>
 
 
 <div class="col-xs-12">
-    <big>Portfolio<big>
+    <big>Portfolio</big>
     <br/>
     <div class="col-xs-12">
       Upload at least one and at most three photos or links of the following
