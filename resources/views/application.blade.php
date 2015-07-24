@@ -805,7 +805,7 @@ ANYTHING ELSE
 			if($('#zip').val()=='')message+=" [zip code]";
 			if($('#gender').val()=='')message+=" [gender]";
 			if($('#dob').val()=='')message+=" [birthday]";
-			if(message>27){
+			if(message>26){
 			message=message.substring(0,message.length);
 			message+=" field(s). Please fill these out.";
 			alert(message);
@@ -855,7 +855,7 @@ ANYTHING ELSE
 		var picmessage="";
 	    if($('#category1').val()=='')message+=" [category]";
 	    if($('#specific_talent1').val()=='')message+=" [specific_talent]";
-		if(message>27){
+		if(message>26){
 		    message=message.substring(0,message.length);
 			message+=" field(s). Please fill these out.";
 			alert(message);
@@ -911,7 +911,7 @@ ANYTHING ELSE
 	    if($("[name='opportunity[]']:checked").length==0)message+=" [opportunity]";
 		if($("[name='service[]']:checked").length==0)message+=" [service]";
 		
-		if(message>27){
+		if(message>26){
 		    message=message.substring(0,message.length);
 			message+=" field(s). Please fill these out.";
 			alert(message);
@@ -936,7 +936,7 @@ ANYTHING ELSE
 		var picmessage="";
 	    if($('#category1').val()=='')message+=" [category]";
 	    if($('#specific_talent1').val()=='')message+=" [specific talent]";
-		if(message>27){
+		if(message>26){
 		    message=message.substring(0,message.length);
 			message+=" field(s). Please fill these out.";
 			alert(message);
@@ -1001,7 +1001,7 @@ ANYTHING ELSE
 		var picmessage="";
 	    if($('#category2').val()=='')message+=" [category]";
 	    if($('#specific_talent2').val()=='')message+=" [specific talent]";
-		if(message>27){
+		if(message>26){
 		    message=message.substring(0,message.length);
 			message+=" field(s). Please fill these out.";
       alert(message);
@@ -1031,7 +1031,7 @@ ANYTHING ELSE
 		var picmessage="";
 	    if($('#category2').val()=='')message+=" [category]";
 	    if($('#specific_talent2').val()=='')message+=" [specific talent]";
-		if(message>27){
+		if(message>26){
 		    message=message.substring(0,message.length);
 			message+=" field(s). Please fill these out.";
 			alert(message);
@@ -1096,7 +1096,7 @@ ANYTHING ELSE
 		var picmessage="";
 	    if($('#category3').val()=='')message+=" [category]";
 	    if($('#specific_talent3').val()=='')message+=" [specific talent]";
-		if(message>27){
+		if(message>26){
 		    message=message.substring(0,message.length);
 			message+=" field(s). Please fill these out.";
 			alert(message);
