@@ -38,11 +38,8 @@ class PaymentController extends Controller {
      $sql = "SELECT name FROM users where email="."'".$email."'";
      $result = mysqli_query($conn, $sql);
      if(mysqli_num_rows($result)==0)return view('payment/no_account');
-	echo "1";
-	require_once('C:\wamp\apps\talentscool\vendor\autoload.php');
-	\Stripe\Stripe::setApiKey("sk_test_kr0gEVBLylbLE7r0FKMFSHyG");
-	//\Stripe\Stripe::setApiKey(Config::get('stripe.stripe.secret'));
-     echo "2";
+	 \Stripe\Stripe::setApiKey("sk_test_kr0gEVBLylbLE7r0FKMFSHyG");
+	//\Stripe\Stripe::setApiKey("{{Config::get('stripe.stripe.secret')}}");
 	
 	// Get the credit card details submitted by the form
 	$token = \Input::get('stripeToken');
