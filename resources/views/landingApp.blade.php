@@ -146,7 +146,47 @@
 				<div class="container">
 					<h2>Services</h2>
 					<div class="member wow bounceInUp animated animated" style="visibility: visible; animation-name: bounceInUp; -webkit-animation-name: bounceInUp;">
-						<ul>
+						<div class="tg-wrap"><table class="tg" style="undefined;table-layout: fixed; width: 100%">
+							<colgroup>
+							<col style="width: 33%">
+							<col style="width: 33%">
+							<col style="width: 33%">
+							</colgroup>
+							  <tr>
+							    <th class="tg-2awo">General</th>
+							    <th class="tg-2awo">Opportunities</th>
+							    <th class="tg-2awo">Representation</th>
+							  </tr>
+							  <tr>
+							    <td class="tg-zlxb">Opportunities, Representation, Branding, Talent Development, Collaboration, Social Media Management</td>
+							    <td class="tg-zlxb">Bookings, Endorsements, Auditions, Internships, Showcases, Appearances</td>
+							    <td class="tg-zlxb">Manager/Agent, Talent Agency, Publicist, Booking Agent</td>
+							  </tr>
+							  <tr>
+							    <th class="tg-2awo">Outside Services</th>
+							    <th class="tg-2awo">Talent Development</th>
+							    <th class="tg-2awo">Vanity Services</th>
+							  </tr>
+							  <tr>
+							    <td class="tg-zlxb">Musician, Vocalist, Dancer, Lawyer, Accountant, Personal Assistant, Video/Film Production, Event Planner, Graphic Designer, Audio Engineer</td>
+							    <td class="tg-zlxb">Vocal Coach, Acting Coach, Athletic Trainer, Dance Instructor, Instrument Teacher</td>
+							    <td class="tg-zlxb">Clothing Stylist, Hair Stylist, Make-Up Artists, Clothing Designer, Photographer, Videographer, Model</td>
+							  </tr>
+							  <tr>
+							    <th class="tg-zlxb"></th>
+							    <th class="tg-2awo">Luxury Services</th>
+							    <th class="tg-zlxb"></th>
+							  </tr>
+							  <tr>
+							    <td class="tg-zlxb"></td>
+							    <td class="tg-zlxb">Body Guard, Limo Drivers, Private Jet, Car Rental, Studio Rental</td>
+							    <td class="tg-zlxb"></td>
+							  </tr>
+							</table>
+						</div>
+
+
+						<!-- <ul>
 							<li class="listHeader">General</li>
 							<ul>
 								<li>Opportunities, Representation, Branding, Talent Development, Collaboration, Social Media Management</li>
@@ -187,7 +227,7 @@
 							<ul>
 								<li>Body Guard, Limo Drivers, Private Jet, Car Rental, Studio Rental</li>
 							</ul>
-						</ul>
+						</ul> -->
 						
 						
 					</div>
