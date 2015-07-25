@@ -1746,8 +1746,8 @@ div.mc-image {
 
 /*Table on landing page formatting*/
 .tg  {color: white; border-collapse:collapse;border-spacing:0;width:33%;}
-.tg td{font-family:Arial, sans-serif;font-size:18px;padding:10px 5px;overflow:hidden;word-break:normal;width:100%;}
-.tg th{font-family:Arial, sans-serif;font-size:20px;font-weight:normal;padding:10px 5px;overflow:hidden;word-break:normal;width:200px;}
+.tg td{font-family:Arial, sans-serif;font-size:18px;padding:10px 5px;overflow:hidden;word-break:normal;}
+.tg th{font-family:Arial, sans-serif;font-size:20px;font-weight:normal;padding:10px 5px;overflow:hidden;word-break:normal;}
 .tg .tg-2awo{font-weight:bold;text-align:center}
 .tg .tg-zlxb{text-align:center}
 @media screen and (max-width: 767px) {.tg {width: auto !important;}.tg col {width: auto !important;}.tg-wrap {overflow-x: auto;-webkit-overflow-scrolling: touch;}}
