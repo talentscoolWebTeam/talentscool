@@ -333,7 +333,7 @@ a.read_more2:hover {
 ---------------------------------*/
 
 #service {
-	height: auto; 
+	height: 100vh; 
     padding: 10vh 0px;
 	background-image: url(http://talentscool.com/images/bodyBackground.png);
 	background-repeat:no-repeat;
