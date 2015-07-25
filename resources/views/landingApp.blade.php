@@ -82,7 +82,7 @@
 		<!--Header_section--> 
         
 		<!--Hero_Section-->
-		<section id="hero_section" class="top_cont_outer">
+		<section id="hero_section" class="top_cont_outer" data-section-name="Home">
 			<div class="hero_wrapper">
 				<div class="container">
 					<div class="hero_section">
@@ -114,7 +114,7 @@
 		
 		<!--Aboutus-->
 		<!-- style="background-color: black;" -->
-		<section id="aboutUs" >
+		<section id="aboutUs" data-section-name="About Us">
 			<div class="inner_wrapper">
 				<div class="container">
 					<h2 id="auhead">About Us</h2>
@@ -141,7 +141,7 @@
 		
 		
 		<!--Service-->
-		<section  id="service">
+		<section  id="service" data-section-name="Services">
 			<div class="service_wrapper" >
 				<div class="container">
 					<h2>Services</h2>
@@ -249,7 +249,7 @@
 		<!--Footer-->
 		<footer class="footer_wrapper" id="contact">
 			<div class="container">
-				<section class="page_section contact" id="contact">
+				<section class="page_section contact" id="contact" data-section-name="Contact">
 					<div class="contact_section">
 						<h2 style="padding:0px">Contact Us</h2>
 					</div>
