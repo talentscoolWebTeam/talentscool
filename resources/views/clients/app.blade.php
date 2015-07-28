@@ -22,7 +22,7 @@ background: url("/images/bodyBackground.png") no-repeat center center fixed;
 				</div>
 		@endif
 		<div>
-			<h1>Clients</h1>
+            <h1>Clients</h1>
 		 		<br>
 			<ul class="clientHeaders">
 				<a href={{ action('ClientController@accepted')}} class="nodeclink"><li class="acceptedClientsButton"  style="float:left"> Accepted Client </li></a>
