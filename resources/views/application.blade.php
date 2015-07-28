@@ -17,7 +17,7 @@
        background-size: cover;
 	   color:white;
 	   font-family: 'Raleway', sans-serif;
-	   font-size:18px;
+	   font-size:16px;
 	   padding-left:5%;
 	}
 	

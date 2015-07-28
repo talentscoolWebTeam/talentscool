@@ -73,6 +73,7 @@
 								<li><a href="#aboutUs" class="scroll-link">About Us</a></li>
 								<li><a href="#service" class="scroll-link">Services</a></li>
 								<li><a href="#contact" class="scroll-link">Contact</a></li>
+								<li><a href="http://talentscool.com/application" class="scroll-link">Apply Now!</a></li>
 							</ul>
 						</div>
 					</nav>
