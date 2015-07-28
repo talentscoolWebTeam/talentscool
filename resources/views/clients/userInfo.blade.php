@@ -1,3 +1,6 @@
+@extends('app')
+
+@section('content')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,13 +34,61 @@ color:white;
 </head>
 <body>
 <div class="container">
-	<div style="margin-top:100px"> &nbsp;</div>
-	<div class="col-xs-12"">
-		<h1><span class="glyphicon glyphicon-user" style="word-spacing:-25px">   Client&nbsp;Information</span>@yield('content')</h1>
+<!--	<div style="margin-top:100px"> &nbsp;</div>-->
+	<div class="col-xs-12">
+        <h1><span class="glyphicon glyphicon-user" style="word-spacing:-25px">   {{ $client->fname . "   " . $client->lname }}<img src="{{{ asset('/images/4-stars.png') }}}" width="112px" height="46px"></span></h1>
 	</div>
 	<hr>
+    	<div class="talentInfo">
+		@if(!is_null($client->talents))
+		<div class="talentInfo col-xs-12">
+			<?php $visited=0; ?>
+			@foreach($client->talents as $talent)
+				@if($visited > 0)
+					<hr>
+				@endif
+				<?php $visited++?>
+				
+				<div class="subBodyDiv">
+				<!--  parsing photo -->
+				<?php $photos = explode(';', $talent->portfolios->photo);
+				$videos = explode(';', $talent->portfolios->video);
+				$audios = explode(';', $talent->portfolios->audio);?>
+				@if(sizeof($photos) > 0 && !empty($photos[0]))
+					@foreach($photos as $photo)
+            <div id="photo"><img src={{$photo}} width="210px" height="306px"></div>
+					@endforeach
+				@endif
+            <h2 style="margin-left:20px">Talent Introduction</h2>
+            <div id="intro">
+                <br /><p>Scarlett Johansson was born in New York City. Her mother, Melanie Sloan, is from an Ashkenazi Jewish family, and her father, Karsten Johansson, is Danish. She has a sister named Vanessa Johansson, a brother named Adrian, and a twin brother named Hunter Johansson born three minutes after her. Scarlett showed a passion for acting at a young age and starred in many plays. She began her acting career starring as Laura Nelson in the comedy film North (1994). The acclaimed drama film The Horse Whisperer (1998) brought Johansson critical praise and worldwide recognition. Following the film's success, she starred in many other films including the critically acclaimed cult film Ghost World (2001) and then the hit Lost in Translation (2003) with Bill Murray in which she again stunned critics. Later on, she appeared in the drama film Girl with a Pearl Earring (2003).</p>
+            </div>
+				<!-- parse video -->
+<!--
+				@if(sizeof($videos) > 0 && !empty($videos[0]))
+					<h3>Video</h3>
+					@foreach($videos as $video)
+						<iframe src={{$video}} width="300px" height="200px" allowFullScreen> </iframe>
+					@endforeach
+				@endif
+				
+				@if(sizeof($audios) > 0 && !empty($audios[0]))
+					<h3>Audio</h3>
+					@foreach($audios as $audio)
+						<img src={{$audio}} width="300px" height="200px">
+					@endforeach
+				@endif
+				
+-->
+				</div>
+			@endforeach
+		</div>
+		@endif
+    <hr>
 	<div class="personalInfo">
+     <div class="subBodyDiv">
 		<h2 style="margin-left:20px">Personal Information</h2>
+<!--
 		<div class="col-xs-12">
 			<div class="col-xs-12">
 				<div class="col-xs-1">
@@ -48,6 +99,7 @@ color:white;
 				</div>
 			</div>
 		</div>
+-->
 		<div class="col-xs-12">
 			<div class="col-xs-12">
 				<div class="col-xs-1">
@@ -93,7 +145,7 @@ color:white;
 		<div class="col-xs-12">
 			<div class="col-xs-12">
 				<div class="col-xs-1">
-					<b>Zip code:</b>
+					<b>Zip:</b>
 				</div>
 				<div class="col-xs-4 col-xs-offset-1">
 					{{ $client->zipcode }}
@@ -117,67 +169,38 @@ color:white;
 			</div>
 		</div>
 	</div>
+    </div>
+	
 	<hr>
-	<div class="talentInfo">
-		<h2 style="margin-left:20px">Talent Information</h2>
-		@if(!is_null($client->talents))
-		<div class="talentInfo col-xs-12">
-			<?php $visited=0; ?>
-			@foreach($client->talents as $talent)
-				@if($visited > 0)
-					<hr>
-				@endif
-				<?php $visited++?>
-				
-				<div class="col-xs-12">
-					<div class="col-xs-2">
-						<b>Category:</b>
-					</div>
-					<div class="col-xs-10">
-						{{ $talent->category }}
-					</div>
+    <div class="Talentalbum">
+     <div class="subBodyDiv">
+         <span style="margin-left:20px;font-size:30px"><i>{{ $talent->category }}</i></span>
+         <span style="float:right;font-size:30px;padding-right:6%"><i>{{ $talent->specific_talent }}</i></span>
+    </div>
+        <br />
+        <div style="margin-left:20px;padding-left:50px">
+					@if(!is_null($client->option))
+						@if(!empty($client->option->intro_video))
+							<iframe width="300px" height="300px" src={{{$client->option->intro_video}}} AllowFullScreen></iframe>
+						@endif
+					@endif
+        <img src="{{{asset('/images/album.png')}}}">
+        </div>
+    </div>
+<!--
+		<div class="col-xs-12">
+			<div class="col-xs-12">
+				<div class="col-xs-1">
+					<b>Name:</b>
 				</div>
-				<div class="col-xs-12">
-					<div class="col-xs-2">
-						<b>Specific Talent:</b>
-					</div>
-					<div class="col-xs-10">
-						{{ $talent->specific_talent }}
-					</div>
+				<div class="col-xs-6 col-xs-offset-1">
+					{{ $client->fname . "   " . $client->lname }}
 				</div>
-				
-				<div class="subBodyDiv">
-				<!--  parsing photo -->
-				<?php $photos = explode(';', $talent->portfolios->photo);
-				$videos = explode(';', $talent->portfolios->video);
-				$audios = explode(';', $talent->portfolios->audio);?>
-				@if(sizeof($photos) > 0 && !empty($photos[0]))
-					<h3>Photo</h3>
-					@foreach($photos as $photo)
-						<img src={{$photo}} width="300px" height="200px">
-					@endforeach
-				@endif
-				<!-- parse video -->
-				@if(sizeof($videos) > 0 && !empty($videos[0]))
-					<h3>Video</h3>
-					@foreach($videos as $video)
-						<iframe src={{$video}} width="300px" height="200px" allowFullScreen> </iframe>
-					@endforeach
-				@endif
-				
-				@if(sizeof($audios) > 0 && !empty($audios[0]))
-					<h3>Audio</h3>
-					@foreach($audios as $audio)
-						<img src={{$audio}} width="300px" height="200px">
-					@endforeach
-				@endif
-				
-				</div>
-			@endforeach
+			</div>
 		</div>
-		@endif
-	</div>
-	<hr>
+-->
+
+    <hr>
 	<div class="serviceInfo">
 		<h2 style="margin-left:20px">Service Information</h2>
 		<div class="subBodyDiv">
@@ -271,21 +294,10 @@ color:white;
 					@endif
 				</div>
 			</div>
+            
 			<div class="col-xs-12">
 				<div class="col-xs-4">
-					<b>Intro Video</b>
-				</div>
-				<div class="col-xs-8">
-					@if(!is_null($client->option))
-						@if(!empty($client->option->intro_video))
-							<iframe width="200px" height="200px" src={{{$client->option->intro_video}}} AllowFullScreen></iframe>
-						@endif
-					@endif
-				</div>
-			</div>
-			<div class="col-xs-12">
-				<div class="col-xs-4">
-					<b>Current representation</b>
+					<b>Current representation:</b>
 				</div>
 				<div class="col-xs-8">
 						@if(!is_null($client->option))
@@ -295,7 +307,7 @@ color:white;
 			</div>
 			<div class="col-xs-12">
 				<div class="col-xs-4">
-					<b>Accolades</b>
+					<b>Accolades:</b>
 				</div>
 				<div class="col-xs-8">
 						@if(!is_null($client->option))
@@ -305,7 +317,7 @@ color:white;
 			</div>
 			<div class="col-xs-12">
 				<div class="col-xs-4">
-					<b>Achievement</b>
+					<b>Achievement:</b>
 				</div>
 				<div class="col-xs-8">
 						@if(!is_null($client->option))
@@ -315,7 +327,7 @@ color:white;
 			</div>
 			<div class="col-xs-12">
 				<div class="col-xs-4">
-					<b>Experiences</b>
+					<b>Experiences:</b>
 				</div>
 				<div class="col-xs-8">
 						@if(!is_null($client->option))
@@ -325,7 +337,7 @@ color:white;
 			</div>
 			<div class="col-xs-12">
 				<div class="col-xs-4">
-					<b>Relative talent</b>
+					<b>Relative talent:</b>
 				</div>
 				<div class="col-xs-8">
 						@if(!is_null($client->option))
@@ -335,7 +347,7 @@ color:white;
 			</div>
 			<div class="col-xs-12">
 				<div class="col-xs-4">
-					<b>Anything</b>
+					<b>Anything else:</b>
 				</div>
 				<div class="col-xs-8">
 						@if(!is_null($client->option))
@@ -345,12 +357,11 @@ color:white;
 			</div>
 		</div>
 	</div>
-
 	<hr>
 	<div class="tagInfo">
 		@yield('tags')
 	</div>
-</div>
+    </div>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.min.js"></script>
@@ -364,3 +375,4 @@ color:white;
 	</script>
 	@yield('tail')
 </body>
+@stop
