@@ -111,7 +111,7 @@
 
 <div class="col-xs-12">
            <div class="col-xs-2">
-            PROFILE PHOTO
+            PROFILE PHOTO<sup>*</sup>
             <br/>
             <b style="font-size:12px; color:red">(5MB max, jpg/gif/png only)</b>
            </div>
