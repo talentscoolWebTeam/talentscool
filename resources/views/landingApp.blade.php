@@ -185,6 +185,8 @@
 							    <td class="tg-zlxb"></td>
 							  </tr>
 							</table>
+							<div><br/><br/></div>
+							<a href="http://talentscool.com/application" class="read_more2">Apply now!</a>
 						</div>
 
 
