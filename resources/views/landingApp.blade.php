@@ -93,7 +93,7 @@
 									<h2>We are the new way to connect in Entertainment</h2>
 									<p>Whether you are looking for talent or your next big break, we're here to help.</p>
 									<p>Music. Dance. Film. Fashion. Arts. Sports. We know them all.</p>
-								<a href="#service" class="read_more2">Read more</a> </div>
+								<a href="http://talentscool.com/application" class="read_more2">Apply now!</a> </div>
 							</div>
                             <div class="bannerImg zoomIn wow animated" id="show">
                                 <img src="{{asset('/images/rotator/Acting.png')}}">
@@ -128,7 +128,7 @@
 									<p align="justify">Headquartered in Los Angeles, Talentscool is a talent service that works with the music, film, fashion, visual arts, dance, and sports industries to help find talents new opportunities and connect them to the services they need. Having been founded by founded by both a musician and a pro-athlete, we know how hard it is to stand out in the entertainment industry. With so much competition, our clients will be given the ease at mind with someone on their side.</p> <br/>
 									<p align="justify">Through our global relationships with major/indie record labels, talent agencies, casting agencies, production companies, venues, art galleries, corporate sponsors, and much more, we are able to provide the best possible services to our clients. In addition, we recommend our clients to well-established vendor services ranging from publicists to agents to investors to entertainment lawyers and everything in between. The needs of our clients are our #1 priority.</p>
 								</div>
-								<div class="work_bottom"> <span>Want to know more?</span> <a href="#contact" class="contact_btn">Contact Us</a> </div>       
+								<div class="work_bottom"> <span>Want to know more?</span> <a href="http://talentscool.com/application" class="contact_btn">Apply now!</a> </div>       
 							</div>
 							
 						</div>
@@ -154,9 +154,9 @@
 							<col style="width: 33%">
 							</colgroup>
 							  <tr>
-							    <th class="tg-2awo">General</th>
-							    <th class="tg-2awo">Opportunities</th>
-							    <th class="tg-2awo">Representation</th>
+							    <th class="tg-2awo">GENERAL</th>
+							    <th class="tg-2awo">OPPORTUNITIES</th>
+							    <th class="tg-2awo">REPRESENTATION</th>
 							  </tr>
 							  <tr>
 							    <td class="tg-zlxb">Opportunities, Representation, Branding, Talent Development, Collaboration, Social Media Management</td>
@@ -164,9 +164,9 @@
 							    <td class="tg-zlxb">Manager/Agent, Talent Agency, Publicist, Booking Agent</td>
 							  </tr>
 							  <tr>
-							    <th class="tg-2awo">Outside Services</th>
-							    <th class="tg-2awo">Talent Development</th>
-							    <th class="tg-2awo">Vanity Services</th>
+							    <th class="tg-2awo">OUTSIDE SERVICES</th>
+							    <th class="tg-2awo">TALENT DEVELOPMENT</th>
+							    <th class="tg-2awo">VANITY SERVICES</th>
 							  </tr>
 							  <tr>
 							    <td class="tg-zlxb">Musician, Vocalist, Dancer, Lawyer, Accountant, Personal Assistant, Video/Film Production, Event Planner, Graphic Designer, Audio Engineer</td>
@@ -175,7 +175,7 @@
 							  </tr>
 							  <tr>
 							    <th class="tg-zlxb"></th>
-							    <th class="tg-2awo">Luxury Services</th>
+							    <th class="tg-2awo">LUXURY SERVICES</th>
 							    <th class="tg-zlxb"></th>
 							  </tr>
 							  <tr>
@@ -277,7 +277,7 @@
 						<a href="http://www.instagram.com/talentscool" target="_blank">
 						<img src="http://talentscool.com/images/social_media/instagram_logo.png" style="max-height: 6vh; max-width: 6vh; padding: 1vh"></a>
 						<br/>
-						<p style="font-family: 'Raleway', sans-serif;">Copyright &copy; 2015 Talentscool, LLC.</p>
+						<p style="font-family: 'Raleway', sans-serif;">Copyright &copy; 2015 Talentscool, Inc.</p>
 						<!-- <img src="http://talentscool.com/images/logoT.png" style="vertical-align:middle; max-height: 50%; max-width: 50%;">  -->
 					</div>
 				</div>				
