@@ -147,6 +147,7 @@
 				<div class="container">
 					<h2>Services</h2>
 					<div class="member wow bounceInUp animated animated" style="visibility: visible; animation-name: bounceInUp; -webkit-animation-name: bounceInUp;">
+						<div style="text-align: center; margin-left: auto; margin-right: auto;">We will help you find:</div>
 						<div class="tg-wrap"><table class="tg" style="undefined;table-layout: fixed; width: 100%">
 							<colgroup>
 							<col style="width: 33%">
