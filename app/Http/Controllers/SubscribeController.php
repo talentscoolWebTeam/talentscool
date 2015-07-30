@@ -33,3 +33,4 @@ class SubscribeController extends Controller {
 	{
 		return view('subscribe');
 	}
+}
