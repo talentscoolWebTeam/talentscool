@@ -52,6 +52,11 @@ color:white;
 				<div class="subBodyDiv">
 				<!--  parsing photo -->
 				<?php $photos = explode(';', $talent->portfolios->photo);
+				foreach ($photos as &$photo)
+				{
+   			 		$photo = "/".$photo;
+   			 		$photo = preg_replace("{\\\}", "/", $photo);
+   			 	}
 				$videos = explode(';', $talent->portfolios->video);
 				$audios = explode(';', $talent->portfolios->audio);?>
 				@if(sizeof($photos) > 0 && !empty($photos[0]))
