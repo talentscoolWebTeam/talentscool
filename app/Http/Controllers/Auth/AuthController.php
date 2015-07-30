@@ -87,7 +87,7 @@ class AuthController extends Controller {
 			if($user->accessible == 0)
 				{
 					\Auth::logout();
-					return redirect()->back()->withErrors(['Your Account has beend blocked']);
+					return redirect()->back()->withErrors(['Your Account has been blocked']);
 				}
 			else
 				return redirect()->intended($this->redirectPath());
