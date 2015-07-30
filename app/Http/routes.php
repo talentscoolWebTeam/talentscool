@@ -25,6 +25,7 @@ Route::get('clients/requested/{id}', 'ClientController@requestedClientInfo');
 Route::post('clients/requested/accept/', 'ClientController@acceptClient');
 Route::post('Tags', 'TagController@store');
 Route::put('Tags', 'TagController@delete');
+Route::get('subscribe', 'SubscribeController@index')
 
 Route::get('application', 'ApplicationController@application');
 Route::get('loading', 'ApplicationController@loading');
