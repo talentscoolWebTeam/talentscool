@@ -106,7 +106,7 @@ body{
  <div class="rowBlock stackmail_block emailAddress" style="width: 560px;">
  
  <div class="fieldDesc" style="color: rgb(255, 255, 255); font-family: Geneva, Tahoma, sans-serif;"><b>Email address<div class="required" style="color: inherit;">*</div></b></div>
- <input type="text" id="emailAddress" value="" class="" name="email" placeholder="Email address" style="width: 500px; color: black;">
+ <input type="text" id="emailAddress" value="" class="" name="email" placeholder="Email address" style="width: 100%; color: black;">
  </div>
  </div>
  <input type="submit" id="subscribeToList" value="Subscribe" style="background-color: rgb(255, 255, 255); color: rgb(237, 28, 36);">
