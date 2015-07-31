@@ -36,6 +36,9 @@
 	<body>
 <style type="text/css">
 
+body{
+	background-image: url(http://talentscool.com/images/background.png);
+}
 #formBox  .hidden_menu {height:0px;display:none;}
 #selectField_chzn.chzn-container-single .chzn-single { height:24px !important; line-height:24px !important; }
 #formBox, .formBox  { position:relative; border:1px solid #F2F2F2; padding:10px 20px 20px 20px; margin-top:20px; width:560px; }
@@ -99,11 +102,10 @@
  <div class="rowBlock stackmail_block emailAddress" style="width: 560px;">
  
  <div class="fieldDesc" style="color: rgb(255, 255, 255); font-family: Geneva, Tahoma, sans-serif;"><b>Email address<div class="required" style="color: inherit;">*</div></b></div>
- <input type="text" id="emailAddress" value="" class="" name="email" placeholder="Email address" style="width: 547px;">
+ <input type="text" id="emailAddress" value="" class="" name="email" placeholder="Email address" style="width: 547px; color: black;">
  </div>
  </div>
  <input type="submit" id="subscribeToList" value="Subscribe" style="background-color: rgb(255, 255, 255); color: rgb(237, 28, 36);">
- <a href="http://campayn.com" class="cmpLnk" style="color: rgb(255, 255, 255);">campayn</a>
  <div class="clearBothDiv" style="clear:both;"></div> 
 </form>
 </div>
