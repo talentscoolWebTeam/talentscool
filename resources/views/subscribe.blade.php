@@ -67,7 +67,7 @@ body{
 #subscribeToList { clear:both; font-size:14px; font-weight:bold; padding:5px 10px; border:none; color:#fff; cursor:pointer; margin-top:20px; }
 .signupError { padding:20px 0px 0px 0px; text-align:center; color:red; font-weight:bold; font-size:14px; }
 
-#formContainer { width:33%; margin:0 auto; position:relative; font-family: Arial;}
+#formContainer { width:560px; margin:0 auto; position:relative; font-family: Arial;}
 #formContainer input[type=text] { padding:0px 5px; }
 #formContainer #formBox .rowBlock:hover { border-color:#fff; }
 #formContainer .rowBlock:hover .hidden_arrow, #formContainer .rowBlock:hover #deleteItem { display:none; }
@@ -106,7 +106,7 @@ body{
  <div class="rowBlock stackmail_block emailAddress" style="width: 560px;">
  
  <div class="fieldDesc" style="color: rgb(255, 255, 255); font-family: Geneva, Tahoma, sans-serif;"><b>Email address<div class="required" style="color: inherit;">*</div></b></div>
- <input type="text" id="emailAddress" value="" class="" name="email" placeholder="Email address" style="width: 100%; color: black;">
+ <input type="text" id="emailAddress" value="" class="" name="email" placeholder="Email address" style="width: 500px; color: black;">
  </div>
  </div>
  <input type="submit" id="subscribeToList" value="Subscribe" style="background-color: rgb(255, 255, 255); color: rgb(237, 28, 36);">
