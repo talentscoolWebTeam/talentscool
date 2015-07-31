@@ -44,7 +44,7 @@ body{
 }
 #formBox  .hidden_menu {height:0px;display:none;}
 #selectField_chzn.chzn-container-single .chzn-single { height:24px !important; line-height:24px !important; }
-#formBox, .formBox  { position:relative; border:1px solid #F2F2F2; padding:10px 20px 20px 20px; margin-top:20px; width:100%; }
+#formBox, .formBox  { position:relative; border:1px solid #F2F2F2; padding:10px 20px 20px 20px; margin-top:20px; width:33%; }
 #formBox h2, .formBox h2 { font-weight:bold; font-size:18px; margin:0px; padding:0px;}
 .leftblock #formBox h2:hover { cursor:text; }
 #formBox .description, .formBox .description { display:block; font-size:12px; margin-top:15px; line-height:15px; }
@@ -67,7 +67,7 @@ body{
 #subscribeToList { clear:both; font-size:14px; font-weight:bold; padding:5px 10px; border:none; color:#fff; cursor:pointer; margin-top:20px; }
 .signupError { padding:20px 0px 0px 0px; text-align:center; color:red; font-weight:bold; font-size:14px; }
 
-#formContainer { width:600px; margin:0 auto; position:relative; font-family: Arial;}
+#formContainer { width:33%; margin:0 auto; position:relative; font-family: Arial;}
 #formContainer input[type=text] { padding:0px 5px; }
 #formContainer #formBox .rowBlock:hover { border-color:#fff; }
 #formContainer .rowBlock:hover .hidden_arrow, #formContainer .rowBlock:hover #deleteItem { display:none; }
