@@ -264,8 +264,14 @@
 
 
 
-  <div class="col-xs-12">&nbsp;</div>
-
+  <div class="col-xs-12">
+      <div class="col-xs-3">
+      SELF-INTRODUCTION<sup>*</sup>
+      </div>
+      <div class="col-xs-8">
+          <textarea style="height:10em" name="selfintro" id="selfintro" class="form-control"></textarea>
+      </div>
+  </div>
 
 
   <div class="col-xs-12">
@@ -856,6 +862,7 @@ ANYTHING ELSE
 		var picmessage="";
 	    if($('#category1').val()=='')message+=" [category]";
 	    if($('#specific_talent1').val()=='')message+=" [specific_talent]";
+        if($('#selfintro').val()=='')message+="[self-introduction]";
 		if(message.length > 28){
 		    message=message.substring(0,message.length);
 			message+=" field(s). Please fill these out.";
