@@ -90,8 +90,9 @@
 						<div class="row">
 							<div class="col-lg-6 col-sm-7">
 								<div class="top_left_cont zoomIn wow animated"> 
-									<h2><span style="color: red;">Talentscool, the new way to connect in Entertainment</span></h2>
-									<p>Whether you are looking for talent or your next big break, Talentscool is here to help.</p>
+									<h2>Talentscool, the new way to connect in Entertainment</h2>
+									<p>Whether you are looking for talent or your next big break</p>
+									<p>Talentscool is here to help.</p>
 									<p>Music • Dance • Film • Fashion • Arts • Sports</p>
 								<a href="http://talentscool.com/application" class="read_more2">Apply now!</a> </div>
 							</div>
