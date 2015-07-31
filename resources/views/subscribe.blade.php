@@ -83,8 +83,8 @@ body{
 
 </style>
 
-<div id="logo_top" style="float:right; position: relative; margin-right: 20%"><a href="http://talentscool.com"><img src="/pic/TSVector.png" style="width:200px;"></a></div>
-<div id="formContainer" style="margin-top: 200px;">
+<div id="logo_top" style="float:right; position: relative; margin-top:20px; margin-right: 2%"><a href="http://talentscool.com"><img src="/pic/TSVector.png" style="width:200px;"></a></div>
+<div id="formContainer" style="position: absolute; margin-top: 15%; margin-left: 30%;">
 <div id="formBox">
 <form id="signupSubscriberForm" method="post" action="http://talentscool.campayn.com/contacts/signup_form_add_contact/27361" accept-charset="utf-8">
 
