@@ -44,7 +44,7 @@ body{
 }
 #formBox  .hidden_menu {height:0px;display:none;}
 #selectField_chzn.chzn-container-single .chzn-single { height:24px !important; line-height:24px !important; }
-#formBox, .formBox  { position:relative; border:1px solid #F2F2F2; padding:10px 20px 20px 20px; margin-top:20px; width:560px; }
+#formBox, .formBox  { position:relative; border:1px solid #F2F2F2; padding:10px 20px 20px 20px; margin-top:20px; width:33%; }
 #formBox h2, .formBox h2 { font-weight:bold; font-size:18px; margin:0px; padding:0px;}
 .leftblock #formBox h2:hover { cursor:text; }
 #formBox .description, .formBox .description { display:block; font-size:12px; margin-top:15px; line-height:15px; }
@@ -84,7 +84,7 @@ body{
 </style>
 
 <div id="logo_top" style="float:right; position: relative; margin-top:20px; margin-right: 2%"><a href="http://talentscool.com"><img src="/pic/TSVector.png" style="width:200px;"></a></div>
-<div id="formContainer" style="position: absolute; margin-top: 15%; margin-left: 30%;">
+<div id="formContainer" style="position: absolute; margin-top: 15%; margin-left: 33%;">
 <div id="formBox">
 <form id="signupSubscriberForm" method="post" action="http://talentscool.campayn.com/contacts/signup_form_add_contact/27361" accept-charset="utf-8">
 
@@ -106,7 +106,7 @@ body{
  <div class="rowBlock stackmail_block emailAddress" style="width: 560px;">
  
  <div class="fieldDesc" style="color: rgb(255, 255, 255); font-family: Geneva, Tahoma, sans-serif;"><b>Email address<div class="required" style="color: inherit;">*</div></b></div>
- <input type="text" id="emailAddress" value="" class="" name="email" placeholder="Email address" style="width: 547px; color: black;">
+ <input type="text" id="emailAddress" value="" class="" name="email" placeholder="Email address" style="width: 500px; color: black;">
  </div>
  </div>
  <input type="submit" id="subscribeToList" value="Subscribe" style="background-color: rgb(255, 255, 255); color: rgb(237, 28, 36);">
