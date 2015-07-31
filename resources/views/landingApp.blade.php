@@ -91,8 +91,7 @@
 							<div class="col-lg-6 col-sm-7">
 								<div class="top_left_cont zoomIn wow animated"> 
 									<h2>Talentscool, the new way to connect in Entertainment</h2>
-									<p>Whether you are looking for talent or your next big break</p>
-									<p>Talentscool is here to help.</p>
+									<p>Whether you are looking for talent or your next big break<br/>Talentscool is here to help.</p>
 									<p>Music • Dance • Film • Fashion • Arts • Sports</p>
 								<a href="http://talentscool.com/application" class="read_more2">Apply now!</a> </div>
 							</div>
@@ -126,7 +125,7 @@
 							<div class=" col-lg-8 col-md-8 col-sm-8 col-xs-12 pull-left">
 								<div class=" delay-01s animated fadeInDown wow animated">
 									
-									<p align="justify">Headquartered in Los Angeles, Talentscool is a talent service that works with the music, film, fashion, visual arts, dance, and sports industries to help talents find new opportunities and connect them to the services they need. Having been founded by both a musician and a pro-athlete, we know how hard it is to stand out in the entertainment industry. With so much competition, our clients will be given ease at mind knowing someone is on their side.</p> <br/>
+									<p align="justify">Talentscool is a talent service that connects talent in music, film, fashion, art, dance, and sports to opportunities and services for their careers. Founded by both a musician and a pro-athlete, we know how hard it is to stand out in the entertainment industry. With so much competition, our clients will be given peace of mind knowing someone is on their side.</p> <br/>
 									<p align="justify">Through our global relationships with major/indie record labels, talent agencies, casting agencies, production companies, venues, art galleries, corporate sponsors, and much more, we are able to provide the best possible services to our clients. In addition, we recommend our clients to well-established vendor services ranging from publicists to agents to investors to entertainment lawyers and everything in between. The needs of our clients are our #1 priority.</p>
 								</div>
 								<div class="work_bottom"> <a href="http://talentscool.com/application" class="contact_btn">Apply now!</a> </div>       
