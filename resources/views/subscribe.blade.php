@@ -40,6 +40,7 @@ body{
 	background-image: url(http://talentscool.com/images/background.png);
 	background-size: cover;
 	background-repeat: no-repeat;
+	background-color: #000000;
 }
 #formBox  .hidden_menu {height:0px;display:none;}
 #selectField_chzn.chzn-container-single .chzn-single { height:24px !important; line-height:24px !important; }
@@ -82,7 +83,7 @@ body{
 
 </style>
 
-<div id="formContainer">
+<div id="formContainer" style="margin-top: 200px;">
 <div id="formBox">
 <form id="signupSubscriberForm" method="post" action="http://talentscool.campayn.com/contacts/signup_form_add_contact/27361" accept-charset="utf-8">
 
