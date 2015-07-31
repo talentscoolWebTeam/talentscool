@@ -44,7 +44,7 @@ body{
 }
 #formBox  .hidden_menu {height:0px;display:none;}
 #selectField_chzn.chzn-container-single .chzn-single { height:24px !important; line-height:24px !important; }
-#formBox, .formBox  { position:relative; border:1px solid #F2F2F2; padding:10px 20px 20px 20px; margin-top:20px; width:33%; }
+#formBox, .formBox  { position:relative; border:1px solid #F2F2F2; padding:10px 20px 20px 20px; margin-top:20px; width:100%; }
 #formBox h2, .formBox h2 { font-weight:bold; font-size:18px; margin:0px; padding:0px;}
 .leftblock #formBox h2:hover { cursor:text; }
 #formBox .description, .formBox .description { display:block; font-size:12px; margin-top:15px; line-height:15px; }
