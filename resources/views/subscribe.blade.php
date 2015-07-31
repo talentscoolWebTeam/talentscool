@@ -38,6 +38,8 @@
 
 body{
 	background-image: url(http://talentscool.com/images/background.png);
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 #formBox  .hidden_menu {height:0px;display:none;}
 #selectField_chzn.chzn-container-single .chzn-single { height:24px !important; line-height:24px !important; }
