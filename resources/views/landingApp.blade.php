@@ -259,7 +259,7 @@
 					</div>
 					<div class="row">
 						
-						<div class="col-lg-12 wow fadeInLeft delay-06s">
+						<div class="col-lg-12 wow fadeInLeft delay-06s" style="margin-left: 0px;">
 							<div class="form">
                             {!! Form::open() !!}
 								<input class="input-text" type="text" name="receiver" value="Your Name *" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;">
