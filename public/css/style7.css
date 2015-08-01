@@ -66,7 +66,8 @@ h2 {
     font-family: 'Raleway', sans-serif;
     font-weight: normal;
     margin: 0px 0 25px 0;
-    text-align: center; 
+    text-align: center;
+    font-weight: bold; 
 }
 
 h3 {

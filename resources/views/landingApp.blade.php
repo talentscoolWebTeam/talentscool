@@ -96,11 +96,11 @@
 								<a href="http://talentscool.com/application" class="read_more2">Apply now!</a> </div>
 							</div>
                             <div class="bannerImg zoomIn wow animated" id="show">
-                                <img src="{{asset('/images/rotator/Acting.png')}}">
-                                <img src="{{asset('/images/rotator/Art.png')}}">
+                                <!-- <img src="{{asset('/images/rotator/Acting.png')}}"> -->
+                                <!-- <img src="{{asset('/images/rotator/Art.png')}}"> -->
                                 <img src="{{asset('/images/rotator/Fashion.png')}}">
                                 <img src="{{asset('/images/rotator/HipHop.png')}}">
-                                <img src="{{asset('/images/rotator/Makeup.png')}}">
+                                <!-- <img src="{{asset('/images/rotator/Makeup.png')}}"> -->
                                 <img src="{{asset('/images/rotator/Music.png')}}">
                                 <img src="{{asset('/images/rotator/Sports.png')}}">
                             </div>
