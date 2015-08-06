@@ -262,7 +262,7 @@
 								<input class="input-text" type="text" name="receiver" value="Your Name *" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;">
 								<input class="input-text" type="text" name="email" value="Your E-mail *" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;">
 								<textarea class="input-text text-area" cols="0" rows="0" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;" name="message" id="message">Your Message *</textarea>
-								<input class="input-btn" type="button" value="send message" id="sendmail" style="text-transform: uppercase;
+								<input class="input-btn" type="button" value="send" id="sendmail" style="text-transform: uppercase;
     display: block;
     width: 20%;
     min-width: 120px;
