@@ -88,19 +88,16 @@
 				<div class="container">
 					<div class="hero_section">
 						<div class="row">
-							<div class="col-lg-6 col-sm-7">
+							<div class="col-lg-6 col-sm-4">
 								<div class="top_left_cont zoomIn wow animated"> 
 									<h2>Talentscool, the new way to connect in Entertainment</h2>
-									<p>Whether you are looking for talent or your next big break<br/>Talentscool is here to help.</p>
+									<p>Whether you are looking for talent or your next big break,<br/>Talentscool is here to help.</p>
 									<p>Music • Dance • Film • Fashion • Arts • Sports</p>
 								<a href="http://talentscool.com/application" class="read_more2">Apply now!</a> </div>
 							</div>
                             <div class="bannerImg zoomIn wow animated" id="show">
-                                <!-- <img src="{{asset('/images/rotator/Acting.png')}}"> -->
-                                <!-- <img src="{{asset('/images/rotator/Art.png')}}"> -->
                                 <img src="{{asset('/images/rotator/Fashion.png')}}">
                                 <img src="{{asset('/images/rotator/HipHop.png')}}">
-                                <!-- <img src="{{asset('/images/rotator/Makeup.png')}}"> -->
                                 <img src="{{asset('/images/rotator/Music.png')}}">
                                 <img src="{{asset('/images/rotator/Sports.png')}}">
                             </div>
@@ -265,7 +262,17 @@
 								<input class="input-text" type="text" name="receiver" value="Your Name *" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;">
 								<input class="input-text" type="text" name="email" value="Your E-mail *" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;">
 								<textarea class="input-text text-area" cols="0" rows="0" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;" name="message" id="message">Your Message *</textarea>
-								<input class="input-btn" type="button" value="send message" id="sendmail">
+								<input class="input-btn" type="button" value="send message" id="sendmail" style="text-transform: uppercase;
+    display: block;
+    width: 20%;
+    min-width: 120px;
+    height: 49px;
+    text-align: center;
+    font-size: 16px;
+    color: white;
+    border-radius: 3px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;">
                              {!! Form::close() !!}
 							</div>
 						</div>
@@ -346,7 +353,7 @@
     });
     $(aImg[nTime]).removeClass('hidden');//拿掉display=hidden
     $(aImg[nTime]).fadeIn('50000');//淡入，可选项，如果删除的话fadeOut也要一并删除
-    (nTime == 6)?nTime=0:nTime++;//三目运算符，如果轮播完毕则跳转回第一张
+    (nTime == 3)?nTime=0:nTime++;//controls based on the number of images?
   }
     show();//让它先进行一次播放，显示第一张图片
     $(document).ready(function() {

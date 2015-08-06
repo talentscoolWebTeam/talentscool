@@ -110,7 +110,8 @@ p {
     margin-top: 8px;
 	position: relative;
 	z-index: 2;
-	width:200px;
+	width:100%;
+    max-width: 200px;
 }
 
 .res-nav_click {
@@ -286,22 +287,26 @@ p {
 	float: right;
 }
 a.read_more2 {
-    font-family: 'Raleway', sans-serif;
-    display: block;
-    font-size: 16px;
-    width: 178px;
-    height: 46px;
-    line-height: 46px;
-    text-align: center;
     text-transform: uppercase;
+    display: block;
+    width: 20%;
+    min-width: 120px;
+    height: 49px;
+    text-align: center;
+    line-height: 49px;
+    font-size: 16px;
+    color: #d0313c;
+    border-radius: 3px;
+    font-family: 'Raleway', sans-serif;
     font-weight: 600;
+    border: 2px solid #d0313c;
     transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
     -webkit-transition: all 0.2s ease-in-out;
-	background: #d0313c;
+    background: #d0313c;
     color: #fff;
     border-radius: 3px;
-	border: 0px;
+    border: 0px;
 }
 
 a.read_more2:hover {
@@ -474,7 +479,8 @@ a.read_more2:hover {
 a.contact_btn {
     text-transform: uppercase;
     display: block;
-    width: 176px;
+    width: 20%;
+    min-width: 120px;
     height: 49px;
     text-align: center;
     line-height: 49px;
@@ -927,16 +933,18 @@ img {
 }
 
 .input-btn {    
-    width: 175px;
-    height: 50px;
+    width: auto;
+    height: 20%;
+    font-family: 'Raleway', sans-serif;
     letter-spacing: 0px;
     background: #d0313c;
     border-radius: 3px;
     color: #ffffff;
-    font-size: 16px;
+    font-size: 2vh;
     text-transform: uppercase;
     font-weight: 600;
     border: 0px;
+    display: block;
     transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
