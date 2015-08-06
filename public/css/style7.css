@@ -222,7 +222,8 @@ p {
 }
 
 #hero_section {
-	height: 550px;
+	height: auto;
+    min-height: 100vh
     padding-top:15%;
     position: relative;
 	background-image: url(http://talentscool.com/images/background.png);
@@ -339,7 +340,8 @@ a.read_more2:hover {
 ---------------------------------*/
 
 #service {
-	height: 100vh; 
+    height: auto;
+	min-height: 100vh; 
     padding: 7vh 0px;
 	background-image: url(http://talentscool.com/images/bodyBackground.png);
 	background-repeat:no-repeat;
