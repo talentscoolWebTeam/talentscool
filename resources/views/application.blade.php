@@ -74,7 +74,7 @@
     <p>Please fill out your personal information below.</p>
   </div>
 </div>
-<p class="col-xs-12"><b style="color:red;">*</b><b> required</b></p>
+
 <br><br>
 <div class="col-xs-12">
 	<div class="col-xs-2">
@@ -944,6 +944,7 @@ ANYTHING ELSE
 		var picmessage="";
 	    if($('#category1').val()=='')message+=" [category]";
 	    if($('#specific_talent1').val()=='')message+=" [specific talent]";
+		if($('#selfintro').val()=='')message+="[self-introduction]";
 		if(message.length > 28){
 		    message=message.substring(0,message.length);
 			message+=" field(s). Please fill these out.";
@@ -978,7 +979,7 @@ ANYTHING ELSE
 		}
 		if(num==0)alert("Please upload at least one file!");
 		if(num>3)alert("Please upload at most three files!");
-		if(num<=3&&num>0&&message==""&&picmessage==""){
+		if(num<=3&&num>0&&picmessage==""){
 			$('.secondPage').hide();
 		    $('.add_one').show();
 		}

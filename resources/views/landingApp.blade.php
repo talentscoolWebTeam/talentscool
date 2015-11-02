@@ -73,7 +73,7 @@
 								<li><a href="#aboutUs" class="scroll-link">About Us</a></li>
 								<li><a href="#service" class="scroll-link">Services</a></li>
 								<li><a href="#contact" class="scroll-link">Contact</a></li>
-								<li><a href="http://talentscool.com/application" class="scroll-link">Apply Now!</a></li>
+								<li><a href="/application" class="scroll-link">Apply Now!</a></li>
 							</ul>
 						</div>
 					</nav>
@@ -90,10 +90,11 @@
 						<div class="row">
 							<div class="col-lg-6 col-sm-4">
 								<div class="top_left_cont zoomIn wow animated"> 
-									<h2>Talentscool, the new way to connect in Entertainment</h2>
-									<p>Whether you are looking for talent or your next big break,<br/>Talentscool is here to help.</p>
-									<p>Music • Dance • Film • Fashion • Arts • Sports</p>
-								<a href="http://talentscool.com/application" class="read_more2">Apply now!</a> </div>
+									<h2 align="center">Talentscool, the new way to connect in Entertainment</h2>
+									<p style="font-size:20px" align="center">Whether you are looking for talent or your next big break,<br/>Talentscool is here to help.</p>
+									<p style="font-size:20px" align="center">Music • Dance • Film • Fashion • Arts • Sports</p>
+                                <a href="/application" class="read_more2">Apply Now!</a>
+                                </div>
 							</div>
                             <div class="bannerImg zoomIn wow animated" id="show">
                                 <img src="{{asset('/images/rotator/Fashion.png')}}">
@@ -101,31 +102,29 @@
                                 <img src="{{asset('/images/rotator/Music.png')}}">
                                 <img src="{{asset('/images/rotator/Sports.png')}}">
                             </div>
-							<div>
+							</div>
 							</div>
 						</div>
 					</div>
-				</div>
-			</div>
 		</section>
 		<!--Hero_Section--> 
 		
 		<!--Aboutus-->
 		<!-- style="background-color: black;" -->
 		<section id="aboutUs" data-section-name="About Us">
-			<div class="inner_wrapper">
+			<div class="inner_wrapper" align="center">
 				<div class="container">
-					<h2 id="auhead">About Us</h2>
+					<h2 id="auhead" style="font-size:48px">About Us</h2>
 					<div class="inner_section">
 						<div class="row">
 							<div class=" col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-right"></div>
 							<div class=" col-lg-8 col-md-8 col-sm-8 col-xs-12 pull-left">
 								<div class=" delay-01s animated fadeInDown wow animated">
 									
-									<p align="justify">Talentscool is a talent service that connects talent in music, film, fashion, art, dance, and sports to opportunities and services for their careers. Founded by both a musician and a pro-athlete, we know how hard it is to stand out in the entertainment industry. With so much competition, our clients will be given peace of mind knowing someone is on their side.</p> <br/>
-									<p align="justify">Through our global relationships with major/indie record labels, talent agencies, casting agencies, production companies, venues, art galleries, corporate sponsors, and much more, we are able to provide the best possible services to our clients. In addition, we recommend our clients to well-established vendor services ranging from publicists to agents to investors to entertainment lawyers and everything in between. The needs of our clients are our #1 priority.</p>
+									<p align="justify" style="font-size:20px">Talentscool is a talent service that connects talent in music, film, fashion, art, dance, and sports to opportunities and services for their careers. Founded by both a musician and a pro-athlete, we know how hard it is to stand out in the entertainment industry. With so much competition, our clients will be given peace of mind knowing someone is on their side.</p> <br/>
+									<p align="justify" style="font-size:20px">Through our global relationships with major/indie record labels, talent agencies, casting agencies, production companies, venues, art galleries, corporate sponsors, and much more, we are able to provide the best possible services to our clients. In addition, we recommend our clients to well-established vendor services ranging from publicists to agents to investors to entertainment lawyers and everything in between. The needs of our clients are our #1 priority.</p>
 								</div>
-								<div class="work_bottom"> <a href="http://talentscool.com/application" class="contact_btn">Apply now!</a> </div>       
+								<div class="work_bottom"> <a href="/application" class="read_more2">Apply now!</a> </div>       
 							</div>
 							
 						</div>
@@ -140,9 +139,9 @@
 		
 		<!--Service-->
 		<section  id="service" data-section-name="Services">
-			<div class="service_wrapper" >
+			<div class="service_wrapper" align="center">
 				<div class="container">
-					<h2>Services</h2>
+					<h2 style="font-size:48px">Services</h2>
 					<div class="member wow bounceInUp animated animated" style="visibility: visible; animation-name: bounceInUp; -webkit-animation-name: bounceInUp;">
 						<div style="text-align: center; margin-left: auto; margin-right: auto;">We will help you find:</div>
 						<div class="tg-wrap"><table class="tg" style="undefined;table-layout: fixed; width: 100%">
@@ -183,7 +182,7 @@
 							  </tr>
 							</table>
 							<div><br/><br/></div>
-							<a href="http://talentscool.com/application" class="read_more2">Apply now!</a>
+							<a href="/application" class="read_more2">Apply now!</a>
 						</div>
 
 
@@ -248,20 +247,20 @@
 		
 		<!--/Team-->
 		<!--Footer-->
-		<footer class="footer_wrapper" id="contact">
+		<footer class="footer_wrapper" id="contact" align="center">
 			<div class="container">
 				<section class="page_section contact" id="contact" data-section-name="Contact">
 					<div class="contact_section">
-						<h2 style="padding:0px">Contact Us</h2>
+						<h2 style="font-size:48px;">Contact Us</h2>
 					</div>
 					<div class="row">
 						
-						<div class="col-lg-12 wow fadeInLeft delay-06s" style="margin-left: 0px;">
-							<div class="form">
+						<div class="col-lg-12 wow fadeInLeft delay-06s" style="margin-left: 40px;">
+							<div class="form" align="center">
                             {!! Form::open() !!}
-								<input class="input-text" type="text" name="receiver" value="Your Name *" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;">
-								<input class="input-text" type="text" name="email" value="Your E-mail *" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;">
-								<textarea class="input-text text-area" cols="0" rows="0" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;" name="message" id="message">Your Message *</textarea>
+								<input class="input-text" type="text" name="receiver" value="Your Name *" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;" style="width:50%">
+								<input class="input-text" type="text" name="email" value="Your E-mail *" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;" style="width:50%">
+								<textarea class="input-text text-area" cols="0" rows="0" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;" name="message" id="message" style="width:50%">Your Message *</textarea>
 								<input class="input-btn" type="button" value="send" id="sendmail" style="text-transform: uppercase;
     display: block;
     width: 20%;
@@ -277,24 +276,27 @@
 							</div>
 						</div>
 					</div>
+                    </section>
+                    
+    <section  id="follow" data-section-name="Follow us">
+			<div class="folow_wrapper" align="center">
 				<div class="container">
-					<div class="footer_bottom">
-						<p style="font-family: 'Raleway', sans-serif;">Follow us!</p>
-						<a href="http://www.twitter.com/talentscool" target="_blank">
+					<h2 style="font-size:20px">Follow us!</h2>
+                     <a href="http://www.twitter.com/talentscool" target="_blank">
 						<img src="http://talentscool.com/images/social_media/twitter_logo.png" style="max-height: 6vh; max-width: 6vh; padding: 1vh;"></a>
 						<a href="http://www.facebook.com/talentscool" target="_blank">
 						<img src="http://talentscool.com/images/social_media/facebook_logo.png" style="max-height: 6vh; max-width: 6vh; padding: 1vh"></a>
 						<a href="http://www.instagram.com/talentscool" target="_blank">
 						<img src="http://talentscool.com/images/social_media/instagram_logo.png" style="max-height: 6vh; max-width: 6vh; padding: 1vh"></a>
 						<br/>
-						<p style="font-family: 'Raleway', sans-serif;">Copyright &copy; 2015 Talentscool, Inc.</p>
-						<!-- <img src="http://talentscool.com/images/logoT.png" style="vertical-align:middle; max-height: 50%; max-width: 50%;">  -->
-					</div>
-				</div>				
-			</section>
+                        <h2 style="font-size:16px">Copyright &copy; 2015 Talentscool, Inc.</h2>
+                     </div>
+               </div>
+    </section>
+                        
+                        
+				
 			
-
-		</footer>
 		
 		<!-- Scripts -->
 		<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
