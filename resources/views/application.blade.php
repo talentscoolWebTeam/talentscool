@@ -113,7 +113,7 @@
            <div class="col-xs-2">
             PROFILE PHOTO<sup>*</sup>
             <br/>
-            <b style="font-size:12px; color:red">(5MB max, jpg/gif/png only)</b>
+            <span style="font-size:12px">(5MB max, jpg/gif/png only)</span>
            </div>
            <div class="col-xs-3">
            <input type="file" name="personal_photo" id="personal_photo" accept="image/*"></input>
@@ -202,6 +202,17 @@
 </div>
 
 <div class="col-xs-12">&nbsp;</div>
+<div class="col-xs-12">
+      <div class="col-xs-2">
+      SELF-INTRODUCTION<sup>*</sup>
+      </div>
+      <div class="col-xs-3">
+      <input type="text"style="height:25px" name="self" id="self" class="page1 form-control">
+      </div>
+</div>
+
+
+<div class="col-xs-12">&nbsp;</div>
 <input type="text" name="status" value="2" style="display:none;">
 <div class="col-xs-12">
      <div class="col-xs-2">
@@ -262,18 +273,6 @@
   <div class="col-xs-12">&nbsp;</div>
 
 
-
-
-  <div class="col-xs-12">
-      <div class="col-xs-3">
-      SELF-INTRODUCTION<sup>*</sup>
-      </div>
-      <div class="col-xs-8">
-          <textarea style="height:10em" name="selfintro" id="selfintro" class="form-control"></textarea>
-      </div>
-  </div>
-
-
   <div class="col-xs-12">
     <big>Portfolio</big>
     <br/>
@@ -303,7 +302,7 @@
 
   <div class="col-xs-12">
   <div class="col-xs-3">
-  PHOTO <b style="font-size:12px; color:red">(5MB max, jpg/gif/png only)</b>
+  PHOTO <span style="font-size:12px">(5MB max, jpg/gif/png only)</span>
   </div>
   <div class="col-xs-3">
   <input type="file" name="tphoto1_1" id="tphoto1_1" accept="image/*">
@@ -433,7 +432,7 @@ SPECIFIC TALENT<sup>*</sup>
 
 <div class="col-xs-12">
 <div class="col-xs-3">
-PHOTO <b style="font-size:12px; color:red">(5MB max, jpg/gif/png only)</b>
+PHOTO <span style="font-size:12px">(5MB max, jpg/gif/png only)</span>
 </div>
 <div class="col-xs-3">
 <input type="file" name="tphoto2_1" id="tphoto2_1" accept="image/*">
@@ -563,7 +562,7 @@ SPECIFIC TALENT<sup>*</sup>
 <div class="col-xs-12">&nbsp;</div>
 <div class="col-xs-12">
 <div class="col-xs-3">
-PHOTO <b style="font-size:12px; color:red">(5MB max, jpg/gif/png only)</b>
+PHOTO <span style="font-size:12px">(5MB max, jpg/gif/png only)</span>
 </div>
 <div class="col-xs-3">
 <input type="file" name="tphoto3_1" id="tphoto3_1" accept="image/*">
@@ -629,6 +628,7 @@ OPPORTUNITIES<sup>*</sup><br>
 <li><input type="checkbox" name="opportunity[]" value="internship">internship<br>
 <li><input type="checkbox" name="opportunity[]" value="job">job<br>
 <li><input type="checkbox" name="opportunity[]" value="endorsement">endorsement<br>
+<li><input type="checkbox" name="opportunity[]" value="none">none<br>
 <li><input type="checkbox" name="opportunity[]" value="" id="oppo_other" onClick="addopp()">other<br>
 <li><input type="text" name="opportunity[]" id="oppo" disabled class="form-control" style="width:200px;"></input><br></li></ul>
 </div>
@@ -641,6 +641,7 @@ REPRESENTATION<sup>*</sup><br>
 <li><input type="checkbox" name="representation[]" value="record label">record label<br>
 <li><input type="checkbox" name="representation[]" value="agent manager">agent manager<br>
 <li><input type="checkbox" name="representation[]" value="modeling agency">modeling agency<br>
+<li><input type="checkbox" name="representation[]" value="none">none<br>
 <li><input type="checkbox" name="representation[]" value="" onClick="addrep()" id="rep_other">other<br>
 <li><input type="text" name="representation[]" id="rep" disabled class="form-control" style="width:200px;"></input><br></li></ul>
 </div>
@@ -658,6 +659,7 @@ SERVICES<sup>*</sup><br>
 <li><input type="checkbox" name="service[]" value="stylist">stylist<br>
 <li><input type="checkbox" name="service[]" value="consulting">consulting<br>
 <li><input type="checkbox" name="service[]" value="collaboration">collaboration<br>
+<li><input type="checkbox" name="service[]" value="none">none<br>
 <li><input type="checkbox" name="service[]" value="" onClick="addser()" id="ser_other">other<br>
 <li><input type="text" name="service[]" id="ser" disabled class="form-control" style="width:200px;"></input><br></li></ul>
 </div>
@@ -811,6 +813,7 @@ ANYTHING ELSE
 			if($('#zip').val()=='')message+=" [zip code]";
 			if($('#gender').val()=='')message+=" [gender]";
 			if($('#dob').val()=='')message+=" [birthday]";
+			if($('#self').val()=='')message+=" [self-introduction]";
       if($('#personal_photo').val()=='')message+=" [personal photo]";
 			if(message.length > 28){
 			message=message.substring(0,message.length);
@@ -862,7 +865,6 @@ ANYTHING ELSE
 		var picmessage="";
 	    if($('#category1').val()=='')message+=" [category]";
 	    if($('#specific_talent1').val()=='')message+=" [specific_talent]";
-        if($('#selfintro').val()=='')message+="[self-introduction]";
 		if(message.length > 28){
 		    message=message.substring(0,message.length);
 			message+=" field(s). Please fill these out.";
@@ -944,7 +946,6 @@ ANYTHING ELSE
 		var picmessage="";
 	    if($('#category1').val()=='')message+=" [category]";
 	    if($('#specific_talent1').val()=='')message+=" [specific talent]";
-		if($('#selfintro').val()=='')message+="[self-introduction]";
 		if(message.length > 28){
 		    message=message.substring(0,message.length);
 			message+=" field(s). Please fill these out.";
@@ -1019,6 +1020,7 @@ ANYTHING ELSE
 				picmessage="The extension name of file is wrong!";
 				alert(picmessage);
 			}
+		else if($('#specific_talent2').val()==$('#specific_talent1').val())alert("You have submitted this talent, please provide another one!");
 		else{
 		if($('#tphoto2_1').val()!='')pic++;
 		if($('#tphoto2_2').val()!='')pic++;
@@ -1028,7 +1030,7 @@ ANYTHING ELSE
 		num=pic+audio+video;
 		if(num==0)alert("Please upload at least one file!");
 		if(num>3)alert("PLease upload at most three files!");
-		if(num<=3&&num>0&&message==""&&picmessage==""){
+		if(num<=3&&num>0&&picmessage==""){
 			$('.add_one').hide();
 		    $('.thirdPage').show();
 		}
@@ -1049,6 +1051,7 @@ ANYTHING ELSE
 				picmessage="The extension name of file is wrong!";
 				alert(picmessage);
 			}
+		else if($('#specific_talent2').val()==$('#specific_talent1').val())alert("You have submitted this talent, please provide another one!");
 		else{
 		var num=0;
 		if($('#tphoto2_1').val()!=''){
@@ -1074,7 +1077,7 @@ ANYTHING ELSE
 		}
 		if(num==0)alert("Please upload at least one file!");
 		if(num>3)alert("Please upload at most three files!");
-		if(num<=3&&num>0&&message==""&&picmessage==""){
+		if(num<=3&&num>0&&picmessage==""){
 			$('.add_one').hide();
 		    $('.add_two').show();
 		}
@@ -1114,6 +1117,7 @@ ANYTHING ELSE
 				picmessage="The extension name of file is wrong!";
 				alert(picmessage);
 			}
+		else if($('#specific_talent3').val()==$('#specific_talent1').val()||$('#specific_talent3').val()==$('#specific_talent2').val())alert("You have submitted this talent, please provide another one!")
 		else{
 		if($('#tphoto3_1').val()!='')pic++;
 		if($('#tphoto3_2').val()!='')pic++;
@@ -1123,7 +1127,7 @@ ANYTHING ELSE
 		num=pic+audio+video;
 		if(num==0)alert("Please upload at least one file!");
 		if(num>3)alert("Please upload at most three files!");
-		if(num<=3&&num>0&&message==""&&picmessage==""){
+		if(num<=3&&num>0&&picmessage==""){
 			$('.add_two').hide();
 		    $('.thirdPage').show();
 		}

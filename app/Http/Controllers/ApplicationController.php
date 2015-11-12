@@ -230,7 +230,8 @@ class ApplicationController extends Controller {
 		$option->save();
 		
 		 $subject='Thanks for your interest in Talentscool';
-		 $message='Thanks for your interest. Your application has been submitted. If there is a match, we will contact you ASAP.'."\r\n".'Please do not reply this email!'."\r\n".'Thank you!';
+		 $message='Hi there,'."\r\n"."\r\n".'Thank you for your interest in Talentscool! Our aim is to connect you to opportunities and service providers for your career.'."\r\n"."\r\n".'We have received your application and will be reviewing it shortly. A member of our team will be in contact with you as your application proceeds.
+'."\r\n"."\r\n".'Thank you,'."\r\n".'Talentscool Team';
 		 $headers = 'From: donotreply@talentscool.com' . "\r\n" .
     'Reply-To: donotreply@talentscool.com' . "\r\n" .
     'X-Mailer: PHP/' . phpversion();
