@@ -21,11 +21,11 @@ class CreateOptionsTable extends Migration {
 			$table->string('describeword2');
 			$table->string('describeword3');
 			$table->text('intro_video');
-			$table->text('current_representation');
+			$table->text('presonal_website');
+			$table->text('social_media');
 			$table->text('accolades');
-			$table->text('achievements');
+			$table->text('current_representation');
 			$table->text('experiences');
-			$table->text('relative_talent');
 			$table->text('anything');
 			$table->timestamps();
 		});

@@ -122,6 +122,7 @@ class ApplicationController extends Controller {
 		$clients->gender=$_POST['gender'];
 		$clients->phone_number=$_POST['phoneNum'];
 		$clients->dob=$_POST['dob'];
+		$clients->self_introduction=$_POST['self'];
 		$clients->status=$_POST['status'];
 		if($personal_photo!=null){
 			$name='';
@@ -221,11 +222,11 @@ class ApplicationController extends Controller {
 		$option->describeword2=$_POST['describeword2'];
 		$option->describeword3=$_POST['describeword3'];
 		$option->intro_video=$_POST['introVideo'];
-		$option->current_representation=$_POST['current_representation'];
+		$option->presonal_website=$_POST['personalWebsite'];
+		$option->social_media=$_POST['socialMedia'];
 		$option->accolades=$_POST['accolades'];
-		$option->achievements=$_POST['achievements'];
-		$option->experiences=$_POST['experiences'];
-		$option->relative_talent=$_POST['relative_talent'];
+		$option->current_representation=$_POST['current_representation'];
+		$option->experiences=$_POST['experience'];
 		$option->anything=$_POST['anything'];
 		$option->save();
 		

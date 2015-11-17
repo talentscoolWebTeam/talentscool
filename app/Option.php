@@ -11,11 +11,11 @@ class Option extends Model {
 							'describeword2',
 							'describework3',
 							'intro_video',
-							'current_representation',
+							'presonal_website',
+							'social_media',
 							'accolades',
-							'achievements',
+							'current_representation',
 							'experiences',
-							'relative_talent',
 							'anything',
 	];
 	

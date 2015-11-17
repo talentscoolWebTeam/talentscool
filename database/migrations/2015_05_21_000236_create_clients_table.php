@@ -23,6 +23,7 @@ class CreateClientsTable extends Migration {
 			$table->String('state');
 			$table->Integer('zipcode');
 			$table->String('gender');
+			$table->String('self_introduction');
 			$table->text('phone_number')->nullable();
 			$table->date('dob');
 			$table->string('personal_photo');

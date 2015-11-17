@@ -58,6 +58,9 @@
 	.add_two{
 		display:none;
 	}
+	.reviewPage{
+		display:none;
+	}
 </style>
 
 <body>
@@ -66,7 +69,7 @@
 <table>
 <tr><td class="col-xs-12" style="font-size:36px;">APPLICATION</td><td style="float:right;position:relative;margin-right:20%;margin-top:2%;"><a href="http://talentscool.com"><img src="/pic/TSVector.png" style="width:200px;"></td></tr>
 </table>
-{!! Form::open(['action'=>'ApplicationController@store','enctype' => 'multipart/form-data']) !!}
+{!! Form::open(['action'=>'ApplicationController@store','enctype' => 'multipart/form-data','id'=>'myform']) !!}
 <div class="firstPage">
 <p class="col-xs-12"><big>Personal information</big></p>
 <div class="col-xs-12">
@@ -186,7 +189,7 @@
       PHONE NUMBER
       </div>
       <div class="col-xs-3">
-      <input type="text" style="height:25px" name="phoneNum"  class="page1 form-control">
+      <input type="text" style="height:25px" name="phoneNum" id="phone" class="page1 form-control">
       </div>
 </div>
 
@@ -615,11 +618,12 @@ VIDEO <span style="font-size:12px;">(Separate links with a <b style="color:red;"
 
 
 <div class="thirdPage">
-<p class="col-xs-12">Services desired</p>
+<p class="col-xs-12"><big>Services desired</big></p>
 <p class="col-xs-12">Please check all boxes that apply</p>
+<br><br>
 <div class="col-xs-12">
-<div class="col-xs-3">
-OPPORTUNITIES<sup>*</sup><br>
+<div class="col-xs-5">
+<big>OPPORTUNITIES</big><sup>*</sup><br>
 <ul class="checkbox-grid">
 <li><input type="checkbox" name="opportunity[]" value="booking">booking<br>
 <li><input type="checkbox" name="opportunity[]" value="audition">audition<br>
@@ -630,12 +634,14 @@ OPPORTUNITIES<sup>*</sup><br>
 <li><input type="checkbox" name="opportunity[]" value="endorsement">endorsement<br>
 <li><input type="checkbox" name="opportunity[]" value="none">none<br>
 <li><input type="checkbox" name="opportunity[]" value="" id="oppo_other" onClick="addopp()">other<br>
-<li><input type="text" name="opportunity[]" id="oppo" disabled class="form-control" style="width:200px;"></input><br></li></ul>
+<input type="text" name="opportunity[]" id="oppo" disabled class="form-control" style="width:200px;"></input><br>
+</ul>
 </div>
 </div>
 <div class="col-xs-12">
-<div class="col-xs-3">
-REPRESENTATION<sup>*</sup><br>
+<div class="col-xs-5">
+<br><br>
+<big>REPRESENTATION</big><sup>*</sup><br>
 <ul class="checkbox-grid">
 <li><input type="checkbox" name="representation[]" value="talent agent">talent agent<br>
 <li><input type="checkbox" name="representation[]" value="record label">record label<br>
@@ -643,12 +649,14 @@ REPRESENTATION<sup>*</sup><br>
 <li><input type="checkbox" name="representation[]" value="modeling agency">modeling agency<br>
 <li><input type="checkbox" name="representation[]" value="none">none<br>
 <li><input type="checkbox" name="representation[]" value="" onClick="addrep()" id="rep_other">other<br>
-<li><input type="text" name="representation[]" id="rep" disabled class="form-control" style="width:200px;"></input><br></li></ul>
+<input type="text" name="representation[]" id="rep" disabled class="form-control" style="width:200px;"></input><br>
+</ul>
 </div>
 </div>
 <div class="col-xs-12">
-<div class="col-xs-3">
-SERVICES<sup>*</sup><br>
+<div class="col-xs-5">
+<br><br>
+<big>SERVICES</big><sup>*</sup><br>
 <ul class="checkbox-grid">
 <li><input type="checkbox" name="service[]" value="brand manager">brand manager<br>
 <li><input type="checkbox" name="service[]" value="lawyer">lawyer<br>
@@ -661,7 +669,8 @@ SERVICES<sup>*</sup><br>
 <li><input type="checkbox" name="service[]" value="collaboration">collaboration<br>
 <li><input type="checkbox" name="service[]" value="none">none<br>
 <li><input type="checkbox" name="service[]" value="" onClick="addser()" id="ser_other">other<br>
-<li><input type="text" name="service[]" id="ser" disabled class="form-control" style="width:200px;"></input><br></li></ul>
+<input type="text" name="service[]" id="ser" disabled class="form-control" style="width:200px;"></input><br>
+</ul>
 </div>
 </div>
 <div class="col-xs-12">
@@ -679,23 +688,24 @@ SERVICES<sup>*</sup><br>
 
 
 <div class="fourPage">
-<p class="col-xs-12">Optional&nbsp(STRONGLY RECOMMENDED)</p>
+<p class="col-xs-12"><big>Optional&nbsp(STRONGLY RECOMMENDED)</big></p>
 <div class="col-xs-12">
 <div class="col-xs-2">
 DESCRIBE YOURSELF IN THREE WORDS
 </div>
 <div class="col-xs-3">
-<input type="text" style="width:300px"  name="describeword1" class="page4 form-control">
+<input type="text" style="width:300px"  name="describeword1" id="describeword1" class="page4 form-control">
 </div>
 <div class="col-xs-3">
-<input type="text" style="width:300px"  name="describeword2" class="page4 form-control">
+<input type="text" style="width:300px"  name="describeword2" id="describeword2" class="page4 form-control">
 </div>
 <div class="col-xs-3">
-<input type="text"  style="width:300px"  name="describeword3" class="page4 form-control">
+<input type="text" style="width:300px"  name="describeword3" id="describeword3" class="page4 form-control">
  </div>
  </div>
  
 <div class="col-xs-12">&nbsp;</div> 
+
 <div class="col-xs-12">
 <div class="col-xs-2">
 INTRO VIDEO&nbsp(ONE LINK ONLY)
@@ -707,35 +717,45 @@ INTRO VIDEO&nbsp(ONE LINK ONLY)
 
 <div class="col-xs-12">&nbsp;</div>
 
+<div class="col-xs-12">
+<div class="col-xs-2">
+PERSONAL WEBSITE&nbsp(ONE LINK ONLY)
+</div>
+<div class="col-xs-3">
+<input type="text" style="width:300px"  name="personalWebsite" id="personalWebsite" class="page4 form-control">
+</div>
+</div>
+
+<div class="col-xs-12">&nbsp;</div>
+
+<div class="col-xs-12">
+<div class="col-xs-2">
+SOCIAL MEDIA&nbsp(ONE LINK ONLY)
+</div>
+<div class="col-xs-3">
+<input type="text" style="width:300px"  name="socialMedia" id="socialMedia" class="page4 form-control">
+</div>
+</div>
+
+<div class="col-xs-12">&nbsp;</div>
+
+<div class="col-xs-12">
+<div class="col-xs-2">
+ACCOLADES
+</div>
+<div class="col-xs-3">
+<input type="text"  style="width:300px"  name="accolades" id="accolades" class="page4 form-control">
+</div>
+</div>
+
+<div class="col-xs-12">&nbsp;</div>
 
  <div class="col-xs-12">
  <div class="col-xs-2">
 CURRENT REPRESENTATION
 </div> 
 <div class="col-xs-3">
-<input type="text"  style="width:300px"  name="current_representation" class="page4 form-control">
-</div>
-</div>
-
-<div class="col-xs-12">&nbsp;</div>
-
-<div class="col-xs-12">
-<div class="col-xs-2">
-ACCOLADES 
-</div>
-<div class="col-xs-3">
-<input type="text"  style="width:300px"  name="accolades" class="page4 form-control">
-</div>
-</div>
-
-<div class="col-xs-12">&nbsp;</div>
-
-<div class="col-xs-12">
-<div class="col-xs-2">
-ACHIEVEMENTS 
-</div>
-<div class="col-xs-3">
-<input type="text"  style="width:300px"  name="achievements" class="page4 form-control">
+<textarea form="myform" name="current_representation" id="current_representation" class="page4 form-control"></textarea>
 </div>
 </div>
 
@@ -746,18 +766,7 @@ ACHIEVEMENTS
 EXPERIENCE 
 </div>
 <div class="col-xs-3">
-<input type="text"  style="width:300px"  name="experiences" class="page4 form-control">
-</div>
-</div>
-
-<div class="col-xs-12">&nbsp;</div>
-
-<div class="col-xs-12">
-<div class="col-xs-2">
-RELATED TALENT 
-</div>
-<div class="col-xs-3">
-<input type="text"  style="width:300px"  name="relative_talent" class="page4 form-control">
+<textarea form="myform" name="experience" id="experience" class="page4 form-control"></textarea>
 </div>
 </div>
 
@@ -767,7 +776,7 @@ RELATED TALENT
 ANYTHING ELSE 
 </div>
 <div class="col-xs-3">
-<input type="text"  style="width:300px"  name="anything" class="page4 form-control">
+<textarea form="myform" name="anything" id="anything" class="page4 form-control"></textarea>
 </div>
 </div>
 
@@ -780,6 +789,53 @@ ANYTHING ELSE
 <div class="col-xs-3">
 <input type="submit" value="SUBMIT" id="submit" formmethod="post" class="btn btn-danger" style="font-family:'Roboto', Helvetica, Arial, sans-serif"></input>
 <input type="button" value="REVIEW APPLICATION" id="review" style="font-family:'Roboto', Helvetica, Arial, sans-serif" class="btn btn-danger"></input>
+</div>
+</div>
+</div>
+
+
+<div class="reviewPage">
+<p class="col-xs-12"><big>Review Application</big></p>
+<table>
+<tr><td class="col-xs-11">FIRST NAME</td><td id="review_fname"></td></tr>
+<tr><td class="col-xs-11">LAST NAME</td><td id="review_lname"></td></tr>
+<tr><td class="col-xs-11">NICKNAME</td><td id="review_nname"></td></tr>
+<tr><td class="col-xs-11">PROFILE PHOTO</td><td id="review_photo"></td></tr>
+<tr><td class="col-xs-11">EMAIL</td><td id="review_email"></td></tr>
+<tr><td class="col-xs-11">STATE</td><td id="review_state"></td></tr>
+<tr><td class="col-xs-11">CITY</td><td id="review_city"></td></tr>
+<tr><td class="col-xs-11">ZIP CODE</td><td id="review_zip"></td></tr>
+<tr><td class="col-xs-11">GENDER</td><td id="review_gender"></td></tr>
+<tr><td class="col-xs-11">PHONE NUMBER</td><td id="review_phone"></td></tr>
+<tr><td class="col-xs-11">DATE OF BIRTH</td><td id="review_dob"></td></tr>
+<tr><td class="col-xs-11">SELF-INTRODUCTION</td><td id="review_self"></td></tr>
+<tr><td class="col-xs-11">TALENT CATEGORY_1</td><td id="review_category1"></td></tr>
+<tr><td class="col-xs-11">SPECIFIC TALENT_1</td><td id="review_talent1"></td></tr>
+<tr><td class="col-xs-11">PROFILE_1</td><td id="review_profile1"></td></tr>
+<tr><td class="col-xs-11">TALENT CATEGORY_2</td><td id="review_category2"></td></tr>
+<tr><td class="col-xs-11">SPECIFIC TALENT_2</td><td id="review_talent2"></td></tr>
+<tr><td class="col-xs-11">PROFILE_2</td><td id="review_profile2"></td></tr>
+<tr><td class="col-xs-11">TALENT CATEGORY_3</td><td id="review_category3"></td></tr>
+<tr><td class="col-xs-11">SPECIFIC TALENT_3</td><td id="review_talent3"></td></tr>
+<tr><td class="col-xs-11">PROFILE_3</td><td id="review_profile3"></td></tr>
+<tr><td class="col-xs-11">OPPORTUNITIES</td><td id="review_opportunities"></td></tr>
+<tr><td class="col-xs-11">REPRESENTATION</td><td id="review_representation"></td></tr>
+<tr><td class="col-xs-11">SERVICES</td><td id="review_services"></td></tr>
+<tr><td class="col-xs-11">DESCRIBE YOURSELF IN THREE WORDS</td><td id="review_describeword"></td></tr>
+<tr><td class="col-xs-11">INTRO VIDEO</td><td id="review_introVideo"></td></tr>
+<tr><td class="col-xs-11">PERSONAL WEBSITE</td><td id="review_personalWebsite"></td></tr>
+<tr><td class="col-xs-11">SOCIAL MEDIA</td><td id="review_socialMedia"></td></tr>
+<tr><td class="col-xs-11">ACCOLADES</td><td id="review_accolades"></td></tr>
+<tr><td class="col-xs-11">CURRENT REPRESENTATION</td><td id="review_current_representation"></td></tr>
+<tr><td class="col-xs-11">EXPERIENCE</td><td id="review_experience"></td></tr>
+<tr><td class="col-xs-11">ANYTHING ELSE</td><td id="review_anything"></td></tr>
+</table>
+<div class="col-xs-12">
+<div class="col-xs-2">
+<input type='button' value="PREVIOUS" id="reviewPrevious" class="btn btn-danger" style="font-family:'Roboto', Helvetica, Arial, sans-serif"></input>
+</div>
+<div class="col-xs-3">
+<input type="submit" value="SUBMIT" id="submit" formmethod="post" class="btn btn-danger" style="font-family:'Roboto', Helvetica, Arial, sans-serif"></input>
 </div>
 </div>
 </div>
@@ -847,6 +903,8 @@ ANYTHING ELSE
 		   document.getElementById('tphoto1_1').value='';
 		   document.getElementById('tphoto1_2').value='';
 		   document.getElementById('tphoto1_3').value='';
+		   document.getElementById('specific_talent1').value='';
+		   document.getElementById('category1').value='';
 	}
 	);
 	
@@ -914,6 +972,12 @@ ANYTHING ELSE
 		document.getElementById('img3_3').innerHTML="";
 		document.getElementById('audio3').innerHTML="";
 		document.getElementById('video3').innerHTML="";
+		document.getElementById('specific_talent1').value='';
+		document.getElementById('category1').value='';
+        document.getElementById('specific_talent2').value='';
+   	    document.getElementById('category2').value='';
+		document.getElementById('specific_talent3').value='';
+		document.getElementById('category3').value='';
 	});
 	$('#thirdNext').click(function(){
 		var message="You are missing the required";
@@ -1000,6 +1064,8 @@ ANYTHING ELSE
 		document.getElementById('tphoto2_1').value='';
 		document.getElementById('tphoto2_2').value='';
 		document.getElementById('tphoto2_3').value='';
+		document.getElementById('specific_talent2').value='';
+		document.getElementById('category2').value='';
 	});
 	
 	$('#addoneNext').click(function(){
@@ -1097,6 +1163,8 @@ ANYTHING ELSE
 		document.getElementById('tphoto3_1').value='';
 		document.getElementById('tphoto3_2').value='';
 		document.getElementById('tphoto3_3').value='';
+		document.getElementById('specific_talent3').value='';
+		document.getElementById('category3').value='';
 	});
 	
 	$('#addtwoNext').click(function(){
@@ -1167,6 +1235,68 @@ function addser(){
 		}
 }
 
+
+$('#review').click(function(){
+	$('.firstPage').hide();
+	$('.fourPage').hide();
+	$('.reviewPage').show();
+	document.getElementById('review_fname').innerHTML=document.getElementById('fname').value;
+	document.getElementById('review_lname').innerHTML=document.getElementById('lname').value;
+	document.getElementById('review_nname').innerHTML=document.getElementById('nname').value;
+	document.getElementById('review_photo').innerHTML=document.getElementById('personal_photo').value;
+	document.getElementById('review_email').innerHTML=document.getElementById('email').value;
+	document.getElementById('review_state').innerHTML=document.getElementById('state').value;
+	document.getElementById('review_city').innerHTML=document.getElementById('city').value;
+	document.getElementById('review_zip').innerHTML=document.getElementById('zip').value;
+	document.getElementById('review_gender').innerHTML=document.getElementById('gender').value;
+	document.getElementById('review_phone').innerHTML=document.getElementById('phone').value;
+	document.getElementById('review_dob').innerHTML=document.getElementById('dob').value;
+	document.getElementById('review_self').innerHTML=document.getElementById('self').value;
+	document.getElementById('review_category1').innerHTML=document.getElementById('category1').value;
+	
+	document.getElementById('review_talent1').innerHTML=document.getElementById('specific_talent1').value;
+	document.getElementById('review_profile1').innerHTML=document.getElementById('tphoto1_1').value+" "+document.getElementById('tphoto1_2').value+" "+document.getElementById('tphoto1_3').value+" "+document.getElementById('audiolink1').value+" "+document.getElementById('videolink1').value;
+	document.getElementById('review_category2').innerHTML=document.getElementById('category2').value;
+	document.getElementById('review_talent2').innerHTML=document.getElementById('specific_talent2').value;
+	document.getElementById('review_profile2').innerHTML=document.getElementById('tphoto2_1').value+" "+document.getElementById('tphoto2_2').value+" "+document.getElementById('tphoto2_3').value+" "+document.getElementById('audiolink2').value+" "+document.getElementById('videolink2').value;
+	document.getElementById('review_category3').innerHTML=document.getElementById('category3').value;
+	document.getElementById('review_talent3').innerHTML=document.getElementById('specific_talent3').value;
+	document.getElementById('review_profile3').innerHTML=document.getElementById('tphoto3_1').value+" "+document.getElementById('tphoto3_2').value+" "+document.getElementById('tphoto3_3').value+" "+document.getElementById('audiolink3').value+" "+document.getElementById('videolink3').value;
+	
+	 document.getElementById('review_representation').innerHTML="";
+	 document.getElementById('review_services').innerHTML="";
+	 document.getElementById('review_opportunities').innerHTML="";
+     $('input[name="opportunity[]"]:checked').each(function() {
+       $('#review_opportunities').append(' '+$(this).val());
+     });
+	 $('#review_opportunities').append(' ');
+	   $('#review_opportunities').append($('#oppo').val());
+	$('input[name="representation[]"]:checked').each(function() {
+       $('#review_representation').append(' '+$(this).val());
+     });
+	 $('#review_representation').append(' ');
+	   $('#review_representation').append($('#rep').val());
+	 $('input[name="service[]"]:checked').each(function() {
+       $('#review_services').append(' '+$(this).val());
+     });
+	 $('#review_services').append(' ');
+	   $('#review_services').append($('#ser').val());
+	
+	document.getElementById('review_describeword').innerHTML=document.getElementById('describeword1').value+" "+document.getElementById('describeword2').value+" "+document.getElementById('describeword3').value;
+	document.getElementById('review_introVideo').innerHTML=document.getElementById('introVideo').value;
+	document.getElementById('review_personalWebsite').innerHTML=document.getElementById('personalWebsite').value;
+	document.getElementById('review_socialMedia').innerHTML=document.getElementById('socialMedia').value;
+	document.getElementById('review_accolades').innerHTML=document.getElementById('accolades').value;
+	document.getElementById('review_current_representation').innerHTML=document.getElementById('current_representation').value;
+	document.getElementById('review_experience').innerHTML=document.getElementById('experience').value;
+	document.getElementById('review_anything').innerHTML=document.getElementById('anything').value;
+	
+});
+
+$('#reviewPrevious').click(function(){
+	$('.reviewPage').hide();
+	$('.fourPage').show();
+});
 </script>
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.min.js">

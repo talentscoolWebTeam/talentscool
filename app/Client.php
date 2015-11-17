@@ -16,6 +16,7 @@ class Client extends Model {
 							'gender',
 							'phone_number',
 							'dob',
+							'self_introduction',
 	];
 	protected $dates = ['dob'];
 	
