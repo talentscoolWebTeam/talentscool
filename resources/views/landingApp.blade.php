@@ -73,6 +73,7 @@
 								<li><a href="#aboutUs" class="scroll-link">About Us</a></li>
 								<li><a href="#service" class="scroll-link">Services</a></li>
 								<li><a href="#contact" class="scroll-link">Contact</a></li>
+                                <li><a href="#founders" class="scroll-link">Founders</a></li>
 								<li><a href="/application" class="scroll-link">Apply Now!</a></li>
 							</ul>
 						</div>
@@ -277,6 +278,41 @@
 						</div>
 					</div>
                     </section>
+                    
+     <section id="founders" data-section-name="Founders">
+			<div class="founder_wrapper" align="center">
+				<div class="container">
+					<h2 style="font-size:48px">Founder</h2>
+					<div class="member wow bounceInUp animated animated" style="visibility: visible; animation-name: bounceInUp; -webkit-animation-name: bounceInUp;">
+						<div class="tg-wrap"><table class="tg" style="undefined;table-layout: fixed; width: 100%">
+							<colgroup>
+							<col style="width: 50%">
+							<col style="width: 50%">
+							</colgroup>
+							  <tr>
+							    <th class="tg-2awo">Michael B. Pratt<br>President and Founder</th>
+							    <th class="tg-2awo">Steve Smith<br>Vice President and Co-Founder</th>
+							  </tr>
+							  <tr>
+							    <td class="tg-zlxb"><img src="/images/Mike.png" style="max-height: 30vh; max-width: 30vh; padding: 1vh;"></td>
+							    <td class="tg-zlxb"><img src="/images/Steve.jpg" style="max-height: 30vh; max-width: 30vh; padding: 1vh;"></td>
+							  </tr>
+							  <tr>
+							    <th class="tg-2awo">Michael is an entrepreneur, musician (6 instruments), songwriting for major labels/artists, and film score composer for feature films/TV shows. The combination of his extensive entrepreneurial experience and love for the arts led his to launch a company by artists, for artists. He also has an extensive network within the entertainment industry that allows him to service his clientele globally. As an honor roll student at the University of Southern California, where majored in Business Entrepreneurship and minored in Music.</th>
+							    <th class="tg-2awo">Steve is a retired NFL Pro-Bowl wide receiver and Super Bowl Champion. He set a franchise record for the New York Giants football organization for most receptions in a single season. He has a wide range of connections in sports and entertainment along with a hard-working attribute and a persistence to better the company. Steve’s accomplishments give him a strong desire to excel in anything he puts his mind to.</th>
+							  </tr>
+							</table>
+							<div><br/><br/></div>
+							<a href="/application" class="read_more2">Apply now!</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+        <br>
+        <br>
+        
+        
                     
     <section  id="follow" data-section-name="Follow us">
 			<div class="folow_wrapper" align="center">
