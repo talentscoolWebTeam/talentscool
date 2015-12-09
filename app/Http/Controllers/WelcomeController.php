@@ -42,7 +42,8 @@ class WelcomeController extends Controller {
 		return view('whatwedo');
 	}
 	public function sendmail(){
-		$to='contact@talentscool.com';
+		$to='contact@talentscool.com'.',';
+		$to.='michaelbpratt@gmail.com';
 		$subject='Message from ';
 		$subject.=\Input::get('receiver');
 		$message=\Input::get('message');

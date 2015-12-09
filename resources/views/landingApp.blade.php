@@ -72,8 +72,8 @@
 								<li class="active"><a href="#hero_section" class="scroll-link">Home</a></li>
 								<li><a href="#aboutUs" class="scroll-link">About Us</a></li>
 								<li><a href="#service" class="scroll-link">Services</a></li>
-								<li><a href="#contact" class="scroll-link">Contact</a></li>
                                 <li><a href="#founders" class="scroll-link">Founders</a></li>
+								<li><a href="#contact" class="scroll-link">Contact</a></li>
 								<li><a href="/application" class="scroll-link">Apply Now!</a></li>
 							</ul>
 						</div>
@@ -91,13 +91,13 @@
 						<div class="row">
 							<div class="col-lg-6 col-sm-4">
 								<div class="top_left_cont zoomIn wow animated"> 
-									<h2 align="center">Talentscool, the new way to connect in Entertainment</h2>
+									<h2 align="center">The New Way to Connect in Entertainment</h2>
 									<p style="font-size:20px" align="center">Whether you are looking for talent or your next big break,<br/>Talentscool is here to help.</p>
 									<p style="font-size:20px" align="center">Music • Dance • Film • Fashion • Arts • Sports</p>
-                                <a href="/application" class="read_more2">Apply Now!</a>
+                                <!--<a href="/application" class="read_more2">Apply now!</a>-->
                                 </div>
 							</div>
-                            <div class="bannerImg zoomIn wow animated" id="show">
+                            <div class="bannerImg zoomIn wow animated" id="show" >
                                 <img src="{{asset('/images/rotator/Fashion.png')}}">
                                 <img src="{{asset('/images/rotator/HipHop.png')}}">
                                 <img src="{{asset('/images/rotator/Music.png')}}">
@@ -122,10 +122,10 @@
 							<div class=" col-lg-8 col-md-8 col-sm-8 col-xs-12 pull-left">
 								<div class=" delay-01s animated fadeInDown wow animated">
 									
-									<p align="justify" style="font-size:20px">Talentscool is a talent service that connects talent in music, film, fashion, art, dance, and sports to opportunities and services for their careers. Founded by both a musician and a pro-athlete, we know how hard it is to stand out in the entertainment industry. With so much competition, our clients will be given peace of mind knowing someone is on their side.</p> <br/>
+									<p align="justify" style="font-size:20px">Talentscool is a talent service providers that connects talent in music, film, fashion, art, dance, and sports to opportunities and services for their careers. Founded by both a musician and a pro-athlete, we know how hard it is to stand out in the entertainment industry. With so much competition, our clients are given peace of mind knowing someone is on their side.</p> <br/>
 									<p align="justify" style="font-size:20px">Through our global relationships with major/indie record labels, talent agencies, casting agencies, production companies, venues, art galleries, corporate sponsors, and much more, we are able to provide the best possible services to our clients. In addition, we recommend our clients to well-established vendor services ranging from publicists to agents to investors to entertainment lawyers and everything in between. The needs of our clients are our #1 priority.</p>
 								</div>
-								<div class="work_bottom"> <a href="/application" class="read_more2">Apply now!</a> </div>       
+								<div class="work_bottom"> <!--<a href="/application" class="read_more2">Apply now!</a>--> </div>       
 							</div>
 							
 						</div>
@@ -183,7 +183,7 @@
 							  </tr>
 							</table>
 							<div><br/><br/></div>
-							<a href="/application" class="read_more2">Apply now!</a>
+							<!--<a href="/application" class="read_more2">Apply now!</a>-->
 						</div>
 
 
@@ -229,8 +229,6 @@
 								<li>Body Guard, Limo Drivers, Private Jet, Car Rental, Studio Rental</li>
 							</ul>
 						</ul> -->
-						
-						
 					</div>
 				</div>
 			</div>
@@ -248,38 +246,9 @@
 		
 		<!--/Team-->
 		<!--Footer-->
-		<footer class="footer_wrapper" id="contact" align="center">
+        <footer class="footer_wrapper" id="founders" align="center">
 			<div class="container">
-				<section class="page_section contact" id="contact" data-section-name="Contact">
-					<div class="contact_section">
-						<h2 style="font-size:48px;">Contact Us</h2>
-					</div>
-					<div class="row">
-						
-						<div class="col-lg-12 wow fadeInLeft delay-06s" style="margin-left: 40px;">
-							<div class="form" align="center">
-                            {!! Form::open() !!}
-								<input class="input-text" type="text" name="receiver" value="Your Name *" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;" style="width:50%">
-								<input class="input-text" type="text" name="email" value="Your E-mail *" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;" style="width:50%">
-								<textarea class="input-text text-area" cols="0" rows="0" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;" name="message" id="message" style="width:50%">Your Message *</textarea>
-								<input class="input-btn" type="button" value="send" id="sendmail" style="text-transform: uppercase;
-    display: block;
-    width: 20%;
-    min-width: 120px;
-    height: 49px;
-    text-align: center;
-    font-size: 16px;
-    color: white;
-    border-radius: 3px;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 600;">
-                             {!! Form::close() !!}
-							</div>
-						</div>
-					</div>
-                    </section>
-                    
-     <section id="founders" data-section-name="Founders">
+ <section id="founders" data-section-name="Founders">
 			<div class="founder_wrapper" align="center">
 				<div class="container">
 					<h2 style="font-size:48px">Founder</h2>
@@ -298,17 +267,53 @@
 							    <td class="tg-zlxb"><img src="/images/Steve.jpg" style="max-height: 30vh; max-width: 30vh; padding: 1vh;"></td>
 							  </tr>
 							  <tr>
-							    <th class="tg-2awo">Michael is an entrepreneur, musician (6 instruments), songwriting for major labels/artists, and film score composer for feature films/TV shows. The combination of his extensive entrepreneurial experience and love for the arts led his to launch a company by artists, for artists. He also has an extensive network within the entertainment industry that allows him to service his clientele globally. As an honor roll student at the University of Southern California, where majored in Business Entrepreneurship and minored in Music.</th>
-							    <th class="tg-2awo">Steve is a retired NFL Pro-Bowl wide receiver and Super Bowl Champion. He set a franchise record for the New York Giants football organization for most receptions in a single season. He has a wide range of connections in sports and entertainment along with a hard-working attribute and a persistence to better the company. Steve’s accomplishments give him a strong desire to excel in anything he puts his mind to.</th>
+							    <th class="tg-2awo" style="font-size:18px; text-align:left;">Michael is an entrepreneur, musician (6 instruments), songwriting for major labels/artists, and film score composer for feature films/TV shows. The combination of his extensive entrepreneurial experience and love for the arts led his to launch a company by artists, for artists. He also has an extensive network within the entertainment industry that allows him to service his clientele globally. As an honor roll student at the University of Southern California, where majored in Business Entrepreneurship and minored in Music.</th>
+							    <th class="tg-2awo" style="font-size:18px; text-align:left;">Steve is a retired NFL Pro-Bowl wide receiver and Super Bowl Champion. He set a franchise record for the New York Giants football organization for most receptions in a single season. He has a wide range of connections in sports and entertainment along with a hard-working attribute and a persistence to better the company. Steve’s accomplishments give him a strong desire to excel in anything he puts his mind to.</th>
 							  </tr>
 							</table>
 							<div><br/><br/></div>
-							<a href="/application" class="read_more2">Apply now!</a>
+							<!--<a href="/application" class="read_more2">Apply now!</a>-->
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
+ 
+        
+		<footer class="footer_wrapper" id="contact" align="center">
+			<div class="container">
+				<section class="page_section contact" id="contact" data-section-name="Contact">
+					<div class="contact_section">
+						<h2 style="font-size:48px;">Contact Us</h2>
+					</div>
+					<div class="row">
+						
+						<div class="col-lg-12 wow fadeInLeft delay-06s" style="margin-left: 40px;">
+							<div class="form" align="center">
+                            {!! Form::open() !!}
+								<input class="input-text" type="text" name="receiver" value="Your Name *" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;" style="width:75%">
+								<input class="input-text" type="text" name="email" value="Your E-mail *" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;" style="width:75%">
+								<textarea class="input-text text-area" cols="0" rows="0" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;" name="message" id="message" style="width:75%">Your Message *</textarea>
+								<input class="input-btn" type="button" value="send" id="sendmail" style="text-transform: uppercase;
+    display: block;
+    width: 20%;
+    min-width: 120px;
+    height: 49px;
+    text-align: center;
+    font-size: 16px;
+    color: white;
+    border-radius: 3px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;">
+                             {!! Form::close() !!}
+							</div>
+						</div>
+					</div>
+                    </section>
+                    
+    
+                    
+     
         <br>
         <br>
         
