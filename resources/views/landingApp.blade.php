@@ -91,9 +91,9 @@
 						<div class="row">
 							<div class="col-lg-6 col-sm-4">
 								<div class="top_left_cont zoomIn wow animated"> 
-									<h2 align="center">The New Way to Connect in Entertainment</h2>
-									<p style="font-size:20px" align="center">Whether you are looking for talent or your next big break,<br/>Talentscool is here to help.</p>
-									<p style="font-size:20px" align="center">Music • Dance • Film • Fashion • Arts • Sports</p>
+									<h2 align="left">The New Way to Connect in Entertainment</h2>
+									<p style="font-size:20px" align="left">Whether you are looking for talent or your next big break,<br/>Talentscool is here to help.</p>
+									<p style="font-size:20px" align="left">Music • Dance • Film • Fashion • Arts • Sports</p>
                                 <!--<a href="/application" class="read_more2">Apply now!</a>-->
                                 </div>
 							</div>
@@ -147,88 +147,41 @@
 						<div style="text-align: center; margin-left: auto; margin-right: auto;">We will help you find:</div>
 						<div class="tg-wrap"><table class="tg" style="undefined;table-layout: fixed; width: 100%">
 							<colgroup>
-							<col style="width: 33%">
-							<col style="width: 33%">
-							<col style="width: 33%">
+							<col style="width: 35%">
+							<col style="width: 65%">
 							</colgroup>
 							  <tr>
-							    <th class="tg-2awo">GENERAL</th>
-							    <th class="tg-2awo">OPPORTUNITIES</th>
-							    <th class="tg-2awo">REPRESENTATION</th>
+							    <th class="tg-2awo" id="general">GENERAL</th>
+                                <td class="tg-zlxb" id="general_content" style="display:none">Opportunities, Representation, Branding, Talent Development, Collaboration, Social Media Management</td>
 							  </tr>
 							  <tr>
-							    <td class="tg-zlxb">Opportunities, Representation, Branding, Talent Development, Collaboration, Social Media Management</td>
-							    <td class="tg-zlxb">Bookings, Endorsements, Auditions, Internships, Showcases, Appearances</td>
-							    <td class="tg-zlxb">Manager/Agent, Talent Agency, Publicist, Booking Agent</td>
+							    <th class="tg-2awo" id="opportunities">OPPORTUNITIES</th>
+							    <td class="tg-zlxb" id="opportunities_content" style="display:none">Bookings, Endorsements, Auditions, Internships, Showcases, Appearances</td>
+                               </tr>
+                               <tr>
+                                <th class="tg-2awo" id="representation">REPRESENTATION</th>
+							    <td class="tg-zlxb" id="representation_content" style="display:none">Manager/Agent, Talent Agency, Publicist, Booking Agent</td>
 							  </tr>
 							  <tr>
-							    <th class="tg-2awo">OUTSIDE SERVICES</th>
-							    <th class="tg-2awo">TALENT DEVELOPMENT</th>
-							    <th class="tg-2awo">VANITY SERVICES</th>
+							    <th class="tg-2awo" id="outside">OUTSIDE SERVICES</th>
+                                <td class="tg-zlxb" id="outside_content" style="display:none">Musician, Vocalist, Dancer, Lawyer, Accountant, Personal Assistant, Video/Film Production, Event Planner, Graphic Designer, Audio Engineer</td>
 							  </tr>
 							  <tr>
-							    <td class="tg-zlxb">Musician, Vocalist, Dancer, Lawyer, Accountant, Personal Assistant, Video/Film Production, Event Planner, Graphic Designer, Audio Engineer</td>
-							    <td class="tg-zlxb">Vocal Coach, Acting Coach, Athletic Trainer, Dance Instructor, Instrument Teacher</td>
-							    <td class="tg-zlxb">Clothing Stylist, Hair Stylist, Make-Up Artists, Clothing Designer, Photographer, Videographer, Model</td>
+							    <th class="tg-2awo" id="talent">TALENT DEVELOPMENT</th>
+							    <td class="tg-zlxb" id="talent_content" style="display:none">Vocal Coach, Acting Coach, Athletic Trainer, Dance Instructor, Instrument Teacher</td>
+                                </tr>
+                                <tr>
+                                <th class="tg-2awo" id="vanity">VANITY SERVICES</th>
+							    <td class="tg-zlxb" id="vanity_content" style="display:none">Clothing Stylist, Hair Stylist, Make-Up Artists, Clothing Designer, Photographer, Videographer, Model</td>
 							  </tr>
 							  <tr>
-							    <th class="tg-zlxb"></th>
-							    <th class="tg-2awo">LUXURY SERVICES</th>
-							    <th class="tg-zlxb"></th>
-							  </tr>
-							  <tr>
-							    <td class="tg-zlxb"></td>
-							    <td class="tg-zlxb">Body Guard, Limo Drivers, Private Jet, Car Rental, Studio Rental</td>
-							    <td class="tg-zlxb"></td>
+							    <th class="tg-2awo" id="luxury">LUXURY SERVICES</th>
+							    <td class="tg-zlxb" id="luxury_content" style="display:none">Body Guard, Limo Drivers, Private Jet, Car Rental, Studio Rental</td>
 							  </tr>
 							</table>
 							<div><br/><br/></div>
 							<!--<a href="/application" class="read_more2">Apply now!</a>-->
 						</div>
-
-
-						<!-- <ul>
-							<li class="listHeader">General</li>
-							<ul>
-								<li>Opportunities, Representation, Branding, Talent Development, Collaboration, Social Media Management</li>
-							</ul>
-						</ul>
-						<ul>
-							<li class="listHeader">Opportunities</li>
-							<ul>
-								<li>Bookings, Endorsements, Auditions, Internships, Showcases, Appearances</li>
-							</ul>
-						</ul>
-						<ul>
-							<li class="listHeader">Representation</li>
-							<ul>
-								<li>Manager/Agent, Talent Agency, Publicist, Booking Agent</li>
-							</ul>
-						</ul>
-						<ul>
-							<li class="listHeader">Outside Services</li>
-							<ul>
-								<li>Musician, Vocalist, Dancer, Consultant, Lawyer, Accountant, Personal Assistant, Fitness Trainer, Video/Film Production, Event Planner, Graphic Designer, Audio Engineer</li>
-							</ul>
-						</ul>
-						<ul>
-							<li class="listHeader">Talent Development</li>
-							<ul>
-								<li>Vocal Coach, Acting Coach, Athletic Trainer, Dance Instructor, Instrument Teacher</li>
-							</ul>
-						</ul>
-						<ul>
-							<li class="listHeader">Vanity Services</li>
-							<ul>
-								<li>Clothing Stylist, Hair Stylist, Make-Up Artists, Clothing Designer, Photographer, Videographer, Model</li>
-							</ul>
-						</ul>
-						<ul>
-							<li class="listHeader">Luxury Services</li>
-							<ul>
-								<li>Body Guard, Limo Drivers, Private Jet, Car Rental, Studio Rental</li>
-							</ul>
-						</ul> -->
 					</div>
 				</div>
 			</div>
@@ -248,10 +201,10 @@
 		<!--Footer-->
         <footer class="footer_wrapper" id="founders" align="center">
 			<div class="container">
- <section id="founders" data-section-name="Founders">
-			<div class="founder_wrapper" align="center">
+				<section  id="founders" data-section-name="Founders">
+			<div class="founders_wrapper" align="center">
 				<div class="container">
-					<h2 style="font-size:48px">Founder</h2>
+					<h2 style="font-size:48px">Founders</h2>
 					<div class="member wow bounceInUp animated animated" style="visibility: visible; animation-name: bounceInUp; -webkit-animation-name: bounceInUp;">
 						<div class="tg-wrap"><table class="tg" style="undefined;table-layout: fixed; width: 100%">
 							<colgroup>
@@ -422,6 +375,64 @@
             }}); 
         
         </script>
+        
+        <script>
+		$('#general').hover(function(){
+			$('#general_content').show();
+			$(this).css("color", "red");
+		}, function(){
+			$('#general_content').hide();
+			$(this).css("color", "white");
+		});
+		
+		$('#opportunities').hover(function(){
+			$('#opportunities_content').show();
+			$(this).css("color", "red");
+		}, function(){
+			$('#opportunities_content').hide();
+			$(this).css("color", "white");
+		});
+		
+		$('#representation').hover(function(){
+			$('#representation_content').show();
+			$(this).css("color", "red");
+		}, function(){
+			$('#representation_content').hide();
+			$(this).css("color", "white");
+		});
+		
+		$('#outside').hover(function(){
+			$('#outside_content').show();
+			$(this).css("color", "red");
+		}, function(){
+			$('#outside_content').hide();
+			$(this).css("color", "white");
+		});
+		
+		$('#talent').hover(function(){
+			$('#talent_content').show();
+			$(this).css("color", "red");
+		}, function(){
+			$('#talent_content').hide();
+			$(this).css("color", "white");
+		});
+		
+		$('#vanity').hover(function(){
+			$('#vanity_content').show();
+			$(this).css("color", "red");
+		}, function(){
+			$('#vanity_content').hide();
+			$(this).css("color", "white");
+		});
+		
+		$('#luxury').hover(function(){
+			$('#luxury_content').show();
+			$(this).css("color", "red");
+		}, function(){
+			$('#luxury_content').hide();
+			$(this).css("color", "white");
+		});
+		</script>
 		
 	</body>
 </html>
