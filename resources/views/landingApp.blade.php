@@ -358,23 +358,6 @@
 });
         </script>
             
-        <script>
-            $(function(){
-            if (/Android|BlackBerry|iPhone|iPad|iPod|webOS/i.test(navigator.userAgent) === false) {
-
-                $.scrollify({ 
-                section : "section", 
-                sectionName : "section-name", 
-                easing: "easeOutExpo", 
-                scrollSpeed: 1500, 
-                offset : 0, 
-                scrollbars: true, 
-                before:function() {}, 
-                after:function() {} 
-                });     
-            }}); 
-        
-        </script>
         
         <script>
 		$('#general').hover(function(){
