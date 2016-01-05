@@ -29,6 +29,9 @@ class WelcomeController extends Controller {
 	 *
 	 * @return Response
 	 */
+	public function landing(){
+		return view('home');
+	}
 	public function index()
 	{
 		return view('landingApp');
