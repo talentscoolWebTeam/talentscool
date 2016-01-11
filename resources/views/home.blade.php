@@ -90,7 +90,7 @@ e}b.call(this);d&&a.setAttribute("alt",c)};this.bootstrap=function(){var a=docum
       <div class="sqs-slice" data-slice-area-id="landing-full-center-01-3" data-slice-type="heading" data-slice-id="55a5dc76e4b060dd614d6c48"><h1>Connecting Talent in Entertainment</h1></div>
       <div class="sqs-slice" data-slice-area-id="landing-full-center-01-4" data-slice-type="body" data-slice-id="55a5dc76e4b08c17072ea6b2"><p>Music • Film • Fashion • Art • Dance</p></div>
       <div class="responsive-wrapper actions">
-        <div class="sqs-slice" data-slice-area-id="landing-full-center-01-5" data-slice-type="custom-form" data-content-empty="true"></div><div class="sqs-slice" data-slice-area-id="landing-full-center-01-5" data-slice-type="buttons" data-compound-type="action" data-slice-id="55a5de3fe4b0b9904ed02ed0"><ul><li><a href="/" >ENTER</a></li></ul></div>
+        <div class="sqs-slice" data-slice-area-id="landing-full-center-01-5" data-slice-type="custom-form" data-content-empty="true"></div><div class="sqs-slice" data-slice-area-id="landing-full-center-01-5" data-slice-type="buttons" data-compound-type="action" data-slice-id="55a5de3fe4b0b9904ed02ed0"><ul><li><a href="/homepage" >ENTER</a></li></ul></div>
       </div>
     </div>
 
