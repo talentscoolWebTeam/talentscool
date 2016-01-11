@@ -1,6 +1,5 @@
 <!doctype html>
-<html lang="en">
-	<head>
+<html lang="en"><head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, maximum-scale=1">
@@ -30,8 +29,9 @@
 		<style>
             .hidden{
                 display:hidden;
-            }
-        </style>
+              }
+			
+      </style>
 	</head>
 	<body>
 <!--
@@ -59,6 +59,7 @@
         </script>
 -->
 		<!--Header_section-->
+        <section class="hero" id="hero">
 		<header id="header_wrapper">
 			<div class="container">
 				<div class="header_box">
@@ -74,7 +75,7 @@
 								<li><a href="#service" class="scroll-link">Services</a></li>
                                 <li><a href="#founders" class="scroll-link">Founders</a></li>
 								<li><a href="#contact" class="scroll-link">Contact</a></li>
-								<li><a href="/application" class="scroll-link">Apply Now!</a></li>
+								<li><a href="/application" class="scroll-link" style="border:solid">Apply Now</a></li>
 							</ul>
 						</div>
 					</nav>
@@ -92,7 +93,7 @@
 							<div class="col-lg-6 col-sm-4">
 								<div class="top_left_cont zoomIn wow animated"> 
 									<h2 align="left">The New Way to Connect in Entertainment</h2>
-									<p style="font-size:20px" align="left">Whether you are looking for talent or your next big break,<br/>Talentscool is here to help.</p>
+									<h2 align="left">Talentscool can help you find talent, opportunities, and services.</h2>
 									<p style="font-size:20px" align="left">Music • Dance • Film • Fashion • Arts • Sports</p>
                                 <!--<a href="/application" class="read_more2">Apply now!</a>-->
                                 </div>
@@ -101,13 +102,13 @@
                                 <img src="{{asset('/images/rotator/Fashion.png')}}">
                                 <img src="{{asset('/images/rotator/HipHop.png')}}">
                                 <img src="{{asset('/images/rotator/Music.png')}}">
-                                <img src="{{asset('/images/rotator/Sports.png')}}">
                             </div>
 							</div>
 							</div>
 						</div>
 					</div>
 		</section>
+        </section>
 		<!--Hero_Section--> 
 		
 		<!--Aboutus-->
@@ -116,14 +117,22 @@
 			<div class="inner_wrapper" align="center">
 				<div class="container">
 					<h2 id="auhead" style="font-size:48px">About Us</h2>
-					<div class="inner_section">
+                    <table class="tg" style="undefined;table-layout: fixed; width: 100%">
+							<colgroup>
+							<col style="width: 10%">
+							<col style="width: 95%">
+                            <col style="width: 10%">
+							</colgroup>
+                     <tr>
+                     <td><img src="images/Connect.jpg" style="max-height: 30vh; max-width: 30vh; padding: 1vh;"></td>
+                     <td><div class="inner_section">
 						<div class="row">
 							<div class=" col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-right"></div>
 							<div class=" col-lg-8 col-md-8 col-sm-8 col-xs-12 pull-left">
 								<div class=" delay-01s animated fadeInDown wow animated">
-									
-									<p align="justify" style="font-size:20px">Talentscool is a talent service providers that connects talent in music, film, fashion, art, dance, and sports to opportunities and services for their careers. Founded by both a musician and a pro-athlete, we know how hard it is to stand out in the entertainment industry. With so much competition, our clients are given peace of mind knowing someone is on their side.</p> <br/>
-									<p align="justify" style="font-size:20px">Through our global relationships with major/indie record labels, talent agencies, casting agencies, production companies, venues, art galleries, corporate sponsors, and much more, we are able to provide the best possible services to our clients. In addition, we recommend our clients to well-established vendor services ranging from publicists to agents to investors to entertainment lawyers and everything in between. The needs of our clients are our #1 priority.</p>
+                               <p align="justify" style="font-size:25px">Talentscool is a talent service that connects creative talent to opportunities and service providers. Founded by a musician and a pro-athlete, we understand how hard it is to stand out in the entertainment industry. With so much competition, our clients are given peace of mind knowing they have someone on their side.</p> <br/>
+									<p align="justify" style="font-size:25px">Through our global relationships with major/indie record labels, talent agencies, casting agencies, production companies, venues, art galleries, corporate sponsors, and much more, we are able to provide the best possible services to our clients. In addition, we recommend our clients to best service providers to fit their individual needs.</p><br>
+                                    <p><center style="font-size:30px">The needs of our clients are our #1 priority</center></p>
 								</div>
 								<div class="work_bottom"> <!--<a href="/application" class="read_more2">Apply now!</a>--> </div>       
 							</div>
@@ -131,7 +140,11 @@
 						</div>
 						
 						
-					</div>
+					</div></td>
+                     <td><img src="images/Globe.jpg" style="max-height: 30vh; max-width: 30vh; padding: 1vh;"></td>
+                     </tr>
+					
+                    </table>
 				</div> 
 			</div>
 		</section>
@@ -140,48 +153,43 @@
 		
 		<!--Service-->
 		<section  id="service" data-section-name="Services">
-			<div class="service_wrapper" align="center">
+			<div class="service_wrapper" >
 				<div class="container">
-					<h2 style="font-size:48px">Services</h2>
+					<h2>Services</h2>
 					<div class="member wow bounceInUp animated animated" style="visibility: visible; animation-name: bounceInUp; -webkit-animation-name: bounceInUp;">
-						<div style="text-align: center; margin-left: auto; margin-right: auto;">We will help you find:</div>
 						<div class="tg-wrap"><table class="tg" style="undefined;table-layout: fixed; width: 100%">
 							<colgroup>
-							<col style="width: 35%">
-							<col style="width: 65%">
+							<col style="width: 33%">
+							<col style="width: 33%">
+							<col style="width: 33%">
 							</colgroup>
 							  <tr>
-							    <th class="tg-2awo" id="general">GENERAL</th>
-                                <td class="tg-zlxb" id="general_content" style="display:none">Opportunities, Representation, Branding, Talent Development, Collaboration, Social Media Management</td>
+							    <th class="tg-2awo">Opportunities<br><img src="images/Opportunities.jpeg" style="max-height: 15vh; max-width: 20vh; padding:0vh;"></th>
+							    <th class="tg-2awo">Representation<br><img src="images/Representation.jpg" style="max-height: 15vh; max-width: 20vh; padding:0vh;"></th>
+							    <th class="tg-2awo">Talent Development<br><img src="images/Talent Development.jpg" style="max-height: 15vh; max-width: 20vh; padding:0vh;"></th>
 							  </tr>
 							  <tr>
-							    <th class="tg-2awo" id="opportunities">OPPORTUNITIES</th>
-							    <td class="tg-zlxb" id="opportunities_content" style="display:none">Bookings, Endorsements, Auditions, Internships, Showcases, Appearances</td>
-                               </tr>
-                               <tr>
-                                <th class="tg-2awo" id="representation">REPRESENTATION</th>
-							    <td class="tg-zlxb" id="representation_content" style="display:none">Manager/Agent, Talent Agency, Publicist, Booking Agent</td>
+							    <td class="tg-zlxb">Bookings, Endorsements, Auditions, Showcases, Appearances, Collaborations, Jobs, Internships</td>
+							    <td class="tg-zlxb">Manager, Agent, Record Deal, Booking Agent, Publicist, Talent Agent, Brand Manager</td>
+							    <td class="tg-zlxb">Vocal Coach, Acting Coach, Instrument Teacher, Dance Instructor, Art Instructor, School Placement </td>
 							  </tr>
 							  <tr>
-							    <th class="tg-2awo" id="outside">OUTSIDE SERVICES</th>
-                                <td class="tg-zlxb" id="outside_content" style="display:none">Musician, Vocalist, Dancer, Lawyer, Accountant, Personal Assistant, Video/Film Production, Event Planner, Graphic Designer, Audio Engineer</td>
+							    <th class="tg-2awo">General Services<br><img src="images/General Services.png" style="max-height: 15vh; max-width: 20vh; padding:0vh;"></th>
+							    <th class="tg-2awo">Vanity Services<br><img src="images/Vanity Services.png" style="max-height: 15vh; max-width: 20vh; padding:0vh;"></th>
+							    <th class="tg-2awo">Luxury Services<br><img src="images/Luxury Service.jpg" style="max-height: 15vh; max-width: 20vh; padding:0vh;"></th>
 							  </tr>
 							  <tr>
-							    <th class="tg-2awo" id="talent">TALENT DEVELOPMENT</th>
-							    <td class="tg-zlxb" id="talent_content" style="display:none">Vocal Coach, Acting Coach, Athletic Trainer, Dance Instructor, Instrument Teacher</td>
-                                </tr>
-                                <tr>
-                                <th class="tg-2awo" id="vanity">VANITY SERVICES</th>
-							    <td class="tg-zlxb" id="vanity_content" style="display:none">Clothing Stylist, Hair Stylist, Make-Up Artists, Clothing Designer, Photographer, Videographer, Model</td>
-							  </tr>
-							  <tr>
-							    <th class="tg-2awo" id="luxury">LUXURY SERVICES</th>
-							    <td class="tg-zlxb" id="luxury_content" style="display:none">Body Guard, Limo Drivers, Private Jet, Car Rental, Studio Rental</td>
+							    <td class="tg-zlxb">Musician, Vocalist, Dancer, Lawyer, Accountant, Investor, Personal Assistant, Web Designer, Engineer, Fitness Trainer, Camera Crew</td>
+							    <td class="tg-zlxb">Clothing Stylist, Hair Stylist, Barber, Makeup Artist, Model, Photographer, Videographer, Clothing Designer</td>
+							    <td class="tg-zlxb">Bodyguard, Limo Driver, Private Jet Rental, Studio Rental, Helicopter Rental, Car Rental</td>
 							  </tr>
 							</table>
-							<div><br/><br/></div>
-							<!--<a href="/application" class="read_more2">Apply now!</a>-->
+                            <p><center style="font-size:30px">In addition, we help find talent for talent buyers</center></p>
 						</div>
+
+
+		
+						
 					</div>
 				</div>
 			</div>
@@ -212,16 +220,12 @@
 							<col style="width: 50%">
 							</colgroup>
 							  <tr>
-							    <th class="tg-2awo">Michael B. Pratt<br>President and Founder</th>
-							    <th class="tg-2awo">Steve Smith<br>Vice President and Co-Founder</th>
+							    <th class="tg-2awo" style="font-size:30px">Michael B. Pratt<br>President and Founder<br><img src="/images/Mike.png" style="max-height: 20vh; max-width: 20vh; padding:0vh;"></th>
+							    <th class="tg-2awo" style="font-size:30px">Steve Smith<br>Vice President and Co-Founder<br><img src="/images/Steve.jpg" style="max-height: 20vh; max-width: 20vh; padding:0vh;"></th>
 							  </tr>
 							  <tr>
-							    <td class="tg-zlxb"><img src="/images/Mike.png" style="max-height: 30vh; max-width: 30vh; padding: 1vh;"></td>
-							    <td class="tg-zlxb"><img src="/images/Steve.jpg" style="max-height: 30vh; max-width: 30vh; padding: 1vh;"></td>
-							  </tr>
-							  <tr>
-							    <th class="tg-2awo" style="font-size:18px; text-align:left;">Michael is an entrepreneur, musician (6 instruments), songwriting for major labels/artists, and film score composer for feature films/TV shows. The combination of his extensive entrepreneurial experience and love for the arts led his to launch a company by artists, for artists. He also has an extensive network within the entertainment industry that allows him to service his clientele globally. As an honor roll student at the University of Southern California, where majored in Business Entrepreneurship and minored in Music.</th>
-							    <th class="tg-2awo" style="font-size:18px; text-align:left;">Steve is a retired NFL Pro-Bowl wide receiver and Super Bowl Champion. He set a franchise record for the New York Giants football organization for most receptions in a single season. He has a wide range of connections in sports and entertainment along with a hard-working attribute and a persistence to better the company. Steve’s accomplishments give him a strong desire to excel in anything he puts his mind to.</th>
+							    <td style="font-size:18px; font-weight:bold; text-align:justify"><br>Michael is an entrepreneur, multi-instrumentalist, songwriter for major labels/artists, and film score composer for feature films/television. The combination of his extensive entrepreneurial experience and love for the arts led him to launch Talentscool. He also has an extensive network within the entertainment industry that allows him to service his clientele globally. He is an honor roll student at the University of Southern California studying Entrepreneurship and Music.</td>
+							    <td style="font-size:18px; font-weight:bold; text-align:justify">Steve is a retired NFL Pro-Bowl wide receiver and Super Bowl champion. He set a franchise record for the New York Giants football organization for most receptions in a single season. He has a wide range of connections in the entertainment industry along with a hard-working attribute and a persistence to better the company. His accomplishments give him a strong desire to excel in anything he puts his mind to.</td>
 							  </tr>
 							</table>
 							<div><br/><br/></div>
@@ -283,7 +287,7 @@
 						<a href="http://www.instagram.com/talentscool" target="_blank">
 						<img src="http://talentscool.com/images/social_media/instagram_logo.png" style="max-height: 6vh; max-width: 6vh; padding: 1vh"></a>
 						<br/>
-                        <h2 style="font-size:16px">Copyright &copy; 2015 Talentscool, Inc.</h2>
+                        <h2 style="font-size:16px">Copyright © 2016. Talentscool, Inc. All rights reserved. </h2>
                      </div>
                </div>
     </section>
@@ -349,7 +353,7 @@
     });
     $(aImg[nTime]).removeClass('hidden');//拿掉display=hidden
     $(aImg[nTime]).fadeIn('50000');//淡入，可选项，如果删除的话fadeOut也要一并删除
-    (nTime == 3)?nTime=0:nTime++;//controls based on the number of images?
+    (nTime == 2)?nTime=0:nTime++;//controls based on the number of images?
   }
     show();//让它先进行一次播放，显示第一张图片
     $(document).ready(function() {
@@ -357,65 +361,7 @@
   });
 });
         </script>
-            
-        
-        <script>
-		$('#general').hover(function(){
-			$('#general_content').show();
-			$(this).css("color", "red");
-		}, function(){
-			$('#general_content').hide();
-			$(this).css("color", "white");
-		});
-		
-		$('#opportunities').hover(function(){
-			$('#opportunities_content').show();
-			$(this).css("color", "red");
-		}, function(){
-			$('#opportunities_content').hide();
-			$(this).css("color", "white");
-		});
-		
-		$('#representation').hover(function(){
-			$('#representation_content').show();
-			$(this).css("color", "red");
-		}, function(){
-			$('#representation_content').hide();
-			$(this).css("color", "white");
-		});
-		
-		$('#outside').hover(function(){
-			$('#outside_content').show();
-			$(this).css("color", "red");
-		}, function(){
-			$('#outside_content').hide();
-			$(this).css("color", "white");
-		});
-		
-		$('#talent').hover(function(){
-			$('#talent_content').show();
-			$(this).css("color", "red");
-		}, function(){
-			$('#talent_content').hide();
-			$(this).css("color", "white");
-		});
-		
-		$('#vanity').hover(function(){
-			$('#vanity_content').show();
-			$(this).css("color", "red");
-		}, function(){
-			$('#vanity_content').hide();
-			$(this).css("color", "white");
-		});
-		
-		$('#luxury').hover(function(){
-			$('#luxury_content').show();
-			$(this).css("color", "red");
-		}, function(){
-			$('#luxury_content').hide();
-			$(this).css("color", "white");
-		});
-		</script>
+           
 		
 	</body>
 </html>

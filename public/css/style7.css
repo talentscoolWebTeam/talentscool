@@ -97,7 +97,7 @@ p {
 ---------------------------------*/
 
 #header_wrapper {
-    background: #454545;
+    
     padding: 1vh 0px;
 }
 
@@ -221,12 +221,12 @@ p {
 	height:100vh !important;
 }
 
-#hero_section {
+#hero{
 	height: auto;
     min-height: 100vh
     padding-top:15%;
     position: relative;
-	background-image: url(http://talentscool.com/images/background.png);
+	background-image: url(/images/Home_Page.jpg);
 	background-repeat:no-repeat;
 	background-size: cover;
 }
@@ -321,11 +321,10 @@ a.read_more2:hover {
 ---------------------------------*/
 #aboutUs{
 	height: auto;
-	background-image:url(http://talentscool.com/images/bodyBackground1.png);
+	background-image:url(/images/aboutus.png);
 	background-repeat:no-repeat;
 	background-size: cover;	
-	padding: 120px 0;
-	
+	padding: 10px 0;
 }
 
 /* .inner_wrapper{
@@ -333,26 +332,31 @@ a.read_more2:hover {
 } */
 
 
-
+#founders{
+	height: auto;
+	background-repeat:no-repeat;
+	background-size: cover;	
+	padding: 0px 0;
+}
 
 
 /* Services
 ---------------------------------*/
 
-#service {
+#service{
     height: auto;
 	min-height: 100vh; 
-    padding: 7vh 0px;
-	background-image: url(http://talentscool.com/images/bodyBackground.png);
+    padding: 0px 0;
+	background-image:url(/images/service.png);
 	background-repeat:no-repeat;
 	background-size: cover;
 }
 
-.service_wrapper {
-    padding: 40px 0 40px;
-	/* height: 550px */
+/*.service_wrapper {
+    padding: 0px 0 40px;
+	 height: 550px 
 	
-}
+}*/
 
 /* li{
 	-webkit-animation-name: bounceInUp;
@@ -753,7 +757,7 @@ img {
 /* Contact
 ---------------------------------*/
 .page_section.contact {
-    padding: 90px 0 100px;
+    padding: 0px 0 100px;
 }
 
 .contact_section {
@@ -1749,8 +1753,8 @@ div.mc-image {
 }
 
 #show img{
-    padding-top: 150px;
-    padding-left: 390px;
+    padding-top: 200px;
+    padding-left: 700px;
     text-align:center;
 }
 

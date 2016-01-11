@@ -67,7 +67,7 @@
 
 
 <table>
-<tr><td class="col-xs-12" style="font-size:36px;">APPLICATION</td><td style="float:right;position:relative;margin-right:20%;margin-top:2%;"><a href="http://talentscool.com"><img src="/pic/TSVector.png" style="width:200px;"></td></tr>
+<tr><td class="col-xs-12" style="font-size:36px; text-align:center">APPLICATION</td><td align="left" style="float:right;position:relative;margin-right:20%;margin-top:2%;"><a href="http://talentscool.com"><img src="/pic/TSVector.png" style="width:200px;"></td></tr>
 </table>
 {!! Form::open(['action'=>'ApplicationController@store','enctype' => 'multipart/form-data','id'=>'myform']) !!}
 <div class="firstPage">
