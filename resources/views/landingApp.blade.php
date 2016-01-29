@@ -92,7 +92,7 @@
 						<div class="row">
 							<div class="col-lg-6 col-sm-4">
 								<div class="top_left_cont zoomIn wow animated"> 
-									<h2 align="left">The New Way to Connect in Entertainment</h2>
+									<h2 align="left">The Entertainment Connection</h2>
 									<h2 align="left">Talentscool can help you find talent, opportunities, and services.</h2>
 									<p style="font-size:20px" align="left">Music • Dance • Film • Fashion • Arts • Sports</p>
                                 <!--<a href="/application" class="read_more2">Apply now!</a>-->

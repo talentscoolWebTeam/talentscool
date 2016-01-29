@@ -30,7 +30,7 @@ class WelcomeController extends Controller {
 	 * @return Response
 	 */
 	public function landing(){
-		return view('home');
+		return view('index');
 	}
 	public function index()
 	{
