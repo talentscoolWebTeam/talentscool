@@ -29,9 +29,10 @@
 			<div class="content">
 				<nav>
 					<ul>
-						<li><a href="index.html">Welcome</a></li>
-						<li><a href="index.html">Find Talent</a></li>
-						<li><a href="index.html">Contact</a></li>
+						<li><a href="javascript:null(0)" id="welcome_tab">Welcome</a></li>
+						<li><a href="javascript:null(0)" id="whatwedo_tab">What We Do</a></li>
+						<!--<li><a href="javascript:null(0)" id="services_tab">Services</a></li>-->
+						<li><a href="javascript:null(0)" id="founder_tab">Founders</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -76,7 +77,7 @@
 				<p><img src="images/michael.jpg" title="Michael Pratt">Michael is an entrepreneur, multi-instrumentalist, songwriter for major labels/artists, and film score composer for feature films/television. The combination of his extensive entrepreneurial experience and love for the arts led him to launch Talentscool. He also has an extensive network within the entertainment industry that allows him to service his clientele globally. He is an honor roll student at the University of Southern California studying Entrepreneurship and Music.</p>
 				</div>
 
-				<div class="info-box">
+				<div class="info-box clearfix">
 				<h3>Steve Smith</h3>
 				<span>Vice President and Co-Founder</span>
 				
@@ -94,7 +95,7 @@
 		</div>
 
 		<footer>
-			<p>Copyright stuff | about | contact | Terms of Service</p>
+			<p>Copyright © 2016. Talentscool, Inc. All rights reserved. </p>
 		</footer>
 
 	</main>
