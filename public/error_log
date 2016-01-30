@@ -35,3 +35,10 @@
 [21-Jul-2015 21:04:49 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement in the script in /home4/tscool/talentscool/app/User.php on line 2
 [21-Jul-2015 21:05:33 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement in the script in /home4/tscool/talentscool/app/User.php on line 2
 [21-Jul-2015 21:09:11 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement in the script in /home4/tscool/talentscool/app/User.php on line 2
+[30-Jul-2015 23:48:18 UTC] PHP Parse error:  syntax error, unexpected 'Route' (T_STRING) in /home4/tscool/talentscool/app/Http/routes.php on line 30
+[30-Jul-2015 23:49:13 UTC] PHP Parse error:  syntax error, unexpected 'Route' (T_STRING) in /home4/tscool/talentscool/app/Http/routes.php on line 30
+[30-Jul-2015 23:49:13 UTC] PHP Parse error:  syntax error, unexpected 'Route' (T_STRING) in /home4/tscool/talentscool/app/Http/routes.php on line 30
+[30-Jul-2015 23:49:14 UTC] PHP Parse error:  syntax error, unexpected 'Route' (T_STRING) in /home4/tscool/talentscool/app/Http/routes.php on line 30
+[30-Jul-2015 23:49:14 UTC] PHP Parse error:  syntax error, unexpected 'Route' (T_STRING) in /home4/tscool/talentscool/app/Http/routes.php on line 30
+[30-Jul-2015 23:49:14 UTC] PHP Parse error:  syntax error, unexpected 'Route' (T_STRING) in /home4/tscool/talentscool/app/Http/routes.php on line 30
+[30-Jul-2015 23:49:14 UTC] PHP Parse error:  syntax error, unexpected 'Route' (T_STRING) in /home4/tscool/talentscool/app/Http/routes.php on line 30
