@@ -4,7 +4,9 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="The Entertainment Connection"/>
+	<meta name="description" content="Connecting you to talent, opportunities, and services."/>
+	<meta name="google-site-verification" content="MR1iwryrni13r6b5YgHGV_q8_Ws4CsAGVez39Blj7-o" />
+	<meta name="robots" content="NOODP">
     <title>TalentsCool</title>
     <link rel="stylesheet" href="css/welcome-style.css" />
     <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
@@ -30,10 +32,9 @@
 			<div class="content">
 				<nav>
 					<ul>
-						<li><a href="javascript:null(0)" id="welcome_tab">Welcome</a></li>
-						<li><a href="javascript:null(0)" id="whatwedo_tab">What We Do</a></li>
-						<li><a href="javascript:null(0)" id="services_tab">Services</a></li>
-						<li><a href="javascript:null(0)" id="founder_tab">Founders</a></li>
+						<li><a href="index.html">Welcome</a></li>
+						<li><a href="index.html">Find Talent</a></li>
+						<li><a href="index.html">Contact</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -96,7 +97,7 @@
 		</div>
 
 		<footer>
-			<p>Copyright © 2016. Talentscool, Inc. All rights reserved. </p>
+			<p>Copyright stuff | about | contact | Terms of Service</p>
 		</footer>
 
 	</main>
