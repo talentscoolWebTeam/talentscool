@@ -15,7 +15,7 @@
 		<div class="header">
 			<div>
 				<!--<table> -->
-					<h1><a href="index.html"><img src="images/TSVector.png"></a></h1>
+					<h1><a href="index.blade.php"><img src="images/TSVector.png"></a></h1>
 					<form class="searchbar"><input type="text" title="Search Talent" placeholder="Search"></form>
 				<!--</table> -->
 				<div class="user-entry">
