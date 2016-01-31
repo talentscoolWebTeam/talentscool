@@ -149,7 +149,8 @@ li{
 }
 #window3{
 	position: relative;
-	top: -74px;
+	/*top: -74px;*/
+	top: -64px;
 	font-family: arial, sans-serif;
 }
 #window3 .content{
@@ -163,7 +164,8 @@ li{
 }
 #window4{
 	position: relative;
-	top: -84px;
+	/*top: -84px;*/
+	top: -64px;
 	padding-bottom: 2.5em;
 	text-align: center;
 }

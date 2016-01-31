@@ -31,11 +31,11 @@ $('#welcome_tab').click(function() {
 });
 
 $('#whatwedo_tab').click(function() {
-    $("html, body").animate({scrollTop: $("#window2").offset().top + 10}, 600);
+    $("html, body").animate({scrollTop: $("#window2").offset().top}, 600);
 });
 
 $('#services_tab').click(function() {
-    $("html, body").animate({scrollTop: $("#window3").offset().top + 30}, 600);
+    $("html, body").animate({scrollTop: $("#window3").offset().top}, 600);
 });
 
 $('#founder_tab').click(function() {
