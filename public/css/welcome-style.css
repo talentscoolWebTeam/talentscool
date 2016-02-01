@@ -86,6 +86,10 @@ li{
 	list-style-type: none;
 }
 
+#subheading {
+    font-size: 0.9em;
+}
+
 .plain-window{
 	background-color: #fff;
 	padding: 5em 4em;

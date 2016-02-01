@@ -42,8 +42,8 @@
 
 		<div class="parallax-window" id="window1" data-speed="0.3" data-type="background" data-ios-fix="true">
 			<div class="content">
-				<h2>The Entertainment Connection</h2>
-				<p>Talentscool can help you find talent, opportunities, and services.</p>
+				<h2 id="mainheading">The Entertainment Connection</h2>
+				<p id="subheading">Connecting you to talent, opportunities, and services.</p>
 			</div>
 		</div>
 
@@ -95,7 +95,7 @@
 		</div>
 
 		<footer>
-			<p>Copyright © 2016. Talentscool, Inc. All rights reserved </p>
+			<p>Copyright © 2016. Talentscool, Inc. All rights reserved. </p>
 		</footer>
 
 	</main>
