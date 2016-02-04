@@ -6,7 +6,10 @@ $('#window3').parallax({imageSrc: 'images/city.jpg'});
 /*For sticky header*/
 $(document).ready(function() {
 var stickyNavTop = $('.navbar').offset().top;
- 
+var headerHt = $('div.header').height();
+var navBarHt = $("div.navbar").height()*2;
+
+var ht = $("div.header").height();
 var stickyNav = function(){
 var scrollTop = $(window).scrollTop();
       
@@ -31,7 +34,18 @@ $('#welcome_tab').click(function() {
 });
 
 $('#whatwedo_tab').click(function() {
-    $("html, body").animate({scrollTop: $("#window2").offset().top}, 600);
+	//problem for iphone
+	//reset the scrollTop so that the headerHt can be readjusted
+	var scrollTop = $(window).scrollTop();
+	//check everytime
+	if(scrollTop > stickyNavTop)
+	{
+			$("html,body").animate({scrollTop: $("#window2").offset().top - navBarHt + headerHt}, 600);
+	}
+	else
+	{
+			$("html,body").animate({scrollTop: $("#window2").offset().top}, 600);
+	}	
 });
 
 $('#services_tab').click(function() {
