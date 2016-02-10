@@ -29,12 +29,36 @@ html, body {
     src: url(../css/fonts/Genius.otf);
 }
 
+@font-face {
+    font-family: Tenso;
+    src: url(../css/fonts/TensoRegular.otf);
+}
+
+@font-face {
+    font-family: Geometria;
+    src: url(../css/fonts/GeometriaLight.otf);
+}
+
+@font-face {
+    font-family: Existence;
+    src: url(../css/fonts/ExistenceLight.otf);
+}
+
+@font-face {
+    font-family: Ashbury;
+    src: url(../css/fonts/AshburyLight.otf);
+}
+
+@font-face {
+    font-family: Freight;
+    src: url(../css/fonts/FreightNeoProLight.otf);
+}
 
 #app1 {
     display: block;
 }
 
-#app2, #app3, #app4, #app5, #app6 {
+#app2, #app3, #app4/* , #app5, #app6 */ {
     display: none;
 }
 
@@ -58,32 +82,43 @@ html, body {
 
 .app_heading {
     text-align: center;
-    font-family: PrintClearly;
+    font-family: Tenso;
 }
 
 .app_heading h1 {
     padding: 0.5em;
-    font-size: 60px;
+    font-size: 40px;
 }
 
 .app_heading p {
-    font-size: 40px;
+    font-size: 30px;
 }
 
 .navigation {
     display: block;
     padding: 3em;
     font-family: Genius;
-    font-size: 1.3em;
+    font-size: 1em;
+    padding-bottom: 0;
 }
 
 .navigation ul {
     list-style: none;
-    height: 110px;
+    height: 60px;
+}
+
+.navigation div {
+    text-align: left;
+    margin-top: 1em;
+    margin-left: 30%;
+}
+
+#app2 .navigation div, #app3 .navigation div {
+    margin-left: 19%;
 }
 
 .navigation .personal_li, .navigation .talent_li, .navigation .services_li, 
-.navigation .additional_li, .navigation .review_li, .navigation .complete_li {
+.navigation .additional_li/* , .navigation .review_li, .navigation .complete_li */ {
     color: red;
     border-color: red;
 }
@@ -91,7 +126,7 @@ html, body {
 .navigation li {
     display: block;
     float: left;
-    width: 14%;
+    width: 23%;
     text-align: center;
     border-bottom: 1px solid #D3D3D3;
     margin: 10px;
@@ -108,30 +143,52 @@ html, body {
 .info {
     font-family: PrintClearly;
     font-size: 25px;
-    padding-top: 4em;
     text-align: center;
     width: 100%;
 }
 
 .info p {
     padding: 1em;
-    width: 60%;
+    width: 40%;
     text-align: left;
-    display: block;
+    display: inline-block;
     margin: auto;
 }
 
 .info label {
     vertical-align: sub;
+    display: none;
 }
 
 input[type="text"] {
     float: right;
-    margin-right: 45%;
+    margin-right: 29%;
     font-size: 18px;
     border: solid 3px #c9c9c9;
     transition: border 0.3s;
-    font-family: Inconsolata;
+    font-family: Tenso;
+}
+
+
+#app1 .info .left, #app4 .info .left {
+    float: right;
+    margin: 0;
+}
+
+#app1 .info .right, #app4 .info .right {
+    float: left;
+}
+
+#app2 .info p, #app3 .info p {
+    display: block;
+    width: 60%;
+    text-align: left;
+    padding: 1.5em;
+    padding-left: 0.75em;
+}
+
+#app2 input[type="text"], #app3 input[type="text"] {
+    float: left;
 }
 
 input[type="text"]:focus, input[type="text"].focus {
@@ -146,7 +203,7 @@ input[type="text"]:focus, input[type="text"].focus {
 
 .buttons {
     width: 60%;
-    text-align: left;
+    /*text-align: left;*/
     display: block;
     margin: auto;
     padding: 1.5em;
@@ -187,7 +244,8 @@ button:onclick, button.active {
 .social-media-bar {
 	text-align: center;
 	padding: 1em 0;
-	background-color: #f0f0f0;
+	/* background-color: #f0f0f0; */
+	background-color: black;
 }
 
 .social-media-bar ul {
@@ -241,11 +299,21 @@ button:onclick, button.active {
     opacity: 0.5;
 }
 
-footer {
-	background-color: gray;
+footer{
+	/*background-color: #330000;*/
+	background-color: #000;
 	padding: 2em;
 	color: #fff;
 	text-align: center;
 	font-family: 'Quicksand', sans-serif;
 }
 
+/* styles for thank you page */
+.content{
+    padding: 8em;
+    font-family: 'Quicksand', sans-serif;
+}
+.content h2{
+    padding-bottom: 1em;
+    font-size: 2em;
+}

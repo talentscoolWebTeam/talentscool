@@ -7,32 +7,35 @@
     <title>TalentsCool</title>
     <link rel="stylesheet" href="css/welcome-style.css" />
     <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
-
+ 
 </head>
 
 <body>
 	<main class="main">
+		<!-- Retired black header above the nav-bar.
 		<div class="header">
 			<div>
-				<!--<table> -->
+				
 					<h1><a href="index.html"><img src="images/TSVector.png"></a></h1>
 					<form class="searchbar"><input type="text" title="Search Talent" placeholder="Search"></form>
-				<!--</table> -->
 				<div class="user-entry">
 					<a href="index.html">Join</a>
 					<a href="index.html">Login</a>
 				</div>
 			</div>
 		</div>
+		-->
 
 		<div class="navbar" >
 			<div class="content">
+				<h1 class="logo"><a href="index.html"><img src="images/TSVector.png"></a></h1>
 				<nav>
 					<ul>
 						<li><a href="javascript:null(0)" id="welcome_tab">Welcome</a></li>
 						<li><a href="javascript:null(0)" id="whatwedo_tab">What We Do</a></li>
 						<li><a href="javascript:null(0)" id="services_tab">Services</a></li>
 						<li><a href="javascript:null(0)" id="founder_tab">Founders</a></li>
+						<li><a style="display:none" href="javascript:null(0" id="contactus_tab">Contact Us</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -50,20 +53,79 @@
 		<div class="plain-window" id="window2">
 			<div class="content">
 				<h2>What we do</h2>
-				<p>Talentscool is a service that connects creative talent to opportunities and service providers. Founded by a musician and a pro-athlete, we understand how hard it is to stand out in the entertainment industry. With so much competition, our clients are given peace of mind knowing they have someone on their side.</p>
-				<p>Through our global relationships with major/indie record labels, talent agencies, casting agencies, production companies, venues, art galleries, corporate sponsors, and much more, we are able to provide the best possible services to our clients. In addition, we recommend our clients to best service providers to fit their individual needs.</p>
+				<p>With the competitive landscape of the entertainment industry, your talents may go unheard- but that’s what we’re here for! We are a service that connects creative talents to opportunities & services. Through our global relationships, our clients varying from athletes to artists  can find the resources they need in order to bolster their talents. We serve as the mediator between you and our connections by recommending you to the appropriate service providers that best fulfill your needs. With our connections ranging from major/indie record labels, talent/casting agencies, production companies, corporate sponsors, venues/art galleries, and advisors from various professions, Talentscool provides you the advantage of convenience & peace of mind.</p>
+
 			</div>
 		</div>
 
 		<div class="parallax-window" id="window3" data-speed="0.1" data-ios-fix="true">
 			<div class="content">
-				<h2>Services</h2>
+				<h2>Services</h2><!--
 				<p>Opportunities: Bookings, Endorsements, Auditions, Showcases, Appearances, Collaborations, Jobs, Internships</p>
 				<p>Representation: Manager, Agent, Record Deal, Booking Agent, Publicist, Talent Agent, Brand Manager</p>
 				<p>Talent Development: Vocal Coach, Acting Coach, Instrument Teacher, Dance Instructor, Art Instructor, School Placement</p>
 				<p>General Services: Musician, Vocalist, Dancer, Lawyer, Accountant, Investor, Personal Assistant, Web Designer, Engineer, Fitness Trainer, Camera Crew</p>
 				<p>Clothing Services: Clothing Stylist, Hair Stylist, Barber, Makeup Artist, Model, Photographer, Videographer, Clothing Designer</p>
-				<p>Luxury Services: Bodyguard, Limo Driver, Private Jet Rental, Studio Rental, Helicopter Rental, Car Rental</p>
+				<p>Luxury Services: Bodyguard, Limo Driver, Private Jet Rental, Studio Rental, Helicopter Rental, Car Rental</p> -->
+				<ul>
+				    <li class="opportunities">
+				    <div class="box">
+  						<div id="asabove">
+  							<p>Opportunities: These connect you to platforms that help showcase your talents </p>
+  						</div>
+  						<div id="sobelow">
+  							<p>Bookings, Endorsements, Auditions, Showcases, Appearances, Collaborations, Jobs, Internships</p>
+  						</div>
+					</div>
+				        <div>
+				    </li>   
+				    
+				    <li>
+				        <div class="box">
+  							<div id="asabove">
+  								<p>Representation: Professionals and organizations that promote and handle other aspects of your career </p>
+  							</div>
+				        <div id="sobelow">
+  							<p>Manager, Agent, Record Deal, Booking Agent, Publicist, Talent Agent, Brand Manager</p>
+  						</div>    
+				        </div>
+				    </li>   
+				    
+				    <li>
+				        <div class="box">
+  							<div id="asabove">
+				                   <p>Talent Development: Resources that help you further enhance your talents
+				             </div>
+				             <div id="sobelow">
+				                   <p> Vocal Coach, Acting Coach, Instrument Teacher, Dance Instructor, Art Instructor, School Placement</p>
+				             </div>
+				        </div>
+				    </li>   
+				    
+				    <li>
+				        <div class="box">
+  							<div id="asabove">
+				               	<p>General Services: Professionals in different fields that are here to ensure your general needs are met
+				            </div>
+				            <div id="sobelow">
+				                   <p>Musician, Vocalist, Dancer, Lawyer, Accountant, Investor, Personal Assistant, Web Designer, Engineer, Fitness Trainer, Camera Crew
+				                </p>
+				            </div>
+				        </div>
+				    </li>   
+				    
+				    <li>
+				        <div class="box">
+  							<div id="asabove">
+				               	<p>Vanity and Luxury Services: Touch up your personal style with high class services </p>
+				             </div>
+				            <div id="sobelow">
+				                  <p> Clothing Stylist, Hair Stylist, Barber, Makeup Artist, Model, Photographer, Bodyguard, Limo Driver, Private Jet Rental, Studio Rental </p>
+				            </div>
+				        </div>
+				    </li>  
+				    
+				</ul>
 			</div>
 		</div>
 
@@ -86,15 +148,37 @@
 			</div>
 		</div>
 
-		<div class="social-media-bar">
+		<div class="parallax-window" id="window5" style="display:none">
+			<div class="content">
+				<h2>Contact us</h2>
+				<form method="POST" name="contactform" action="email-contact-form/contact-form-handler.php"> 
+					<p>
+						<label for='name'>Your Name:</label><br class="breakline">
+						<input type="text" name="name" class="textfield">
+					</p>
+					<p>
+						<label for='email'>Email Address:</label><br class="breakline">
+						<input type="text" name="email" class="textfield"> <br>
+					</p>
+					<p>
+						<label for='message'>Message:</label><br>
+						<textarea name="message"></textarea>
+					</p>
+					<input type="submit" value="Submit" class="submit-button"><br>
+				</form>
+			</div>
+		</div>
+
+		
+
+		<footer>
+			<div class="social-media-bar">
 			<ul>
 				<li><a target="_blank" href="https://twitter.com/talentscool"><img src="images/twitter_logo.png" title="Follow us on Twitter!" class="media-icon"></a></li>
 				<li><a target="_blank" href="https://www.facebook.com/talentscool"><img src="images/facebook_logo.png" title="Follow us on Facebook!" class="media-icon"></a></li>
 				<li><a target="_blank" href="https://www.instagram.com/talentscool/"><img src="images/instagram_logo.png" title="Follow us on Instagram!" class="media-icon"></a></li>
 			</ul>
 		</div>
-
-		<footer>
 			<p>Copyright © 2016. Talentscool, Inc. All rights reserved. </p>
 		</footer>
 
@@ -106,6 +190,17 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="js/parallax.js/parallax.min.js"></script>
     <script src="js/welcome-script.js"></script>
+    <script language="JavaScript" src="email-contact-form/scripts/gen_validatorv31.js" type="text/javascript"></script>
+
+    <script language="JavaScript">
+	// Code for validating the form
+	// Visit http://www.javascript-coder.com/html-form/javascript-form-validation.phtml
+	// for details
+	var frmvalidator  = new Validator("contactform");
+	frmvalidator.addValidation("name","req","Please provide your name"); 
+	frmvalidator.addValidation("email","req","Please provide your email"); 
+	frmvalidator.addValidation("email","email","Please enter a valid email address"); 
+	</script>
 
 
     <!--Jquery link for Sticky
