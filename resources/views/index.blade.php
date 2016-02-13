@@ -178,7 +178,6 @@
             </div>
         </div>
         {!! Form::close() !!}
-        <div class="parallax-window" id=""window5"></div>
 
 		<footer>
 			<div class="social-media-bar">
