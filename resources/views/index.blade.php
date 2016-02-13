@@ -7,7 +7,7 @@
     <title>TalentsCool</title>
     <link rel="stylesheet" href="css/welcome-style.css" />
     <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
- 
+
 </head>
 
 <body>
@@ -28,14 +28,14 @@
 
 		<div class="navbar" >
 			<div class="content">
-				<h1 class="logo"><a href="index.html"><img src="images/TSVector.png"></a></h1>
+				<h1 class="logo"><a href="/"><img src="images/TSVector.png"></a></h1>
 				<nav>
 					<ul>
 						<li><a href="javascript:null(0)" id="welcome_tab">Welcome</a></li>
 						<li><a href="javascript:null(0)" id="whatwedo_tab">What We Do</a></li>
-						<li><a href="javascript:null(0)" id="services_tab">Services</a></li>
+					<li><a href="javascript:null(0)" id="services_tab">Services</a></li>
 						<li><a href="javascript:null(0)" id="founder_tab">Founders</a></li>
-						<li><a style="display:none" href="javascript:null(0" id="contactus_tab">Contact Us</a></li>
+						<li><a href="javascript:null(0" id="contactus_tab">Contact Us</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -71,7 +71,9 @@
 				    <li class="opportunities">
 				    <div class="box">
   						<div id="asabove">
-  							<p>Opportunities: These connect you to platforms that help showcase your talents </p>
+  							<h3>Opportunities:</h3>
+  							<p> These connect you to platforms that help showcase your talents </p>
+  							<img class="downarrow" src="images/down-arrow.png">
   						</div>
   						<div id="sobelow">
   							<p>Bookings, Endorsements, Auditions, Showcases, Appearances, Collaborations, Jobs, Internships</p>
@@ -83,7 +85,9 @@
 				    <li>
 				        <div class="box">
   							<div id="asabove">
-  								<p>Representation: Professionals and organizations that promote and handle other aspects of your career </p>
+  								<h3>Representation:</h3>
+  								<p> Professionals and organizations that promote and handle other aspects of your career </p>
+  								<img class="downarrow" src="images/down-arrow.png">
   							</div>
 				        <div id="sobelow">
   							<p>Manager, Agent, Record Deal, Booking Agent, Publicist, Talent Agent, Brand Manager</p>
@@ -94,7 +98,9 @@
 				    <li>
 				        <div class="box">
   							<div id="asabove">
-				                   <p>Talent Development: Resources that help you further enhance your talents
+  									<h3>Talent Development:</h3>
+				                   <p> Resources that help you further enhance your talents</p>
+				                   <img class="downarrow" src="images/down-arrow.png">
 				             </div>
 				             <div id="sobelow">
 				                   <p> Vocal Coach, Acting Coach, Instrument Teacher, Dance Instructor, Art Instructor, School Placement</p>
@@ -105,7 +111,9 @@
 				    <li>
 				        <div class="box">
   							<div id="asabove">
-				               	<p>General Services: Professionals in different fields that are here to ensure your general needs are met
+  								<h3>General Services:</h3>
+				               	<p>Professionals in different fields that are here to ensure your general needs are met</p>
+				               	<img class="downarrow" src="images/down-arrow.png">
 				            </div>
 				            <div id="sobelow">
 				                   <p>Musician, Vocalist, Dancer, Lawyer, Accountant, Investor, Personal Assistant, Web Designer, Engineer, Fitness Trainer, Camera Crew
@@ -117,7 +125,9 @@
 				    <li>
 				        <div class="box">
   							<div id="asabove">
-				               	<p>Vanity and Luxury Services: Touch up your personal style with high class services </p>
+  								<h3>Vanity and Luxury Services:</h3>
+				               	<p>Touch up your personal style with high class services </p>
+				               	<img class="downarrow" src="images/down-arrow.png">
 				             </div>
 				            <div id="sobelow">
 				                  <p> Clothing Stylist, Hair Stylist, Barber, Makeup Artist, Model, Photographer, Bodyguard, Limo Driver, Private Jet Rental, Studio Rental </p>
@@ -148,28 +158,27 @@
 			</div>
 		</div>
 
-		<div class="parallax-window" id="window5" style="display:none">
-			<div class="content">
-				<h2>Contact us</h2>
-				<form method="POST" name="contactform" action="email-contact-form/contact-form-handler.php"> 
-					<p>
-						<label for='name'>Your Name:</label><br class="breakline">
-						<input type="text" name="name" class="textfield">
-					</p>
-					<p>
-						<label for='email'>Email Address:</label><br class="breakline">
-						<input type="text" name="email" class="textfield"> <br>
-					</p>
-					<p>
-						<label for='message'>Message:</label><br>
-						<textarea name="message"></textarea>
-					</p>
-					<input type="submit" value="Submit" class="submit-button"><br>
-				</form>
-			</div>
-		</div>
-
-		
+        {!! Form::open(['route' => 'contactus.store', 'method'=>'POST', 'name' => 'contactform'])!!}
+        <div class="parallax-window" id="window5">
+            <div class="content">
+                <h2>Contact us</h2>
+                    <p>
+                        <label for='name'>Your Name:</label><br class="breakline">
+                        {!! Form::text('name',null, ['class'=>'textfield']) !!}
+                    </p>
+                    <p>
+                        <label for='email'>Email Address:</label><br class="breakline">
+                        {!! Form::text('email',null, ['class'=>'textfield']) !!}
+                    </p>
+                    <p>
+                        <label for='msge'>Message:</label><br>
+                        {!! Form::textarea('msge',null) !!}
+                    </p>
+                    <input type="submit" value="Submit" class="submit-button"><br>
+            </div>
+        </div>
+        {!! Form::close() !!}
+        <div class="parallax-window" id=""window5"></div>
 
 		<footer>
 			<div class="social-media-bar">
@@ -192,16 +201,16 @@
     <script src="js/welcome-script.js"></script>
     <script language="JavaScript" src="email-contact-form/scripts/gen_validatorv31.js" type="text/javascript"></script>
 
-    <script language="JavaScript">
+    //<script language="JavaScript">
 	// Code for validating the form
 	// Visit http://www.javascript-coder.com/html-form/javascript-form-validation.phtml
 	// for details
 	var frmvalidator  = new Validator("contactform");
-	frmvalidator.addValidation("name","req","Please provide your name"); 
-	frmvalidator.addValidation("email","req","Please provide your email"); 
-	frmvalidator.addValidation("email","email","Please enter a valid email address"); 
-	</script>
-
+	frmvalidator.addValidation("name","req","Please provide your name");
+	frmvalidator.addValidation("email","req","Please provide your email");
+	frmvalidator.addValidation("email","email","Please enter a valid email address");
+	//</script>
+	-->
 
     <!--Jquery link for Sticky
     <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script> 

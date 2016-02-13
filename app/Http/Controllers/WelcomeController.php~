@@ -62,5 +62,9 @@ class WelcomeController extends Controller {
 			$ret = array("result" => 'fail');
 		return \Response::json($ret);
 	}
+	public function contactthanks(){
+		return view('contact-form-thank-you');
+	}
+
 
 }

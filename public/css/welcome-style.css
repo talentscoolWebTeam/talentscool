@@ -193,6 +193,9 @@ li{
     padding: 1em;
     font-family: 'Quicksand', sans-serif;
 }
+#window3 h3{
+	text-align: center;
+}
 
 #window3 .above h4 {
     font-style: italic;
@@ -208,6 +211,7 @@ li{
 	background-color: black;
 	opacity: .7;
 }
+
 #window3 h2{
 	font-family: 'Quicksand', sans-serif;
 	font-size: 3em;
@@ -233,9 +237,10 @@ li{
 	font-family: 'Quicksand', sans-serif;
 	text-align: center;
 	font-size: 1.5em;
+	display: block;
 }
 #window5 .content{
-	background-color: black;
+	background-color: #222;
 	padding: 2em 0;
 }
 #window5 p{
@@ -244,7 +249,7 @@ li{
 }
 #window5 textarea{
 	height: 11em;
-	width: 20em;
+	width: 18em;
 }
 #window5 .textfield, textarea{
 	font-size: .6em;
@@ -288,6 +293,14 @@ footer{
 .searchbar{
 
 }
+
+.downarrow{
+	position: absolute;
+	height: 30px;
+	width: 30px;
+	left: 100px;
+	top: 220px;
+}
 /* -------- [Fixes for javascript sticky scrolling] ------------- */
 .sticky{
 		position: fixed;
@@ -303,15 +316,15 @@ footer{
 }
 
 /* ---- [ 24.6em (393.6px and up, slightly larger phone)]---- */
-@media only screen and (max-width: 36em){
-	.navbar nav{
+@media only screen and (max-width: 37em){
+	.navbar nav, .downarrow{
 		display: none;
 	}
 }
 
 /* ---- [ 30em (480px and up, slightly larger phone)]---- */
-@media only screen and (max-width: 37em){
-	#sobelow {
+@media only screen and (max-width: 49em){
+	#sobelow, .downarrow {
 	    display: none;
 	}
 	
@@ -393,6 +406,7 @@ footer{
 	}
 	#window3 .content{
 		/*padding: 5em 6em;*/
+		padding-top: 1.5em;
 	}
 	#window3 h2{
 		font-size: 3em;
@@ -540,8 +554,21 @@ footer{
     width:100%;
     height:100%;
     opacity:1;
+    margin: auto;
+    
 }
-
+.downarrow{
+	position: absolute;
+	height: 30px;
+	width: 30px;
+	left: 100px;
+	top: 220px;
+}
+#thanksimg{
+	background-color:black;
+	height: 40%;
+	width: 40%;
+}
 
 
 }

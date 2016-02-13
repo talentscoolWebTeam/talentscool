@@ -41,16 +41,18 @@ $('#welcome_tab').click(function() {
 $('#whatwedo_tab').click(function() {
 	//problem for iphone
 	//reset the scrollTop so that the headerHt can be readjusted
-	var scrollTop = $(window).scrollTop();
+//	var scrollTop = $(window).scrollTop();
 	//check everytime
-	if(scrollTop > stickyNavTop)
-	{
-			$("html,body").animate({scrollTop: $("#window2").offset().top - navBarHt + headerHt}, 600);
-	}
-	else
-	{
+//	if(scrollTop > stickyNavTop)
+//	{
+//			console.log("IF");
+//			$("html,body").animate({scrollTop: $("#window2").offset().top}, 600);
+//	}
+//	else
+//	{
+//			console.log("ELSE");
 			$("html,body").animate({scrollTop: $("#window2").offset().top}, 600);
-	}	
+//	}	
 });
 
 $('#services_tab').click(function() {

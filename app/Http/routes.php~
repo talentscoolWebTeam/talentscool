@@ -27,7 +27,7 @@ Route::post('Tags', 'TagController@store');
 Route::put('Tags', 'TagController@delete');
 Route::get('subscribe', 'SubscribeController@index');
 Route::resource('/contactus', 'MailController');
-Route::get('contact-form-thank-you', 'WelcomeController@contactthanks'); 
+Route::get('contact-form-thank-you'); 
 
 Route::get('application', 'ApplicationController@application');
 Route::get('loading', 'ApplicationController@loading');
