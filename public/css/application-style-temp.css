@@ -1,3 +1,4 @@
+/* ---[ Base Styles ]--- */
 html, body { 
     width: 100%; 
     height: 100%; 
@@ -5,7 +6,7 @@ html, body {
 }
 
 *{
-	box-sizing:border-box;
+	/*box-sizing:border-box;*/
 	margin: 0;
 }
 
@@ -53,7 +54,6 @@ html, body {
     font-family: Freight;
     src: url(../css/fonts/FreightNeoProLight.otf);
 }
-
 #app1 {
     display: block;
 }
@@ -95,11 +95,12 @@ html, body {
 }
 
 .navigation {
-    display: block;
+    display: none;
     padding: 3em;
     font-family: Genius;
     font-size: 1em;
     padding-bottom: 0;
+    min-width: 63em;
 }
 
 .navigation ul {
@@ -160,16 +161,6 @@ html, body {
     display: none;
 }
 
-
-#app1 .info .left, #app4 .info .left {
-    float: right;
-    margin: 0;
-}
-
-#app1 .info .right, #app4 .info .right {
-    float: left;
-}
-
 #app2 .info p, #app3 .info p {
     display: block;
     width: 60%;
@@ -178,16 +169,11 @@ html, body {
     padding-left: 0.75em;
 }
 
-#app2 input[type="text"], #app3 input[type="text"], textarea {
-    float: left;
-}
-
 input[type="text"]:focus, input[type="text"].focus {
     border: solid 5px #969696;
 }
 
-input[type="text"], input[type="file"], select, textarea {
-    float: right;
+input[type="text"], input[type="file"], select {
     margin-right: 29%;
     font-size: 18px;
     border: solid 3px #c9c9c9;
@@ -195,37 +181,20 @@ input[type="text"], input[type="file"], select, textarea {
     font-family: Tenso;
 }
 
-textarea {
-    margin-right: 303px;
-    margin-bottom: 1.5em;
-    width: 57.5%;
-}
-
-#add_links input {
-    margin-right: 5%;
-}
-
-
-#add_links button {
-    line-height: 1.8em;
-    font-size: 16px;
-    float: left;
-}
-
 input[type="file"] {
-/*     color: transparent;  */
-    width: 200px; 
-    font-size: 15px;
+    color: transparent; 
+    width: 97px; 
 }
 
 select {
     margin-right: 0;
-    width: 46%;
+    /*width: 46%;*/
+    width: 200px;
     overflow-x: hidden;
 }
 
 #profile_photo, #portfolio {
-    text-align: left;
+    text-align: right;
     padding-bottom: 0px;
 }
 
@@ -234,11 +203,6 @@ select {
     font-family: Tenso; 
     font-size: 19px; 
     margin-right: 6px;
-}
-
-#state {
-    float: left;
-    margin-left: -2px;
 }
 
 .buttons_container {
@@ -264,7 +228,8 @@ button {
     border: none;
     line-height: 3em;
     font-size: 18px;
-    width: 15%;
+    /*width: 15%;*/
+    width: 100px;
     font-family: Argh;
     text-transform: lowercase;
 }
@@ -298,6 +263,7 @@ button:onclick, button.active {
 .submit-button:active{
     background-color: #6d2727;
 }
+
 .social-media-bar {
 	text-align: center;
 	padding: 1em 0;
@@ -365,18 +331,31 @@ footer{
 	font-family: 'Quicksand', sans-serif;
 }
 
-/* styles for thank you page */
-.content{
-    padding: 8em;
-    font-family: 'Quicksand', sans-serif;
-}
-.content h2{
-    padding-bottom: 1em;
-    font-size: 2em;
-}
-
 /* ----[ 69.9em (1118px and up, computer screen)]---- */
-@media only screen and (min-width: 69.9em){
+@media only screen and (min-width: 45em){
+	.navigation {
+		display: block;
+	}
 
+	#app1 .info .left, #app4 .info .left {
+    float: right;
+    margin: 0;
+	}
+
+	#app1 .info .right, #app4 .info .right {
+	    float: left;
+	}
+
+	#app2 input[type="text"], #app3 input[type="text"] {
+	    float: left;
+	}
+
+	input[type="text"], #app1 input[type="file"], select {
+		float: right;
+	}
+
+	#state {
+    float: left;
+    margin-left: -2px;
 }
-
+}

@@ -28,7 +28,7 @@
 
 		<div class="navbar" >
 			<div class="content">
-				<h1 class="logo"><a href="/"><img src="images/TSVector.png"></a></h1>
+				<h1 class="logo"><a href="index.html"><img src="images/TSVector.png"></a></h1>
 				<nav>
 					<ul>
 						<li><a href="javascript:null(0)" id="welcome_tab">Welcome</a></li>
@@ -71,7 +71,7 @@
 				    <li class="opportunities">
 				    <div class="box">
   						<div id="asabove">
-  							<h3>Opportunities:</h3>
+  							<h3>Opportunities:</h3><br>
   							<p> These connect you to platforms that help showcase your talents </p>
   							<img class="downarrow" src="images/down-arrow.png">
   						</div>
@@ -85,7 +85,7 @@
 				    <li>
 				        <div class="box">
   							<div id="asabove">
-  								<h3>Representation:</h3>
+  								<h3>Representation:</h3><br>
   								<p> Professionals and organizations that promote and handle other aspects of your career </p>
   								<img class="downarrow" src="images/down-arrow.png">
   							</div>
@@ -98,7 +98,7 @@
 				    <li>
 				        <div class="box">
   							<div id="asabove">
-  									<h3>Talent Development:</h3>
+  									<h3>Talent Development:</h3><br>
 				                   <p> Resources that help you further enhance your talents</p>
 				                   <img class="downarrow" src="images/down-arrow.png">
 				             </div>
@@ -111,7 +111,7 @@
 				    <li>
 				        <div class="box">
   							<div id="asabove">
-  								<h3>General Services:</h3>
+  								<h3>General Services:</h3><br>
 				               	<p>Professionals in different fields that are here to ensure your general needs are met</p>
 				               	<img class="downarrow" src="images/down-arrow.png">
 				            </div>
@@ -125,7 +125,7 @@
 				    <li>
 				        <div class="box">
   							<div id="asabove">
-  								<h3>Vanity and Luxury Services:</h3>
+  								<h3>Vanity and Luxury Services:</h3><br>
 				               	<p>Touch up your personal style with high class services </p>
 				               	<img class="downarrow" src="images/down-arrow.png">
 				             </div>
