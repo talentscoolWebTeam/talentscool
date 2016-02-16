@@ -28,7 +28,7 @@
 
 		<div class="navbar" >
 			<div class="content">
-				<h1 class="logo"><a href="index.html"><img src="images/TSVector.png"></a></h1>
+				<h1 class="logo"><a href="/"><img src="images/TSVector.png"></a></h1>
 				<nav>
 					<ul>
 						<li><a href="javascript:null(0)" id="welcome_tab">Welcome</a></li>
