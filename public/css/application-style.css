@@ -4,6 +4,14 @@ html, body {
     margin: 0 auto; 
 }
 
+body {
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+}
+
 *{
 	box-sizing:border-box;
 	margin: 0;
@@ -149,7 +157,7 @@ html, body {
 
 .info p {
     padding: 1em;
-    width: 40%;
+    width: 45%;
     text-align: left;
     display: inline-block;
     margin: auto;
@@ -171,11 +179,10 @@ html, body {
 }
 
 #app2 .info p, #app3 .info p {
-    display: block;
+    display: inline-block;
     width: 60%;
     text-align: left;
-    padding: 1.5em;
-    padding-left: 0.75em;
+    padding: 0.75em;
 }
 
 #app2 input[type="text"], #app3 input[type="text"], textarea {
@@ -196,7 +203,8 @@ input[type="text"], input[type="file"], select, textarea {
 }
 
 textarea {
-    margin-right: 303px;
+    margin-left: 0px;
+    float: left;
     margin-bottom: 1.5em;
     width: 57.5%;
 }
@@ -220,13 +228,12 @@ input[type="file"] {
 
 select {
     margin-right: 0;
-    width: 46%;
+    width: 212px;
     overflow-x: hidden;
 }
 
 #profile_photo, #portfolio {
     text-align: left;
-    padding-bottom: 0px;
 }
 
 #profile_photo label, #portfolio label {
@@ -236,9 +243,43 @@ select {
     margin-right: 6px;
 }
 
+#profile_photo label {
+    float: left;
+    margin-left: 20%;
+    margin-right: 6px;
+}
+
+#portfolio label, #portfolio input {
+    float: left;
+    margin-bottom: 1em;
+}
+
+#audio, #video {
+    margin-left: 25px;
+}
+
 #state {
     float: left;
     margin-left: -2px;
+}
+
+#ui-datepicker-div {
+    border: solid 5px #969696;
+    background-color: lightgray;
+    font-family: Tenso;
+    left: 461.783px !important;
+}
+
+#ui-datepicker-div select {
+    width: 75px;
+}
+
+#ui-datepicker-div .ui-datepicker-year {
+    float: left;
+}
+
+.ui-datepicker-header a {
+    display: none;
 }
 
 .buttons_container {
@@ -375,8 +416,15 @@ footer{
     font-size: 2em;
 }
 
+
 /* ----[ 69.9em (1118px and up, computer screen)]---- */
 @media only screen and (min-width: 69.9em){
-
+    #profile_photo label {
+        margin-left: 20%;
+    }
 }
 
+/* ----[ 69.9em (1118px and below)]---- */
+@media only screen and (min-width: 49.9em) and (max-width: 69.9em){
+
+}
