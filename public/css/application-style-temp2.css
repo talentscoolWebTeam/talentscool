@@ -1,0 +1,468 @@
+html, body { 
+    width: 100%; 
+    height: 100%; 
+    margin: 0 auto; 
+}
+
+.info {
+    -moz-transform: scale(.75);
+    -webkit-transform: scale(.75);
+    -o-transform: scale(.75);
+    -ms-transform: scale(.75);
+    transform: scale(.75);
+}
+
+*{
+	box-sizing:border-box;
+	margin: 0;
+}
+
+@font-face {
+    font-family: Inconsolata;
+    src: url(../css/fonts/Inconsolata.otf);
+}
+
+@font-face {
+    font-family: PrintClearly;
+    src: url(../css/fonts/PrintClearly.otf);
+}
+
+@font-face {
+    font-family: Argh;
+    src: url(../css/fonts/Aaargh.ttf);
+}
+
+@font-face {
+    font-family: Genius;
+    src: url(../css/fonts/Genius.otf);
+}
+
+@font-face {
+    font-family: Tenso;
+    src: url(../css/fonts/TensoRegular.otf);
+}
+
+@font-face {
+    font-family: Geometria;
+    src: url(../css/fonts/GeometriaLight.otf);
+}
+
+@font-face {
+    font-family: Existence;
+    src: url(../css/fonts/ExistenceLight.otf);
+}
+
+@font-face {
+    font-family: Ashbury;
+    src: url(../css/fonts/AshburyLight.otf);
+}
+
+@font-face {
+    font-family: Freight;
+    src: url(../css/fonts/FreightNeoProLight.otf);
+}
+
+#app1 {
+    display: block;
+}
+
+#app2, #app3, #app4/* , #app5, #app6 */ {
+    display: none;
+}
+
+.header{
+	background-color: black;
+	padding: 0.6em 0.6em 0.1em
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+.header h1 {
+    padding: 0.2em;
+    padding-bottom: 0.3em;
+    display: inline-block;
+    width: 8em;
+}
+
+.header img {
+    width: 89%;
+}
+
+.app_heading {
+    text-align: center;
+    font-family: Tenso;
+}
+
+.app_heading h1 {
+    padding: 0.5em;
+    font-size: 40px;
+}
+
+.app_heading p {
+    font-size: 30px;
+}
+
+.navigation {
+    display: none;
+    padding: 3em;
+    font-family: Genius;
+    font-size: 1em;
+    padding-bottom: 0;
+}
+
+.navigation ul {
+    list-style: none;
+    height: 60px;
+}
+
+.navigation div {
+    text-align: left;
+    margin-top: 1em;
+    margin-left: 30%;
+}
+
+#app2 .navigation div, #app3 .navigation div {
+    margin-left: 19%;
+}
+
+.navigation .personal_li, .navigation .talent_li, .navigation .services_li, 
+.navigation .additional_li/* , .navigation .review_li, .navigation .complete_li */ {
+    color: red;
+    border-color: red;
+}
+
+.navigation li {
+    display: block;
+    float: left;
+    width: 23%;
+    text-align: center;
+    border-bottom: 1px solid #D3D3D3;
+    margin: 10px;
+    height: 100%;
+    cursor: pointer;
+}
+
+.navigation span {
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.info {
+    font-family: PrintClearly;
+    font-size: 25px;
+    text-align: center;
+    width: 100%;
+}
+
+.info p {
+    padding: 1em;
+    width: 45%;
+    text-align: left;
+    display: inline-block;
+    margin: auto;
+}
+
+.info label {
+    vertical-align: sub;
+    display: none;
+}
+
+
+#app1 .info .left, #app4 .info .left {
+    float: right;
+    margin: 0;
+}
+
+#app1 .info .right, #app4 .info .right {
+    float: left;
+}
+
+#app2 .info p, #app3 .info p {
+    display: inline-block;
+    width: 60%;
+    text-align: left;
+    padding: 0.75em;
+}
+
+#app2 input[type="text"], #app3 input[type="text"], textarea {
+    float: left;
+}
+
+input[type="text"]:focus, input[type="text"].focus {
+    border: solid 5px #969696;
+}
+
+input[type="text"], input[type="file"], select, textarea {
+    float: right;
+    margin-right: 29%;
+    font-size: 18px;
+    border: solid 3px #c9c9c9;
+    transition: border 0.3s;
+    font-family: Tenso;
+}
+
+#talent_category {
+    float: left;
+}
+
+textarea {
+    margin-left: 0px;
+    float: left;
+    margin-bottom: 1.5em;
+    /*width: 57.5%;*/
+    width: 300px;
+}
+
+#add_links input {
+    margin-right: 5%;
+}
+
+
+#add_links button {
+    /*line-height: 1.8em;
+    font-size: 16px;*/
+    line-height: 1.8em;
+    font-size: 14px;
+    float: right;
+}
+
+input[type="file"] {
+/*     color: transparent;  */
+    width: 200px; 
+    font-size: 15px;
+}
+
+select {
+    margin-right: 0;
+    width: 212px;
+    overflow-x: hidden;
+}
+
+#profile_photo, #portfolio {
+    text-align: left;
+}
+
+#profile_photo label, #portfolio label {
+    display: inline; 
+    font-family: Tenso; 
+    font-size: 19px; 
+    margin-right: 6px;
+}
+
+#profile_photo label {
+    float: left;
+    margin-left: 20%;
+    margin-right: 6px;
+}
+
+#portfolio label, #portfolio input {
+    float: left;
+    margin-bottom: 1em;
+}
+
+#audio, #video, #portfolio_image {
+    margin-left: 25px;
+}
+
+#state {
+    float: left;
+    margin-left: -2px;
+}
+
+#ui-datepicker-div {
+    border: solid 5px #969696;
+    background-color: lightgray;
+    font-family: Tenso;
+    left: 461.783px !important;
+}
+
+#ui-datepicker-div select {
+    width: 75px;
+}
+
+#ui-datepicker-div .ui-datepicker-year {
+    float: left;
+}
+
+.ui-datepicker-header a {
+    display: none;
+}
+
+.buttons_container {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 3em;
+}
+
+.buttons {
+    width: 60%;
+    /*text-align: left;*/
+    display: block;
+    margin: auto;
+    padding: 1.5em;
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
+
+button {
+    color: #fff;
+    background-color: #6496c8;
+    text-shadow: -1px 1px #417cb8;
+    border: none;
+    line-height: 3em;
+    font-size: 18px;
+    /*width: 15%;*/
+    width: 80px;
+    font-family: Argh;
+    text-transform: lowercase;
+}
+
+button:hover, button.hover {
+    background-color: #346392;
+    text-shadow: -1px 1px #27496d;
+    cursor: pointer;
+}
+
+button:active, button.active {
+    background-color: #27496d;
+    text-shadow: -1px 1px #193047;
+    cursor: pointer;
+}
+
+button:onclick, button.active {
+    background-color: #27496d;
+    text-shadow: -1px 1px #193047;
+    cursor: progress;
+}
+.submit-button{
+    background-color: #c96464;
+}
+
+.submit-button:hover{
+    background-color: #6d2727;
+}
+
+.submit-button:active{
+    background-color: #6d2727;
+}
+.social-media-bar {
+	text-align: center;
+	padding: 1em 0;
+	/* background-color: #f0f0f0; */
+	background-color: black;
+}
+
+.social-media-bar ul {
+	padding: 0;
+}
+
+.social-media-bar li {
+	padding: 5px;
+	display: inline-block;
+	list-style-type: none;
+}
+
+.media-icon {
+	max-height: 20px;
+	max-width: 20px;
+}
+
+.social-media-bar ul {
+    animation: fadein .5s;
+    -moz-animation: fadein .5s; /* Firefox */
+    -webkit-animation: fadein .5s; /* Safari and Chrome */
+    -o-animation: fadein .5s;
+}
+
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0.5;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+@-webkit-keyframes fadeout { /* Safari and Chrome */
+    from {
+        opacity:1;
+    }
+    to {
+        opacity:0.5;
+    }
+}
+.social-media-bar img:hover {
+    animation: fadeout .5s;
+    -moz-animation: fadeout .5s; /* Firefox */
+    -webkit-animation: fadeout .5s; /* Safari and Chrome */
+    -o-animation: fadeout .5s;
+    opacity: 0.5;
+    
+}
+.social-media-bar img:hover {
+    opacity: 0.5;
+}
+
+footer{
+	/*background-color: #330000;*/
+	background-color: #000;
+	padding: 2em;
+	color: #fff;
+	text-align: center;
+	font-family: 'Quicksand', sans-serif;
+}
+
+/* styles for thank you page */
+.content{
+    padding: 8em;
+    font-family: 'Quicksand', sans-serif;
+}
+.content h2{
+    padding-bottom: 1em;
+    font-size: 2em;
+}
+
+
+
+/* ----[ 69.9em (1118px and up, computer screen)]---- */
+@media only screen and (min-width: 69.9em){
+    #profile_photo label {
+        margin-left: 20%;
+    }
+}
+
+/* ----[ 69.9em (1118px and below)]---- */
+@media only screen and (min-width: 45em){
+
+    .info {
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    }
+
+    .navigation {
+        display: block;
+        min-width: 70em;
+    }
+
+    textarea{
+        width: 400px;
+    }
+
+    button{
+        width: 100px;
+    }
+
+    #add_links button {
+    /*line-height: 1.8em;
+    font-size: 16px;*/
+    line-height: 1.8em;
+    font-size: 16px;
+    float: left;
+}
+
+
+}

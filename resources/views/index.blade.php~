@@ -36,6 +36,7 @@
 					<li><a href="javascript:null(0)" id="services_tab">Services</a></li>
 						<li><a href="javascript:null(0)" id="founder_tab">Founders</a></li>
 						<li><a href="javascript:null(0" id="contactus_tab">Contact Us</a></li>
+						<li><a href="/apply" class="scroll-link" style="border:solid">Apply Now</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -65,7 +66,7 @@
 				    <li class="opportunities">
 				    <div class="box">
   						<div id="asabove">
-  							<h3>Opportunities</h3><br>
+  							<h3 text-align="center">Opportunities</h3><br>
   							<p> These connect you to platforms that help showcase your talents </p>
   							<img class="downarrow" src="images/down-arrow.png">
   						</div>
@@ -79,7 +80,7 @@
 				    <li>
 				        <div class="box">
   							<div id="asabove">
-  								<h3>Representation</h3><br>
+  								<h3 text-align="center">Representation</h3><br>
   								<p> Professionals and organizations that promote and handle other aspects of your career </p>
   								<img class="downarrow" src="images/down-arrow.png">
   							</div>

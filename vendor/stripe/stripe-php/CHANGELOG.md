@@ -1,10 +1,7 @@
-<<<<<<< HEAD
 ### 2.3.0 2015-07-06
 
 * Add request ID to all Stripe exceptions
 
-=======
->>>>>>> a4954494880de80b002b67374bf830a440e3a926
 ### 2.2.0 2015-06-01
 
 * Add support for Alipay accounts as sources

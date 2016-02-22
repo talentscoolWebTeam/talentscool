@@ -201,6 +201,9 @@ h2 {
 	text-align: center;
 	font-size: 1.5em;
 }
+.box{
+	text-align: center;
+}
 
 #window3 .above h4 {
     font-style: italic;
@@ -393,9 +396,6 @@ footer{
 		padding: 2em;
 		color: #fff;
 	}
-	.parallax-window p{
-		padding-left: 1em;
-	}
 
 	#window1{
 		padding: 3.5em 0;
@@ -416,7 +416,6 @@ footer{
 	#window3 p{
 		font-size: 1.2em;
 		line-height: 2em;
-		padding-left: 1em;
 		text-align: center;
 	}
 	#window3 .content{

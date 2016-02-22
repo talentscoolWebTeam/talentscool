@@ -173,28 +173,12 @@ input[type="text"]:focus, input[type="text"].focus {
     border: solid 5px #969696;
 }
 
-input[type="text"], input[type="file"], select, textarea {
+input[type="text"], input[type="file"], select {
     margin-right: 29%;
     font-size: 18px;
     border: solid 3px #c9c9c9;
     transition: border 0.3s;
     font-family: Tenso;
-}
-
-textarea {
-    margin-right: 303px;
-    margin-bottom: 1.5em;
-    width: 57.5%;
-}
-
-#add_links input {
-    margin-right: 5%;
-}
-
-
-#add_links button {
-    line-height: 1.8em;
-    font-size: 16px;
 }
 
 input[type="file"] {
@@ -362,24 +346,16 @@ footer{
 	    float: left;
 	}
 
-	#app2 input[type="text"], #app3 input[type="text"], textarea {
+	#app2 input[type="text"], #app3 input[type="text"] {
 	    float: left;
 	}
-	/*
-	#app3 .info p{
-		margin-bottom: 10em;
-	}
-	*/
-	input[type="text"], #app1 input[type="file"], select, textarea {
+
+	input[type="text"], #app1 input[type="file"], select {
 		float: right;
 	}
 
-	#add_links button {
-    	float: left;
-	}
-
 	#state {
-    	float: left;
-   	 margin-left: -2px;
-	}
+    float: left;
+    margin-left: -2px;
+}
 }

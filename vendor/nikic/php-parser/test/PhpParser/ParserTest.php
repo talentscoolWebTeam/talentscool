@@ -4,46 +4,27 @@ namespace PhpParser;
 
 use PhpParser\Comment;
 
-require_once __DIR__ . '/CodeTestAbstract.php';
-
-class ParserTest extends CodeTestAbstract
+abstract class ParserTest extends \PHPUnit_Framework_TestCase
 {
+    /** @returns Parser */
+    abstract protected function getParser(Lexer $lexer);
+
     /**
-     * @dataProvider provideTestParse
+     * @expectedException \PhpParser\Error
+     * @expectedExceptionMessage Syntax error, unexpected EOF on line 1
      */
-    public function testParse($name, $code, $dump) {
-        $parser = new Parser(new Lexer\Emulative);
-        $dumper = new NodeDumper;
-
-        $stmts = $parser->parse($code);
-        $this->assertSame(
-            $this->canonicalize($dump),
-            $this->canonicalize($dumper->dump($stmts)),
-            $name
-        );
-    }
-
-    public function provideTestParse() {
-        return $this->getTests(__DIR__ . '/../code/parser', 'test');
+    public function testParserThrowsSyntaxError() {
+        $parser = $this->getParser(new Lexer());
+        $parser->parse('<?php foo');
     }
 
     /**
-     * @dataProvider provideTestParseFail
+     * @expectedException \PhpParser\Error
+     * @expectedExceptionMessage Cannot use foo as self because 'self' is a special class name on line 1
      */
-    public function testParseFail($name, $code, $msg) {
-        $parser = new Parser(new Lexer\Emulative);
-
-        try {
-            $parser->parse($code);
-
-            $this->fail(sprintf('"%s": Expected Error', $name));
-        } catch (Error $e) {
-            $this->assertSame($msg, $e->getMessage(), $name);
-        }
-    }
-
-    public function provideTestParseFail() {
-        return $this->getTests(__DIR__ . '/../code/parser', 'test-fail');
+    public function testParserThrowsSpecialError() {
+        $parser = $this->getParser(new Lexer());
+        $parser->parse('<?php use foo as self;');
     }
 
     public function testAttributeAssignment() {
@@ -63,9 +44,9 @@ function test($a) {
     echo $a;
 }
 EOC;
-        $code = $this->canonicalize($code);
+        $code = canonicalize($code);
 
-        $parser = new Parser($lexer);
+        $parser = $this->getParser($lexer);
         $stmts = $parser->parse($code);
 
         /** @var \PhpParser\Node\Stmt\Function_ $fn */
@@ -121,21 +102,8 @@ EOC;
      */
     public function testInvalidToken() {
         $lexer = new InvalidTokenLexer;
-        $parser = new Parser($lexer);
+        $parser = $this->getParser($lexer);
         $parser->parse('dummy');
-    }
-
-    public function testInvalidOctals() {
-        if (version_compare(PHP_VERSION, '7.0-dev', '>=')) {
-            $this->markTestSkipped('Cannot parse invalid octal numbers on PHP 7');
-        }
-
-        $parser = new Parser(new Lexer);
-        $stmts = $parser->parse('<?php 0787; 0177777777777777777777787;');
-        $this->assertInstanceof('PhpParser\Node\Scalar\LNumber', $stmts[0]);
-        $this->assertInstanceof('PhpParser\Node\Scalar\DNumber', $stmts[1]);
-        $this->assertSame(7, $stmts[0]->value);
-        $this->assertSame(0xFFFFFFFFFFFFFFFF, $stmts[1]->value);
     }
 }
 
