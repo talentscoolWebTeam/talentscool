@@ -17,11 +17,11 @@ Route::resource('/contactus', 'MailController');
 Route::get('contact-form-thank-you', 'WelcomeController@contactthanks');
 
 //Application page
-Route::get('apply', 'ApplicationController@application');
+//Route::get('apply', 'ApplicationController@application');
 
 //Route::get('/admin', 'AdminController@index');
 //Route::get('testmysql','ApplicationController@testsql');
-Route::post('submitapp','ApplicationController@store');
+//Route::post('submitapp','ApplicationController@store');
 Route::get('thanks', 'ApplicationController@thanks');
 Route::controllers([
     'auth' => 'Auth\AuthController',
