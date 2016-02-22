@@ -396,6 +396,9 @@ footer{
 		padding: 2em;
 		color: #fff;
 	}
+	.parallax-window p{
+		padding-left: 1em;
+	}
 
 	#window1{
 		padding: 3.5em 0;

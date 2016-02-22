@@ -1,12 +1,19 @@
-/* ---[ Base Styles ]--- */
 html, body { 
     width: 100%; 
     height: 100%; 
     margin: 0 auto; 
 }
 
+.info {
+    -moz-transform: scale(.75);
+    -webkit-transform: scale(.75);
+    -o-transform: scale(.75);
+    -ms-transform: scale(.75);
+    transform: scale(.75);
+}
+
 *{
-	/*box-sizing:border-box;*/
+	box-sizing:border-box;
 	margin: 0;
 }
 
@@ -54,6 +61,7 @@ html, body {
     font-family: Freight;
     src: url(../css/fonts/FreightNeoProLight.otf);
 }
+
 #app1 {
     display: block;
 }
@@ -100,7 +108,6 @@ html, body {
     font-family: Genius;
     font-size: 1em;
     padding-bottom: 0;
-    min-width: 63em;
 }
 
 .navigation ul {
@@ -150,7 +157,7 @@ html, body {
 
 .info p {
     padding: 1em;
-    width: 40%;
+    width: 45%;
     text-align: left;
     display: inline-block;
     margin: auto;
@@ -161,19 +168,33 @@ html, body {
     display: none;
 }
 
+
+#app1 .info .left, #app4 .info .left {
+    float: right;
+    margin: 0;
+}
+
+#app1 .info .right, #app4 .info .right {
+    float: left;
+}
+
 #app2 .info p, #app3 .info p {
-    display: block;
+    display: inline-block;
     width: 60%;
     text-align: left;
-    padding: 1.5em;
-    padding-left: 0.75em;
+    padding: 0.75em;
+}
+
+#app2 input[type="text"], #app3 input[type="text"], textarea {
+    float: left;
 }
 
 input[type="text"]:focus, input[type="text"].focus {
     border: solid 5px #969696;
 }
 
-input[type="text"], input[type="file"], select {
+input[type="text"], input[type="file"], select, textarea {
+    float: right;
     margin-right: 29%;
     font-size: 18px;
     border: solid 3px #c9c9c9;
@@ -181,21 +202,45 @@ input[type="text"], input[type="file"], select {
     font-family: Tenso;
 }
 
+#talent_category {
+    float: left;
+}
+
+textarea {
+    margin-left: 0px;
+    float: left;
+    margin-bottom: 1.5em;
+    /*width: 57.5%;*/
+    width: 300px;
+}
+
+#add_links input {
+    margin-right: 5%;
+}
+
+
+#add_links button {
+    /*line-height: 1.8em;
+    font-size: 16px;*/
+    line-height: 1.8em;
+    font-size: 14px;
+    float: right;
+}
+
 input[type="file"] {
-    color: transparent; 
-    width: 97px; 
+/*     color: transparent;  */
+    width: 200px; 
+    font-size: 15px;
 }
 
 select {
     margin-right: 0;
-    /*width: 46%;*/
-    width: 200px;
+    width: 212px;
     overflow-x: hidden;
 }
 
 #profile_photo, #portfolio {
-    text-align: right;
-    padding-bottom: 0px;
+    text-align: left;
 }
 
 #profile_photo label, #portfolio label {
@@ -203,6 +248,45 @@ select {
     font-family: Tenso; 
     font-size: 19px; 
     margin-right: 6px;
+}
+
+#profile_photo label {
+    float: left;
+    margin-left: 20%;
+    margin-right: 6px;
+}
+
+#portfolio label, #portfolio input {
+    float: left;
+    margin-bottom: 1em;
+}
+
+#audio, #video, #portfolio_image {
+    margin-left: 25px;
+}
+
+#state {
+    float: left;
+    margin-left: -2px;
+}
+
+#ui-datepicker-div {
+    border: solid 5px #969696;
+    background-color: lightgray;
+    font-family: Tenso;
+    left: 461.783px !important;
+}
+
+#ui-datepicker-div select {
+    width: 75px;
+}
+
+#ui-datepicker-div .ui-datepicker-year {
+    float: left;
+}
+
+.ui-datepicker-header a {
+    display: none;
 }
 
 .buttons_container {
@@ -229,7 +313,7 @@ button {
     line-height: 3em;
     font-size: 18px;
     /*width: 15%;*/
-    width: 100px;
+    width: 80px;
     font-family: Argh;
     text-transform: lowercase;
 }
@@ -251,7 +335,6 @@ button:onclick, button.active {
     text-shadow: -1px 1px #193047;
     cursor: progress;
 }
-
 .submit-button{
     background-color: #c96464;
 }
@@ -263,7 +346,6 @@ button:onclick, button.active {
 .submit-button:active{
     background-color: #6d2727;
 }
-
 .social-media-bar {
 	text-align: center;
 	padding: 1em 0;
@@ -331,31 +413,56 @@ footer{
 	font-family: 'Quicksand', sans-serif;
 }
 
-/* ----[ 69.9em (1118px and up, computer screen)]---- */
-@media only screen and (min-width: 45em){
-	.navigation {
-		display: block;
-	}
-
-	#app1 .info .left, #app4 .info .left {
-    float: right;
-    margin: 0;
-	}
-
-	#app1 .info .right, #app4 .info .right {
-	    float: left;
-	}
-
-	#app2 input[type="text"], #app3 input[type="text"] {
-	    float: left;
-	}
-
-	input[type="text"], #app1 input[type="file"], select {
-		float: right;
-	}
-
-	#state {
-    float: left;
-    margin-left: -2px;
+/* styles for thank you page */
+.content{
+    padding: 8em;
+    font-family: 'Quicksand', sans-serif;
 }
+.content h2{
+    padding-bottom: 1em;
+    font-size: 2em;
+}
+
+
+
+/* ----[ 69.9em (1118px and up, computer screen)]---- */
+@media only screen and (min-width: 69.9em){
+    #profile_photo label {
+        margin-left: 20%;
+    }
+}
+
+/* ----[ 69.9em (1118px and below)]---- */
+@media only screen and (min-width: 45em){
+
+    .info {
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    }
+
+    .navigation {
+        display: block;
+        min-width: 70em;
+    }
+
+    textarea{
+        width: 400px;
+    }
+
+    button{
+        width: 100px;
+    }
+
+    #add_links button {
+    /*line-height: 1.8em;
+    font-size: 16px;*/
+    line-height: 1.8em;
+    font-size: 16px;
+    float: left;
+}
+
+
 }
