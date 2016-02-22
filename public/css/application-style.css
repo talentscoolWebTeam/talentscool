@@ -202,10 +202,6 @@ input[type="text"], input[type="file"], select, textarea {
     font-family: Tenso;
 }
 
-#talent_category {
-    float: left;
-}
-
 textarea {
     margin-left: 0px;
     float: left;
@@ -258,7 +254,7 @@ select {
     margin-bottom: 1em;
 }
 
-#audio, #video, #portfolio_image {
+#audio, #video {
     margin-left: 25px;
 }
 

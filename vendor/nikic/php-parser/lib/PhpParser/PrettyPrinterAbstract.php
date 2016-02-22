@@ -66,8 +66,6 @@ abstract class PrettyPrinterAbstract
         'Expr_AssignOp_ShiftLeft'      => array(160,  1),
         'Expr_AssignOp_ShiftRight'     => array(160,  1),
         'Expr_AssignOp_Pow'            => array(160,  1),
-        'Expr_YieldFrom'               => array(165,  1),
-        'Expr_Print'                   => array(168,  1),
         'Expr_BinaryOp_LogicalAnd'     => array(170, -1),
         'Expr_BinaryOp_LogicalXor'     => array(180, -1),
         'Expr_BinaryOp_LogicalOr'      => array(190, -1),
@@ -76,21 +74,9 @@ abstract class PrettyPrinterAbstract
 
     protected $noIndentToken;
     protected $canUseSemicolonNamespaces;
-    protected $options;
 
-    /**
-     * Creates a pretty printer instance using the given options.
-     *
-     * Supported options:
-     *  * bool $shortArraySyntax = false: Whether to use [] instead of array()
-     *
-     * @param array $options Dictionary of formatting options
-     */
-    public function __construct(array $options = []) {
+    public function __construct() {
         $this->noIndentToken = '_NO_INDENT_' . mt_rand();
-
-        $defaultOptions = ['shortArraySyntax' => false];
-        $this->options = $options + $defaultOptions;
     }
 
     /**

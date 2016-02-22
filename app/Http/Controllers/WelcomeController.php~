@@ -24,41 +24,47 @@ class WelcomeController extends Controller {
 		$this->middleware('guest');
 	}
 
-	public function index(){
+	/**
+	 * Show the application welcome screen to the user.
+	 *
+	 * @return Response
+	 */
+	public function landing(){
 		return view('index');
 	}
+	public function index()
+	{
+		return view('index');
+	}
+	public function aboutUs()
+	{
+		return view('aboutus');
+	}
+	public function whatwedo()
+	{
+		return view('whatwedo');
+	}
+	public function sendmail(){
+		$to='contact@talentscool.com'.',';
+		$to.='michaelbpratt@gmail.com';
+		$subject='Message from ';
+		$subject.=\Input::get('receiver');
+		$message=\Input::get('message');
+		$headers = 'From: '.\Input::get('email')."\r\n".
+				'Reply-To: '.\Input::get('email') . "\r\n";
+		$status = mail($to,$subject,$message,$headers);
+		$ret = "";
+		if($status)
+		{
+			$ret = array("result"=> 'success');
+		}
+		else
+			$ret = array("result" => 'fail');
+		return \Response::json($ret);
+	}
+	public function contactthanks(){
+		return view('contact-form-thank-you');
+	}
 
-    /**
-     * Function for sending email when form is submitted
-     */
-    public function sendmail(){
-        //For security, take in only these parameters
-        $input =  Input::only('name', 'email', 'message');
-
-        //Validate that these fields are not blank
-        $validator = Validator::make($input,
-            array(
-                'name' => 'required',
-                'email' => 'required|email',
-                'msg' => 'required',
-            )
-        );
-        if ($validator->fails())
-        {
-            return Redirect::to('index')->with('errors', $validator->messages);
-        }
-        else { // the validation has not failed, it has passed
-
-            // Send the email with the contactemail view, the user input
-            Mail::send('contactemail', $input, function ($message) {
-                $message->from($input['email'], $input['name']);
-
-                $message->to('geeting.talentscool@gmail.com', 'Kevin');
-            });
-
-            return Redirect::to('index');
-        }
-
-    }
 
 }

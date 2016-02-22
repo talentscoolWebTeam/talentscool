@@ -29,7 +29,7 @@ class Param extends NodeAbstract
      * @param array            $attributes Additional attributes
      */
     public function __construct($name, Expr $default = null, $type = null, $byRef = false, $variadic = false, array $attributes = array()) {
-        parent::__construct($attributes);
+        parent::__construct(null, $attributes);
         $this->type = $type;
         $this->byRef = $byRef;
         $this->variadic = $variadic;
@@ -37,7 +37,7 @@ class Param extends NodeAbstract
         $this->default = $default;
 
         if ($variadic && null !== $default) {
-            throw new Error('Variadic parameter cannot have a default value', $default->getAttributes());
+            throw new Error('Variadic parameter cannot have a default value');
         }
     }
 

@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        TalentsCool | Application
+    </title>
+    
+    <link rel="stylesheet" href="css/application-style.css" />
+    <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+	
+    <div class="header">
+        <div>
+            <h1><a href="index.html"><img src="images/TSVector.png"></a></h1>
+        </div>
+    </div>
+
+
+    <div id="app1">
+		<form id = "myform" action = "testsql.php" method = "post">
+        <div class="app_heading">
+            <h1>
+                Application
+            </h1>
+            <p>
+                Personal Information
+            </p>
+        </div>
+    
+    
+        <div class="navigation">
+            <ul>
+                <li class="personal_li">
+                    Step 1 <br><br> <span>Personal Information</span>
+                </li>
+                <li>
+                    Step 2 <br><br> <span>Talent</span>
+                </li>
+                <li>
+                    Step 3 <br><br> <span>More About Yourself</span>
+                </li>
+                <li>
+                    Step 4 <br><br> <span>Desired Services</span>
+                </li>
+                <!--<li>
+                    Step 5 <br><br> <span>Review Application</span>
+                </li>
+                <li>
+                    Step 6 <br><br> <span>Complete</span>
+                </li>-->
+            </ul>
+            <div>
+                <br><br><br>*required
+            </div>
+        </div>
+    
+        <div class="info"> 
+            <p>
+                <label>
+                    First Name
+                </label>
+                <input type="text" class="left" autocomplete="off" placeholder="First Name*" required></input>
+            </p>
+            <p>
+                <label>
+                    Last Name
+                </label>
+                <input type="text" class="right" autocomplete="off" placeholder="Last Name*" required></input>
+            </p>
+            <p>
+                <label>
+                    E-mail
+                </label>
+                <input type="text" class="left" autocomplete="off" placeholder="E-mail*" required></input>
+            </p>
+            <p>
+                <label>
+                    Phone Number
+                </label>
+                <input type="text" class="right" autocomplete="off" placeholder="Phone Number*" required></input>
+            </p>
+            <p>
+                <label>
+                    Country
+                </label>
+                <input type="text" name = "country" class="left" autocomplete="off" placeholder="Country" required></input>
+            </p>
+            <p>
+                <label>
+                    State
+                </label>
+                <input type="text" name = "state" class="right" autocomplete="off" placeholder="State" required></input>
+            </p>
+            <p>
+                <label>
+                    City
+                </label>
+                <input type="text" name ="city" class="left" autocomplete="off" placeholder="City" required></input>
+            </p>
+            <p>
+                <label>
+                    Zip Code
+                </label>
+                <input type="text" name = "zip" class="right" autocomplete="off" placeholder="Zip Code" required></input>
+            </p>
+            <p>
+                <label>
+                    Date of Birth
+                </label>
+                <input type="text" name ="dob" class="left" autocomplete="off" placeholder="Date of Birth" required></input>
+            </p>
+            <p>
+                <label>
+                    Gender
+                </label>
+                <input type="text" name = "gender" class="right" autocomplete="off" placeholder="Gender" required></input>
+            </p>
+            <p>
+                <label>
+                    Profile Photo
+                </label>
+                <input type="text" name = "dp" class="left" autocomplete="off" placeholder="Profile Photo" required></input>
+            </p>
+        </div>
+    
+     <div class="buttons_container">
+            <div class="buttons">
+                <button class="next-button">
+                    Next
+	            </button>
+	        </div>
+        </div>
+		<input type= "submit" value='click here'>
+    </div>
+	</form>
+				
+	
+    <!------------------------------------------------------------------------------------------------------------>
+
+    <div id="app2">
+        <div class="app_heading">
+            <h1>
+                Application
+            </h1>
+            <p>
+                Talent
+            </p>
+        </div>
+    
+    
+        <div class="navigation">
+            <ul>
+                <li>
+                    Step 1 <br><br> <span>Personal Information</span>
+                </li>
+                <li class="talent_li">
+                    Step 2 <br><br> <span>Talent</span>
+                </li>
+                <li>
+                    Step 3 <br><br> <span>More About Yourself</span>
+                </li>
+                <li>
+                    Step 4 <br><br> <span>Desired Services</span>
+                </li>
+<!-- 
+                <li>
+                    Step 5 <br><br> <span>Review Application</span>
+                </li>
+                <li>
+                    Step 6 <br><br> <span>Complete</span>
+                </li>
+ -->
+            </ul>
+            <div>
+                <br><br><br>*required
+            </div>
+        </div>
+    
+        <div class="info"> 
+            <p>
+                <label>
+                    Talent Category
+                </label>
+                <input type="text" autocomplete="off" placeholder="Talent Category*" required></input>
+            </p>
+            <p>
+                <label>
+                    Specific Talent
+                </label>
+                <input type="text" autocomplete="off" placeholder="Specific Talent*" required></input>
+            </p>
+            <p>
+                <label>
+                    Portfolio
+                </label>
+                <input type="text" autocomplete="off" placeholder="Portfolio" required></input>
+            </p>
+            <p>
+                <label>
+                    Audio
+                </label>
+                <input type="text" autocomplete="off" placeholder="Audio" required></input>
+            </p>
+            <p>
+                <label>
+                    Video
+                </label>
+                <input type="text" autocomplete="off" placeholder="Video" required></input>
+            </p>
+        </div>
+    
+        <div class="buttons_container">
+            <div class="buttons">
+                <button class="prev-button">
+                    Previous
+                </button>
+                <button class="next-button">
+                    Next
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <!------------------------------------------------------------------------------------------------------------>
+
+
+    <div id="app3">
+
+        <div class="app_heading">
+            <h1>
+                Application
+            </h1>
+            <p>
+                Desired Services
+            </p>
+        </div>
+    
+    
+        <div class="navigation">
+            <ul>
+                <li>
+                    Step 1 <br><br> <span>Personal Information</span>
+                </li>
+                <li>
+                    Step 2 <br><br> <span>Talent</span>
+                </li>
+                <li class="services_li">
+                    Step 3 <br><br> <span>More About Yourself</span>
+                </li>
+                <li>
+                    Step 4 <br><br> <span>Desired Services</span>
+                </li>
+<!-- 
+                <li>
+                    Step 5 <br><br> <span>Review Application</span>
+                </li>
+                <li>
+                    Step 6 <br><br> <span>Complete</span>
+                </li>
+ -->
+            </ul>
+            <div>
+                <br><br><br>*required
+            </div>
+        </div>
+    
+        <div class="info"> 
+            <p>
+                <label>
+                    Describe Yourself
+                </label>
+                <input type="text" autocomplete="off" placeholder="Describe Yourself*" required></input>
+            </p>
+            <p>
+                <label>
+                    Personal Web/Social Media
+                </label>
+                <input type="text" autocomplete="off" placeholder="Personal Web/Social Media" required></input>
+            </p>
+            <p>
+                <label>
+                    Experiences (Accomplishments)
+                </label>
+                <input type="text" autocomplete="off" placeholder="Experiences (Accomplishments)" required></input>
+            </p>
+            <p>
+                <label>
+                    Current Representative
+                </label>
+                <input type="text" autocomplete="off" placeholder="Current Representative" required></input>
+            </p>        
+        </div>
+    
+        <div class="buttons_container">
+            <div class="buttons">
+                <button class="prev-button">
+                    Previous
+                </button>
+                <button class="next-button">
+                    Next
+                </button>
+            </div>
+        </div>
+    
+    </div>
+
+    <!------------------------------------------------------------------------------------------------------------>
+
+
+
+
+    <div id="app4">
+        <div class="app_heading">
+            <h1>
+                Application
+            </h1>
+            <p>
+                Additional Information
+            </p>
+        </div>
+    
+    
+        <div class="navigation">
+            <ul>
+                <li>
+                    Step 1 <br><br> <span>Personal Information</span>
+                </li>
+                <li>
+                    Step 2 <br><br> <span>Talent</span>
+                </li>
+                <li>
+                    Step 3 <br><br> <span>More About Yourself</span>
+                </li>
+                <li class="additional_li">
+                    Step 4 <br><br> <span>Desired Services</span>
+                </li>
+<!-- 
+                <li>
+                    Step 5 <br><br> <span>Review Application</span>
+                </li>
+                <li>
+                    Step 6 <br><br> <span>Complete</span>
+                </li>
+ -->
+            </ul>
+            <div>
+                <br><br><br>*required
+            </div>
+        </div>
+    
+        <div class="info"> 
+            <p>
+                <label>
+                    Opportunities
+                </label>
+                <input type="text" class="left" autocomplete="off" placeholder="Opportunities" required></input>
+            </p>
+            <p>
+                <label>
+                    Representation
+                </label>
+                <input type="text" class="right" autocomplete="off" placeholder="Representation" required></input>
+            </p>
+            <p>
+                <label>
+                    Talent Development
+                </label>
+                <input type="text" class="left" autocomplete="off" placeholder="Talent Development" required></input>
+            </p>
+            <p>
+                <label>
+                    General Services
+                </label>
+                <input type="text" class="right" autocomplete="off" placeholder="General Services" required></input>
+            </p>
+            <p>
+                <label>
+                    Vanity & Luxury Services
+                </label>
+                <input type="text" class="left" autocomplete="off" placeholder="Vanity & Luxury Services" required></input>
+            </p>
+            <p>
+                <label>
+                    Additional Requests
+                </label>
+                <input type="text" class="right" autocomplete="off" placeholder="Additional Requests" required></input>
+            </p>
+        </div>
+    
+        <div class="buttons_container">
+            <div class="buttons">
+                <button class="prev-button">
+                    Previous
+                </button>
+           
+   <button class="submit-button" on>
+                    Submit
+                </button>
+			
+            </div>
+        </div>
+    </div>
+		
+    
+<!------------------------------------------------------------------------------------------------------------>
+		<footer>
+			<div class="social-media-bar">
+			<ul>
+				<li><a target="_blank" href="https://twitter.com/talentscool"><img src="images/twitter_logo.png" title="Follow us on Twitter!" class="media-icon"></a></li>
+				<li><a target="_blank" href="https://www.facebook.com/talentscool"><img src="images/facebook_logo.png" title="Follow us on Facebook!" class="media-icon"></a></li>
+				<li><a target="_blank" href="https://www.instagram.com/talentscool/"><img src="images/instagram_logo.png" title="Follow us on Instagram!" class="media-icon"></a></li>
+			</ul>
+		</div>
+			<p>Copyright &copy 2016. Talentscool, Inc. All rights reserved. </p>
+		</footer>
+
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/application-script.js"></script>
+
+

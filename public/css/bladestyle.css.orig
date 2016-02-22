@@ -1,0 +1,483 @@
+<<<<<<< HEAD
+/*
+Theme Name: My custom theme
+Theme URI: http://wordpress.org/
+Description: The 2010 default theme for WordPress.
+Author: wordpressdotorg
+Author URI: http://wordpress.org/
+Version: 1.0
+Tags: black, blue, white, two-columns, fixed-width, custom-header, custom-background, threaded-comments, sticky-post, translation-ready, microformats, rtl-language-support, editor-style, custom-menu (optional)
+
+License:
+License URI:
+
+General comments (optional).
+*/
+
+body, html,  p, a {
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    color: #000;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Libre Baskerville', serif;
+}
+
+h1{
+    font-size: 80px;
+    color: #000;
+}
+
+ul{
+    margin: 0;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+.container-fluid{
+    padding:0;
+    max-width: 100%;
+}
+
+.col-md-3, .col-md-4, .col-md-8{
+    padding:0;
+}
+
+.row{
+    max-width: 100%;
+    margin: 0;
+}
+
+.nav-bar{
+    background-color: rgba(255, 255, 255);
+    width: 100%;
+    height: 70px;
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+.nav-bar.border{
+    border-bottom: 1px #000 solid;
+}
+
+.nav-bar li{
+    display: inline-block;
+    padding: 25px 35px;
+}
+
+#logo{
+    padding: 0;
+}
+
+.nav-bar a{
+    color: #000;
+    font-weight: 800;
+}
+
+.nav-bar a:hover{
+    text-decoration: none;
+}
+
+/* Searchbar */
+
+.search-header{
+    width: 100%;
+    /*background-color: #262F75;*/
+    /*color: #fff;*/
+    padding: 50px 0;
+    z-index: 1;
+
+}
+
+.category-search{
+    width: 100%;
+    position: relative;
+    background-color: #fff;
+    border: 2px #000 solid;
+    height: 65px;
+    margin: 25px 0 75px;
+    font-size: 18px;
+    overflow: hidden;
+
+}
+
+.category-search:hover{
+    overflow: visible;
+}
+
+.search-option{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    overflow: scroll;
+}
+
+.select-category{
+    padding: 20px 25px;
+}
+
+.search-option li{
+    list-style: none;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    text-transform: capitalize;
+}
+
+.search-option a, .search-option p{
+    display: block;
+    padding: 20px 25px;
+    margin: 0;
+    color: #000;
+}
+
+.search-option li a:hover{
+    background-color: rgba(23, 28, 75, 0.9);
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Categories Display */
+
+.grid-container{
+    position: relative;
+
+}
+
+.category-label{
+    position: absolute;
+    z-index: 1;
+    color: #fff;
+    font-size: 60px;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 110px 100px;
+    width: 50%;
+    background-color: red;
+    margin: 47px;
+
+}
+
+.medium-thumb{
+    max-height: 600px;
+    max-width: 400px;
+    display: inline-block;
+    position: relative;
+}
+
+.medium-thumb img{
+    width: 400px;
+    height: 600px ;
+}
+
+.medium-thumb:hover a{
+    visibility: visible;
+    text-decoration: none;
+}
+
+.medium-thumb a{
+    top:0;
+    left:0;
+    padding: 100px;
+    padding-top: 60%;
+    position: absolute;
+    display: block;
+    width: 100%;
+    height:100%;
+    text-align: center;
+    background-color: rgba(23, 28, 75, 0.85);
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 30px;
+    visibility: hidden;
+}
+
+
+/* Single Page */
+
+.post-title{
+    height: 100px;
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+    background-color: #171c4b;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+}
+
+.meet-artist{
+    display: block;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 48px;
+    font-weight: bold;
+    padding: 15px 35px;
+}
+
+.bio{
+    padding: 15px 35px;
+    margin-bottom: 25px;
+}
+
+.tag a{
+    background-color: #000000;
+    color: #fff;
+    padding: 3px 10px;
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-radius: 3px;
+    margin-right: 10px;
+    overflow: auto;
+}
+
+.prof-img img{
+    width: 100%;
+    height: auto;
+}
+
+
+.page-title{
+    margin-bottom: 25px;
+=======
+body, html,  p, a {
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Libre Baskerville', serif;
+}
+
+h1{
+    font-size: 80px;
+}
+
+ul{
+    margin: 0;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+.container-fluid{
+    padding:0;
+    max-width: 100%;
+}
+
+.col-md-3, .col-md-4, .col-md-8{
+    padding:0;
+}
+
+.row{
+    max-width: 100%;
+    margin: 0;
+}
+
+.nav-bar{
+    background-color: rgba(255, 255, 255);
+    width: 100%;
+    height: 70px;
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+.nav-bar.border{
+    border-bottom: 1px #000 solid;
+}
+
+.nav-bar li{
+    display: inline-block;
+    padding: 25px 35px;
+}
+
+#logo{
+    padding: 0;
+}
+
+.nav-bar a{
+    color: #000;
+    font-weight: 800;
+}
+
+.nav-bar a:hover{
+    text-decoration: none;
+}
+
+/* Searchbar */
+
+.search-header{
+    width: 100%;
+    /*background-color: #262F75;*/
+    /*color: #fff;*/
+    padding: 50px 0;
+    z-index: 1;
+
+}
+
+.category-search{
+    width: 100%;
+    position: relative;
+    background-color: #fff;
+    border: 2px #000 solid;
+    height: 65px;
+    margin: 25px 0 75px;
+    font-size: 18px;
+    overflow: hidden;
+
+}
+
+.category-search:hover{
+    overflow: visible;
+}
+
+.search-option{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    overflow: scroll;
+}
+
+.select-category{
+    padding: 20px 25px;
+}
+
+.search-option li{
+    list-style: none;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    text-transform: capitalize;
+}
+
+.search-option a, .search-option p{
+    display: block;
+    padding: 20px 25px;
+    margin: 0;
+    color: #000;
+}
+
+.search-option li a:hover{
+    background-color: rgba(23, 28, 75, 0.9);
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Categories Display */
+
+.grid-container{
+    position: relative;
+
+}
+
+.category-label{
+    position: absolute;
+    z-index: 1;
+    color: #fff;
+    font-size: 60px;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 110px 100px;
+    width: 50%;
+    background-color: red;
+    margin: 47px;
+
+}
+
+.medium-thumb{
+    max-height: 600px;
+    max-width: 400px;
+    display: inline-block;
+    position: relative;
+}
+
+.medium-thumb img{
+    width: 400px;
+    height: 600px ;
+}
+
+.medium-thumb:hover a{
+    visibility: visible;
+    text-decoration: none;
+}
+
+.medium-thumb a{
+    top:0;
+    left:0;
+    padding: 100px;
+    padding-top: 60%;
+    position: absolute;
+    display: block;
+    width: 100%;
+    height:100%;
+    text-align: center;
+    background-color: rgba(23, 28, 75, 0.85);
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 30px;
+    visibility: hidden;
+}
+
+
+/* Single Page */
+
+.post-title{
+    height: 100px;
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+    background-color: #171c4b;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+}
+
+.meet-artist{
+    display: block;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 48px;
+    font-weight: bold;
+    padding: 15px 35px;
+}
+
+.bio{
+    padding: 15px 35px;
+    margin-bottom: 25px;
+}
+
+.tag a{
+    background-color: #000000;
+    color: #fff;
+    padding: 3px 10px;
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-radius: 3px;
+    margin-right: 10px;
+    overflow: auto;
+}
+
+.prof-img img{
+    width: 100%;
+    height: auto;
+}
+
+
+.page-title{
+    margin-bottom: 25px;
+>>>>>>> 09e9ecc9d2d2e5654db442799b21cf959a83aa68
+}

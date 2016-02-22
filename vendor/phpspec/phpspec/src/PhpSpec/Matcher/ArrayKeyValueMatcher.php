@@ -20,7 +20,7 @@ use PhpSpec\Formatter\Presenter\PresenterInterface;
 class ArrayKeyValueMatcher extends BasicMatcher
 {
     /**
-     * @var PresenterInterface
+     * @var \PhpSpec\Formatter\Presenter\PresenterInterface
      */
     private $presenter;
 
@@ -41,11 +41,10 @@ class ArrayKeyValueMatcher extends BasicMatcher
      */
     public function supports($name, $subject, array $arguments)
     {
-        return
-            (is_array($subject) || $subject instanceof \ArrayAccess) &&
-            'haveKeyWithValue' === $name &&
-            2 == count($arguments)
-        ;
+        return 'haveKeyWithValue' === $name
+        && 2 == count($arguments)
+        && (is_array($subject) || $subject instanceof ArrayAccess)
+            ;
     }
 
     /**
@@ -63,7 +62,7 @@ class ArrayKeyValueMatcher extends BasicMatcher
             return $subject->offsetExists($key) && $subject->offsetGet($key) === $value;
         }
 
-        return (isset($subject[$key]) || array_key_exists($arguments[0], $subject)) && $subject[$key] === $value;
+        return (isset($subject[$key]) || array_key_exists($arguments[0], $subject) && $subject[$key] === $value);
     }
 
     /**
@@ -76,10 +75,13 @@ class ArrayKeyValueMatcher extends BasicMatcher
     protected function getFailureException($name, $subject, array $arguments)
     {
         $key = $arguments[0];
+        $expectedValue = $arguments[1];
+        $actualValue = $subject[$key];
 
         if (!$this->offsetExists($key, $subject)) {
-            return new FailureException(sprintf('Expected %s to have key %s, but it didn\'t.',
+            return new FailureException(sprintf('Expected %s to have value %s for %s key, but no key was set.',
                 $this->presenter->presentValue($subject),
+                $this->presenter->presentValue($expectedValue),
                 $this->presenter->presentString($key)
             ));
         }
@@ -87,9 +89,9 @@ class ArrayKeyValueMatcher extends BasicMatcher
         return new FailureException(sprintf(
             'Expected %s to have value %s for %s key, but found %s.',
             $this->presenter->presentValue($subject),
-            $this->presenter->presentValue($arguments[1]),
+            $this->presenter->presentValue($expectedValue),
             $this->presenter->presentString($key),
-            $this->presenter->presentValue($subject[$key])
+            $this->presenter->presentValue($actualValue)
         ));
     }
 

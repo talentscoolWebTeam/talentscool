@@ -36,7 +36,6 @@
 					<li><a href="javascript:null(0)" id="services_tab">Services</a></li>
 						<li><a href="javascript:null(0)" id="founder_tab">Founders</a></li>
 						<li><a href="javascript:null(0" id="contactus_tab">Contact Us</a></li>
-						<li><a href="/apply" class="scroll-link" style="border:solid">Apply Now</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -53,7 +52,7 @@
 
 		<div class="plain-window" id="window2">
 			<div class="content">
-				<h2>What We Do</h2>
+				<h2>What we do</h2>
 				<p>With the competitive landscape of the entertainment industry, your talents may go unheard- but that’s what we’re here for! We are a service that connects creative talents to opportunities & services. Through our global relationships, our clients varying from athletes to artists  can find the resources they need in order to bolster their talents. We serve as the mediator between you and our connections by recommending you to the appropriate service providers that best fulfill your needs. With our connections ranging from major/indie record labels, talent/casting agencies, production companies, corporate sponsors, venues/art galleries, and advisors from various professions, Talentscool provides you the advantage of convenience & peace of mind.</p>
 
 			</div>
@@ -61,12 +60,18 @@
 
 		<div class="parallax-window" id="window3" data-speed="0.1" data-ios-fix="true">
 			<div class="content">
-				<h2 id="services_header">Services</h2>
+				<h2>Services</h2><!--
+				<p>Opportunities: Bookings, Endorsements, Auditions, Showcases, Appearances, Collaborations, Jobs, Internships</p>
+				<p>Representation: Manager, Agent, Record Deal, Booking Agent, Publicist, Talent Agent, Brand Manager</p>
+				<p>Talent Development: Vocal Coach, Acting Coach, Instrument Teacher, Dance Instructor, Art Instructor, School Placement</p>
+				<p>General Services: Musician, Vocalist, Dancer, Lawyer, Accountant, Investor, Personal Assistant, Web Designer, Engineer, Fitness Trainer, Camera Crew</p>
+				<p>Clothing Services: Clothing Stylist, Hair Stylist, Barber, Makeup Artist, Model, Photographer, Videographer, Clothing Designer</p>
+				<p>Luxury Services: Bodyguard, Limo Driver, Private Jet Rental, Studio Rental, Helicopter Rental, Car Rental</p> -->
 				<ul>
 				    <li class="opportunities">
 				    <div class="box">
   						<div id="asabove">
-  							<h3>Opportunities</h3><br>
+  							<h3>Opportunities:</h3><br>
   							<p> These connect you to platforms that help showcase your talents </p>
   							<img class="downarrow" src="images/down-arrow.png">
   						</div>
@@ -80,7 +85,7 @@
 				    <li>
 				        <div class="box">
   							<div id="asabove">
-  								<h3>Representation</h3><br>
+  								<h3>Representation:</h3><br>
   								<p> Professionals and organizations that promote and handle other aspects of your career </p>
   								<img class="downarrow" src="images/down-arrow.png">
   							</div>
@@ -93,7 +98,7 @@
 				    <li>
 				        <div class="box">
   							<div id="asabove">
-  									<h3>Talent Development</h3><br>
+  									<h3>Talent Development:</h3><br>
 				                   <p> Resources that help you further enhance your talents</p>
 				                   <img class="downarrow" src="images/down-arrow.png">
 				             </div>
@@ -106,7 +111,7 @@
 				    <li>
 				        <div class="box">
   							<div id="asabove">
-  								<h3>General Services</h3><br>
+  								<h3>General Services:</h3><br>
 				               	<p>Professionals in different fields that are here to ensure your general needs are met</p>
 				               	<img class="downarrow" src="images/down-arrow.png">
 				            </div>
@@ -120,7 +125,7 @@
 				    <li>
 				        <div class="box">
   							<div id="asabove">
-  								<h3>Vanity and Luxury</h3><br>
+  								<h3>Vanity and Luxury Services:</h3><br>
 				               	<p>Touch up your personal style with high class services </p>
 				               	<img class="downarrow" src="images/down-arrow.png">
 				             </div>
@@ -153,7 +158,7 @@
 			</div>
 		</div>
 
-         {!! Form::open(['route' => 'contactus.store', 'method'=>'POST', 'name' => 'contactform'])!!}
+        {!! Form::open(['route' => 'contactus.store', 'method'=>'POST', 'name' => 'contactform'])!!}
         <div class="parallax-window" id="window5">
             <div class="content">
                 <h2>Contact us</h2>
@@ -173,7 +178,6 @@
             </div>
         </div>
         {!! Form::close() !!}
-
 
 		<footer>
 			<div class="social-media-bar">
