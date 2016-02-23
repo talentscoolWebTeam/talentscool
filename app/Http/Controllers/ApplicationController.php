@@ -15,6 +15,72 @@ class ApplicationController extends Controller
    public function application(){
 	return view('apply/application');	
    }
+   public function viewapp()
+   {
+       
+       $clients = Client::all();
+       echo '<head><style>
+#clientview {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#clientview td, #customers th {
+    border: 1px solid #ddd;
+    text-align: left;
+    padding: 8px;
+}
+
+#clientview tr:nth-child(even){background-color: #f2f2f2}
+
+#clientview tr:hover {background-color: #ddd;}
+
+#clientview th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #4CAF50;
+    color: white;
+}
+</style></head>';
+       echo '<div style="overflow-x:auto;">
+       <table id = "clientview" border ="2"><tr><th>ID</th><th>First Name</th><th>Last Name</th><th>E-mail</th><th>Country</th>
+       <th>State</th><th>City</th><th>Zip Code</th><th>Phone</th><th>Date Of Birth</th><th>Gender</th><th>Profile Picture</th>
+       <th>Talent Category</th><th>Specific Talent</th><th>Audio</th><th>Image</th><th>Video</th><th>About Me</th>
+       <th>Social Media</th><th>Experience</th><th>Current Rep.</th><th>Opportunities</th><th>Representation</th>
+       <th>General Service</th><th>Talent Development</th><th>Vanity & Luxury</th><th>Additional</th></tr>';
+       #need to loop
+       echo '<tr><td>';
+       echo $clients['0']->id.'</td><td>';
+       echo $clients['0']->first_name.'</td><td>';
+       echo $clients['0']->last_name.'</td><td>';
+       echo $clients['0']->email.'</td><td>';
+       echo $clients['0']->country.'</td><td>';
+       echo $clients['0']->state.'</td><td>';
+       echo $clients['0']->city.'</td><td>';
+       echo $clients['0']->zip.'</td><td>';
+       echo $clients['0']->phone.'</td><td>';
+       echo $clients['0']->dob.'</td><td>';
+       echo $clients['0']->gender.'</td><td>';
+       echo '<img src ="'.$clients['0']->profilepic.'"></td><td>';
+       echo $clients['0']->talent_category.'</td><td>';
+       echo $clients['0']->specific_talent.'</td><td>';
+       echo '<a href = "'.$clients['0']->audiopath.'">Listen</a></td><td>';
+       echo '<img src ="'.$clients['0']->imagepath.'"></td><td>';
+       echo '<a href = "'.$clients['0']->vidlink.'">Watch</a></td><td>';
+       echo $clients['0']->aboutme.'</td><td>';
+       echo $clients['0']->socialmedia.'</td><td>';
+       echo $clients['0']->experience.'</td><td>';
+       echo $clients['0']->currRepresent.'</td><td>';
+       echo $clients['0']->opportunities.'</td><td>';
+       echo $clients['0']->representation.'</td><td>';
+       echo $clients['0']->generalserv.'</td><td>';
+       echo $clients['0']->talentdev.'</td><td>';
+       echo $clients['0']->vanitylux.'</td><td>';
+       echo $clients['0']->additional.'</td><td>';
+       # }
+
+   }
    public function testsql()
 	{
 		//gets the 
