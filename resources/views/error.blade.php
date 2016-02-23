@@ -1,40 +1,54 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-<meta charset="utf-8">
-<title>Error</title>
-<style>
-body{
-	   background: url("http://www.talentscool.com/images/background.png") no-repeat center center fixed; 
-       -webkit-background-size: cover;
-       -moz-background-size: cover;
-       -o-background-size: cover;
-       background-size: cover;	
-	   color:white;
-	   font:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
-	   font-size:20px;
-	   padding-left:5%;
-	}
-	img {
-	float: right top;
-    margin-top:2%;
-	position:relative;
-	margin-left:80%;
-	width:200px;
-	
-}
-</style>
+	<title>
+		TalentsCool | Error
+	</title>
+
+	<link rel="stylesheet" href="css/application-style.css" />
+	<link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
+
+	<style>
+		footer{
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+		}
+	</style>
+
 </head>
-<link href="{{ asset('/css/app.css') }}" rel="stylesheet">
+
 <body>
-<img src="/pic/TSVector.png">
-<div class="error">
-<p style="font-size:30px; position:relative; color:white; margin-top:15%; margin-left:10%; margin-right:15%;">The files you submitted have some problems. Please make sure that the photos you submitted have valid extension names (.gif,.png,.jpg only) and each one is limited to 5MB.<br><input type="button" value="Back to application page" id="myButton" class="btn btn-danger"></input></p>
+
+<div class="header">
+	<div>
+		<h1><a href="/"><img src="images/TSVector.png"></a></h1>
+	</div>
 </div>
+
+<div class="content">
+	<h2>Sorry, an error occurred</h2>
+	<p>There was a problem with your application. Make sure your files are within the size limit (5MB) and that all required fields are filled out properly</p><br>
+	<input type="button" value="Back to application page" id="myButton" class="btn btn-danger"></input>
+</div>
+
+
+<footer>
+	<div class="social-media-bar">
+		<ul>
+			<li><a target="_blank" href="https://twitter.com/talentscool"><img src="images/twitter_logo.png" title="Follow us on Twitter!" class="media-icon"></a></li>
+			<li><a target="_blank" href="https://www.facebook.com/talentscool"><img src="images/facebook_logo.png" title="Follow us on Facebook!" class="media-icon"></a></li>
+			<li><a target="_blank" href="https://www.instagram.com/talentscool/"><img src="images/instagram_logo.png" title="Follow us on Instagram!" class="media-icon"></a></li>
+		</ul>
+	</div>
+	<p>Copyright &copy 2016. Talentscool, Inc. All rights reserved. </p>
+</footer>
+
 </body>
+
 <script type="text/javascript">
-    document.getElementById("myButton").onclick = function () {
-        location.href = "/application";
-    };
+	document.getElementById("myButton").onclick = function () {
+		location.href = "/apply";
+	};
 </script>
-</html>

@@ -26,3 +26,4 @@ Route::get('thanks', 'ApplicationController@thanks');
 Route::controllers([
     'auth' => 'Auth\AuthController',
     'password' => 'Auth\PasswordController',]);
+Route::get('error', 'ApplicationController@error');

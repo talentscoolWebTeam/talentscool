@@ -61,13 +61,13 @@
                 <label>
                     First Name
                 </label>
-                <input id="first_name" name= "first_name" type="text" class="left" autocomplete="off" placeholder="First Name*" required></input>
+                <input onchange="validateText('first_name');" id="first_name" name= "first_name" type="text" class="left" autocomplete="off" placeholder="First Name*" required></input>
             </p>
             <p>
                 <label>
                     Last Name
                 </label>
-                <input name="last_name" id="last_name" type="text" class="right" autocomplete="off" placeholder="Last Name*" required></input>
+                <input onchange="validateText('first_name');" name="last_name" id="last_name" type="text" class="right" autocomplete="off" placeholder="Last Name*" required></input>
             </p>
             <p>
                 <label>
@@ -97,7 +97,7 @@
                 <label>
                     City
                 </label>
-                <input type="text" id="city" name="city" class="left" autocomplete="off" placeholder="City" required></input>
+                <input onchange="validateText('first_name');" type="text" id="city" name="city" class="left" autocomplete="off" placeholder="City" required></input>
             </p>
             <p>
                 <label>
@@ -188,7 +188,7 @@
                 <label>
                     Specific Talent
                 </label>
-                <input type="text" id="specific_talent" name="specific_talent" autocomplete="off" placeholder="Specific Talent" required></input>
+                <input onchange="validateText('first_name');" type="text" id="specific_talent" name="specific_talent" autocomplete="off" placeholder="Specific Talent" required></input>
             </p>
             <p id="portfolio"  style="padding-bottom: 0px;">
                 <label>

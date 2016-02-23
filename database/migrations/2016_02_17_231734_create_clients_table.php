@@ -25,13 +25,13 @@ class CreateClientsTable extends Migration
             $table->string('phone',20);
             $table->date('dob');
             $table->string('gender',30);
-            $table->string('profilepic', 100);
+            $table->string('profilepic', 255);
 
             $table->string('talent_category',100);
             $table->string('specific_talent',100);
-            $table->string('audiopath', 100)->nullable();
-            $table->string('imagepath', 100)->nullable();
-            $table->string('vidlink', 100)->nullable();
+            $table->string('audiopath', 255)->nullable();
+            $table->string('imagepath', 255)->nullable();
+            $table->string('vidlink', 255)->nullable();
 
             $table->text('aboutme');
             $table->string('socialmedia',100)->nullable();

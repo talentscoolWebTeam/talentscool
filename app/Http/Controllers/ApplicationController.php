@@ -9,6 +9,7 @@ use App\Http\Requests;
 use App\Client;
 use Redirect;
 use Session;
+use Input;
 
 class ApplicationController extends Controller
 {
@@ -107,8 +108,29 @@ class ApplicationController extends Controller
 	{
 
         $input = $request->all();
-        $client = new Client;
 
+        //Verify file sizes and existence
+        if(Input::hasFile('image_file')) {
+            $size = Input::file('image_file')->getSize();
+            if($size > 5242880) {
+                return Redirect::to('/error');
+            }
+        }
+        if(Input::hasFile('audio_file')) {
+            $size = Input::file('audio_file')->getSize();
+            if($size > 5242880) {
+                return Redirect::to('/error');
+            }
+        }
+
+        if (Input::hasFile('profile_image')) {
+            $size = Input::file('profile_image')->getSize();
+            if($size > 5242880) {
+                return Redirect::to('/error');
+            }
+
+        }
+        $client = new Client;
         //Get non-media data
         $client->first_name = $input['first_name'];
         $client->last_name = $input['last_name'];
@@ -117,7 +139,7 @@ class ApplicationController extends Controller
         $client->state = $input['state'];
         $client->city = $input['city'];
         $client->zip = $input['zip'];
-        $client->phone = $input['phone'];
+        $client->phone = preg_replace("/\D/", "", $input['phone']);
         $client->dob = $input['dob'];
         $client->gender = $input['gender'];
         $client->talent_category = $input['talent_category'];
@@ -138,39 +160,36 @@ class ApplicationController extends Controller
         $client->additional = $input['additional'];
 
         //Get media data
-        //if ($input->hasFile('profile_image'))
-        {
-            $profilepicture = $input['profile_image'];
-            //Save the image with the formal "(ClientID)_(ClientLastName)_(ClientFirstName).(fileExtension)"
-            $fileName = rand(11111,99999) . $client->last_name . '_' . $client->first_name . '_profile' . '.' . $profilepicture->getClientOriginalExtension();
-            $filepath = base_path() . '/resources/uploads/profile_pictures/';
-            //Move to new folder
-            $profilepicture->move($filepath, $fileName);
-            //Store image path in database
-            $client->profilepic = $filepath . $fileName;
-        }
-        //if ($input->hasFile('audio_file'))
-        {
-            $audiofile = $input['audio_file'];
-            //Save the image with the formal "(ClientID)_(ClientLastName)_(ClientFirstName).(fileExtension)"
-            $fileName = rand(11111,99999) . $client->last_name . '_' . $client->first_name . '_audio' . '.' . $audiofile->getClientOriginalExtension();
-            $filepath = base_path() . '/resources/uploads/audio_files/';
-            //Move to new folder
-            $audiofile->move($filepath, $fileName);
-            //Store image path in database
-            $client->audiopath = $filepath . $fileName;
-        }
-       // if ($input->hasFile('image_file'))
-        {
-            $imagefile = $input['image_file'];
-            //Save the image with the formal "(ClientID)_(ClientLastName)_(ClientFirstName).(fileExtension)"
-            $fileName = rand(11111,99999) . $client->last_name . '_' . $client->first_name . '_image' . '.' . $imagefile->getClientOriginalExtension();
-            $filepath = base_path() . '/resources/uploads/image_files/';
-            //Move to new folder
-            $imagefile->move($filepath, $fileName);
-            //Store image path in database
-            $client->imagepath = $filepath . $fileName;
-        }
+
+            //Profile image
+        $profilepicture = $input['profile_image'];
+        //Save the image with the formal "(ClientID)_(ClientLastName)_(ClientFirstName).(fileExtension)"
+        $fileName = rand(11111,99999) . $client->last_name . '_' . $client->first_name . '_profile' . '.' . $profilepicture->getClientOriginalExtension();
+        $filepath = base_path() . '/resources/uploads/profile_pictures/';
+        //Move to new folder
+        $profilepicture->move($filepath, $fileName);
+        //Store image path in database
+        $client->profilepic = $filepath . $fileName;
+
+        //Audio file
+        $audiofile = $input['audio_file'];
+        //Save the image with the formal "(ClientID)_(ClientLastName)_(ClientFirstName).(fileExtension)"
+        $fileName = rand(11111,99999) . $client->last_name . '_' . $client->first_name . '_audio' . '.' . $audiofile->getClientOriginalExtension();
+        $filepath = base_path() . '/resources/uploads/audio_files/';
+        //Move to new folder
+        $audiofile->move($filepath, $fileName);
+        //Store image path in database
+        $client->audiopath = $filepath . $fileName;
+
+        //Image
+        $imagefile = $input['image_file'];
+        //Save the image with the formal "(ClientID)_(ClientLastName)_(ClientFirstName).(fileExtension)"
+        $fileName = rand(11111,99999) . $client->last_name . '_' . $client->first_name . '_image' . '.' . $imagefile->getClientOriginalExtension();
+        $filepath = base_path() . '/resources/uploads/image_files/';
+        //Move to new folder
+        $imagefile->move($filepath, $fileName);
+        //Store image path in database
+        $client->imagepath = $filepath . $fileName;
 
         $client->save();
         //Redirect to thank you page
@@ -180,5 +199,10 @@ class ApplicationController extends Controller
     public function thanks()
     {
         return view('app-thankyou');
+    }
+
+    public function error()
+    {
+        return view('error');
     }
 }

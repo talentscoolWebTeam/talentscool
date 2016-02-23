@@ -192,7 +192,7 @@ function validateLength(string_id) {
 
 function validateText(name_id) {
     //alert("validateName");
-    var regex = /^[A-Za-z]+$/;
+    var regex = /^[A-Za-z\s-]+$/;
     var name = document.getElementById(name_id);
     if(!regex.test(name.value)) {
         alert("This cannot contain numbers or special characters");
