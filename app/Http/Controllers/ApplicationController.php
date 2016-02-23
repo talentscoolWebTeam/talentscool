@@ -49,36 +49,40 @@ class ApplicationController extends Controller
        <th>Talent Category</th><th>Specific Talent</th><th>Audio</th><th>Image</th><th>Video</th><th>About Me</th>
        <th>Social Media</th><th>Experience</th><th>Current Rep.</th><th>Opportunities</th><th>Representation</th>
        <th>General Service</th><th>Talent Development</th><th>Vanity & Luxury</th><th>Additional</th></tr>';
-       #need to loop
+       
+       $num = count($clients);
+       for ($i = 0; $i < $num; $i++)
+       {
        echo '<tr><td>';
-       echo $clients['0']->id.'</td><td>';
-       echo $clients['0']->first_name.'</td><td>';
-       echo $clients['0']->last_name.'</td><td>';
-       echo $clients['0']->email.'</td><td>';
-       echo $clients['0']->country.'</td><td>';
-       echo $clients['0']->state.'</td><td>';
-       echo $clients['0']->city.'</td><td>';
-       echo $clients['0']->zip.'</td><td>';
-       echo $clients['0']->phone.'</td><td>';
-       echo $clients['0']->dob.'</td><td>';
-       echo $clients['0']->gender.'</td><td>';
-       echo '<img src ="'.$clients['0']->profilepic.'"></td><td>';
-       echo $clients['0']->talent_category.'</td><td>';
-       echo $clients['0']->specific_talent.'</td><td>';
-       echo '<a href = "'.$clients['0']->audiopath.'">Listen</a></td><td>';
-       echo '<img src ="'.$clients['0']->imagepath.'"></td><td>';
-       echo '<a href = "'.$clients['0']->vidlink.'">Watch</a></td><td>';
-       echo $clients['0']->aboutme.'</td><td>';
-       echo $clients['0']->socialmedia.'</td><td>';
-       echo $clients['0']->experience.'</td><td>';
-       echo $clients['0']->currRepresent.'</td><td>';
-       echo $clients['0']->opportunities.'</td><td>';
-       echo $clients['0']->representation.'</td><td>';
-       echo $clients['0']->generalserv.'</td><td>';
-       echo $clients['0']->talentdev.'</td><td>';
-       echo $clients['0']->vanitylux.'</td><td>';
-       echo $clients['0']->additional.'</td><td>';
-       # }
+       echo $clients[$i]->id.'</td><td>';
+       echo $clients[$i]->first_name.'</td><td>';
+       echo $clients[$i]->last_name.'</td><td>';
+       echo $clients[$i]->email.'</td><td>';
+       echo $clients[$i]->country.'</td><td>';
+       echo $clients[$i]->state.'</td><td>';
+       echo $clients[$i]->city.'</td><td>';
+       echo $clients[$i]->zip.'</td><td>';
+       echo $clients[$i]->phone.'</td><td>';
+       echo $clients[$i]->dob.'</td><td>';
+       echo $clients[$i]->gender.'</td><td>';
+       echo '<img src ="'.$clients[$i]->profilepic.'"></td><td>';
+       echo $clients[$i]->talent_category.'</td><td>';
+       echo $clients[$i]->specific_talent.'</td><td>';
+       echo '<a href = "'.$clients[$i]->audiopath.'">Listen</a></td><td>';
+       echo '<img src ="'.$clients[$i]->imagepath.'"></td><td>';
+       echo '<a href = "'.$clients[$i]->vidlink.'">Watch</a></td><td>';
+       echo $clients[$i]->aboutme.'</td><td>';
+       echo $clients[$i]->socialmedia.'</td><td>';
+       echo $clients[$i]->experience.'</td><td>';
+       echo $clients[$i]->currRepresent.'</td><td>';
+       echo $clients[$i]->opportunities.'</td><td>';
+       echo $clients[$i]->representation.'</td><td>';
+       echo $clients[$i]->generalserv.'</td><td>';
+       echo $clients[$i]->talentdev.'</td><td>';
+       echo $clients[$i]->vanitylux.'</td><td>';
+       echo $clients[$i]->additional.'</td><td>';
+       }
+       echo '</table>';
 
    }
    public function testsql()
