@@ -36,7 +36,7 @@
 					<li><a href="javascript:null(0)" id="services_tab">Services</a></li>
 						<li><a href="javascript:null(0)" id="founder_tab">Founders</a></li>
 						<li><a href="javascript:null(0" id="contactus_tab">Contact Us</a></li>
-						<li><a href="/apply" class="scroll-link" style="border:solid">Apply Now</a></li>
+						<!--<li><a href="/apply" class="scroll-link" style="border:solid">Apply Now</a></li> -->
 					</ul>
 				</nav>
 			</div>
