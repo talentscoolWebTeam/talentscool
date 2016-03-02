@@ -6,17 +6,16 @@ class Talent extends Model {
 
 	//
 	protected $fillable=[
-							'client_id',
-							'category',
-							'specific_talent',
+		'email',
+		'industry',
+		'specific_talent',
+		'portfolioitem1',
+		'portfolioitem2',
+		'portfolioitem3'
 	];
 	
 	public function client()
 	{
 		return $this->belongsTo('App\Client');
-	}
-	public function portfolios()
-	{
-		return $this->hasOne('App\Portfolio');
 	}
 }

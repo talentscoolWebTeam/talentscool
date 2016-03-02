@@ -14,7 +14,7 @@ use Input;
 class ApplicationController extends Controller
 {
    public function application(){
-	return view('apply/application2');	
+	return view('apply/application');	
    }
    public function viewapp()
    {
@@ -146,8 +146,10 @@ class ApplicationController extends Controller
         $client->specific_talent = $input['specific_talent'];
         $client->vidlink = $input['video_link'];
         $client->aboutme = $input['aboutme'];
-        $socmedarray = Input::get('socialmedia');
-        $client->socialmedia = join(" ,",$socmedarray);
+        $client->socialmedia = $input['socialmedia'];
+        //$client->extralink1 = $input['extralink1'];
+        //$client->extralink2 = $input['extralink2'];
+        //$client->extralink3 = $input['extralink3'];
         $client->experience = $input['experience'];
         $client->currRepresent = $input['curr_rep'];
         $client->opportunities = $input['opportunities'];

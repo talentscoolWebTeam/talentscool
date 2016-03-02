@@ -15,7 +15,7 @@ Route::get('/', 'WelcomeController@index');
 Route::get('/homepage', 'WelcomeController@index');
 Route::resource('/contactus', 'MailController');
 Route::get('contact-form-thank-you', 'WelcomeController@contactthanks');
-
+Route::get('viewapp','ApplicationController@viewapp');
 //Application page
 //Route::get('apply', 'ApplicationController@application');
 
@@ -26,3 +26,4 @@ Route::get('thanks', 'ApplicationController@thanks');
 Route::controllers([
     'auth' => 'Auth\AuthController',
     'password' => 'Auth\PasswordController',]);
+Route::get('error', 'ApplicationController@error');

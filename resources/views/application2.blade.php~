@@ -21,7 +21,7 @@
         </div>
     </div>
 
-    <form id = "myform" action = "testsql.php" method = "post">
+    {!! Form::open(['url' => 'submitapp', 'method'=>'POST', 'name' => 'application', 'files'=>true])!!}
     <div id="app1">
         <div class="app_heading">
             <h1>
@@ -65,40 +65,39 @@
         </div>
     
         <div class="info"> 
-			<p>
+	    <p>
                 <label>
                     Headshot
                 </label>
-                <input type="file" class = "left" id="profile_image" onchange="validateImage('profile_image');" name = "dp" autocomplete="off" placeholder="Profile Photo" required></input>
+                <input type="file" class = "left" id="profile_image" onchange="validateImage('profile_image');" name = "profile_image" autocomplete="off" placeholder="Profile Photo" required></input>
             </p>
 			
             <p>
-			<img class = "right" id="display_image" src="#" alt="<Choose Profile Pic>" />
-			
-			</p>
-			<p>	
-		        <label>
+		<img class = "right" id="display_image" src="#" alt="<Choose Profile Pic>" />
+	    </p>
+	    <p>	
+	       <label>
                     First Name
-                </label>
-                <input id="first_name" type="text" class="left" autocomplete="off" placeholder="First Name*" required></input>
+               </label>
+                <input id="first_name" name="first_name" type="text" class="left" autocomplete="off" placeholder="First Name*" required></input>
             </p>
             <p>
                 <label>
                     Last Name
                 </label>
-                <input id="last_name" type="text" class="right" autocomplete="off" placeholder="Last Name*" required></input>
+                <input id="last_name" name="last_name" type="text" class="right" autocomplete="off" placeholder="Last Name*" required></input>
             </p>
             <p>
                 <label>
                     E-mail
                 </label>
-                <input onchange="validateEmail('email');" id="email" type="text" class="left" autocomplete="off" placeholder="E-mail*" required></input>
+                <input onchange="validateEmail('email');" id="email" name="email" type="text" class="left" autocomplete="off" placeholder="E-mail*" required></input>
             </p>
             <p>
                 <label>
                     Phone Number
                 </label>
-                <input onchange="validatePhone('phone');" id="phone" type="text" class="right" onclick="this.placeholder='(_ _ _) _ _ _ - _ _ _ _';" autocomplete="off" placeholder="Phone Number" required></input>
+                <input onchange="validatePhone('phone');" id="phone" name="phone" type="text" class="right" onclick="this.placeholder='(_ _ _) _ _ _ - _ _ _ _';" autocomplete="off" placeholder="Phone Number" required></input>
             </p>
             <p>
                 <label>
@@ -205,7 +204,7 @@
                         <div id = "Dance" class = "talent">
                             <p id="portfolio" style="padding-bottom: 0px;">
                                 <label>Talent</label>
-                                <input id="specific_talent" type="text" class="left" autocomplete="off" placeholder=">Hip Hop, Jazz, Ballet, Western, Zumba!" required></input>
+                                <input id="specific_talent" name="specific_talent" type="text" class="left" autocomplete="off" placeholder=">Hip Hop, Jazz, Ballet, Western, Zumba!" required></input>
                             </p>
                             <div id = "toolTip">Hip Hop, Jazz, Ballet, Western, Zumba </div>
                         </div><!-- for dance-->
@@ -228,7 +227,7 @@
                                 <label>Talent</label>
                                 <input id="specific_talent" type="text" class="left" autocomplete="off" placeholder="Hover Me!" required></input>
                             </p>
-                            <div id = "toolTip">Gymnast, Football, Wrestling, Kayaking, Martial Arts</div>
+                            <div id = "toolTip">Gymnastics, Football, Wrestling, Kayaking, Martial Arts</div>
                         </div><!-- for athletics-->
                         <div id = "Music" class = "talent">
                             <p id="portfolio" style="padding-bottom: 0px;">

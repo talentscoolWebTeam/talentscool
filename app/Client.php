@@ -8,6 +8,7 @@ class Client extends Model
 {
 
     protected $fillable = [
+        'profilepic',
         'first_name',
         'last_name',
         'email',
@@ -18,18 +19,14 @@ class Client extends Model
         'phone',
         'dob',
         'gender',
-        'profilepic',
-        'talent_category',
-        'specific_talent',
-        'audiopath',
-        'imagepath',
-        'vidlink',
         'aboutme',
-        'socialmedia',
-        'extralink1',
-        'extralink2',
-        'extralink3',
+        'instagram',
+        'facebook',
+        'youtube',
+        'twitter',
+        'extralinks',
         'experience',
+        'awards',
         'currRepresent',
         'opportunities',
         'representation',
@@ -38,4 +35,9 @@ class Client extends Model
         'vanitylux',
         'additional'
     ];
+
+    public function talents()
+    {
+        return $this->hasMany('App\Talent');
+    }
 }

@@ -17,7 +17,7 @@ Route::resource('/contactus', 'MailController');
 Route::get('contact-form-thank-you', 'WelcomeController@contactthanks');
 Route::get('viewapp','ApplicationController@viewapp');
 //Application page
-//Route::get('apply', 'ApplicationController@application');
+Route::get('apply', 'ApplicationController@application');
 
 //Route::get('/admin', 'AdminController@index');
 //Route::get('testmysql','ApplicationController@testsql');

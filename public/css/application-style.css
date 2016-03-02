@@ -72,7 +72,7 @@ body {
 
 .header{
 	background-color: black;
-	padding: 0.6em 0.6em 0.1em
+	padding: 0.6em 0.6em 0.1em;
     box-sizing: border-box;
     margin: 0px;
 }
@@ -116,13 +116,65 @@ body {
 }
 
 .navigation div {
-    text-align: left;
+    text-align: center;
     margin-top: 1em;
-    margin-left: 30%;
 }
-
+.checkboxlist{
+    text-align: left;
+    position:relative;
+    margin-left: 37%;
+}
+.checkboxlistright{
+    text-align: left;
+    position:relative;
+    left:50%;
+}
 #app2 .navigation div, #app3 .navigation div {
     margin-left: 19%;
+}
+
+input::-webkit-input-placeholder {
+    color: black !important;
+}
+ 
+input:-moz-placeholder { /* Firefox 18- */
+    color: black !important;  
+    opacity: 1;
+}
+ 
+input::-moz-placeholder {  /* Firefox 19+ */
+    color: black !important;  
+    opacity: 1;
+}
+ 
+input:-ms-input-placeholder {  
+    color: black !important;  
+}
+
+textarea::-webkit-input-placeholder {
+    color: black !important;
+}
+ 
+textarea:-moz-placeholder { /* Firefox 18- */
+    color: black !important;  
+    opacity: 1;
+}
+ 
+textarea::-moz-placeholder {  /* Firefox 19+ */
+    color: black !important;  
+    opacity: 1;
+}
+ 
+textarea:-ms-input-placeholder {  
+    color: black !important;  
+}
+
+input:visited:empty {
+    border: 2px solid red !important;
+} 
+
+input:required:before {
+    border: 2px solid red !important;
 }
 
 .navigation .personal_li, .navigation .talent_li, .navigation .services_li, 
@@ -189,6 +241,22 @@ body {
     float: left;
 }
 
+.app2_wrapper {
+    width: 40%;
+    margin: 0 auto;
+}
+
+
+.app3_wrapper {
+    width: 65%;
+    margin: 0 auto;
+    margin-right: 13%;
+}
+
+.app3_wrapper p input {
+    width: 400px;   
+}
+
 input[type="text"]:focus, input[type="text"].focus {
     border: solid 5px #969696;
 }
@@ -200,21 +268,59 @@ input[type="text"], input[type="file"], select, textarea {
     border: solid 3px #c9c9c9;
     transition: border 0.3s;
     font-family: Tenso;
+    width: 212px;
+}
+.talent{
+    margin-top: -20%;
+    margin-left: 35%;
 }
 
-#talent_category {
+#talent_category, #specific_talent {
     float: left;
 }
 
+#industry{
+    margin-right: 100%;
+}
+
+#radioselector{
+    margin-left: -54%;
+    margin-top: 5%;
+}
+#toolTip{
+    font-size: 16px;
+    float: right;
+    margin-top: -100px;
+    margin-right: -40%;
+    background-color: grey;
+    color: white;
+    padding: 4px;
+}
+.imgdiv, .auddiv, .viddiv{
+    margin-top: -5%;
+    float: right;
+}
+.remove-field{
+    font-size: 10px;
+    float: right;
+    margin-top: -6%;
+    margin-left: 100%;
+}
+.add-field{
+    font-size: 10px;
+    float:left;
+    margin-left:3%;
+}
 textarea {
     margin-left: 0px;
     float: left;
     margin-bottom: 1.5em;
-    width: 57.5%;
+    width: 400px;
 }
 
 #add_links input {
     margin-right: 5%;
+    width: 400px;
 }
 
 
@@ -226,7 +332,7 @@ textarea {
 
 input[type="file"] {
 /*     color: transparent;  */
-    width: 200px; 
+    width: 212px; 
     font-size: 15px;
 }
 
@@ -256,10 +362,11 @@ select {
 #portfolio label, #portfolio input {
     float: left;
     margin-bottom: 1em;
+    margin-right: 30px;
 }
 
-#audio, #video, #portfolio_image {
-    margin-left: 25px;
+#audio_label, #video_label {
+    margin-right: 35px !important;
 }
 
 #state {
@@ -302,10 +409,15 @@ select {
     padding-bottom: 3em;
 }
 
+.next-button {
+    margin-left: 30%;
+}
+
 button {
     color: #fff;
-    background-color: #6496c8;
-    text-shadow: -1px 1px #417cb8;
+/*     background-color: #6496c8; */
+    background-color: #c96464;
+/*     text-shadow: -1px 1px #417cb8; */
     border: none;
     line-height: 3em;
     font-size: 18px;
@@ -315,25 +427,35 @@ button {
 }
 
 button:hover, button.hover {
+/* 
     background-color: #346392;
     text-shadow: -1px 1px #27496d;
+ */
+    background-color: #6d2727;
     cursor: pointer;
 }
 
 button:active, button.active {
+/* 
     background-color: #27496d;
     text-shadow: -1px 1px #193047;
+ */
+    background-color: #6d2727;
     cursor: pointer;
 }
 
 button:onclick, button.active {
+/* 
     background-color: #27496d;
     text-shadow: -1px 1px #193047;
+ */
+    background-color: #6d2727;
     cursor: progress;
 }
 
 .submit-button{
     background-color: #c96464;
+    margin-left: 13%;
 }
 
 .submit-button:hover{

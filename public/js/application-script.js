@@ -18,16 +18,16 @@ $('.navigation li:nth-child(3)').click(function() {
     //alert("clicked third");
     document.getElementById("app1").style.display = "none";
     document.getElementById("app2").style.display = "none";
-    document.getElementById("app3").style.display = "block";
-    document.getElementById("app4").style.display = "none";
+    document.getElementById("app3").style.display = "none";
+    document.getElementById("app4").style.display = "block";
 });
 
 $('.navigation li:nth-child(4)').click(function() {
     //alert("clicked fourth");
     document.getElementById("app1").style.display = "none";
     document.getElementById("app2").style.display = "none";
-    document.getElementById("app3").style.display = "none";
-    document.getElementById("app4").style.display = "block";
+    document.getElementById("app3").style.display = "block";
+    document.getElementById("app4").style.display = "none";
 });
 
 /* Next and previous buttons */
@@ -49,15 +49,15 @@ $('#app2 .prev-button').click(function() {
 $('#app2 .next-button').click(function() {
     document.getElementById("app1").style.display = "none";
     document.getElementById("app2").style.display = "none";
-    document.getElementById("app3").style.display = "block";
-    document.getElementById("app4").style.display = "none";
+    document.getElementById("app3").style.display = "none";
+    document.getElementById("app4").style.display = "block";
 });
 /* app3 prev */
 $('#app3 .prev-button').click(function() {
     document.getElementById("app1").style.display = "none";
-    document.getElementById("app2").style.display = "block";
+    document.getElementById("app2").style.display = "none";
     document.getElementById("app3").style.display = "none";
-    document.getElementById("app4").style.display = "none";
+    document.getElementById("app4").style.display = "block";
 });
 /* app3 next */
 $('#app3 .next-button').click(function() {
@@ -69,6 +69,14 @@ $('#app3 .next-button').click(function() {
 /* app4 previous */
 $('#app4 .prev-button').click(function() {
     document.getElementById("app1").style.display = "none";
+    document.getElementById("app2").style.display = "block";
+    document.getElementById("app3").style.display = "none";
+    document.getElementById("app4").style.display = "none";
+});
+
+/* app4 previous */
+$('#app4 .next-button').click(function() {
+    document.getElementById("app1").style.display = "none";
     document.getElementById("app2").style.display = "none";
     document.getElementById("app3").style.display = "block";
     document.getElementById("app4").style.display = "none";
@@ -79,21 +87,94 @@ function populateGender() {
     gender.options[0] = new Option('Select Gender','-1');
     gender.options[1] = new Option('Male','Male');
     gender.options[2] = new Option('Female','Female');
-    gender.options[3] = new Option('Other','Other');
-    gender.options[4] = new Option('Prefer Not To Say','Prefer Not To Say');
+    gender.options[3] = new Option('Prefer Not To Say','Prefer Not To Say');
 }
 
 function populateTalentCategory() {
     var talent = document.getElementById("talent_category");
-    talent.options[0] = new Option('Select Talent Category','-1');
-    talent.options[1] = new Option('Dancer','Dancer');
+    talent.options[0] = new Option('Select Industry','-1');
+    talent.options[1] = new Option('Dance','Dance');
     talent.options[2] = new Option('Fashion','Fashion');
     talent.options[3] = new Option('Film','Film');
-    talent.options[4] = new Option('Athlete','Athlete');
-    talent.options[5] = new Option('Musician','Musician');
-    talent.options[6] = new Option('Painter','Painter');
-    talent.options[7] = new Option('Other (Specify Below)','Other');
+    talent.options[4] = new Option('Athletics','Athletics');
+    talent.options[5] = new Option('Music','Music');
+    talent.options[6] = new Option('Art','Art');
+//     talent.options[7] = new Option('Other (Specify Below)','Other');
 }
+
+function clearOptions() {
+    var select = document.getElementById("specific_talent");
+    var length = select.options.length;
+    for (i = 0; i < length; i++) {
+      select.options[i] = null;
+    }
+}
+
+function furtherPopulateTalent() {
+    var further = document.getElementById("specific_talent");
+    var talent = document.getElementById("talent_category");
+    clearOptions();
+    if(talent.options[talent.selectedIndex].text == "Dancer") {
+        further.options[0] = new Option('Select Specific Talent','-1');
+        further.options[1] = new Option('Hip Hop','Hip Hop');
+        further.options[2] = new Option('Jazz','Jazz');
+        further.options[3] = new Option('Ballet','Ballet');
+        further.options[4] = new Option('Western','Western');
+        further.options[5] = new Option('Zumba','Zumba');
+    }
+    
+    if(talent.options[talent.selectedIndex].text == "Fashion") {
+        further.options[0] = new Option('Select Specific Talent','-1');
+        further.options[1] = new Option('Model','Model');
+        further.options[2] = new Option('Clothing Stylist','Clothing Stylist');
+        further.options[3] = new Option('Hair Stylist','Hair Stylist');
+        further.options[4] = new Option('Designing','Designing');
+    }
+    
+    if(talent.options[talent.selectedIndex].text == "Film") {
+        further.options[0] = new Option('Select Specific Talent','-1');
+        further.options[1] = new Option('Actor','Actor');
+        further.options[2] = new Option('Comedian','Comedian');
+        further.options[3] = new Option('Make-Up Artist','Make-Up Artist');
+    }
+    
+    if(talent.options[talent.selectedIndex].text == "Athlete") {
+        further.options[0] = new Option('Select Specific Talent','-1');
+        further.options[1] = new Option('Gymnast','Gymnast');
+        further.options[2] = new Option('Football','Football');
+        further.options[3] = new Option('Wrestling','Wrestling');
+        further.options[4] = new Option('Kayaking','Kayaking');
+        further.options[5] = new Option('Martial Arts','Martial Arts');
+    }
+    
+    if(talent.options[talent.selectedIndex].text == "Musician") {
+        further.options[0] = new Option('Select Specific Talent','-1');
+        further.options[1] = new Option('Songwriter','Songwriter');
+        further.options[2] = new Option('Vocalist','Vocalist');
+        further.options[3] = new Option('Pianist','Pianist');
+        further.options[4] = new Option('Guitarist','Guitarist');
+    }
+    
+    if(talent.options[talent.selectedIndex].text == "Artist") {
+        further.options[0] = new Option('Select Specific Talent','-1');
+        further.options[1] = new Option('Painting','Painting');
+        further.options[2] = new Option('Photography','Photography');
+        further.options[3] = new Option('Architecture','Architecture');
+        further.options[4] = new Option('Sculpture','Sculpture');
+        further.options[5] = new Option('Crafting','Crafting');
+    }
+    
+}
+
+/*
+Dance: Hip Hop, Jazz, Ballet, Western, Zumba etc.
+Musician: Songwriter, Vocalist, Pianist, Guitarist etc.
+Fashion: Model, clothing or hair stylist, designing etc.
+Film: actor or actress, comedian, make-up artists etc.
+Athlete: Gymnast, football, wrestling, kayaking, martial arts etc.
+Art: Painting, Photography, architecture, sculpture, crafting etc.
+
+*/
 
 function populateOpportunities() {
     var opp = document.getElementById("opportunities");
@@ -106,6 +187,7 @@ function populateOpportunities() {
     opp.options[6] = new Option('Collaborations','Collarborations');
     opp.options[7] = new Option('Jobs','Jobs');
     opp.options[8] = new Option('Internships','Internships');
+    opp.options[0].selected = true;
 }
 
 function populateRepresentation() {
@@ -118,6 +200,7 @@ function populateRepresentation() {
     rep.options[5] = new Option('Publicist','Publicist');
     rep.options[6] = new Option('Talent Agent','Talent Agent');
     rep.options[7] = new Option('Brand Manager','Brand Manager');
+    rep.options[0].selected = true;
 }
 
 function populateTalentDevelopment() {
@@ -129,6 +212,7 @@ function populateTalentDevelopment() {
     td.options[4] = new Option('Dance Instructor','Dance Instructor');
     td.options[5] = new Option('Art Instructor','Art Instructor');
     td.options[6] = new Option('School Placement','School Placement');
+    td.options[0].selected = true;
 }
 
 function populateGeneralServices() {
@@ -145,6 +229,7 @@ function populateGeneralServices() {
     gs.options[9] = new Option('Engineer','Engineer');
     gs.options[10] = new Option('Fitness Trainer','Fitness Trainer');
     gs.options[11] = new Option('Camera Crew','Camera Crew');
+    gs.options[0].selected = true;
 }
 
 function populateVanity() {
@@ -160,18 +245,18 @@ function populateVanity() {
     vanity.options[8] = new Option('Limo Driver','Limo Driver');
     vanity.options[9] = new Option('Private Jet Rental','Private Jet Rental');
     vanity.options[10] = new Option('Studio Rental','Studio Rental');
+    vanity.options[0].selected = true;
 }
 
 var added_links = 0;
 function add_link() {
     //alert("in add links");
     added_links = added_links + 1;
-    if(added_links >= 4) {
-        alert("Cannot add more than 3 new links");
+    if(added_links >= 15) {
+        alert("Cannot add more than 15 social media links");
     }
     else {
-        var name = 'extralink' + added_links;
-        document.getElementById("add_links").innerHTML+= '<p><input type="text" name=' + name + ' focused autocomplete="off" placeholder="New Link" required></input></p>';
+        document.getElementById("add_links").innerHTML+= '<p><input type="text" name="socialmedia[]" focused autocomplete="off" placeholder="New Link" required></input></p>';
     }
 }
 
@@ -192,7 +277,7 @@ function validateLength(string_id) {
 
 function validateText(name_id) {
     //alert("validateName");
-    var regex = /^[A-Za-z\s-]+$/;
+    var regex = /^[A-Za-z]+$/;
     var name = document.getElementById(name_id);
     if(!regex.test(name.value)) {
         alert("This cannot contain numbers or special characters");
@@ -309,8 +394,22 @@ function validateAudio(audio_id) {
     }
     
 }
-
-
+//MB - basically does the profile pic preview thing
+function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            
+            reader.onload = function (e) {
+                $('#blah').attr('src', e.target.result);
+            }
+            
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+    
+    $("#profile_image").change(function(){
+        readURL(this);
+    });
 
 jQuery(function($) {
 //     var $j = jQuery.noConflict();
@@ -321,8 +420,73 @@ jQuery(function($) {
       yearRange: '1916:2016'
     });
 });
+//MB - function for dynamically changing the talent fields
+    //hide all in target div
+$("div", "div#talents").hide();
+$("div", "div.multi-field-wrapper").hide();
+$("select#talent_category").change(function(){
+        // hide previously shown in target div
+    $("div", "div#talents").hide();
+        // read id from your select
+    var value = $(this).val();
+        // show rlrment with selected id
+    $("div.multi-field-wrapper").show();
+    $("div.multi-fields").show();
+    $("div.multi-field").show();
+    $("div#mediapertalent").show();
+    $("div#radioselector").show();
+    $("div#media").show();
+    
+    $("div#"+value).show();
+    //also show the media
 
+});
 
+$("div#radioselector").on("change", function() {
+   //alert($('input[name="myRadio"]:checked', '#myForm').val()); 
+        // hide previously shown in target div
+    $("div","div#media").hide();
+        // read id from your select
+    var value = $("input[name='myRadio']:checked", "div#radioselector").val();
+       // show rlrment with selected id
+    $("div#"+value).show();
+});
+
+$("input#specific_talent.left")
+.mouseover(function() {
+  $("div#toolTip").show();
+})
+.mouseout(function() {
+  $("div#toolTip").hide();
+});
+
+$('.multi-field-wrapper').each(function() {
+    var $wrapper = $('.multi-fields', this);
+    var $i = 1;
+    var $oldval = "";
+    $(".add-field", $(this)).click(function(e) {
+        if (($('.multi-field', $wrapper).length < 3))
+        {        
+            $i= $i+1;         
+            var $mediachild = $('.multi-field:first-child', $wrapper);
+         //   alert('img='+$mediachild.find('.imgdiv').val()+' vid='+$mediachild.find('.vidtype').val()+' aud='+$mediachild.find('.audtype').val());
+            $mediachild.clone(true).appendTo($wrapper);
+            $mediachild.find('.imgtype').val('img'+$i);
+            $mediachild.find('.imgdiv').attr('id','img'+$i);
+            $mediachild.find('.audtype').val('audio'+$i);
+            $mediachild.find('.auddiv').attr('id','audio'+$i);
+            $mediachild.find('.vidtype').val('video'+$i);
+            $mediachild.find('.viddiv').attr('id','video'+$i);
+            
+            
+        } 
+        
+    });
+    $('.multi-field .remove-field', $wrapper).click(function() {
+        if ($('.multi-field', $wrapper).length > 1)
+            $(this).parent('.multi-field').remove();
+    });
+});
 
 
 

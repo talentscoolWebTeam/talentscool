@@ -27,18 +27,15 @@ class CreateClientsTable extends Migration
             $table->string('gender',30);
             $table->string('profilepic', 255);
 
-            $table->string('talent_category',100);
-            $table->string('specific_talent',100);
-            $table->string('audiopath', 255)->nullable();
-            $table->string('imagepath', 255)->nullable();
-            $table->string('vidlink', 255)->nullable();
-
             $table->text('aboutme');
-            $table->string('socialmedia',100)->nullable();
-            //$table->string('extralink1',100)->nullable();
-            //$table->string('extralink2',100)->nullable();
-            //$table->string('extralink3',100)->nullable();
-            $table->string('experience', 255);
+            $table->string('twitter',255)->nullable();
+            $table->string('instagram',255)->nullable();
+            $table->string('facebook',255)->nullable();
+            $table->string('youtube',255)->nullable();
+            $table->text('extralinks')->nullable();
+
+            $table->text('experience', 255);
+            $table->text('awards', 255);
             $table->string('currRepresent', 100)->nullable();
 
             $table->string('opportunities', 100)->nullable();
