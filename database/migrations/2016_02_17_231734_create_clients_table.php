@@ -38,11 +38,11 @@ class CreateClientsTable extends Migration
             $table->text('awards', 255);
             $table->string('currRepresent', 100)->nullable();
 
-            $table->string('opportunities', 100)->nullable();
-            $table->string('representation', 100)->nullable();
-            $table->string('generalserv', 100)->nullable();
-            $table->string('talentdev', 100)->nullable();
-            $table->string('vanitylux', 100)->nullable();
+            $table->text('opportunities', 100)->nullable();
+            $table->text('representation', 100)->nullable();
+            $table->text('generalserv', 100)->nullable();
+            $table->text('talentdev', 100)->nullable();
+            $table->text('vanitylusx', 100)->nullable();
             $table->string('additional', 100)->nullable();
         });
     }

@@ -9,6 +9,9 @@ class Talent extends Model {
 		'email',
 		'industry',
 		'specific_talent',
+		'type1',
+		'type2',
+		'type3',
 		'portfolioitem1',
 		'portfolioitem2',
 		'portfolioitem3'

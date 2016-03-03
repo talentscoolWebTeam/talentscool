@@ -160,8 +160,8 @@
                 Talent
             </p>
         </div>
-    
-    
+
+
         <div class="navigation">
             <ul>
                 <li>
@@ -176,131 +176,116 @@
                 <li>
                     Step 4 <br><br> <span>More About Yourself</span>
                 </li>
-<!-- 
-                <li>
-                    Step 5 <br><br> <span>Review Application</span>
-                </li>
-                <li>
-                    Step 6 <br><br> <span>Complete</span>
-                </li>
- -->
+                <!--
+                                <li>
+                                    Step 5 <br><br> <span>Review Application</span>
+                                </li>
+                                <li>
+                                    Step 6 <br><br> <span>Complete</span>
+                                </li>
+                 -->
             </ul>
-<!-- 
-            <div>
-                <br><br><br>*required
-            </div>
- -->
+
         </div>
-    
-        <div class="info"> 
+
+        <div class="info">
             <div class="app2_wrapper">
-                    <div id = "industry">
-                        <p id="portfolio" style="padding-bottom: 0px;">
+                <div id = "container">
+                    <div id = "talent-container">
+                        <div id = "industry">
                             <label>Industry</label>
-                            <select id="talent_category" name="talent_category" required onchange="furtherPopulateTalent();"></select>
-                        </p>
-                    </div><!-- for industry-->
-                    <div id = "talents">
-                        <div id = "Dance" class = "talent">
-                            <p id="portfolio" style="padding-bottom: 0px;">
+                            <select id="talent_category" name="talent_category[]" required>
+                                <option value="-1">Select Industry</option>
+                                <option value="Dance">Dance</option>
+                                <option value="Fashion">Fashion</option>
+                                <option value="Film">Film</option>
+                                <option value="Athletics">Athletics</option>
+                                <option value="Music">Music</option><option value="Art">Art</option>
+                            </select>
+                        </div><!-- for industry-->
+                        <div id = "talents">
+                            <div id = "Dance" class = "talent">
                                 <label>Talent</label>
-                                <input id="specific_talent" name="specific_talent" type="text" class="left" autocomplete="off" placeholder=">Hip Hop, Jazz, Ballet, Western, Zumba!" required></input>
-                            </p>
-                            <div id = "toolTip">Hip Hop, Jazz, Ballet, Western, Zumba </div>
-                        </div><!-- for dance-->
-                        <div id = "Fashion" class = "talent">
-                            <p id="portfolio" style="padding-bottom: 0px;">
-                                <label>Talent</label>
-                                <input id="specific_talent" name="specific_talent" type="text" class="left" autocomplete="off" placeholder="Hover Me!" required></input>
-                            </p>
-                            <div id = "toolTip">Model, Clothing Stylist, Hair Stylist, Designing</div>
-                        </div><!-- for fashion-->
-                        <div id = "Film" class = "talent">
-                            <p id="portfolio" style="padding-bottom: 0px;">
-                                <label>Talent</label>
-                                <input id="specific_talent" name="specific_talent" type="text" class="left" autocomplete="off" placeholder="Hover Me!" required></input>
-                            </p>
-                            <div id = "toolTip">Actor, Comedian, Make-Up Artist</div>
-                        </div><!-- for film-->
-                        <div id = "Athletics" class = "talent">
-                            <p id="portfolio" style="padding-bottom: 0px;">
-                                <label>Talent</label>
-                                <input id="specific_talent" name="specific_talent" type="text" class="left" autocomplete="off" placeholder="Hover Me!" required></input>
-                            </p>
-                            <div id = "toolTip">Gymnastics, Football, Wrestling, Kayaking, Martial Arts</div>
-                        </div><!-- for athletics-->
-                        <div id = "Music" class = "talent">
-                            <p id="portfolio" style="padding-bottom: 0px;">
-                                <label>Talent</label>
-                                <input id="specific_talent" name="specific_talent" type="text" class="left" autocomplete="off" placeholder="Hover Me!" required></input>
-                            </p>
-                            <div id = "toolTip">Songwriter, Vocalist, Pianist, Guitarist</div>
-                        </div><!-- for music-->
-                        <div id = "Art" class = "talent">
-                            <p id="portfolio" style="padding-bottom: 0px;">
-                                <label>Talent</label>
-                                <input id="specific_talent" name="specific_talent" type="text" class="left" autocomplete="off" placeholder="Hover Me!" required></input>
-                            </p>
-                            <div id = "toolTip">Painting, Photography, Architecture, Sculpting, Crafting</div>
-                        </div><!-- for art-->
-                        <div class="multi-field-wrapper">
-                            <div class="multi-fields">
-                                <div class="multi-field">
-                                    <div id = "mediapertalent">
-                                        <!--- image, audio, video-->
-                                        <div id ="radioselector">
-                                            <input type="radio" class ="imgtype" name="myRadio" value="img1" />Image
-                                            <input type="radio" class ="audtype" name="myRadio" value="audio1" />Audio
-                                            <input type="radio" class ="vidtype" name="myRadio" value="video1" />Video <br>
-                                        </div> <!-- for radio selector-->
-                                        <div id="media">
-                                            <div class="imgdiv" id="img1">
-                                                <input type="file" id="portfolio_image" onchange="validateImage('portfolio_image');" autocomplete="off" placeholder="Portfolio" required></input>
-                                            </div>
-                                            <div class ="auddiv" id="audio1">
-                                                <input type="text" id="audio" autocomplete="off" placeholder="Add Link to Audio" required></input> 
-                                            </div>
-                                            <div class = "viddiv" id="video1">
-                                                <input type="text" id="video" autocomplete="off" placeholder="Add Link to Video" required></input>
-                                            </div>
-                                        </div> <!-- for media -->
-                                    </div> <!-- for mediapertalent-->
-                                    <button type="button" class="remove-field">Remove</button>
-                                </div> <!--  for multi-field-->
-                            </div><!-- for multi-fields-->
-                            <button type="button" class="add-field">Add field</button>
-                        </div><!-- for multi-field-wrapper-->
-                    </div><!-- for talents-->
-             <!--
-                <p id="portfolio"  style="padding-bottom: 0px;">
-                    <label>
-                        Image
-                    </label>
-                    <input type="file" id="portfolio_image" onchange="validateImage('portfolio_image');" autocomplete="off" placeholder="Portfolio" required></input>
-                </p>
-                <p id="portfolio" style="padding-bottom: 0px;">
-                    <label id="audio_label">
-                        Audio
-                    </label>
-                    <input type="file" id="audio" onchange="validateAudio('audio');" autocomplete="off" placeholder="Audio" required></input>
-                </p>
-                <p id="portfolio"  style="padding-bottom: 0px;">
-                    <label id="video_label">
-                        Video
-                    </label>
-                    <input type="text" id="video" autocomplete="off" placeholder="Add Link to Video" required></input>
-                </p>
-            -->
-			
-			</div><!-- for app2_wrapper-->
-		</div>
-		<div class="buttons_container">
-			<div class="buttons">
-				<button class="prev-button">Previous</button>
-				<button class="next-button">Next</button>
-			</div><!-- for buttons -->
-		</div> <!-- for buttons_container-->
-	</div><!-- for app2 -->
+                                <input id="specific_talent" name="specific_talent[]" type="text" placeholder="Hip Hop, Jazz, Ballet, Western, Zumba">
+
+                            </div><!-- for dance-->
+                            <div id = "Fashion" class = "talent">
+                                <p id="portfolio" style="padding-bottom: 0px;">
+                                    <label>Talent</label>
+                                    <input id="specific_talent" name="specific_talent[]" type="text" class="left" autocomplete="off" placeholder="Model, Clothing Stylist, Hair Stylist, Designing">
+                                </p>
+                            </div><!-- for fashion-->
+                            <div id = "Film" class = "talent">
+                                <p id="portfolio" style="padding-bottom: 0px;">
+                                    <label>Talent</label>
+                                    <input id="specific_talent" name="specific_talent[]" type="text" class="left" autocomplete="off" placeholder="Actor, Comedian, Make-Up Artist">
+                                </p>
+                            </div><!-- for film-->
+                            <div id = "Athletics" class = "talent">
+                                <p id="portfolio" style="padding-bottom: 0px;">
+                                    <label>Talent</label>
+                                    <input id="specific_talent" name="specific_talent[]" type="text" class="left" autocomplete="off" placeholder="Gymnastics, Football, Wrestling, Kayaking, Martial Arts">
+                                </p>
+                            </div><!-- for athletics-->
+                            <div id = "Music" class = "talent">
+                                <p id="portfolio" style="padding-bottom: 0px;">
+                                    <label>Talent</label>
+                                    <input id="specific_talent" name="specific_talent[]" type="text" class="left" autocomplete="off" placeholder="Songwriter, Vocalist, Pianist, Guitarist">
+                                </p>
+                            </div><!-- for music-->
+                            <div id = "Art" class = "talent">
+                                <p id="portfolio" style="padding-bottom: 0px;">
+                                    <label>Talent</label>
+                                    <input id="specific_talent" name="specific_talent[]" type="text" class="left" autocomplete="off" placeholder="Painting, Photography, Architecture, Sculpting, Crafting">
+                                </p>
+                            </div><!-- for art-->
+                            <div id="media-container" class ="media">
+                                <div id="media1" class = "visible">
+                                    <select id="drop1" name="type1[]">
+                                        <option>Image</option>
+                                        <option>Audio</option>
+                                        <option>Video</option>
+                                    </select>
+                                    <input id="link1" name="media1[]" placeholder="Enter Link" />
+                                </div>
+                                <div id="media2" class = "visible">
+                                    <select id="drop2" name="type2[]">
+                                        <option>Image</option>
+                                        <option>Audio</option>
+                                        <option>Video</option>
+                                    </select>
+                                    <input id="link2" name="media2[]" placeholder="Enter Link" />
+                                    <button class="removeRow">Remove Media</button>
+                                </div>
+                                <div id="media3" class = "visible">
+                                    <select id="drop3" name="type3[]">
+                                        <option>Image</option>
+                                        <option>Audio</option>
+                                        <option>Video</option>
+                                    </select>
+                                    <input id="link3" name="media3[]" placeholder="Enter Link" />
+                                    <button class="removeRow">Remove Media</button>
+                                </div>
+                            </div>
+                            <button class="addRow">Add Media</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="addTalent">Add Talent</button>
+            </div>
+        </div>
+        <div class="buttons_container">
+            <div class="buttons">
+                <button class="prev-button">
+                    Previous
+                </button>
+                <button class="next-button">
+                    Next
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- for app2 -->
 
     <!------------------------------------------------------------------------------------------------------------>
 

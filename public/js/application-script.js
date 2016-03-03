@@ -102,14 +102,15 @@ function populateTalentCategory() {
 //     talent.options[7] = new Option('Other (Specify Below)','Other');
 }
 
-function clearOptions() {
+/*function clearOptions() {
     var select = document.getElementById("specific_talent");
     var length = select.options.length;
     for (i = 0; i < length; i++) {
       select.options[i] = null;
     }
 }
-
+*/
+/*
 function furtherPopulateTalent() {
     var further = document.getElementById("specific_talent");
     var talent = document.getElementById("talent_category");
@@ -164,8 +165,7 @@ function furtherPopulateTalent() {
         further.options[5] = new Option('Crafting','Crafting');
     }
     
-}
-
+}*/
 /*
 Dance: Hip Hop, Jazz, Ballet, Western, Zumba etc.
 Musician: Songwriter, Vocalist, Pianist, Guitarist etc.
@@ -256,7 +256,8 @@ function add_link() {
         alert("Cannot add more than 15 social media links");
     }
     else {
-        document.getElementById("add_links").innerHTML+= '<p><input type="text" name="socialmedia[]" focused autocomplete="off" placeholder="New Link" required></input></p>';
+        var name = 'extralink' + added_links;
+        document.getElementById("add_links").innerHTML+= '<p><input type="text" name=' + name + ' focused autocomplete="off" placeholder="New Link" required></input></p>';
     }
 }
 
@@ -400,8 +401,11 @@ function readURL(input) {
             var reader = new FileReader();
             
             reader.onload = function (e) {
-                $('#blah').attr('src', e.target.result);
-            }
+                $('#display_image').attr('src', e.target.result);
+				$('#display_image').attr('height', 150);
+				$('#display_image').attr('width', 150);
+				
+            }	
             
             reader.readAsDataURL(input.files[0]);
         }
@@ -421,83 +425,72 @@ jQuery(function($) {
     });
 });
 //MB - function for dynamically changing the talent fields
-    //hide all in target div
-$("div", "div#talents").hide();
-$("div", "div.multi-field-wrapper").hide();
+ var uniqueId = 2;
+ $('#talents').children().hide();
 $("select#talent_category").change(function(){
-        // hide previously shown in target div
-    $("div", "div#talents").hide();
-        // read id from your select
-    var value = $(this).val();
-        // show rlrment with selected id
-    $("div.multi-field-wrapper").show();
-    $("div.multi-fields").show();
-    $("div.multi-field").show();
-    $("div#mediapertalent").show();
-    $("div#radioselector").show();
-    $("div#media").show();
+  listId = $(this).val();
+  var listChildren = $(this).parent().siblings('#talents').children();
+  
+  $(listChildren).each(function(){
+  
+    var childId = $(this).attr("id");
+    if(childId == listId)
+    {
+      //alert(childId);
+      var thisChild = $(this).parent().children('#'+childId);
+      thisChild.show();
+      thisChild.siblings().hide();
+      thisChild.siblings('.addRow').show();
+      thisChild.siblings('.media').show();
+    }
+    //alert(id);
+    });
+});
+ $('.removeRow').click(function() {
+    $(this).parent().hide();
+    $(this).parent().attr('class', 'hidden');
+ });
+ $('.addRow').click(function() {
+    var m2 = $(this).siblings('.media').children('#media2');
+    var m3 = $(this).siblings('.media').children('#media3');
+    var m2class = m2.attr('class');
+    var m3class = m3.attr('class');
+    //4 cases
+    //case1 : media 2 and media 3 are both hidden, display m2
+     if(m2class == 'hidden' && m3class == 'hidden')
+     {
+        m2.show();
+        m2.attr('class','visible');
+     }
+    //case 2: media 2 is hidden, media 3 is visible, display m2
+     if(m2class =='hidden' && m3class == 'visible')
+     {
+        m2.show();
+        m2.attr('class','visible');
+     }
+     //case 3: media 2 is visible, media 3 is hidden, display m2
+     if(m2class == 'visible' && m3class == 'hidden')
+     {
+       m3.show();
+       m3.attr('class','visible');
+     }
+     //case 4: media 2 is visible, media 3 is visible, do nothing
     
-    $("div#"+value).show();
-    //also show the media
-
+ });
+$(function() {
+     $('.addTalent').click(function() {
+         var copy = $("#talent-container").clone(true);
+         var formId = 'talent-container' + uniqueId;
+         copy.attr('id', formId );
+         
+         $('#container').append(copy);
+         $('#' + formId).find('.media:last-child').each(function(){
+         var $temp = $('.media:last-child').attr('id');
+         alert($temp);
+        // uniqueId = parseInt($tempMedia[$tempMedia.length-1])+1;
+            $(this).attr('id', $(this).attr('id') + uniqueId); 
+             
+         });
+         uniqueId++;  
+     });
 });
-
-$("div#radioselector").on("change", function() {
-   //alert($('input[name="myRadio"]:checked', '#myForm').val()); 
-        // hide previously shown in target div
-    $("div","div#media").hide();
-        // read id from your select
-    var value = $("input[name='myRadio']:checked", "div#radioselector").val();
-       // show rlrment with selected id
-    $("div#"+value).show();
-});
-
-$("input#specific_talent.left")
-.mouseover(function() {
-  $("div#toolTip").show();
-})
-.mouseout(function() {
-  $("div#toolTip").hide();
-});
-
-$('.multi-field-wrapper').each(function() {
-    var $wrapper = $('.multi-fields', this);
-    var $i = 1;
-    var $oldval = "";
-    $(".add-field", $(this)).click(function(e) {
-        if (($('.multi-field', $wrapper).length < 3))
-        {        
-            $i= $i+1;         
-            var $mediachild = $('.multi-field:first-child', $wrapper);
-         //   alert('img='+$mediachild.find('.imgdiv').val()+' vid='+$mediachild.find('.vidtype').val()+' aud='+$mediachild.find('.audtype').val());
-            $mediachild.clone(true).appendTo($wrapper);
-            $mediachild.find('.imgtype').val('img'+$i);
-            $mediachild.find('.imgdiv').attr('id','img'+$i);
-            $mediachild.find('.audtype').val('audio'+$i);
-            $mediachild.find('.auddiv').attr('id','audio'+$i);
-            $mediachild.find('.vidtype').val('video'+$i);
-            $mediachild.find('.viddiv').attr('id','video'+$i);
-            
-            
-        } 
-        
-    });
-    $('.multi-field .remove-field', $wrapper).click(function() {
-        if ($('.multi-field', $wrapper).length > 1)
-            $(this).parent('.multi-field').remove();
-    });
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-

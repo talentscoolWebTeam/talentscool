@@ -119,16 +119,7 @@ body {
     text-align: center;
     margin-top: 1em;
 }
-.checkboxlist{
-    text-align: left;
-    position:relative;
-    margin-left: 37%;
-}
-.checkboxlistright{
-    text-align: left;
-    position:relative;
-    left:50%;
-}
+
 #app2 .navigation div, #app3 .navigation div {
     margin-left: 19%;
 }
@@ -136,7 +127,7 @@ body {
 input::-webkit-input-placeholder {
     color: black !important;
 }
- 
+ s
 input:-moz-placeholder { /* Firefox 18- */
     color: black !important;  
     opacity: 1;
@@ -245,7 +236,43 @@ input:required:before {
     width: 40%;
     margin: 0 auto;
 }
+.app2_wrapper .left-column{
+    float: left;
+}
 
+.app2_wrapper .right-column{
+    float: right;
+}
+.app2_wrapper .top-field{
+    padding-top: 1.8em;
+}
+
+.app2_wrapper .right-section{
+    float: right;
+}
+#app2 .info{
+    text-align: left;
+}
+.invisible{
+    display: none;
+}
+.visible{
+    display: block;
+}
+
+/* clear float */
+    .clearfix:before,
+    .clearfix:after{
+        content:" ";
+        display: table;
+    }
+    .clearfix:after{
+        clear:both;
+    }
+    .clearfix{
+        *zoom:1;
+    }
+/* end clearfix */
 
 .app3_wrapper {
     width: 65%;
@@ -271,21 +298,22 @@ input[type="text"], input[type="file"], select, textarea {
     width: 212px;
 }
 .talent{
-    margin-top: -20%;
-    margin-left: 35%;
+    /*margin-top: -20%;
+    margin-left: 35%;*/
 }
-
+.
 #talent_category, #specific_talent {
-    float: left;
+    /*float: left;*/
 }
 
 #industry{
-    margin-right: 100%;
+    /*margin-right: 100%;*/
 }
 
 #radioselector{
-    margin-left: -54%;
-    margin-top: 5%;
+
+    /*margin-left: -60%;
+    margin-top: 5%;*/
 }
 #toolTip{
     font-size: 16px;
@@ -296,6 +324,7 @@ input[type="text"], input[type="file"], select, textarea {
     color: white;
     padding: 4px;
 }
+
 .imgdiv, .auddiv, .viddiv{
     margin-top: -5%;
     float: right;
@@ -303,13 +332,18 @@ input[type="text"], input[type="file"], select, textarea {
 .remove-field{
     font-size: 10px;
     float: right;
-    margin-top: -6%;
-    margin-left: 100%;
+
+    /*margin-top: -10%;*/
 }
 .add-field{
     font-size: 10px;
     float:left;
     margin-left:3%;
+}
+.add-talent{
+font-size: 10px;
+margin-left: -15%;
+margin-top: 8%;
 }
 textarea {
     margin-left: 0px;

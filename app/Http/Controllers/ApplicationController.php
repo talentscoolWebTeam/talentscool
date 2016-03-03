@@ -110,28 +110,14 @@ class ApplicationController extends Controller
         $input = $request->all();
 
         //Verify file sizes and existence
-        if(Input::hasFile('image_file')) {
-            $size = Input::file('image_file')->getSize();
-            if($size > 5242880) {
-                return Redirect::to('/error');
-            }
-        }
-        if(Input::hasFile('audio_file')) {
-            $size = Input::file('audio_file')->getSize();
-            if($size > 5242880) {
-                return Redirect::to('/error');
-            }
-        }
-
         if (Input::hasFile('profile_image')) {
             $size = Input::file('profile_image')->getSize();
             if($size > 5242880) {
                 return Redirect::to('/error');
             }
-
         }
+        //Create client entry
         $client = new Client;
-        //Get non-media data
         $client->first_name = $input['first_name'];
         $client->last_name = $input['last_name'];
         $client->email = $input['email'];
@@ -146,20 +132,33 @@ class ApplicationController extends Controller
         $client->specific_talent = $input['specific_talent'];
         $client->vidlink = $input['video_link'];
         $client->aboutme = $input['aboutme'];
+
         $socmedarray = Input::get('socialmedia');
         $client->socialmedia = join(" ,",$socmedarray);
+
         $client->experience = $input['experience'];
         $client->currRepresent = $input['curr_rep'];
-        $client->opportunities = $input['opportunities'];
-        $client->representation = $input['representation'];
-        $client->generalserv = $input['general'];
-        $client->talentdev = $input['talent_dev'];
-        $client->vanitylux = $input['vanityluxury'];
+
+        $opptarray = Input::get('opportunities');
+        $client->opportunities = join(" ,",$opptarray);
+
+        $reparray = Input::get('representation');
+        $client->representation = join(" ,",$reparray);
+
+        $genarray = Input::get('general');
+        $client->general = join(" ,",$genarray);
+
+        $tndevarray = Input::get('talent_dev');
+        $client->talentdev = join(" ,", $tndevarray);
+
+        $vanluxarray = Input::get('vanityluxury');
+        $client->vanitylux= join(" ,", $vanluxarray);
+
         $client->additional = $input['additional'];
 
         //Get media data
 
-            //Profile image
+        //Profile image
         $profilepicture = $input['profile_image'];
         //Save the image with the formal "(ClientID)_(ClientLastName)_(ClientFirstName).(fileExtension)"
         $fileName = rand(11111,99999) . $client->last_name . '_' . $client->first_name . '_profile' . '.' . $profilepicture->getClientOriginalExtension();
@@ -169,26 +168,7 @@ class ApplicationController extends Controller
         //Store image path in database
         $client->profilepic = $filepath . $fileName;
 
-        //Audio file
-        $audiofile = $input['audio_file'];
-        //Save the image with the formal "(ClientID)_(ClientLastName)_(ClientFirstName).(fileExtension)"
-        $fileName = rand(11111,99999) . $client->last_name . '_' . $client->first_name . '_audio' . '.' . $audiofile->getClientOriginalExtension();
-        $filepath = base_path() . '/resources/uploads/audio_files/';
-        //Move to new folder
-        $audiofile->move($filepath, $fileName);
-        //Store image path in database
-        $client->audiopath = $filepath . $fileName;
-
-        //Image
-        $imagefile = $input['image_file'];
-        //Save the image with the formal "(ClientID)_(ClientLastName)_(ClientFirstName).(fileExtension)"
-        $fileName = rand(11111,99999) . $client->last_name . '_' . $client->first_name . '_image' . '.' . $imagefile->getClientOriginalExtension();
-        $filepath = base_path() . '/resources/uploads/image_files/';
-        //Move to new folder
-        $imagefile->move($filepath, $fileName);
-        //Store image path in database
-        $client->imagepath = $filepath . $fileName;
-
+        //Create talent entry/ies
         $client->save();
         //Redirect to thank you page
         return Redirect::to('/thanks');

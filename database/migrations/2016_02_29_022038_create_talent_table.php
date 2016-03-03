@@ -21,8 +21,11 @@ class CreateTalentTable extends Migration {
 			$table->string('industry');
 			$table->string('specific_talent');
 			//portfolio item
+			$table->string('type1',20)->nullable();
 			$table->string('portfolio_item1', 400)->nullable();
+			$table->string('type2',20)->nullable();
 			$table->string('portfolio_item2', 400)->nullable();
+			$table->string('type3',20)->nullable();
 			$table->string('portfolio_item3', 400)->nullable();
 		});
 	}
