@@ -283,13 +283,16 @@ input:required:before {
     margin-bottom: 1em;
     display: block;
 }
-.addTalent{
+.addTalent, .removeTalent{
     /*font-size: 10px;
     margin-left: -15%;
     margin-top: 8%;*/
     position: relative;
     top: 2.5em;
     margin-bottom: 1em;
+}
+.removeTalent{
+    width:9em;
 }
 .visible{
     padding-bottom: 1em;

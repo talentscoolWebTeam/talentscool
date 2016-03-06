@@ -494,3 +494,12 @@ $(function() {
          uniqueId++;  
      });
 });
+
+$(function() {
+     $('.removeTalent').click(function() {
+     var lastChild = $(this).siblings('#container').children().last().attr('id');
+     if(lastChild != "talent-container")
+      $("#"+lastChild).remove();
+     });
+});
+

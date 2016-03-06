@@ -271,9 +271,11 @@
                             </div>
                             <button class="addRow">Add Media</button>
                         </div>
+
                     </div>
                 </div>
                 <button class="addTalent">Add Talent</button>
+                <button class="removeTalent">Remove Talent</button>
             </div>
         </div>
         <div class="buttons_container">
