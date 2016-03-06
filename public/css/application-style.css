@@ -228,7 +228,7 @@ input:required:before {
     padding: 0.75em;
 }
 
-#app2 input[type="text"], #app3 input[type="text"], textarea {
+#app3 input[type="text"], textarea {
     float: left;
 }
 
@@ -236,28 +236,63 @@ input:required:before {
     width: 40%;
     margin: 0 auto;
 }
-.app2_wrapper .left-column{
-    float: left;
-}
 
-.app2_wrapper .right-column{
-    float: right;
+#app2 input[type="text"]{
+    float: none;
 }
-.app2_wrapper .top-field{
-    padding-top: 1.8em;
+#app2 input[type="file"]{
+    float: none;
 }
-
-.app2_wrapper .right-section{
-    float: right;
+#app2 select{
+    float: none;
+    background-color: #fff;
 }
 #app2 .info{
     text-align: left;
 }
-.invisible{
-    display: none;
+.media{
+    display: inline-block;
+}
+#app2 .talent{
+    position: relative;
+    top: -31px;
+    right: -250px;
+}
+#app2 .info p{
+    width: 100%;
+    padding: 0;
+}
+#app2 .talent-container-class{
+    background-color: #EFEFF0;
+    padding: 1em;
+    position: relative;
+    top: 1.8em;
+    margin-bottom: 1em;
+}
+.imgdiv, .auddiv, .viddiv{
+    margin-top: -5%;
+    float: right;
+}
+.removeRow{
+    font-size: 10px;
+    min-width: 100px;
+}
+.addRow{
+    font-size: 10px;
+    /*margin-left:3%;*/
+    margin-bottom: 1em;
+    display: block;
+}
+.addTalent{
+    /*font-size: 10px;
+    margin-left: -15%;
+    margin-top: 8%;*/
+    position: relative;
+    top: 2.5em;
+    margin-bottom: 1em;
 }
 .visible{
-    display: block;
+    padding-bottom: 1em;
 }
 
 /* clear float */
@@ -297,54 +332,8 @@ input[type="text"], input[type="file"], select, textarea {
     font-family: Tenso;
     width: 212px;
 }
-.talent{
-    /*margin-top: -20%;
-    margin-left: 35%;*/
-}
-.
-#talent_category, #specific_talent {
-    /*float: left;*/
-}
 
-#industry{
-    /*margin-right: 100%;*/
-}
 
-#radioselector{
-
-    /*margin-left: -60%;
-    margin-top: 5%;*/
-}
-#toolTip{
-    font-size: 16px;
-    float: right;
-    margin-top: -100px;
-    margin-right: -40%;
-    background-color: grey;
-    color: white;
-    padding: 4px;
-}
-
-.imgdiv, .auddiv, .viddiv{
-    margin-top: -5%;
-    float: right;
-}
-.remove-field{
-    font-size: 10px;
-    float: right;
-
-    /*margin-top: -10%;*/
-}
-.add-field{
-    font-size: 10px;
-    float:left;
-    margin-left:3%;
-}
-.add-talent{
-font-size: 10px;
-margin-left: -15%;
-margin-top: 8%;
-}
 textarea {
     margin-left: 0px;
     float: left;

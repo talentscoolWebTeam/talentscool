@@ -25,7 +25,7 @@
     <div id="app1">
         <div class="app_heading">
             <h1>
-                Application 
+                Application
                 <div>
                 
                 </div>
@@ -191,7 +191,7 @@
         <div class="info">
             <div class="app2_wrapper">
                 <div id = "container">
-                    <div id = "talent-container">
+                    <div id = "talent-container" class="talent-container-class">
                         <div id = "industry">
                             <label>Industry</label>
                             <select id="talent_category" name="talent_category[]" required>
@@ -205,8 +205,10 @@
                         </div><!-- for industry-->
                         <div id = "talents">
                             <div id = "Dance" class = "talent">
-                                <label>Talent</label>
-                                <input id="specific_talent" name="specific_talent[]" type="text" placeholder="Hip Hop, Jazz, Ballet, Western, Zumba">
+                                <p id="portfolio" style="padding-bottom: 0px;">
+                                    <label>Talent</label>
+                                    <input id="specific_talent" name="specific_talent[]" type="text" placeholder="Hip Hop, Jazz, Ballet, Western, Zumba">
+                                </p>
 
                             </div><!-- for dance-->
                             <div id = "Fashion" class = "talent">
@@ -297,7 +299,7 @@
                 Application
             </h1>
             <p>
-                Desired Services
+                More About Yourself
             </p>
         </div>
     
@@ -431,7 +433,7 @@
                 Application
             </h1>
             <p>
-                Additional Information
+                Desired Services
             </p>
         </div>
     
