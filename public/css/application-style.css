@@ -578,5 +578,45 @@ footer{
 
 /* ----[ 69.9em (1118px and below)]---- */
 @media only screen and (min-width: 49.9em) and (max-width: 69.9em){
+    .navigation {
+        display: none;
+    }
+}
 
+@media only screen and (max-width: 1150px) and (min-width: 400px){
+    .navigation {
+        display: none;
+    }
+    
+    .info{
+        -moz-transform: scale(0.75);
+        -webkit-transform: scale(0.75);
+        -o-transform: scale(0.75);
+        -ms-transform: scale(0.75);
+        transform: scale(0.75);
+        -webkit-transform-origin: center top;
+    }
+    
+    button {
+        width: 100px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .navigation {
+        display: none;
+    }
+    
+    .info{
+        -moz-transform: scale(0.6);
+        -webkit-transform: scale(0.6);
+        -o-transform: scale(0.6);
+        -ms-transform: scale(0.6);
+        transform: scale(0.6);
+        -webkit-transform-origin: center top;
+    }
+    
+    button {
+        width: 100px;
+    }
 }
