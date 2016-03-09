@@ -173,14 +173,14 @@ class ApplicationController extends Controller
         for ($i = 0; $i < $count; $i++) {
             $talent = new Talent;
             $talent->email = $input[email];
-            $talent->industry = $input[talent_category[$i]];
-            $talent->specific_talent = $input[specific_talent[$i]];
-            $talent->type1 = $input[type1[$i]];
-            $talent->type2 = $input[type2[$i]];
-            $talent->type3 = $input[type3[$i]];
-            $talent->portfolioitem1 = $input[media1[$i]];
-            $talent->portfolioitem2 = $input[media2[$i]];
-            $talent->portfolioitem3 = $input[media3[$i]];
+            $talent->industry = $input[talent_category($i)];
+            $talent->specific_talent = $input[specific_talent($i)];
+            $talent->type1 = $input[type1($i)];
+            $talent->type2 = $input[type2($i)];
+            $talent->type3 = $input[type3($i)];
+            $talent->portfolioitem1 = $input[media1($i)];
+            $talent->portfolioitem2 = $input[media2($i)];
+            $talent->portfolioitem3 = $input[media3($i)];
             $talent->save();
 
         }
