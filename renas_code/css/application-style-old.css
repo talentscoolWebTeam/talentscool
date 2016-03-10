@@ -567,12 +567,7 @@ footer{
     padding-bottom: 1em;
     font-size: 2em;
 }
-.cb-container{
-	text-align: left;
-	width: 54%;
-	float: right;
-	
-}
+
 
 /* ----[ 69.9em (1118px and up, computer screen)]---- */
 @media only screen and (min-width: 69.9em){
@@ -605,22 +600,9 @@ footer{
     button {
         width: 100px;
     }
-	.app3_wrapper {
-    width: 65%;
-    margin: 0 auto;
-    margin-right: 27%;
-}
-	.cb-container{
-	text-align: left;
-	width: 70%;
-	float: right;
-}
 }
 
 @media only screen and (max-width: 400px) {
-	*{
-		float:none;
-	}
     .navigation {
         display: none;
     }
@@ -637,15 +619,4 @@ footer{
     button {
         width: 100px;
     }
-	.app3_wrapper {
-    width: 65%;
-    margin: 0 auto;
-    margin-right: 53%;
-}
-.cb-container{
-	text-align: left;
-	width: 74%;
-	float: right;
-	
-}
 }
