@@ -605,11 +605,11 @@ footer{
     }
     
     #app1, #app2 {
-        height: 74.5vh;
+        /*height: 74.5vh;*/
     }
     
     #app4 {
-        height: 160vh;
+        /*height: 160vh;*/
     }
     
     button {

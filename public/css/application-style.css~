@@ -552,6 +552,7 @@ button:onclick, button.active {
 
 footer{
 	/*background-color: #330000;*/
+	position: relative;
 	background-color: #000;
 	padding: 2em;
 	color: #fff;
@@ -570,7 +571,7 @@ footer{
 }
 .cb-container{
 	text-align: left;
-	width: 54%;
+	width: 58%;
 	float: right;
 	
 }
@@ -604,7 +605,7 @@ footer{
     }
     
     #app1, #app2 {
-        height: 74.5vh;
+        /*height: 74.5vh;*/
     }
     
     #app4 {
@@ -659,10 +660,7 @@ footer{
         transform: scale(0.6);
         -webkit-transform-origin: center top;
     }
-    
-    #app1, #app2 {
-        height: 90vh;
-    }
+   
     
     #app2 .talent-container-class {
         width: 300px;
