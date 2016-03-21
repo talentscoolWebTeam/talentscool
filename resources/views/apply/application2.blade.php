@@ -473,6 +473,7 @@
                     Opportunities
                 </label>
                 <div class="checkboxlist">
+			<div class ="cb-container">
                     <h3>OPPORTUNITIES</h3>
                     <input type="checkbox" name="opportunity[]" value="booking"> Bookings<br>
                     <input type="checkbox" name="opportunity[]" value="audition"> Auditions<br>
@@ -482,6 +483,7 @@
                     <input type="checkbox" name="opportunity[]" value="job"> Jobs<br>
                     <input type="checkbox" name="opportunity[]" value="endorsement"> Endorsements<br>
                     <input type="checkbox" name="opportunity[]" value="none"> None<br>
+			</div>
                 </div>
             </p>
             <p>
@@ -489,6 +491,7 @@
                     Representation
                 </label>
             <div class="checkboxlist">
+			<div class ="cb-container">
                 <h3>REPRESENTATION</h3>
                 <input type="checkbox" name="representation[]" value="manager"> Manager<br>
                 <input type="checkbox" name="representation[]" value="agent"> Agent<br>
@@ -498,6 +501,7 @@
                 <input type="checkbox" name="representation[]" value="talent_agent"> Talent Agent<br>
                 <input type="checkbox" name="representation[]" value="brand_manager"> Brand Manager<br>
                 <input type="checkbox" name="representation[]" value="none"> None<br>
+			</div>
             </div>
             </p>
             <p>
@@ -505,7 +509,8 @@
                     Talent Development
                 </label>
                 <div class="checkboxlist">
-                  <h3>TALENT DEVELOPMENT</h3>
+			<div class ="cb-container">
+                  <h3>TALENT DEVELOPMENT</h3>		
                   <input type="checkbox" name="talent_dev[]" value="vocalcoach"> Vocal Coach<br>
                   <input type="checkbox" name="talent_dev[]" value="actingcoach"> Acting Coach<br>
                   <input type="checkbox" name="talent_dev[]" value="instrumentteacher"> Instrument Teacher<br>
@@ -513,6 +518,7 @@
                   <input type="checkbox" name="talent_dev[]" value="artinstructor"> Art Instructor<br>
                   <input type="checkbox" name="talent_dev[]" value="schoolplacement"> School Placement<br>
                   <input type="checkbox" name="talent_dev[]" value="none"> None<br>
+			</div>
                 </div>
             </p>
             <p>
@@ -520,6 +526,7 @@
                     General Services
                 </label>
                 <div class="checkboxlist">
+			<div class ="cb-container">
                   <h3>GENERAL SERVICES</h3>
                   <input type="checkbox" name="general[]" value="musician"> Musician<br>
                   <input type="checkbox" name="general[]" value="vocalist"> Vocalist<br>
@@ -533,6 +540,7 @@
                   <input type="checkbox" name="general[]" value="fitnesstrainer"> Fitness Trainer<br>
                   <input type="checkbox" name="general[]" value="cameracrew"> Camera Crew<br>
                   <input type="checkbox" name="general[]" value="none"> None<br>
+			</div>
                 </div>
             </p>
             <p>
@@ -540,6 +548,7 @@
                     Vanity & Luxury Services
                 </label>
                 <div class="checkboxlist">
+			<div class ="cb-container">
                 <h3>VANITY AND LUXURY SERVICES</h3>
                 <input type="checkbox" name="vanitylux[]" value="clothingstylist"> Clothing Stylist<br>
                 <input type="checkbox" name="vanitylux[]" value="hairstylist"> Hair Stylist<br>
@@ -552,13 +561,14 @@
                 <input type="checkbox" name="vanitylux[]" value="privatejet"> Private Jet Rental<br>
                 <input type="checkbox" name="vanitylux[]" value="studiorental"> Studio Rental<br>
                 <input type="checkbox" name="vanitylux[]" value="none"> None<br>
+			</div>
                 </div>
             </p>
-            <p style="margin-left: 11.5%;">
+            <p style="margin-left: 18%;">
                 <label>
                     Additional Requests
                 </label>
-                <input style="width: 500px;" type="text" id="additional" class="right" autocomplete="off" placeholder="Additional Requests" required></input>
+                <input type="text" id="additional" class="right" autocomplete="off" placeholder="Additional Requests" required></input>
             </p>
         </div>
     

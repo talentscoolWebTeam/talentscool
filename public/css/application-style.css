@@ -207,10 +207,9 @@ input:required:before {
 }
 
 .info label {
-    vertical-align: sub;
+	margin-left: -10px;
     display: none;
 }
-
 
 #app1 .info .left, #app4 .info .left {
     float: right;
@@ -230,6 +229,10 @@ input:required:before {
 
 #app3 input[type="text"], textarea {
     float: left;
+}
+
+#app4 #additional {
+    width: 500px;
 }
 
 .app2_wrapper {
@@ -290,6 +293,10 @@ input:required:before {
     position: relative;
     top: 2.5em;
     margin-bottom: 1em;
+    min-width: 150px;
+    max-width: 150px;
+    min-height: 50px;
+    max-height: 50px;
 }
 .removeTalent{
     width:9em;
@@ -379,13 +386,7 @@ select {
     margin-right: 6px;
 }
 
-#profile_photo label {
-    float: left;
-    margin-left: 20%;
-    margin-right: 6px;
-}
-
-#portfolio label, #portfolio input {
+#portfolio input {
     float: left;
     margin-bottom: 1em;
     margin-right: 30px;
@@ -567,7 +568,12 @@ footer{
     padding-bottom: 1em;
     font-size: 2em;
 }
-
+.cb-container{
+	text-align: left;
+	width: 58%;
+	float: right;
+	
+}
 
 /* ----[ 69.9em (1118px and up, computer screen)]---- */
 @media only screen and (min-width: 69.9em){
@@ -588,7 +594,7 @@ footer{
         display: none;
     }
     
-    .info{
+    #app1, #app2, #app3, #app4 {
         -moz-transform: scale(0.75);
         -webkit-transform: scale(0.75);
         -o-transform: scale(0.75);
@@ -597,17 +603,55 @@ footer{
         -webkit-transform-origin: center top;
     }
     
+    #app1, #app2 {
+        height: 74.5vh;
+    }
+    
+    #app4 {
+        height: 160vh;
+    }
+    
     button {
         width: 100px;
+        font-size: 16px;
+    }
+    
+    #app2 .buttons_container {
+        margin-top: 250px;
+    }
+    
+    #app4 #additional {
+        margin-left: -100px;
+    }
+    
+	.app3_wrapper {
+        width: 65%;
+        margin: 0 auto;
+        margin-right: 27%;
+    }
+	.cb-container{
+        text-align: left;
+        width: 70%;
+        float: right;
     }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 399px) {
+    html, body {
+        overflow-x: hidden;
+        width: device-width;
+        initial-scale: 1;
+        user-scalable:0;
+    }
+    
+	*{
+		float:none;
+	}
     .navigation {
         display: none;
     }
     
-    .info{
+    #app1, #app2, #app3, #app4 {
         -moz-transform: scale(0.6);
         -webkit-transform: scale(0.6);
         -o-transform: scale(0.6);
@@ -616,7 +660,64 @@ footer{
         -webkit-transform-origin: center top;
     }
     
+    #app1, #app2 {
+        height: 90vh;
+    }
+    
+    #app2 .talent-container-class {
+        width: 300px;
+        margin-left: -70px;
+    }
+    
     button {
         width: 100px;
+        font-size: 16px;
     }
+    
+    #app2 .buttons_container {
+        width: 170%;
+        margin-top: 250px;
+        margin-left: -100px;
+    }
+    
+    #app4 .buttons_container, #app3 .buttons_container {
+        width: 170%;
+        margin-left: -100px;
+    }
+    #app4{
+		margin-bottom: -300px;
+	}
+    #app4 #additional {
+        width: 300px;
+        margin-left: -100px;
+		margin-bottom: -100px;
+    }
+    
+	.app3_wrapper {
+        width: 65%;
+        margin: 0 auto;
+        margin-right: 53%;
+    }
+    .cb-container{
+        text-align: left;
+        width: 74%;
+        float: right;
+    }
+	
+	.info label {
+	display: none;
+}
+	#portfolio label {
+	display: block;
+	margin-top: 65px;
+	margin-left: -100%;
+    font-family: Tenso; 
+    font-size: 19px;
+}
+    input#specific_talent{
+		float: none;
+		display: block;
+		margin-left: -100%;
+	}
+
 }
