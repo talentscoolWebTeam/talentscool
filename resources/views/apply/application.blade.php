@@ -7,7 +7,7 @@
         TalentsCool | Application
     </title>
     
-    <link rel="stylesheet" href="css/application-style-temp2.css" />
+    <link rel="stylesheet" href="css/application-style.css" />
     <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="/resources/demos/style.css">

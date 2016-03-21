@@ -130,7 +130,6 @@ class ApplicationController extends Controller
         $client->gender = $input['gender'];
         $client->talent_category = $input['talent_category'];
         $client->specific_talent = $input['specific_talent'];
-        $client->vidlink = $input['video_link'];
         $client->aboutme = $input['aboutme'];
 
         $socmedarray = Input::get('socialmedia');
@@ -139,7 +138,7 @@ class ApplicationController extends Controller
         $client->experience = $input['experience'];
         $client->currRepresent = $input['curr_rep'];
 
-        $opptarray = Input::get('opportunities');
+        $opptarray = Input::get('opportunity');
         $client->opportunities = join(" ,",$opptarray);
 
         $reparray = Input::get('representation');
@@ -151,7 +150,7 @@ class ApplicationController extends Controller
         $tndevarray = Input::get('talent_dev');
         $client->talentdev = join(" ,", $tndevarray);
 
-        $vanluxarray = Input::get('vanityluxury');
+        $vanluxarray = Input::get('vanitylux');
         $client->vanitylux= join(" ,", $vanluxarray);
 
         $client->additional = $input['additional'];

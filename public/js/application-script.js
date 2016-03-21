@@ -4,6 +4,7 @@ $('.navigation li:nth-child(1)').click(function() {
     document.getElementById("app2").style.display = "none";
     document.getElementById("app3").style.display = "none";
     document.getElementById("app4").style.display = "none";
+    $('body').scrollTop(0);
 });
 
 $('.navigation li:nth-child(2)').click(function() {
@@ -12,6 +13,7 @@ $('.navigation li:nth-child(2)').click(function() {
     document.getElementById("app2").style.display = "block";
     document.getElementById("app3").style.display = "none";
     document.getElementById("app4").style.display = "none";
+    $('body').scrollTop(0);
 });
 
 $('.navigation li:nth-child(3)').click(function() {
@@ -20,6 +22,7 @@ $('.navigation li:nth-child(3)').click(function() {
     document.getElementById("app2").style.display = "none";
     document.getElementById("app3").style.display = "none";
     document.getElementById("app4").style.display = "block";
+    $('body').scrollTop(0);
 });
 
 $('.navigation li:nth-child(4)').click(function() {
@@ -28,6 +31,7 @@ $('.navigation li:nth-child(4)').click(function() {
     document.getElementById("app2").style.display = "none";
     document.getElementById("app3").style.display = "block";
     document.getElementById("app4").style.display = "none";
+    $('body').scrollTop(0);
 });
 
 /* Next and previous buttons */
@@ -37,6 +41,7 @@ $('#app1 .next-button').click(function() {
     document.getElementById("app2").style.display = "block";
     document.getElementById("app3").style.display = "none";
     document.getElementById("app4").style.display = "none";
+    $('body').scrollTop(0);
 });
 /* app2 prev */
 $('#app2 .prev-button').click(function() {
@@ -44,6 +49,7 @@ $('#app2 .prev-button').click(function() {
     document.getElementById("app2").style.display = "none";
     document.getElementById("app3").style.display = "none";
     document.getElementById("app4").style.display = "none";
+    $('body').scrollTop(0);
 });
 /* app2 next */
 $('#app2 .next-button').click(function() {
@@ -51,6 +57,7 @@ $('#app2 .next-button').click(function() {
     document.getElementById("app2").style.display = "none";
     document.getElementById("app3").style.display = "none";
     document.getElementById("app4").style.display = "block";
+    $('body').scrollTop(0);
 });
 /* app3 prev */
 $('#app3 .prev-button').click(function() {
@@ -58,6 +65,7 @@ $('#app3 .prev-button').click(function() {
     document.getElementById("app2").style.display = "none";
     document.getElementById("app3").style.display = "none";
     document.getElementById("app4").style.display = "block";
+    $('body').scrollTop(0);
 });
 /* app3 next */
 $('#app3 .next-button').click(function() {
@@ -65,13 +73,7 @@ $('#app3 .next-button').click(function() {
     document.getElementById("app2").style.display = "none";
     document.getElementById("app3").style.display = "none";
     document.getElementById("app4").style.display = "block";
-});
-/* app4 previous */
-$('#app4 .prev-button').click(function() {
-    document.getElementById("app1").style.display = "none";
-    document.getElementById("app2").style.display = "block";
-    document.getElementById("app3").style.display = "none";
-    document.getElementById("app4").style.display = "none";
+    $('body').scrollTop(0);
 });
 
 /* app4 previous */
@@ -80,6 +82,7 @@ $('#app4 .next-button').click(function() {
     document.getElementById("app2").style.display = "none";
     document.getElementById("app3").style.display = "block";
     document.getElementById("app4").style.display = "none";
+    $('body').scrollTop(0);
 });
 
 function populateGender() {
