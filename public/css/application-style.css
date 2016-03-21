@@ -635,6 +635,7 @@ footer{
         width: 70%;
         float: right;
     }
+
 }
 
 @media only screen and (max-width: 399px) {
@@ -681,6 +682,7 @@ footer{
     #app4 .buttons_container, #app3 .buttons_container {
         width: 170%;
         margin-left: -100px;
+		
     }
     #app4{
 		margin-bottom: -300px;
@@ -717,5 +719,6 @@ footer{
 		display: block;
 		margin-left: -100%;
 	}
+
 
 }
