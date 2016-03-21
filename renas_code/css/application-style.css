@@ -207,10 +207,9 @@ input:required:before {
 }
 
 .info label {
-    vertical-align: sub;
+	margin-left: -10px;
     display: none;
 }
-
 
 #app1 .info .left, #app4 .info .left {
     float: right;
@@ -387,13 +386,7 @@ select {
     margin-right: 6px;
 }
 
-#profile_photo label {
-    float: left;
-    margin-left: 20%;
-    margin-right: 6px;
-}
-
-#portfolio label, #portfolio input {
+#portfolio input {
     float: left;
     margin-bottom: 1em;
     margin-right: 30px;
@@ -691,10 +684,13 @@ footer{
         width: 170%;
         margin-left: -100px;
     }
-    
+    #app4{
+		margin-bottom: -300px;
+	}
     #app4 #additional {
         width: 300px;
         margin-left: -100px;
+		margin-bottom: -100px;
     }
     
 	.app3_wrapper {
@@ -707,5 +703,21 @@ footer{
         width: 74%;
         float: right;
     }
-    
+	
+	.info label {
+	display: none;
+}
+	#portfolio label {
+	display: block;
+	margin-top: 65px;
+	margin-left: -100%;
+    font-family: Tenso; 
+    font-size: 19px;
+}
+    input#specific_talent{
+		float: none;
+		display: block;
+		margin-left: -100%;
+	}
+
 }
