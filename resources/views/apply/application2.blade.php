@@ -2,15 +2,15 @@
 <html lang="en">
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
     <title>
         TalentsCool | Application
     </title>
     
-    <link rel="stylesheet" href="css/application-style.css" />
     <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="/resources/demos/style.css">
+    <link rel="stylesheet" href="css/application-style.css" />
 </head>
 
 <body>
@@ -433,7 +433,7 @@
                     Opportunities
                 </label>
                 <div class="checkboxlist">
-			<div class ="cb-container">
+				<div class ="cb-container">
                     <h3>OPPORTUNITIES</h3>
                     <input type="checkbox" name="opportunity[]" value="booking"> Bookings<br>
                     <input type="checkbox" name="opportunity[]" value="audition"> Auditions<br>
@@ -443,7 +443,7 @@
                     <input type="checkbox" name="opportunity[]" value="job"> Jobs<br>
                     <input type="checkbox" name="opportunity[]" value="endorsement"> Endorsements<br>
                     <input type="checkbox" name="opportunity[]" value="none"> None<br>
-			</div>
+				</div>
                 </div>
             </p>
             <p>
@@ -451,7 +451,7 @@
                     Representation
                 </label>
             <div class="checkboxlist">
-			<div class ="cb-container">
+				<div class ="cb-container">
                 <h3>REPRESENTATION</h3>
                 <input type="checkbox" name="representation[]" value="manager"> Manager<br>
                 <input type="checkbox" name="representation[]" value="agent"> Agent<br>
@@ -461,7 +461,7 @@
                 <input type="checkbox" name="representation[]" value="talent_agent"> Talent Agent<br>
                 <input type="checkbox" name="representation[]" value="brand_manager"> Brand Manager<br>
                 <input type="checkbox" name="representation[]" value="none"> None<br>
-			</div>
+				</div>
             </div>
             </p>
             <p>
@@ -469,7 +469,7 @@
                     Talent Development
                 </label>
                 <div class="checkboxlist">
-			<div class ="cb-container">
+				  <div class ="cb-container">
                   <h3>TALENT DEVELOPMENT</h3>		
                   <input type="checkbox" name="talent_dev[]" value="vocalcoach"> Vocal Coach<br>
                   <input type="checkbox" name="talent_dev[]" value="actingcoach"> Acting Coach<br>
@@ -478,7 +478,7 @@
                   <input type="checkbox" name="talent_dev[]" value="artinstructor"> Art Instructor<br>
                   <input type="checkbox" name="talent_dev[]" value="schoolplacement"> School Placement<br>
                   <input type="checkbox" name="talent_dev[]" value="none"> None<br>
-			</div>
+				  </div>
                 </div>
             </p>
             <p>
@@ -486,7 +486,7 @@
                     General Services
                 </label>
                 <div class="checkboxlist">
-			<div class ="cb-container">
+				<div class ="cb-container">
                   <h3>GENERAL SERVICES</h3>
                   <input type="checkbox" name="general[]" value="musician"> Musician<br>
                   <input type="checkbox" name="general[]" value="vocalist"> Vocalist<br>
@@ -500,7 +500,7 @@
                   <input type="checkbox" name="general[]" value="fitnesstrainer"> Fitness Trainer<br>
                   <input type="checkbox" name="general[]" value="cameracrew"> Camera Crew<br>
                   <input type="checkbox" name="general[]" value="none"> None<br>
-			</div>
+				</div>
                 </div>
             </p>
             <p>
@@ -508,7 +508,7 @@
                     Vanity & Luxury Services
                 </label>
                 <div class="checkboxlist">
-			<div class ="cb-container">
+				<div class ="cb-container">
                 <h3>VANITY AND LUXURY SERVICES</h3>
                 <input type="checkbox" name="vanitylux[]" value="clothingstylist"> Clothing Stylist<br>
                 <input type="checkbox" name="vanitylux[]" value="hairstylist"> Hair Stylist<br>
@@ -521,10 +521,10 @@
                 <input type="checkbox" name="vanitylux[]" value="privatejet"> Private Jet Rental<br>
                 <input type="checkbox" name="vanitylux[]" value="studiorental"> Studio Rental<br>
                 <input type="checkbox" name="vanitylux[]" value="none"> None<br>
-			</div>
+				</div>
                 </div>
             </p>
-            <p style="margin-left: 18%;">
+            <p style="margin-left: 11.5%;">
                 <label>
                     Additional Requests
                 </label>
@@ -548,7 +548,7 @@
 		
     
 <!------------------------------------------------------------------------------------------------------------>
-		<footer>
+		<footer id="footer">
 			<div class="social-media-bar">
 			<ul>
 				<li><a target="_blank" href="https://twitter.com/talentscool"><img src="images/twitter_logo.png" title="Follow us on Twitter!" class="media-icon"></a></li>
