@@ -12,20 +12,6 @@
 
 <body>
 	<main class="main">
-		<!-- Retired black header above the nav-bar.
-		<div class="header">
-			<div>
-				
-					<h1><a href="index.html"><img src="images/TSVector.png"></a></h1>
-					<form class="searchbar"><input type="text" title="Search Talent" placeholder="Search"></form>
-				<div class="user-entry">
-					<a href="index.html">Join</a>
-					<a href="index.html">Login</a>
-				</div>
-			</div>
-		</div>
-		-->
-
 		<div class="navbar" >
 			<div class="content">
 				<h1 class="logo"><a href="/"><img src="images/TSVector.png"></a></h1>
@@ -42,7 +28,6 @@
 			</div>
 		</div>
 
-		<!-- <div id="stickyalias"></div> -->
 
 		<div class="parallax-window" id="window1" data-speed="0.3" data-type="background" data-ios-fix="true">
 			<div class="content">
@@ -207,11 +192,6 @@
 	//</script>
 	-->
 
-    <!--Jquery link for Sticky
-    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script> 
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
--->
 
 
 </body>

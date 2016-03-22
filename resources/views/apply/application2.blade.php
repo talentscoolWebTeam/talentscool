@@ -50,18 +50,7 @@
                 <li>
                     Step 4 <br><br> <span>More About Yourself</span>
                 </li>
-                <!--<li>
-                    Step 5 <br><br> <span>Review Application</span>
-                </li>
-                <li>
-                    Step 6 <br><br> <span>Complete</span>
-                </li>-->
             </ul>
-<!-- 
-            <div>
-                <br><br><br>*required
-            </div>
- -->
         </div>
     
         <div class="info"> 
@@ -176,14 +165,6 @@
                 <li>
                     Step 4 <br><br> <span>More About Yourself</span>
                 </li>
-                <!--
-                                <li>
-                                    Step 5 <br><br> <span>Review Application</span>
-                                </li>
-                                <li>
-                                    Step 6 <br><br> <span>Complete</span>
-                                </li>
-                 -->
             </ul>
 
         </div>
@@ -320,20 +301,7 @@
                 <li class="services_li">
                     Step 4 <br><br> <span>More About Yourself</span>
                 </li>
-<!-- 
-                <li>
-                    Step 5 <br><br> <span>Review Application</span>
-                </li>
-                <li>
-                    Step 6 <br><br> <span>Complete</span>
-                </li>
- -->
             </ul>
-<!-- 
-            <div>
-                <br><br><br>*required
-            </div>
- -->
         </div>
     
         <div class="info"> 
@@ -454,14 +422,6 @@
                 <li>
                     Step 4 <br><br> <span>More About Yourself</span>
                 </li>
-<!-- 
-                <li>
-                    Step 5 <br><br> <span>Review Application</span>
-                </li>
-                <li>
-                    Step 6 <br><br> <span>Complete</span>
-                </li>
- -->
             </ul>
  
 
@@ -578,11 +538,6 @@
                     Previous
                 </button>
            
-<!-- 
-                <a style="text-decoration: none; color: white;" href="../renas_code/app-thankyou.html"><button class="submit-button">
-                    Next
-                </button></a>
- -->
             <button class="next-button">
                 Next
             </button>
