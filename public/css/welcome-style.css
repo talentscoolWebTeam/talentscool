@@ -9,7 +9,6 @@ ul{
 	position: relative;
 	z-index: 201;
 }
-/* search bar and login buttons, hidden for now */
 .header input{
 	display: none;
 }
@@ -40,7 +39,6 @@ ul{
 	position: fixed;
 	top: 0;
 	left: 0;
-	/*background-color: #330000;*/
 	background-color: black;
 	opacity: .8;
 	padding: .7em;
@@ -145,7 +143,6 @@ h2 {
 }
 #window2{
 	position: relative;
-	/*top: -64px;*/
 }
 
 #window3 .content ul {
@@ -381,7 +378,6 @@ footer{
 		text-align: center;
 	}
 	#window3 .content{
-		/*padding: 5em 6em;*/
 		padding-top: 1.5em;
 	}
 	#window3 h2{
