@@ -66,7 +66,7 @@ body {
     display: block;
 }
 
-#app2, #app3, #app4/* , #app5, #app6 */ {
+#app2, #app3, #app4 {
     display: none;
 }
 
@@ -124,49 +124,21 @@ body {
     margin-left: 19%;
 }
 
-input::-webkit-input-placeholder {
+input::-webkit-input-placeholder, input:-ms-input-placeholder, 
+textarea::-webkit-input-placeholder, textarea:-ms-input-placeholder  {
     color: black !important;
 }
  s
-input:-moz-placeholder { /* Firefox 18- */
+input:-moz-placeholder, input::-moz-placeholder, 
+textarea:-moz-placeholder, textarea::-moz-placeholder{ 
+/* Firefox 18- */ /* Firefox 19+ */ /* Firefox 18- */
     color: black !important;  
     opacity: 1;
 }
  
-input::-moz-placeholder {  /* Firefox 19+ */
-    color: black !important;  
-    opacity: 1;
-}
- 
-input:-ms-input-placeholder {  
-    color: black !important;  
-}
-
-textarea::-webkit-input-placeholder {
-    color: black !important;
-}
- 
-textarea:-moz-placeholder { /* Firefox 18- */
-    color: black !important;  
-    opacity: 1;
-}
- 
-textarea::-moz-placeholder {  /* Firefox 19+ */
-    color: black !important;  
-    opacity: 1;
-}
- 
-textarea:-ms-input-placeholder {  
-    color: black !important;  
-}
-
-input:visited:empty {
+input:visited:empty, input:required:before  {
     border: 2px solid red !important;
 } 
-
-input:required:before {
-    border: 2px solid red !important;
-}
 
 .navigation .personal_li, .navigation .talent_li, .navigation .services_li, 
 .navigation .additional_li/* , .navigation .review_li, .navigation .complete_li */ {
@@ -240,10 +212,7 @@ input:required:before {
     margin: 0 auto;
 }
 
-#app2 input[type="text"]{
-    float: none;
-}
-#app2 input[type="file"]{
+#app2 input[type="text"], #app2 input[type="file"]{
     float: none;
 }
 #app2 select{
@@ -282,14 +251,10 @@ input:required:before {
 }
 .addRow{
     font-size: 10px;
-    /*margin-left:3%;*/
     margin-bottom: 1em;
     display: block;
 }
 .addTalent, .removeTalent{
-    /*font-size: 10px;
-    margin-left: -15%;
-    margin-top: 8%;*/
     position: relative;
     top: 2.5em;
     margin-bottom: 1em;
@@ -428,7 +393,6 @@ select {
 
 .buttons {
     width: 60%;
-    /*text-align: left;*/
     display: block;
     margin: auto;
     padding: 1.5em;
@@ -442,9 +406,7 @@ select {
 
 button {
     color: #fff;
-/*     background-color: #6496c8; */
     background-color: #c96464;
-/*     text-shadow: -1px 1px #417cb8; */
     border: none;
     line-height: 3em;
     font-size: 18px;
@@ -454,28 +416,17 @@ button {
 }
 
 button:hover, button.hover {
-/* 
-    background-color: #346392;
-    text-shadow: -1px 1px #27496d;
- */
     background-color: #6d2727;
     cursor: pointer;
 }
 
 button:active, button.active {
-/* 
-    background-color: #27496d;
-    text-shadow: -1px 1px #193047;
- */
+
     background-color: #6d2727;
     cursor: pointer;
 }
 
 button:onclick, button.active {
-/* 
-    background-color: #27496d;
-    text-shadow: -1px 1px #193047;
- */
     background-color: #6d2727;
     cursor: progress;
 }
@@ -495,7 +446,6 @@ button:onclick, button.active {
 .social-media-bar {
 	text-align: center;
 	padding: 1em 0;
-	/* background-color: #f0f0f0; */
 	background-color: black;
 }
 

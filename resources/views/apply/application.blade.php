@@ -26,9 +26,6 @@
         <div class="app_heading">
             <h1>
                 Application
-                <div>
-                
-                </div>
             </h1>
             <p>
                 Personal Information
@@ -54,18 +51,17 @@
         </div>
     
         <div class="info"> 
-	    <p>
+			<p>
                 <label>
                     Headshot
                 </label>
                 <input type="file" class = "left" id="profile_image" onchange="validateImage('profile_image');" name = "profile_image" autocomplete="off" placeholder="Profile Photo" required></input>
-        </p>
-
+			</p>
             <p>
-		    <img class = "right" id="display_image" src="#" alt="<Choose Profile Pic>" />
-	    </p>
-	    <p>	
-	       <label>
+				<img class = "right" id="display_image" src="#" alt="<Choose Profile Pic>" />
+			</p>
+			<p>	
+				<label>
                     First Name
                </label>
                 <input id="first_name" name="first_name" type="text" class="left" autocomplete="off" placeholder="First Name*" required></input>
@@ -568,9 +564,3 @@
 <script src="js/countries.js"></script>
 <script language="javascript">populateCountries("country", "state");</script>
 <script language="javascript">populateGender();</script>
-<script language="javascript">populateTalentCategory();</script>
-<script language="javascript">populateOpportunities();</script>
-<script language="javascript">populateRepresentation();</script>
-<script language="javascript">populateTalentDevelopment();</script>
-<script language="javascript">populateGeneralServices();</script>
-<script language="javascript">populateVanity();</script>
