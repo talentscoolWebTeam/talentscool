@@ -16,17 +16,16 @@ class CreateTalentTable extends Migration {
 			//Will use email to pull talents
 			$table->increments('id');
 			$table->string('email');
-			$table->foreign('email')->references('email')->on('clients');
 			$table->timestamps();
 			$table->string('industry');
 			$table->string('specific_talent');
 			//portfolio item
 			$table->string('type1',20)->nullable();
-			$table->string('portfolio_item1', 400)->nullable();
+			$table->string('portfolioitem1', 400)->nullable();
 			$table->string('type2',20)->nullable();
-			$table->string('portfolio_item2', 400)->nullable();
+			$table->string('portfolioitem2', 400)->nullable();
 			$table->string('type3',20)->nullable();
-			$table->string('portfolio_item3', 400)->nullable();
+			$table->string('portfolioitem3', 400)->nullable();
 		});
 	}
 

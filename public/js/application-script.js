@@ -259,8 +259,8 @@ function add_link() {
         alert("Cannot add more than 15 social media links");
     }
     else {
-        var name = 'extralink' + added_links;
-        document.getElementById("add_links").innerHTML+= '<p><input type="text" name=' + name + ' focused autocomplete="off" placeholder="New Link" required></input></p>';
+        //var name = 'extralink' + added_links;
+        document.getElementById("add_links").innerHTML+= '<p><input type="text" name="socialmedia[] focused autocomplete="off" placeholder="New Link" required></input></p>';
     }
 }
 

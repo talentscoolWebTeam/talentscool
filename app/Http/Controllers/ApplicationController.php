@@ -10,6 +10,7 @@ use App\Client;
 use Redirect;
 use Session;
 use Input;
+use App\Talent;
 
 class ApplicationController extends Controller
 {
@@ -40,9 +41,11 @@ class ApplicationController extends Controller
         $client->phone = preg_replace("/\D/", "", $input['phone']);
         $client->dob = $input['dob'];
         $client->gender = $input['gender'];
-        $client->talent_category = $input['talent_category'];
-        $client->specific_talent = $input['specific_talent'];
         $client->aboutme = $input['aboutme'];
+        $client->facebook = $input['facebook'];
+        $client->instagram = $input['instagram'];
+        $client->twitter = $input['twitter'];
+        $client->youtube = $input['youtube'];
 
         $socmedarray = Input::get('socialmedia');
         $client->socialmedia = join(" ,",$socmedarray);
@@ -51,19 +54,34 @@ class ApplicationController extends Controller
         $client->currRepresent = $input['curr_rep'];
 
         $opptarray = Input::get('opportunity');
-        $client->opportunities = join(" ,",$opptarray);
+        if(!empty($opptarray))
+        {
+            $client->opportunities = join(" ,",$opptarray);
+        }
 
         $reparray = Input::get('representation');
-        $client->representation = join(" ,",$reparray);
+          if(!empty($reparray))
+        {
+            $client->representation = join(" ,",$reparray);
+        }
 
         $genarray = Input::get('general');
-        $client->general = join(" ,",$genarray);
+        if(!empty($genarray))
+        {
+            $client->general = join(" ,",$genarray);
+        }
 
         $tndevarray = Input::get('talent_dev');
-        $client->talentdev = join(" ,", $tndevarray);
+        if(!empty($tndevarray))
+        {
+            $client->talentdev = join(" ,", $tndevarray);
+        }     
 
         $vanluxarray = Input::get('vanitylux');
-        $client->vanitylux= join(" ,", $vanluxarray);
+        if(!empty($vanluxarray))
+        {
+            $client->vanitylux= join(" ,", $vanluxarray);
+        }
 
         $client->additional = $input['additional'];
 
@@ -80,23 +98,28 @@ class ApplicationController extends Controller
         $client->profilepic = $filepath . $fileName;
 
         //Create talent entry/ies
-        $count = count($input[talent_category]);
+        $talent_category = Input::get('talent_category');
+        $specific_talent = Input::get('specific_talent');
+        $type1 = Input::get('type1');
+        $type3 = Input::get('type3');
+        $type2 = Input::get('type2');
+        $portfolioitem1 = Input::get('media1');
+        $portfolioitem2 = Input::get('media2');
+        $portfolioitem3 = Input::get('media3');
+        $count = count($input['talent_category']);
         for ($i = 0; $i < $count; $i++) {
             $talent = new Talent;
-            $talent->email = $input[email];
-            $talent->industry = $input[talent_category($i)];
-            $talent->specific_talent = $input[specific_talent($i)];
-            $talent->type1 = $input[type1($i)];
-            $talent->type2 = $input[type2($i)];
-            $talent->type3 = $input[type3($i)];
-            $talent->portfolioitem1 = $input[media1($i)];
-            $talent->portfolioitem2 = $input[media2($i)];
-            $talent->portfolioitem3 = $input[media3($i)];
+            $talent->email = $input['email'];
+            $talent->industry = $talent_category[$i];
+            $talent->specific_talent = $specific_talent[$i];
+            $talent->type1 = $type1[$i];
+            $talent->type2 = $type2[$i];
+            $talent->type3 = $type3[$i];
+            $talent->portfolioitem1 = $portfolioitem1[$i];
+            $talent->portfolioitem2 = $portfolioitem2[$i];
+            $talent->portfolioitem3 = $portfolioitem3[$i];
             $talent->save();
-
         }
-
-
 
         $client->save();
         //Redirect to thank you page

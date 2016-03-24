@@ -364,13 +364,13 @@
                     <label>
                         Awards 
                     </label>
-                    <textarea id="awards" name="awards" autocomplete="off" rows="4" placeholder="Awards" oninput="countChars();" required></textarea>
+                    <textarea id="awards" name="awards" autocomplete="off" rows="4" placeholder="Awards" oninput="countChars();"></textarea>
                 </p>
                 <p>
                     <label>
                         Current Representative
                     </label>
-                    <input type="text" name="curr_rep" autocomplete="off" placeholder="Current Representative" required></input>
+                    <input type="text" name="curr_rep" autocomplete="off" placeholder="Current Representative"></input>
                 </p>        
             </div>
         </div>
@@ -524,7 +524,7 @@
                 <label>
                     Additional Requests
                 </label>
-                <input type="text" id="additional" class="right" autocomplete="off" placeholder="Additional Requests" required></input>
+                <input type="text" id="additional" name="additional" class="right" autocomplete="off" placeholder="Additional Requests"></input>
             </p>
         </div>
     

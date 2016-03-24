@@ -16,9 +16,4 @@ class Talent extends Model {
 		'portfolioitem2',
 		'portfolioitem3'
 	];
-	
-	public function client()
-	{
-		return $this->belongsTo('App\Client');
-	}
 }

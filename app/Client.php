@@ -24,20 +24,15 @@ class Client extends Model
         'facebook',
         'youtube',
         'twitter',
-        'extralinks',
+        'socialmedia',
         'experience',
         'awards',
         'currRepresent',
         'opportunities',
         'representation',
-        'generalserv',
+        'general',
         'talentdev',
         'vanitylux',
         'additional'
     ];
-
-    public function talents()
-    {
-        return $this->hasMany('App\Talent');
-    }
 }

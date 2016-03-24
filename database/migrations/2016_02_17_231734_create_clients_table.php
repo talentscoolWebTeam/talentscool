@@ -32,7 +32,7 @@ class CreateClientsTable extends Migration
             $table->string('instagram',255)->nullable();
             $table->string('facebook',255)->nullable();
             $table->string('youtube',255)->nullable();
-            $table->text('extralinks')->nullable();
+            $table->text('socialmedia')->nullable();
 
             $table->text('experience', 255);
             $table->text('awards', 255);
@@ -40,9 +40,9 @@ class CreateClientsTable extends Migration
 
             $table->text('opportunities', 100)->nullable();
             $table->text('representation', 100)->nullable();
-            $table->text('generalserv', 100)->nullable();
+            $table->text('general', 100)->nullable();
             $table->text('talentdev', 100)->nullable();
-            $table->text('vanitylusx', 100)->nullable();
+            $table->text('vanitylux', 100)->nullable();
             $table->string('additional', 100)->nullable();
         });
     }
