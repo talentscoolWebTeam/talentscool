@@ -20,8 +20,8 @@ $('.navigation li:nth-child(3)').click(function() {
     //alert("clicked third");
     document.getElementById("app1").style.display = "none";
     document.getElementById("app2").style.display = "none";
-    document.getElementById("app3").style.display = "none";
-    document.getElementById("app4").style.display = "block";
+    document.getElementById("app3").style.display = "block";
+    document.getElementById("app4").style.display = "none";
     $('body').scrollTop(0);
 });
 
@@ -29,8 +29,8 @@ $('.navigation li:nth-child(4)').click(function() {
     //alert("clicked fourth");
     document.getElementById("app1").style.display = "none";
     document.getElementById("app2").style.display = "none";
-    document.getElementById("app3").style.display = "block";
-    document.getElementById("app4").style.display = "none";
+    document.getElementById("app3").style.display = "none";
+    document.getElementById("app4").style.display = "block";
     $('body').scrollTop(0);
 });
 
@@ -55,16 +55,16 @@ $('#app2 .prev-button').click(function() {
 $('#app2 .next-button').click(function() {
     document.getElementById("app1").style.display = "none";
     document.getElementById("app2").style.display = "none";
-    document.getElementById("app3").style.display = "none";
-    document.getElementById("app4").style.display = "block";
+    document.getElementById("app3").style.display = "block";
+    document.getElementById("app4").style.display = "none";
     $('body').scrollTop(0);
 });
 /* app3 prev */
 $('#app3 .prev-button').click(function() {
     document.getElementById("app1").style.display = "none";
-    document.getElementById("app2").style.display = "none";
+    document.getElementById("app2").style.display = "block";
     document.getElementById("app3").style.display = "none";
-    document.getElementById("app4").style.display = "block";
+    document.getElementById("app4").style.display = "none";
     $('body').scrollTop(0);
 });
 /* app3 next */
@@ -259,9 +259,16 @@ function add_link() {
         alert("Cannot add more than 15 social media links");
     }
     else {
-        //var name = 'extralink' + added_links;
-        document.getElementById("add_links").innerHTML+= '<p><input type="text" name="socialmedia[] focused autocomplete="off" placeholder="New Link" required></input></p>';
+        document.getElementById("add_links").innerHTML+= '<p><input type="text" name="socialmedia[] focused autocomplete="off" placeholder="New Link"></input></p>';
     }
+}
+
+function remove_link(container_div_id) {
+    var container = document.getElementById(container_div_id);
+    if (container != null && container.childNodes.length > 0) {
+        container.removeChild(container.childNodes[container.childNodes.length-1]);
+    }
+
 }
 
 function countChars() {
@@ -428,6 +435,7 @@ jQuery(function($) {
     });
 });
 //MB - function for dynamically changing the talent fields
+/*
  var uniqueId = 2;
  $('#talents').children().hide();
 $("select#talent_category").change(function(){
@@ -449,6 +457,7 @@ $("select#talent_category").change(function(){
     //alert(id);
     });
 });
+*/
  $('.removeRow').click(function() {
     $(this).parent().hide();
     $(this).parent().attr('class', 'hidden');
