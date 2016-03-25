@@ -154,6 +154,9 @@ textarea {
     font-weight: bold;
     padding-bottom: 2em;
 }
+#app3 p {
+    margin-bottom: .5em;
+}
 #app4 textarea{
     font-size: 16px;
 }
@@ -188,7 +191,6 @@ textarea {
 }
 #submit-button{
     background-color: #647dc9;
-    width: 50%;
 }
 .submit-button:hover{
     background-color: #27396d;
@@ -273,8 +275,6 @@ footer{
 }
 .cb-container{
     text-align: left;
-    width: 58%;
-    float: right;
     
 }
 

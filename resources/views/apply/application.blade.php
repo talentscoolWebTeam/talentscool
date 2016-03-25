@@ -144,7 +144,7 @@
     
      <div class="buttons_container clearfix">
             <div class="buttons">
-                <button class="next-button button">
+                <button type="button" class="next-button button">
                     Next
 	            </button>
 	        </div>
@@ -223,7 +223,7 @@
                                         <option>Video</option>
                                     </select>
                                     <input id="link2" name="media2[]" placeholder="Enter Link" />
-                                    <button class="removeRow button">Remove Media</button>
+                                    <button type="button"class="removeRow button">Remove Media</button>
                                 </div>
                                 <div id="media3" class = "visible">
                                     <select id="drop3" name="type3[]">
@@ -232,24 +232,24 @@
                                         <option>Video</option>
                                     </select>
                                     <input id="link3" name="media3[]" placeholder="Enter Link" />
-                                    <button class="removeRow button">Remove Media</button>
+                                    <button type="button" class="removeRow button">Remove Media</button>
                                 </div>
                             </div>
-                            <button class="addRow button">Add Media</button>
+                            <button type="button" class="addRow button">Add Media</button>
                         </div>
 
                     </div> <!-- end #talent-container .talent-container-class -->
                 </div> <!-- end #container -->
-                <button class="addTalent text-button">Add Talent</button>
-                <button class="removeTalent text-button">Remove Talent</button>
+                <button type="button" class="addTalent text-button">Add Talent</button>
+                <button type="button" class="removeTalent text-button">Remove Talent</button>
             </div>
         </div>
         <div class="buttons_container">
             <div class="buttons">
-                <button class="prev-button button">
+                <button type="button" class="prev-button button">
                     Previous
                 </button>
-                <button id="app2-next" class="next-button button">
+                <button type="button" id="app2-next" class="next-button button">
                     Next
                 </button>
             </div>
@@ -376,7 +376,7 @@
 				</div>
                 </div>
             </p>
-            <p style="margin-left: 11.5%;">
+            <p>
                 <label>
                     Additional Requests
                 </label>
@@ -386,11 +386,11 @@
     
         <div class="buttons_container">
             <div class="buttons">
-                <button class="prev-button button">
+                <button type="button" class="prev-button button">
                     Previous
                 </button>
            
-            <button id="app3-next" class="next-button button">
+            <button type="button" id="app3-next" class="next-button button">
                 Next
             </button>
             </div>
@@ -483,8 +483,8 @@
                         </label>
                         <input type="text" name="socialmedia[]" autocomplete="off"></input>
                         <div id="extra_links"></div>
-                        <button class="addlink-button button" onclick="add_link();">Add Link</button>
-                        <button class="removelink-button button" onclick="remove_link('extra_links');">Remove Link</button>
+                        <button type="button" class="addlink-button button" onclick="add_link();">Add Link</button>
+                        <button type="button" class="removelink-button button" onclick="remove_link('extra_links');">Remove Link</button>
                     </p>
                 </div>
                 <p>
@@ -509,10 +509,12 @@
         </div>
     
         <div class="buttons_container clearfix">
-                 <button class="prev-button button">
+                 <button type="button" class="prev-button button">
                     Previous
                 </button>
-                <input type="submit" value="Submit" id="submit-button" class="submit-button button">
+                <button id="submit-button" class="submit-button button">
+                    Submit
+                </button>
                     
         </div>
     

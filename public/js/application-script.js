@@ -77,7 +77,7 @@ $('#app3 .next-button').click(function() {
 });
 
 /* app4 previous */
-$('#app4 .next-button').click(function() {
+$('#app4 .prev-button').click(function() {
     document.getElementById("app1").style.display = "none";
     document.getElementById("app2").style.display = "none";
     document.getElementById("app3").style.display = "block";
@@ -259,7 +259,7 @@ function add_link() {
         alert("Cannot add more than 15 social media links");
     }
     else {
-        document.getElementById("add_links").innerHTML+= '<p><input type="text" name="socialmedia[] focused autocomplete="off" placeholder="New Link"></input></p>';
+        document.getElementById("extra_links").innerHTML+= '<p><input type="text" name="socialmedia[] focused autocomplete="off" placeholder="New Link"></input></p>';
     }
 }
 
@@ -458,6 +458,7 @@ $("select#talent_category").change(function(){
     });
 });
 */
+var uniqueId = 2;
  $('.removeRow').click(function() {
     $(this).parent().hide();
     $(this).parent().attr('class', 'hidden');
@@ -494,16 +495,15 @@ $(function() {
          var copy = $("#talent-container").clone(true);
          var formId = 'talent-container' + uniqueId;
          copy.attr('id', formId );
-         
          $('#container').append(copy);
          $('#' + formId).find('.media:last-child').each(function(){
          var $temp = $('.media:last-child').attr('id');
-         alert($temp);
+         //alert($temp);
         // uniqueId = parseInt($tempMedia[$tempMedia.length-1])+1;
             $(this).attr('id', $(this).attr('id') + uniqueId); 
              
          });
-         uniqueId++;  
+         uniqueId++; 
      });
 });
 
