@@ -18,7 +18,7 @@
 	
     <div class="header">
         <div>
-            <h1><a href="index.html"><img src="images/TSVector.png"></a></h1>
+            <h1><a href="/"><img src="images/TSVector.png"></a></h1>
         </div>
     </div>
 
