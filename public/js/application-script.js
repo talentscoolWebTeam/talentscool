@@ -85,6 +85,7 @@ $('#app4 .prev-button').click(function() {
     $('body').scrollTop(0);
 });
 
+/* FOR POPULATING DROPDOWNS */
 function populateGender() {
     var gender = document.getElementById("gender");
     gender.options[0] = new Option('Select Gender','-1');
@@ -105,172 +106,7 @@ function populateTalentCategory() {
 //     talent.options[7] = new Option('Other (Specify Below)','Other');
 }
 
-/*function clearOptions() {
-    var select = document.getElementById("specific_talent");
-    var length = select.options.length;
-    for (i = 0; i < length; i++) {
-      select.options[i] = null;
-    }
-}
-*/
-/*
-function furtherPopulateTalent() {
-    var further = document.getElementById("specific_talent");
-    var talent = document.getElementById("talent_category");
-    clearOptions();
-    if(talent.options[talent.selectedIndex].text == "Dancer") {
-        further.options[0] = new Option('Select Specific Talent','-1');
-        further.options[1] = new Option('Hip Hop','Hip Hop');
-        further.options[2] = new Option('Jazz','Jazz');
-        further.options[3] = new Option('Ballet','Ballet');
-        further.options[4] = new Option('Western','Western');
-        further.options[5] = new Option('Zumba','Zumba');
-    }
-    
-    if(talent.options[talent.selectedIndex].text == "Fashion") {
-        further.options[0] = new Option('Select Specific Talent','-1');
-        further.options[1] = new Option('Model','Model');
-        further.options[2] = new Option('Clothing Stylist','Clothing Stylist');
-        further.options[3] = new Option('Hair Stylist','Hair Stylist');
-        further.options[4] = new Option('Designing','Designing');
-    }
-    
-    if(talent.options[talent.selectedIndex].text == "Film") {
-        further.options[0] = new Option('Select Specific Talent','-1');
-        further.options[1] = new Option('Actor','Actor');
-        further.options[2] = new Option('Comedian','Comedian');
-        further.options[3] = new Option('Make-Up Artist','Make-Up Artist');
-    }
-    
-    if(talent.options[talent.selectedIndex].text == "Athlete") {
-        further.options[0] = new Option('Select Specific Talent','-1');
-        further.options[1] = new Option('Gymnast','Gymnast');
-        further.options[2] = new Option('Football','Football');
-        further.options[3] = new Option('Wrestling','Wrestling');
-        further.options[4] = new Option('Kayaking','Kayaking');
-        further.options[5] = new Option('Martial Arts','Martial Arts');
-    }
-    
-    if(talent.options[talent.selectedIndex].text == "Musician") {
-        further.options[0] = new Option('Select Specific Talent','-1');
-        further.options[1] = new Option('Songwriter','Songwriter');
-        further.options[2] = new Option('Vocalist','Vocalist');
-        further.options[3] = new Option('Pianist','Pianist');
-        further.options[4] = new Option('Guitarist','Guitarist');
-    }
-    
-    if(talent.options[talent.selectedIndex].text == "Artist") {
-        further.options[0] = new Option('Select Specific Talent','-1');
-        further.options[1] = new Option('Painting','Painting');
-        further.options[2] = new Option('Photography','Photography');
-        further.options[3] = new Option('Architecture','Architecture');
-        further.options[4] = new Option('Sculpture','Sculpture');
-        further.options[5] = new Option('Crafting','Crafting');
-    }
-    
-}*/
-/*
-Dance: Hip Hop, Jazz, Ballet, Western, Zumba etc.
-Musician: Songwriter, Vocalist, Pianist, Guitarist etc.
-Fashion: Model, clothing or hair stylist, designing etc.
-Film: actor or actress, comedian, make-up artists etc.
-Athlete: Gymnast, football, wrestling, kayaking, martial arts etc.
-Art: Painting, Photography, architecture, sculpture, crafting etc.
-
-*/
-
-function populateOpportunities() {
-    var opp = document.getElementById("opportunities");
-    opp.options[0] = new Option('Select Opportunities','-1');
-    opp.options[1] = new Option('Bookings','Bookings');
-    opp.options[2] = new Option('Endorsements','Endorsements');
-    opp.options[3] = new Option('Auditions','Auditions');
-    opp.options[4] = new Option('Showcases','Showcases');
-    opp.options[5] = new Option('Appearances','Appearances');
-    opp.options[6] = new Option('Collaborations','Collarborations');
-    opp.options[7] = new Option('Jobs','Jobs');
-    opp.options[8] = new Option('Internships','Internships');
-    opp.options[0].selected = true;
-}
-
-function populateRepresentation() {
-    var rep = document.getElementById("representation");
-    rep.options[0] = new Option('Select Representation','-1');
-    rep.options[1] = new Option('Manager','Manager');
-    rep.options[2] = new Option('Agent','Agent');
-    rep.options[3] = new Option('Record Deal','Record Deal');
-    rep.options[4] = new Option('Booking Agent','Booking Agent');
-    rep.options[5] = new Option('Publicist','Publicist');
-    rep.options[6] = new Option('Talent Agent','Talent Agent');
-    rep.options[7] = new Option('Brand Manager','Brand Manager');
-    rep.options[0].selected = true;
-}
-
-function populateTalentDevelopment() {
-    var td = document.getElementById("talent_development");
-    td.options[0] = new Option('Select Talent Development','-1');
-    td.options[1] = new Option('Vocal Coach','Vocal Coach');
-    td.options[2] = new Option('Acting Coach','Acting Coach');
-    td.options[3] = new Option('Instrument Teacher','Instrument Teacher');
-    td.options[4] = new Option('Dance Instructor','Dance Instructor');
-    td.options[5] = new Option('Art Instructor','Art Instructor');
-    td.options[6] = new Option('School Placement','School Placement');
-    td.options[0].selected = true;
-}
-
-function populateGeneralServices() {
-    var gs = document.getElementById("general_services");
-    gs.options[0] = new Option('Select General Services','-1');
-    gs.options[1] = new Option('Musician','Musician');
-    gs.options[2] = new Option('Vocalist','Vocalist');
-    gs.options[3] = new Option('Dancer','Dancer');
-    gs.options[4] = new Option('Lawyer','Lawyer');
-    gs.options[5] = new Option('Accountant','Accountant');
-    gs.options[6] = new Option('Investor','Investor');
-    gs.options[7] = new Option('Personal Assistant','Personal Assistant');
-    gs.options[8] = new Option('Web Designer','Web Designer');
-    gs.options[9] = new Option('Engineer','Engineer');
-    gs.options[10] = new Option('Fitness Trainer','Fitness Trainer');
-    gs.options[11] = new Option('Camera Crew','Camera Crew');
-    gs.options[0].selected = true;
-}
-
-function populateVanity() {
-    var vanity = document.getElementById("vanity");
-    vanity.options[0] = new Option('Select Vanity & Luxury Services','-1');
-    vanity.options[1] = new Option('Clothing Stylist','Clothing Stylist');
-    vanity.options[2] = new Option('Hair Stylist','Hair Stylist');
-    vanity.options[3] = new Option('Barber','Barber');
-    vanity.options[4] = new Option('Makeup Artist','Makeup Artist');
-    vanity.options[5] = new Option('Model','Model');
-    vanity.options[6] = new Option('Photographer','Photographer');
-    vanity.options[7] = new Option('Bodyguard','Bodyguard');
-    vanity.options[8] = new Option('Limo Driver','Limo Driver');
-    vanity.options[9] = new Option('Private Jet Rental','Private Jet Rental');
-    vanity.options[10] = new Option('Studio Rental','Studio Rental');
-    vanity.options[0].selected = true;
-}
-
-var added_links = 0;
-function add_link() {
-    //alert("in add links");
-    added_links = added_links + 1;
-    if(added_links >= 15) {
-        alert("Cannot add more than 15 social media links");
-    }
-    else {
-        document.getElementById("extra_links").innerHTML+= '<p><input type="text" name="socialmedia[] focused autocomplete="off" placeholder="New Link"></input></p>';
-    }
-}
-
-function remove_link(container_div_id) {
-    var container = document.getElementById(container_div_id);
-    if (container != null && container.childNodes.length > 0) {
-        container.removeChild(container.childNodes[container.childNodes.length-1]);
-    }
-
-}
-
+/* VALIDATION */
 function countChars() {
     var ta = document.getElementById("describe");
     if(ta.value.length > 1000) {
@@ -434,6 +270,31 @@ jQuery(function($) {
       yearRange: '1916:2016'
     });
 });
+
+
+/* DYNAMIC ELEMENT ADDING AND REMOVAL */
+var added_links = 0;
+function add_link() {
+    //alert("in add links");
+    added_links = added_links + 1;
+    if(added_links >= 15) {
+        alert("Cannot add more than 15 social media links");
+    }
+    else {
+        document.getElementById("extra_links").innerHTML+= '<p><input type="text" name="socialmedia[] focused autocomplete="off" placeholder="New Link"></input></p>';
+    }
+}
+
+function remove_link(container_div_id) {
+    var container = document.getElementById(container_div_id);
+    if (container != null && container.childNodes.length > 0) {
+        container.removeChild(container.childNodes[container.childNodes.length-1]);
+    }
+
+}
+
+/* ADDING AND REMOVING MEDIA AND TALENT SECTION */
+
 //MB - function for dynamically changing the talent fields
 /*
  var uniqueId = 2;

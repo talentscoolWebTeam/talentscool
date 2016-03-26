@@ -1,3 +1,20 @@
+/* ------------------
+ * APPLICATION STYLE
+ * ------------------
+ * By Talentscool Web Team Interns Spring 2016 <3
+ * 
+ * This is the style sheet for the application page (application.blade.php), 
+ * thank you page (app-thankyou.blade.php), and error page (error.blade.php)
+ * Designed using the mobile-first approach
+ * How to navigate: These styles are applied via media queries:
+ *      - 35em (768px and up, tablet screen)
+ *      - 64em (800px and up, computer screen)
+ * BASE STYLES are the most basic styles that can apply to all screen sizes 
+ * (can be overriden later in the media queries if necessary)
+ * Please consider responsive web page design before applying styles
+ */
+
+/* ---[BASE STYLES]--- */
 html, body { 
     width: 100%; 
     height: 100%; 
@@ -122,12 +139,8 @@ textarea {
 #app4 p{
     padding-bottom: 1em;
 }
-
-#country, #state, #gender {
-    width: 15em;
-}
-#app1 select {
-    width: 16em;
+#app1 select, #app1 input{
+    width: 100%;
 }
 #app1 label, #app4 label {
     display: block;
@@ -278,11 +291,13 @@ footer{
     
 }
 
-/* ----[ 48em (768px and up, computer screen)]---- */
+/* ----[ 35em (768px and up, tablet screen)]---- */
 @media only screen and (min-width: 35em){
     .row p{
         display: inline-block;
-        width: 9em;
+        width: 50%;
+        padding-left: .5em;
+        padding-right: .5em;
     }
     .right-col{
         float: right;
@@ -293,7 +308,7 @@ footer{
     }
 }
 
-/* ----[ 50em (800px and up, computer screen)]---- */
+/* ----[ 64em (800px and up, computer screen)]---- */
 @media only screen and (min-width: 64em){
 
     /*navigation*/
@@ -345,14 +360,6 @@ footer{
     /* APPLICATIONS */
     .info {
         padding-top: 2em;
-    }
-
-    /* app1 */
-    #img-container {
-        width: 150px;
-        height: 150px;
-        background: #EFEFF0;
-        text-align: bottom;
     }
 
     /* app4 */
