@@ -134,7 +134,7 @@ textarea {
     padding: 5px;
 }
 /* APPLICATIONS */
-#app1 .row p, 
+#app1 .row, 
 #app2 .talent, #app2 .visible, #industry, 
 #app4 p{
     padding-bottom: 1em;
@@ -167,8 +167,12 @@ textarea {
     font-weight: bold;
     padding-bottom: 2em;
 }
-#app3 p {
-    margin-bottom: .5em;
+#app3 .row, .half-row {
+    margin-bottom: 1em;
+}
+#additional {
+    min-height: 10.5em;
+    width: 100%;
 }
 #app4 textarea{
     font-size: 16px;
@@ -293,9 +297,13 @@ footer{
 
 /* ----[ 35em (768px and up, tablet screen)]---- */
 @media only screen and (min-width: 35em){
-    .row p{
+    .row .half-row{
         display: inline-block;
         width: 50%;
+        padding-left: .5em;
+        padding-right: .5em;
+    }
+    .row .full-row {
         padding-left: .5em;
         padding-right: .5em;
     }
@@ -368,7 +376,10 @@ footer{
         min-width: 27em;
     }
 
-    
+    /* BUTTONS */
+    .button {
+        line-height: 2;
+    }
 
     /*footer animations*/
     .social-media-bar ul {
