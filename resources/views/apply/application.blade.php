@@ -448,7 +448,7 @@
                     <label id="describeyourself-label">
                         Describe Yourself*
                     </label>
-                    <textarea id="aboutme" name="aboutme" autocomplete="off" rows="12" placeholder="(max 1000 characters)*" oninput="countChars();" required></textarea>
+                    <textarea id="aboutme" name="aboutme" autocomplete="off" rows="12" placeholder="(max 1000 characters)" oninput="countChars();" required></textarea>
                 </p>
                 <div id="instagram">
                     <p>
