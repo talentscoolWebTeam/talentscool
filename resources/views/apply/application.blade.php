@@ -84,7 +84,7 @@
                 <label>
                     Stage Name
                 </label>
-                <input id="alias" name="alias" type="text" autocomplete="off"></input>
+                <input id="stage_name" name="stage_name" type="text" autocomplete="off"></input>
             </p>
         </div>
         <div class="row">
