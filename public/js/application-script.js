@@ -362,7 +362,7 @@ $(function() {
          //alert($temp);
         // uniqueId = parseInt($tempMedia[$tempMedia.length-1])+1;
             $(this).attr('id', $(this).attr('id') + uniqueId); 
-             
+            
          });
          uniqueId++; 
      });
@@ -375,4 +375,36 @@ $(function() {
       $("#"+lastChild).remove();
      });
 });
+
+function SetPlaceholder(talent) {
+    var talent_value = talent.options[talent.selectedIndex].text;
+    //alert(talent_value);
+    var specific_div = talent.parentNode.nextElementSibling.firstElementChild.firstElementChild;
+    var elems = specific_div.childNodes;
+    for(var i = 0; i < elems.length; i++){
+     if(elems[i].id == 'specific_talent'){
+      //alert(elems[i].placeholder);
+      switch(talent_value){
+      case "Dance":
+elems[i].placeholder = "Hip Hop, Jazz, Ballet, Western, Zumba";
+break;
+case "Fashion":
+elems[i].placeholder = "Model, Clothing Stylist, Hair Stylist, Designing";
+break;
+case "Film":
+elems[i].placeholder = "Actor, Comedian, Make-up Artist";
+break;
+case "Athletics":
+elems[i].placeholder = "Gymnastics, Football, Wrestling, Kayaking, Martial Arts";
+break;
+case "Music":
+elems[i].placeholder = "Songwriter, Vocalist, Pianist, Guitarist";
+break;
+case "Art":
+elems[i].placeholder = "Painting, Photography, Architecture, Sculpting, Crafting";
+break;
+      }
+    }
+    }
+    }
 

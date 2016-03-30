@@ -211,7 +211,7 @@
                             <div id = "specific" class = "talent">
                                 <p id="portfolio" style="padding-bottom: 0px;">
                                     <label>Talent</label>
-                                    <input id="specific_talent" name="specific_talent[]" type="text">
+                                    <input id="specific_talent" name="specific_talent[]" type="text" placeholder = "">
                                 </p>
 
                             </div><!-- for dance-->
