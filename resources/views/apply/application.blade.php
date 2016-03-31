@@ -98,8 +98,8 @@
                 <label>
                     Phone Number*
                 </label>
-                <input onchange="validatePhone('phone');" id="phone" name="phone" type="text" onclick="this.placeholder='(_ _ _) _ _ _ - _ _ _ _';" autocomplete="off" 
-                required></input>
+                <input onchange="validatePhone('phone');" id="phone" name="phone" type="text" onclick="this.placeholder='(_ _ _) _ _ _ - _ _ _ _';" autocomplete="off" >
+            </input>
             </p>
         </div>
 
@@ -198,7 +198,7 @@
                     <div id = "talent-container" class="talent-container-class">
                         <div id = "industry">
                             <label>Industry</label>
-                            <select id="talent_category" name="talent_category[]" required>
+                            <select id="talent_category" name="talent_category[]" onchange= "SetPlaceholder(this);" required>
                                 <option value="-1">Select Industry</option>
                                 <option value="Dance">Dance</option>
                                 <option value="Fashion">Fashion</option>
@@ -298,6 +298,7 @@
         </div>
     
         <div class="info">
+            <p class="instruction">Check all that apply.</p>
             <div class="row">
                 <div class="half-row">
                     <label>
@@ -443,12 +444,13 @@
     
         <div class="info"> 
            <div class="app4_wrapper">
+            <p class="instruction">This section is optional but highly recommended.</p>
             <div class="row">
                 <p>
                     <label id="describeyourself-label">
-                        Describe Yourself*
+                        Describe Yourself
                     </label>
-                    <textarea id="aboutme" name="aboutme" autocomplete="off" rows="12" placeholder="(max 1000 characters)" oninput="countChars();" required></textarea>
+                    <textarea id="aboutme" name="aboutme" autocomplete="off" rows="12" placeholder="(max 1000 characters)" oninput="countChars();"></textarea>
                 </p>
                 <div id="instagram">
                     <p>
@@ -499,9 +501,9 @@
                 </div>
                 <p>
                     <label id="experiences-label">
-                        Experiences* 
+                        Experiences 
                     </label>
-                    <textarea id="exp" name="experience" autocomplete="off" rows="4" oninput="countChars();" required></textarea>
+                    <textarea id="exp" name="experience" autocomplete="off" rows="4" oninput="countChars();"></textarea>
                 </p>
                 <p>
                     <label id="awards-label">

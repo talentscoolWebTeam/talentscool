@@ -180,6 +180,11 @@ textarea {
 #app4 textarea, #app4 input {
     width: 100%;
 }
+
+.instruction {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
 /* BUTTONS */
 .buttons_container {
     margin: auto;
