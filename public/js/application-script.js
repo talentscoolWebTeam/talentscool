@@ -196,8 +196,17 @@ function validateImage(image_id) {
         alert("Invalid Extension for Images");
         photo.value = "";
     }
+
+    var size = photo.files[0].size/1024/1024;
+
+    if(size > 5){
+        alert("Your file is "+size +". The maximum file size is 5MB.");
+    }
+
     
 }
+
+
 
 
 function validateVideo(video_id) {
