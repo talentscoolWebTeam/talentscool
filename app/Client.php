@@ -11,6 +11,7 @@ class Client extends Model
         'profilepic',
         'first_name',
         'last_name',
+        'stage_name',
         'email',
         'country',
         'state',

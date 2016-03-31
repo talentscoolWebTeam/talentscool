@@ -16,26 +16,27 @@ class CreateClientsTable extends Migration
             $table->increments('id');
             $table->string('first_name',50);
             $table->string('last_name',50);
+            $table->string('stage_name',50)->nullable();
             $table->string('email')->unique();
             $table->timestamps();
             $table->string('country',50);
             $table->string('state',50);
             $table->string('city',50);
             $table->string('zip',10);
-            $table->string('phone',20);
+            $table->string('phone',20)->nullable;
             $table->date('dob');
             $table->string('gender',30);
             $table->string('profilepic', 255);
 
-            $table->text('aboutme');
+            $table->text('aboutme')->nullable();
             $table->string('twitter',255)->nullable();
             $table->string('instagram',255)->nullable();
             $table->string('facebook',255)->nullable();
             $table->string('youtube',255)->nullable();
             $table->text('socialmedia')->nullable();
 
-            $table->text('experience', 255);
-            $table->text('awards', 255);
+            $table->text('experience', 255)->nullable();
+            $table->text('awards', 255)->nullable();
             $table->string('currRepresent', 100)->nullable();
 
             $table->text('opportunities', 100)->nullable();
