@@ -124,7 +124,7 @@ class ApplicationController extends Controller
 
         $client->save();
         //Redirect to thank you page
-        return Redirect::to('/thanks');
+        return Redirect::to('http://www.talentscool.com/thanks');
 	}
 
     public function thanks()

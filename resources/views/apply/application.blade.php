@@ -18,11 +18,11 @@
 	
     <div class="header">
         <div>
-            <h1><a href="/"><img src="images/TSVector.png"></a></h1>
+            <h1><a href="http://www.talentscool.com/"><img src="images/TSVector.png"></a></h1>
         </div>
     </div>
 
-    {!! Form::open(['url' => 'submitapp', 'method'=>'POST', 'name' => 'application', 'files'=>true])!!}
+    {!! Form::open(['url' => 'http://www.talentscool.com/submitapp', 'method'=>'POST', 'name' => 'application', 'files'=>true])!!}
     <div id="app1">
         <div class="app_heading">
             <h1>
