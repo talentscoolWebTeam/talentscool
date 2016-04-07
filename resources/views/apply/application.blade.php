@@ -194,11 +194,12 @@
 
         <div class="info">
             <div class="app2_wrapper">
+                <p class="instruction">Add up to 15 talents</p>
                 <div id = "container">
                     <div id = "talent-container" class="talent-container-class">
                         <div id = "industry">
                             <label>Industry</label>
-                            <select id="talent_category" name="talent_category[]" onchange= "SetPlaceholder(this);" required>
+                            <select id="talent_category" class="talent_category" name="talent_category[]" onchange= "SetPlaceholder(this);" required>
                                 <option value="-1">Select Industry</option>
                                 <option value="Dance">Dance</option>
                                 <option value="Fashion">Fashion</option>
@@ -211,33 +212,33 @@
                             <div id = "specific" class = "talent">
                                 <p id="portfolio" style="padding-bottom: 0px;">
                                     <label>Talent</label>
-                                    <input id="specific_talent" name="specific_talent[]" type="text" placeholder = "">
+                                    <input id="specific_talent" class="specific_talent" name="specific_talent[]" type="text" placeholder = "">
                                 </p>
-
-                            </div><!-- for dance-->
+                            </div>
+                            <p class="instruction">Include at least 1 and up to 3 media links:</p>
                             <div id="media-container" class ="media">
                                 <div id="media1" class = "visible">
                                     <select id="drop1" name="type1[]">
-                                        <option>Image</option>
-                                        <option>Audio</option>
-                                        <option>Video</option>
+                                        <option value="image">Image</option>
+                                        <option value="audio">Audio</option>
+                                        <option value="video">Video</option>
                                     </select>
                                     <input id="link1" name="media1[]" placeholder="Enter Link" />
                                 </div>
                                 <div id="media2" class = "visible">
                                     <select id="drop2" name="type2[]">
-                                        <option>Image</option>
-                                        <option>Audio</option>
-                                        <option>Video</option>
+                                        <option value="image">Image</option>
+                                        <option value="audio">Audio</option>
+                                        <option value="video">Video</option>
                                     </select>
                                     <input id="link2" name="media2[]" placeholder="Enter Link" />
                                     <button type="button"class="removeRow button">Remove Media</button>
                                 </div>
                                 <div id="media3" class = "visible">
                                     <select id="drop3" name="type3[]">
-                                        <option>Image</option>
-                                        <option>Audio</option>
-                                        <option>Video</option>
+                                        <option value="image">Image</option>
+                                        <option value="audio">Audio</option>
+                                        <option value="video">Video</option>
                                     </select>
                                     <input id="link3" name="media3[]" placeholder="Enter Link" />
                                     <button type="button" class="removeRow button">Remove Media</button>
@@ -298,7 +299,7 @@
         </div>
     
         <div class="info">
-            <p class="instruction">Check all that apply.</p>
+            <p class="instruction">Check all that apply:</p>
             <div class="row">
                 <div class="half-row">
                     <label>
@@ -353,7 +354,7 @@
                 </div>
                 <div class="half-row right-col">
                     <label>
-                        Vanity & Luxury Services
+                        Vanity & Luxury
                     </label>
                     <div class="checkboxlist">
                         <input type="checkbox" name="vanitylux[]" value="clothingstylist"> Clothing Stylist<br>
@@ -444,7 +445,7 @@
     
         <div class="info"> 
            <div class="app4_wrapper">
-            <p class="instruction">This section is optional but highly recommended.</p>
+            <p class="instruction">This section is optional but highly recommended</p>
             <div class="row">
                 <p>
                     <label id="describeyourself-label">
@@ -499,6 +500,7 @@
                         <button type="button" class="removelink-button text-button" onclick="remove_link('extra_links');">Remove Link</button>
                     </p>
                 </div>
+                <p class="instruction">For the following sections, please list each item separated by a comma</p>
                 <p>
                     <label id="experiences-label">
                         Experiences 
@@ -513,12 +515,13 @@
                 </p>
                 <p>
                     <label>
-                        Current Representative
+                        Current Representation
                     </label>
                     <input type="text" name="curr_rep" autocomplete="off"></input>
                 </p>        
             </div>
-        </div>
+        </div> <!-- end app4 wrapper-->
+        <p id="app4-errorlog" class="errorlog"></p>
     
         <div class="buttons_container clearfix">
                  <button type="button" class="prev-button button">
