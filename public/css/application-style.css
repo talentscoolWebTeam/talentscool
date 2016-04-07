@@ -1,7 +1,8 @@
 /* ------------------
  * APPLICATION STYLE
  * ------------------
- * By Talentscool Web Team Interns Spring 2016 <3
+ * By Talentscool Web Team Interns Spring 2016
+ * $ [Add more Contributors here!]
  * 
  * This is the style sheet for the application page (application.blade.php), 
  * thank you page (app-thankyou.blade.php), and error page (error.blade.php)
@@ -81,20 +82,21 @@ html, body {
 
 .header{
     background-color: black;
-    padding: 0.6em 0.6em 0.1em;
+    padding: 0.6em 2em;
     box-sizing: border-box;
     margin: 0px;
 }
 
 .header h1 {
-    padding: 0.2em;
-    padding-bottom: 0.3em;
     display: inline-block;
-    width: 8em;
+    /*width: 8em;*/
+    height: 50px;
+    width: 200px;
+    padding-bottom: 0;
 }
 
 .header img {
-    width: 89%;
+    width: 100%;
 }
 
 .app_heading {
@@ -134,7 +136,7 @@ textarea {
     padding: 5px;
 }
 /* APPLICATIONS */
-#app1 .row p, 
+#app1 .row, 
 #app2 .talent, #app2 .visible, #industry, 
 #app4 p{
     padding-bottom: 1em;
@@ -148,11 +150,15 @@ textarea {
 #app2 select {
     min-width: 6em;
 }
-#app2 input {
-    max-width: 15em;
+.talent input, .media input {
+    /*max-width: 15em;*/
+    width: 100%;
 }
 #app2 input, #app2 .button, #app2 select {
     margin-bottom: .5em;
+}
+.specific_talent {
+    width: 100%;
 }
 .talent-container-class {
     margin-bottom: 2em;
@@ -167,14 +173,25 @@ textarea {
     font-weight: bold;
     padding-bottom: 2em;
 }
-#app3 p {
-    margin-bottom: .5em;
+#app3 .row, #app3 .half-row {
+    margin-bottom: 1em;
+}
+#additional {
+    min-height: 10.5em;
+    width: 100%;
 }
 #app4 textarea{
     font-size: 16px;
 }
 #app4 textarea, #app4 input {
     width: 100%;
+}
+
+.instruction {
+    padding-top: 1em;
+    padding-bottom: .5em;
+    font-weight: bold;
+    font-size: 16px;
 }
 /* BUTTONS */
 .buttons_container {
@@ -234,7 +251,6 @@ textarea {
 /* FOOTER */
 .social-media-bar {
     text-align: center;
-    padding: 1em 0;
     background-color: black;
 }
 
@@ -253,11 +269,14 @@ textarea {
     max-width: 20px;
 }
 
+.errorlog {
+    color:red;
+}
 footer{
     /*background-color: #330000;*/
     position: relative;
     background-color: #000;
-    padding: 2em;
+    padding: .5em;
     color: #fff;
     text-align: center;
     font-family: 'Quicksand', sans-serif;
@@ -293,9 +312,13 @@ footer{
 
 /* ----[ 35em (768px and up, tablet screen)]---- */
 @media only screen and (min-width: 35em){
-    .row p{
+    .row .half-row{
         display: inline-block;
         width: 50%;
+        padding-left: .5em;
+        padding-right: .5em;
+    }
+    .row .full-row {
         padding-left: .5em;
         padding-right: .5em;
     }
@@ -305,6 +328,28 @@ footer{
 
     #app1 label {
         display: inline-block;
+    }
+    .talent label {
+        display: inline-block;
+    }
+    .talent input{
+        width: 80%;
+    }
+    .media input {
+        width: 50%;
+    }
+    #app3 .info {
+        max-width: 32em;
+    }
+    #app3 .half-row {
+        padding-left: 2em;
+    }
+    #app3 .row .right-col {
+        padding-left: 4em;
+    }
+    #app3 .instruction {
+        padding-left: 2em;
+        padding-bottom: 2em;
     }
 }
 
@@ -368,7 +413,10 @@ footer{
         min-width: 27em;
     }
 
-    
+    /* BUTTONS */
+    .button {
+        line-height: 2;
+    }
 
     /*footer animations*/
     .social-media-bar ul {
@@ -408,3 +456,46 @@ footer{
     }
 
 }
+
+/*
+                 ."-,.__
+                 `.     `.  ,
+              .--'  .._,'"-' `.
+             .    .'         `'
+             `.   /          ,'
+               `  '--.   ,-"'
+                `"`   |  \
+                   -. \, |
+                    `--Y.'      ___.
+                         \     L._, \
+               _.,        `.   <  <\                _
+             ,' '           `, `.   | \            ( `
+          ../, `.            `  |    .\`.           \ \_
+         ,' ,..  .           _.,'    ||\l            )  '".
+        , ,'   \           ,'.-.`-._,'  |           .  _._`.
+      ,' /      \ \        `' ' `--/   | \          / /   ..\
+    .'  /        \ .         |\__ - _ ,'` `        / /     `.`.
+    |  '          ..         `-...-"  |  `-'      / /        . `.
+    | /           |L__           |    |          / /          `. `.
+   , /            .   .          |    |         / /             ` `
+  / /          ,. ,`._ `-_       |    |  _   ,-' /               ` \
+ / .           \"`_/. `-_ \_,.  ,'    +-' `-'  _,        ..,-.    \`.
+.  '         .-f    ,'   `    '.       \__.---'     _   .'   '     \ \
+' /          `.'    l     .' /          \..      ,_|/   `.  ,'`     L`
+|'      _.-""` `.    \ _,'  `            \ `.___`.'"`-.  , |   |    | \
+||    ,'      `. `.   '       _,...._        `  |    `/ '  |   '     .|
+||  ,'          `. ;.,.---' ,'       `.   `.. `-'  .-' /_ .'    ;_   ||
+|| '              V      / /           `   | `   ,'   ,' '.    !  `. ||
+||/            _,-------7 '              . |  `-'    l         /    `||
+. |          ,' .-   ,' ||               | .-.        `.      .'     ||
+ `'        ,'    `".'    |               |    `.        '. -.'       `'
+          /      ,'      |               |,'    \-.._,.'/'
+          .     /        .               .       \    .''
+        .`.    |         `.             /         :_,'.'
+          \ `...\   _     ,'-.        .'         /_.-'
+           `-.__ `,  `'   .  _.>----''.  _  __  /
+                .'        /"'          |  "'   '_
+               /_|.-'\ ,".             '.'`__'-( \
+                 / ,"'"\,'               `/  `-.|" mh
+
+*/

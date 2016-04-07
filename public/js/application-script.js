@@ -1,3 +1,23 @@
+/* ------------------
+ * APPLICATION JAVASCRIPT
+ * ------------------
+ * By Talentscool Web Team Interns Spring 2016
+ * $ [Add more Contributors here!]
+ * 
+ * This is the javascript for the application page (application.blade.php)
+ * How to navigate: Scripts are included in the following order:
+ *      - NAVIGATION AT THE TOP OF THE PAGE
+ *      - NEXT AND PREVIOUS BUTTON FUNCTIONALITY
+ *      - POPULATING DROPDOWNS
+ *      - VALIDATION
+ *      - PROFILE PIC PREVIEW
+ *      - DYNAMIC ELEMENT ADDITION AND REMOVAL
+ * ---->Some functions could still be refactored
+ * ---->ie, make them more modular or abstracted, so to increase code reuse.
+ */
+
+
+/* NAVIGATION AT THE TOP OF THE PAGE */
 $('.navigation li:nth-child(1)').click(function() {
     //alert("clicked first");
     document.getElementById("app1").style.display = "block";
@@ -34,7 +54,7 @@ $('.navigation li:nth-child(4)').click(function() {
     $('body').scrollTop(0);
 });
 
-/* Next and previous buttons */
+/* NEXT AND PREVIOUS BUTTON FUNCTIONALITY */
 /* app1 next */
 $('#app1 .next-button').click(function() {
     document.getElementById("app1").style.display = "none";
@@ -85,7 +105,8 @@ $('#app4 .prev-button').click(function() {
     $('body').scrollTop(0);
 });
 
-/* FOR POPULATING DROPDOWNS */
+/* POPULATING DROPDOWNS */
+// populates the gender options in app1
 function populateGender() {
     var gender = document.getElementById("gender");
     gender.options[0] = new Option('Select Gender','-1');
@@ -94,6 +115,7 @@ function populateGender() {
     gender.options[3] = new Option('Prefer Not To Say','Prefer Not To Say');
 }
 
+// Populates the talent category in app2
 function populateTalentCategory() {
     var talent = document.getElementById("talent_category");
     talent.options[0] = new Option('Select Industry','-1');
@@ -103,7 +125,6 @@ function populateTalentCategory() {
     talent.options[4] = new Option('Athletics','Athletics');
     talent.options[5] = new Option('Music','Music');
     talent.options[6] = new Option('Art','Art');
-//     talent.options[7] = new Option('Other (Specify Below)','Other');
 }
 
 /* VALIDATION */
@@ -123,7 +144,6 @@ function validateLength(string_id) {
 }
 
 function validateText(name_id) {
-    //alert("validateName");
     var regex = /^[A-Za-z]+$/;
     var name = document.getElementById(name_id);
     if(!regex.test(name.value)) {
@@ -135,7 +155,6 @@ function validateText(name_id) {
 
 
 function validateEmail(email_id) {
-    //alert("validateEmail");
     var regex = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
     var email = document.getElementById(email_id);
     if(!regex.test(email.value)) {
@@ -145,7 +164,6 @@ function validateEmail(email_id) {
 }
 
 function validatePhone(phone_id) {
-    //alert("validatePhone");
     var regex = /^(\()?\d{3}(\))?(-|\s)?\d{3}(-|\s)\d{4}$|^[0-9]{10}$/;
     var phone = document.getElementById(phone_id);
     if(!regex.test(phone.value)) {
@@ -155,7 +173,6 @@ function validatePhone(phone_id) {
 }
 
 function validateDOB(dob_id) {
-//     alert("validateDOB");
     var regex = /^(0[1-9]|1[0-2])\/(0[1-9]|1\d|2\d|3[01])\/(19|20)\d{2}$/;
     var dob = document.getElementById(dob_id);
 //     alert(dob.value);
@@ -164,11 +181,8 @@ function validateDOB(dob_id) {
 //        dob.value = "";
 //     }
     var today = new Date();
-//     alert(today);
     var dob_date = new Date(dob.value);
-//     alert(dob_date);
     var age = today.getFullYear() - dob_date.getFullYear();
-//     alert(age);
     var month = today.getMonth() - dob_date.getMonth();
     if (month < 0 || (month == 0 && today.getDate() < dob_date.getDate())) {
         age--;
@@ -179,12 +193,11 @@ function validateDOB(dob_id) {
     }
 }
 
-
+//Checks if image has valid extension
 function validateImage(image_id) {
     var photo = document.getElementById(image_id);
     var path = photo.value;
     var extension = path.split('.').pop();
-    //alert(extension);
     
     if((extension == "gif") || (extension == "png") || (extension == "bmp") || (extension == "jpeg") || (extension == "jpg")) {
         //valid extensions
@@ -196,21 +209,26 @@ function validateImage(image_id) {
         alert("Invalid Extension for Images");
         photo.value = "";
     }
+
+    var size = photo.files[0].size/1024/1024;
+
+    if(size > 5){
+        alert("Your file is "+size +". The maximum file size is 5MB.");
+    }
+
     
 }
 
-
+//Checks if video_id has a valid video extension
 function validateVideo(video_id) {
     var video = document.getElementById(video_id);
     var path = video.value;
     var extension = path.split('.').pop();
-    //alert(extension);
     
     if((extension == "flv") || (extension == "gif") || (extension == "avi") || (extension == "mov") || (extension == "wmv")
     || (extension == "mp4") || (extension == "mpg") || (extension == "mp2") || (extension == "mpeg") || (extension == "mpe") 
     || (extension == "mpv") || (extension == "m4v")) {
         //valid extensions
-        //alert("valid extension");
         //do nothing, all's well
     }
     
@@ -221,17 +239,13 @@ function validateVideo(video_id) {
     
 }
 
-
-
 function validateAudio(audio_id) {
     var audio = document.getElementById(audio_id);
     var path = audio.value;
     var extension = path.split('.').pop();
-    //alert(extension);
     
     if((extension == "aac") || (extension == "wav") || (extension == "wma") || (extension == "mp3") || (extension == "mp4")) {
         //valid extensions
-        //alert("valid extension");
         //do nothing, all's well
     }
     
@@ -241,6 +255,8 @@ function validateAudio(audio_id) {
     }
     
 }
+
+/* PROFILE PIC PREVIEW*/
 //MB - basically does the profile pic preview thing
 function readURL(input) {
         if (input.files && input.files[0]) {
@@ -272,7 +288,9 @@ jQuery(function($) {
 });
 
 
-/* DYNAMIC ELEMENT ADDING AND REMOVAL */
+/* DYNAMIC ELEMENT ADDITION AND REMOVAL */
+
+//for adding extra social media links in app4
 var added_links = 0;
 function add_link() {
     //alert("in add links");
@@ -285,6 +303,8 @@ function add_link() {
     }
 }
 
+//for removing extra social media links from app4
+//takes in the id of the div container from which you want to remove, then removes last child.
 function remove_link(container_div_id) {
     var container = document.getElementById(container_div_id);
     if (container != null && container.childNodes.length > 0) {
@@ -351,6 +371,7 @@ var uniqueId = 2;
      //case 4: media 2 is visible, media 3 is visible, do nothing
     
  });
+
 $(function() {
      $('.addTalent').click(function() {
          var copy = $("#talent-container").clone(true);
@@ -362,12 +383,19 @@ $(function() {
          //alert($temp);
         // uniqueId = parseInt($tempMedia[$tempMedia.length-1])+1;
             $(this).attr('id', $(this).attr('id') + uniqueId); 
-             
+            
          });
+
+         $('#' + formId + ' input[type="text"]').val('');
+         $('#' + formId + ' .talent_category').val('-1');
+         $('#' + formId + ' .specific_talent').attr('placeholder', '');
+         $('#' + formId + ' .media select').val('image');
+
          uniqueId++; 
      });
 });
 
+// Removes a talent block from the end of the list. Called by button with the 'removeTalent' class in app2
 $(function() {
      $('.removeTalent').click(function() {
      var lastChild = $(this).siblings('#container').children().last().attr('id');
@@ -375,4 +403,40 @@ $(function() {
       $("#"+lastChild).remove();
      });
 });
+
+// Sets placeholder text for the specific talent text input in app2.
+function SetPlaceholder(talent) {
+    var talent_value = talent.options[talent.selectedIndex].text;
+    //alert(talent_value);
+    var specific_div = talent.parentNode.nextElementSibling.firstElementChild.firstElementChild;
+    var elems = specific_div.childNodes;
+    for(var i = 0; i < elems.length; i++){
+     if(elems[i].id == 'specific_talent'){
+      //alert(elems[i].placeholder);
+      switch(talent_value){
+      case "Dance":
+elems[i].placeholder = "Hip Hop, Jazz, Ballet, Western, Zumba";
+break;
+case "Fashion":
+elems[i].placeholder = "Model, Clothing Stylist, Hair Stylist, Designing";
+break;
+case "Film":
+elems[i].placeholder = "Actor, Comedian, Make-up Artist";
+break;
+case "Athletics":
+elems[i].placeholder = "Gymnastics, Football, Wrestling, Kayaking, Martial Arts";
+break;
+case "Music":
+elems[i].placeholder = "Songwriter, Vocalist, Pianist, Guitarist";
+break;
+case "Art":
+elems[i].placeholder = "Painting, Photography, Architecture, Sculpting, Crafting";
+break;
+default: 
+elems[i].placeholder = "";
+break;
+      }
+    }
+    }
+    }
 

@@ -18,11 +18,11 @@
 	
     <div class="header">
         <div>
-            <h1><a href="index.html"><img src="images/TSVector.png"></a></h1>
+            <h1><a href="http://www.talentscool.com/"><img src="images/TSVector.png"></a></h1>
         </div>
     </div>
 
-    {!! Form::open(['url' => 'submitapp', 'method'=>'POST', 'name' => 'application', 'files'=>true])!!}
+    {!! Form::open(['url' => 'http://www.talentscool.com/submitapp', 'method'=>'POST', 'name' => 'application', 'files'=>true])!!}
     <div id="app1">
         <div class="app_heading">
             <h1>
@@ -53,9 +53,9 @@
     
         <div class="info"> 
         <div class="row clearfix"> 
-			<p>
+			<p class="half-row">
                 <label>
-                    Headshot
+                    Headshot*
                 </label>
                 <input type="file" id="profile_image" onchange="validateImage('profile_image');" name = "profile_image" autocomplete="off" placeholder="Profile Photo" 
                 required></input>
@@ -66,75 +66,83 @@
         </div>
 
         <div class="row clearfix">
-			<p>	
+			<p class="half-row">	
 				<label>
-                    First Name
+                    First Name*
                </label>
                 <input id="first_name" name="first_name" type="text" autocomplete="off" required></input>
             </p>
-            <p class="right-col">
+            <p class="half-row right-col">
                 <label>
-                    Last Name
+                    Last Name*
                 </label>
                 <input id="last_name" name="last_name" type="text" autocomplete="off" required></input>
             </p>
         </div>
         <div class="row">
-            <p>
+            <p class="full-row">
                 <label>
-                     E-mail
+                    Stage Name
+                </label>
+                <input id="stage_name" name="stage_name" type="text" autocomplete="off"></input>
+            </p>
+        </div>
+        <div class="row">
+            <p class="half-row">
+                <label>
+                     E-mail*
                 </label>
                 <input onchange="validateEmail('email');" id="email" name="email" type="text" autocomplete="off" required></input>
             </p>
-            <p class="right-col">
+            <p class="half-row right-col">
                 <label>
-                    Phone Number
+                    Phone Number*
                 </label>
-                <input onchange="validatePhone('phone');" id="phone" name="phone" type="text" onclick="this.placeholder='(_ _ _) _ _ _ - _ _ _ _';" autocomplete="off" 
-                required></input>
+                <input onchange="validatePhone('phone');" id="phone" name="phone" type="text" onclick="this.placeholder='(_ _ _) _ _ _ - _ _ _ _';" autocomplete="off" >
+            </input>
             </p>
         </div>
 
         <div class="row">
-            <p>
+            <p class="half-row">
                 <label>
-                    Country
+                    Country*
                 </label>
                 <select id="country" name="country" placeholder="Country" required></select>
             </p>
-            <p class="right-col">
+            <p class="half-row right-col">
                 <label>
-                    State
+                    State*
                 </label>
                 <select id="state" name="state" placeholder="State" required></select>
             </p>
         </div>
 
         <div class="row">
-            <p>
+            <p class="half-row">
                 <label>
-                    City
+                    City*
                 </label>
                 <input type="text" id="city" name="city" autocomplete="off" required></input>
             </p>
-            <p class="right-col">
+            <p class="right-col half-row">
                 <label>
-                    Zip Code
+                    Zip Code*
                 </label>
                 <input type="text" id="zip" name = "zip" autocomplete="off" required></input>
             </p>
         </div>
 
         <div class="row">
-            <p>
+            <p class="half-row">
                 <label>
-                    Date of Birth
+                    Date of Birth*
                 </label>
                 <input onchange="validateDOB('dob');" id="dob" type="text" name ="dob" autocomplete="off" onclick="this.placeholder='MM/DD/YYYY';" required></input>
             </p>
-            <p class= "right-col">
+            <p class= "right-col half-row">
                 <label>
-                    Gender
+                    Gender*
                 </label>
                 <select name="gender" id="gender" autocomplete="off" required></select>
             </p>
@@ -186,11 +194,12 @@
 
         <div class="info">
             <div class="app2_wrapper">
+                <p class="instruction">Add up to 15 talents</p>
                 <div id = "container">
                     <div id = "talent-container" class="talent-container-class">
                         <div id = "industry">
                             <label>Industry</label>
-                            <select id="talent_category" name="talent_category[]" required>
+                            <select id="talent_category" class="talent_category" name="talent_category[]" onchange= "SetPlaceholder(this);" required>
                                 <option value="-1">Select Industry</option>
                                 <option value="Dance">Dance</option>
                                 <option value="Fashion">Fashion</option>
@@ -203,33 +212,33 @@
                             <div id = "specific" class = "talent">
                                 <p id="portfolio" style="padding-bottom: 0px;">
                                     <label>Talent</label>
-                                    <input id="specific_talent" name="specific_talent[]" type="text">
+                                    <input id="specific_talent" class="specific_talent" name="specific_talent[]" type="text" placeholder = "">
                                 </p>
-
-                            </div><!-- for dance-->
+                            </div>
+                            <p class="instruction">Include at least 1 and up to 3 media links:</p>
                             <div id="media-container" class ="media">
                                 <div id="media1" class = "visible">
                                     <select id="drop1" name="type1[]">
-                                        <option>Image</option>
-                                        <option>Audio</option>
-                                        <option>Video</option>
+                                        <option value="image">Image</option>
+                                        <option value="audio">Audio</option>
+                                        <option value="video">Video</option>
                                     </select>
                                     <input id="link1" name="media1[]" placeholder="Enter Link" />
                                 </div>
                                 <div id="media2" class = "visible">
                                     <select id="drop2" name="type2[]">
-                                        <option>Image</option>
-                                        <option>Audio</option>
-                                        <option>Video</option>
+                                        <option value="image">Image</option>
+                                        <option value="audio">Audio</option>
+                                        <option value="video">Video</option>
                                     </select>
                                     <input id="link2" name="media2[]" placeholder="Enter Link" />
                                     <button type="button"class="removeRow button">Remove Media</button>
                                 </div>
                                 <div id="media3" class = "visible">
                                     <select id="drop3" name="type3[]">
-                                        <option>Image</option>
-                                        <option>Audio</option>
-                                        <option>Video</option>
+                                        <option value="image">Image</option>
+                                        <option value="audio">Audio</option>
+                                        <option value="video">Video</option>
                                     </select>
                                     <input id="link3" name="media3[]" placeholder="Enter Link" />
                                     <button type="button" class="removeRow button">Remove Media</button>
@@ -290,99 +299,102 @@
         </div>
     
         <div class="info">
-            <p>
-                <label>
-                    Opportunities
-                </label>
-                <div class="checkboxlist">
-				<div class ="cb-container">
-                    <input type="checkbox" name="opportunity[]" value="booking"> Bookings<br>
-                    <input type="checkbox" name="opportunity[]" value="audition"> Auditions<br>
-                    <input type="checkbox" name="opportunity[]" value="tour"> Tours<br>
-                    <input type="checkbox" name="opportunity[]" value="showcase"> Showcases<br>
-                    <input type="checkbox" name="opportunity[]" value="internship"> Internships<br>
-                    <input type="checkbox" name="opportunity[]" value="job"> Jobs<br>
-                    <input type="checkbox" name="opportunity[]" value="endorsement"> Endorsements<br>
-				</div>
+            <p class="instruction">Check all that apply:</p>
+            <div class="row">
+                <div class="half-row">
+                    <label>
+                        Opportunities
+                    </label>
+                    <div class="checkboxlist">
+                        <input type="checkbox" name="opportunity[]" value="booking"> Bookings<br>
+                        <input type="checkbox" name="opportunity[]" value="audition"> Auditions<br>
+                        <input type="checkbox" name="opportunity[]" value="tour"> Tours<br>
+                        <input type="checkbox" name="opportunity[]" value="showcase"> Showcases<br>
+                        <input type="checkbox" name="opportunity[]" value="internship"> Internships<br>
+                        <input type="checkbox" name="opportunity[]" value="job"> Jobs<br>
+                        <input type="checkbox" name="opportunity[]" value="endorsement"> Endorsements<br>
+                    </div>
                 </div>
-            </p>
-            <p>
-                <label>
-                    Representation
-                </label>
-            <div class="checkboxlist">
-				<div class ="cb-container">
-                    <input type="checkbox" name="representation[]" value="manager"> Manager<br>
-                    <input type="checkbox" name="representation[]" value="agent"> Agent<br>
-                    <input type="checkbox" name="representation[]" value="record_deal"> Record Deal<br>
-                    <input type="checkbox" name="representation[]" value="booking_agent"> Booking Agent<br>
-                    <input type="checkbox" name="representation[]" value="publicist"> Publicist<br>
-                    <input type="checkbox" name="representation[]" value="talent_agent"> Talent Agent<br>
-                    <input type="checkbox" name="representation[]" value="brand_manager"> Brand Manager<br>
-				</div>
+                <div class="half-row right-col">
+                    <label>
+                        Representation
+                    </label>
+                    <div class="checkboxlist">
+                            <input type="checkbox" name="representation[]" value="manager"> Manager<br>
+                            <input type="checkbox" name="representation[]" value="agent"> Agent<br>
+                            <input type="checkbox" name="representation[]" value="record_deal"> Record Deal<br>
+                            <input type="checkbox" name="representation[]" value="booking_agent"> Booking Agent<br>
+                            <input type="checkbox" name="representation[]" value="publicist"> Publicist<br>
+                            <input type="checkbox" name="representation[]" value="talent_agent"> Talent Agent<br>
+                            <input type="checkbox" name="representation[]" value="brand_manager"> Brand Manager<br>
+                    </div>
+                </div>
+            </div> <!--end row-->
+
+            <div class="row">
+                <div class="half-row">
+                    <label>
+                        General Services
+                    </label>
+                    <div class="checkboxlist">
+    				<div class ="cb-container">
+                          <input type="checkbox" name="general[]" value="musician"> Musician<br>
+                          <input type="checkbox" name="general[]" value="vocalist"> Vocalist<br>
+                          <input type="checkbox" name="general[]" value="dancer"> Dancer<br>
+                          <input type="checkbox" name="general[]" value="lawyer"> Lawyer<br>
+                          <input type="checkbox" name="general[]" value="accountant"> Accountant<br>
+                          <input type="checkbox" name="general[]" value="investor"> Investor<br>
+                          <input type="checkbox" name="general[]" value="personal_asssitant"> Personal Assistant<br>
+                          <input type="checkbox" name="general[]" value="webdesigner"> Web Designer<br>
+                          <input type="checkbox" name="general[]" value="engineer"> Engineer<br>
+                          <input type="checkbox" name="general[]" value="fitnesstrainer"> Fitness Trainer<br>
+                          <input type="checkbox" name="general[]" value="cameracrew"> Camera Crew<br>
+    				</div>
+                    </div>
+                </div>
+                <div class="half-row right-col">
+                    <label>
+                        Vanity & Luxury
+                    </label>
+                    <div class="checkboxlist">
+                        <input type="checkbox" name="vanitylux[]" value="clothingstylist"> Clothing Stylist<br>
+                        <input type="checkbox" name="vanitylux[]" value="hairstylist"> Hair Stylist<br>
+                        <input type="checkbox" name="vanitylux[]" value="barber"> Barber<br>
+                        <input type="checkbox" name="vanitylux[]" value="makeupartist"> Makeup Artist<br>
+                        <input type="checkbox" name="vanitylux[]" value="model"> Model<br>
+                        <input type="checkbox" name="vanitylux[]" value="photographer"> Photographer<br>
+                        <input type="checkbox" name="vanitylux[]" value="bodyguard"> Bodyguard<br>
+                        <input type="checkbox" name="vanitylux[]" value="limodriver"> Limo Driver<br>
+                        <input type="checkbox" name="vanitylux[]" value="privatejet"> Private Jet Rental<br>
+                        <input type="checkbox" name="vanitylux[]" value="studiorental"> Studio Rental<br>
+                    </div>
+                </div>
+            </div> <!-- end row-->
+
+            <div class="row">
+                <div class="half-row">
+                    <label>
+                        Talent Development
+                    </label>
+                    <div class="checkboxlist">
+                      <div class ="cb-container">
+                        <input type="checkbox" name="talent_dev[]" value="vocalcoach"> Vocal Coach<br>
+                        <input type="checkbox" name="talent_dev[]" value="actingcoach"> Acting Coach<br>
+                        <input type="checkbox" name="talent_dev[]" value="instrumentteacher"> Instrument Teacher<br>
+                        <input type="checkbox" name="talent_dev[]" value="danceinstructor"> Dance Instructor<br>
+                        <input type="checkbox" name="talent_dev[]" value="artinstructor"> Art Instructor<br>
+                        <input type="checkbox" name="talent_dev[]" value="schoolplacement"> School Placement<br>
+                      </div>
+                    </div>
+                </div>
+                <div class="half-row right-col">
+                    <label>
+                        Additional Requests
+                    </label>
+                    <textarea id="additional" name="additional" autocomplete="off" ></textarea>
+                </div>
             </div>
-            </p>
-            <p>
-                <label>
-                    Talent Development
-                </label>
-                <div class="checkboxlist">
-				  <div class ="cb-container">
-                    <input type="checkbox" name="talent_dev[]" value="vocalcoach"> Vocal Coach<br>
-                    <input type="checkbox" name="talent_dev[]" value="actingcoach"> Acting Coach<br>
-                    <input type="checkbox" name="talent_dev[]" value="instrumentteacher"> Instrument Teacher<br>
-                    <input type="checkbox" name="talent_dev[]" value="danceinstructor"> Dance Instructor<br>
-                    <input type="checkbox" name="talent_dev[]" value="artinstructor"> Art Instructor<br>
-                    <input type="checkbox" name="talent_dev[]" value="schoolplacement"> School Placement<br>
-				  </div>
-                </div>
-            </p>
-            <p>
-                <label>
-                    General Services
-                </label>
-                <div class="checkboxlist">
-				<div class ="cb-container">
-                      <input type="checkbox" name="general[]" value="musician"> Musician<br>
-                      <input type="checkbox" name="general[]" value="vocalist"> Vocalist<br>
-                      <input type="checkbox" name="general[]" value="dancer"> Dancer<br>
-                      <input type="checkbox" name="general[]" value="lawyer"> Lawyer<br>
-                      <input type="checkbox" name="general[]" value="accountant"> Accountant<br>
-                      <input type="checkbox" name="general[]" value="investor"> Investor<br>
-                      <input type="checkbox" name="general[]" value="personal_asssitant"> Personal Assistant<br>
-                      <input type="checkbox" name="general[]" value="webdesigner"> Web Designer<br>
-                      <input type="checkbox" name="general[]" value="engineer"> Engineer<br>
-                      <input type="checkbox" name="general[]" value="fitnesstrainer"> Fitness Trainer<br>
-                      <input type="checkbox" name="general[]" value="cameracrew"> Camera Crew<br>
-				</div>
-                </div>
-            </p>
-            <p>
-                <label>
-                    Vanity & Luxury Services
-                </label>
-                <div class="checkboxlist">
-				<div class ="cb-container">
-                    <input type="checkbox" name="vanitylux[]" value="clothingstylist"> Clothing Stylist<br>
-                    <input type="checkbox" name="vanitylux[]" value="hairstylist"> Hair Stylist<br>
-                    <input type="checkbox" name="vanitylux[]" value="barber"> Barber<br>
-                    <input type="checkbox" name="vanitylux[]" value="makeupartist"> Makeup Artist<br>
-                    <input type="checkbox" name="vanitylux[]" value="model"> Model<br>
-                    <input type="checkbox" name="vanitylux[]" value="photographer"> Photographer<br>
-                    <input type="checkbox" name="vanitylux[]" value="bodyguard"> Bodyguard<br>
-                    <input type="checkbox" name="vanitylux[]" value="limodriver"> Limo Driver<br>
-                    <input type="checkbox" name="vanitylux[]" value="privatejet"> Private Jet Rental<br>
-                    <input type="checkbox" name="vanitylux[]" value="studiorental"> Studio Rental<br>
-				</div>
-                </div>
-            </p>
-            <p>
-                <label>
-                    Additional Requests
-                </label>
-                <input type="text" id="additional" name="additional" autocomplete="off" ></input>
-            </p>
-        </div>
+        </div> <!--end row-->
     
         <div class="buttons_container">
             <div class="buttons">
@@ -433,12 +445,13 @@
     
         <div class="info"> 
            <div class="app4_wrapper">
+            <p class="instruction">This section is optional but highly recommended</p>
+            <div class="row">
                 <p>
-
                     <label id="describeyourself-label">
                         Describe Yourself
                     </label>
-                    <textarea id="aboutme" name="aboutme" autocomplete="off" rows="12" placeholder="(max 1000 characters)*" oninput="countChars();" required></textarea>
+                    <textarea id="aboutme" name="aboutme" autocomplete="off" rows="12" placeholder="(max 1000 characters)" oninput="countChars();"></textarea>
                 </p>
                 <div id="instagram">
                     <p>
@@ -483,15 +496,16 @@
                         </label>
                         <input type="text" name="socialmedia[]" autocomplete="off"></input>
                         <div id="extra_links"></div>
-                        <button type="button" class="addlink-button button" onclick="add_link();">Add Link</button>
-                        <button type="button" class="removelink-button button" onclick="remove_link('extra_links');">Remove Link</button>
+                        <button type="button" class="addlink-button text-button" onclick="add_link();">Add Link</button>
+                        <button type="button" class="removelink-button text-button" onclick="remove_link('extra_links');">Remove Link</button>
                     </p>
                 </div>
+                <p class="instruction">For the following sections, please list each item separated by a comma</p>
                 <p>
                     <label id="experiences-label">
                         Experiences 
                     </label>
-                    <textarea id="exp" name="experience" autocomplete="off" rows="4" oninput="countChars();" required></textarea>
+                    <textarea id="exp" name="experience" autocomplete="off" rows="4" oninput="countChars();"></textarea>
                 </p>
                 <p>
                     <label id="awards-label">
@@ -501,12 +515,13 @@
                 </p>
                 <p>
                     <label>
-                        Current Representative
+                        Current Representation
                     </label>
                     <input type="text" name="curr_rep" autocomplete="off"></input>
                 </p>        
             </div>
-        </div>
+        </div> <!-- end app4 wrapper-->
+        <p id="app4-errorlog" class="errorlog"></p>
     
         <div class="buttons_container clearfix">
                  <button type="button" class="prev-button button">
@@ -519,6 +534,7 @@
         </div>
     
     </div>
+</div>
     </form>
 
     <!------------------------------------------------------------------------------------------------------------>

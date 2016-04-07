@@ -33,6 +33,7 @@ class ApplicationController extends Controller
         $client = new Client;
         $client->first_name = $input['first_name'];
         $client->last_name = $input['last_name'];
+        $client->stage_name = $input['stage_name'];
         $client->email = $input['email'];
         $client->country = $input['country'];
         $client->state = $input['state'];
@@ -123,7 +124,7 @@ class ApplicationController extends Controller
 
         $client->save();
         //Redirect to thank you page
-        return Redirect::to('/thanks');
+        return Redirect::to('http://www.talentscool.com/thanks');
 	}
 
     public function thanks()

@@ -1,3 +1,23 @@
+/* ------------------
+ * 	WELCOME/HOMEPAGE STYLE
+ * ------------------
+ * By Talentscool Web Team Interns Spring 2016
+ * & [Add more Contributors here!]
+ * 
+ * This is the style sheet for the homepage (index.blade.php), 
+ * Designed using the mobile-first approach
+ * How to navigate: These styles are applied via media queries:
+ *      - 37em (592px and down, slightly larger phone)
+ *      - 49em (784px and down, slightly larger phone)
+ *		- 50em (800px and up, computer screen)
+ * BASE STYLES are the most basic styles that can apply to all screen sizes 
+ * (can be overriden later in the media queries if necessary)
+ * ---->Some refactoring may have to be done to these styles,
+ * ---->especially since there's a mixture of min-width and max-width in the media queries.
+ * ---->It would be nice to have all media queries as min-width.
+ * Please consider responsive web page design before applying styles
+ */
+
 /* ---- [base styles] ---- */
 *{
 	box-sizing:border-box;
@@ -291,14 +311,14 @@ footer{
 	height: 13.95em;
 }
 
-/* ---- [ 24.6em (393.6px and up, slightly larger phone)]---- */
+/* ---- [ 37em (592px and down, slightly larger phone)]---- */
 @media only screen and (max-width: 37em){
 	.navbar nav, .downarrow{
 		display: none;
 	}
 }
 
-/* ---- [ 30em (480px and up, slightly larger phone)]---- */
+/* ---- [ 49em (784px and down, slightly larger phone)]---- */
 @media only screen and (max-width: 49em){
 	#sobelow, .downarrow {
 	    display: none;
@@ -313,7 +333,7 @@ footer{
 	}
 }
 
-/* ----[ 37em (592px and up, computer screen)]---- */
+/* ----[ 50em (800px and up, computer screen)]---- */
 @media only screen and (min-width: 50em){
 	.header h1{
 		padding-right: .5em;
