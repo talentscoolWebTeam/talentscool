@@ -179,9 +179,9 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="js/parallax.js/parallax.min.js"></script>
     <script src="js/welcome-script.js"></script>
-    <script language="JavaScript" src="email-contact-form/scripts/gen_validatorv31.js" type="text/javascript"></script>
+    <script language="JavaScript" src="js/gen_validatorv31.js" type="text/javascript"></script>
 
-    //<script language="JavaScript">
+    <script language="JavaScript">
 	// Code for validating the form
 	// Visit http://www.javascript-coder.com/html-form/javascript-form-validation.phtml
 	// for details
@@ -190,7 +190,6 @@
 	frmvalidator.addValidation("email","req","Please provide your email");
 	frmvalidator.addValidation("email","email","Please enter a valid email address");
 	//</script>
-	-->
 
 
 
