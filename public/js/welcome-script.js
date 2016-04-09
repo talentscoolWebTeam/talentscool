@@ -1,6 +1,6 @@
 /* Javascript file for adding Parallax effects to welcome page */
 
-$('#window1').parallax({imageSrc: 'images/main_backdrop.jpg'});
+$('#window1').parallax({imageSrc: 'images/architecture.png'});
 $('#window3').parallax({imageSrc: 'images/city.jpg'});
 $('#window5').parallax({imageSrc: 'images/third_backdrop.jpg'});
 
