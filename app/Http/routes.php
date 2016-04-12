@@ -20,7 +20,7 @@ Route::get('viewapp','ApplicationController@viewapp');
 Route::get('apply', 'ApplicationController@application');
 
 //Route::get('/admin', 'AdminController@index');
-//Route::get('testmysql','ApplicationController@testsql');
+Route::get('testmysql','ApplicationController@testsql');
 Route::post('submitapp','ApplicationController@store');
 Route::get('thanks', 'ApplicationController@thanks');
 Route::controllers([
